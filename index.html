@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KCS Capital | Where the Future of Finance Is Built</title>
-<meta name="description" content="KCS Capital is the independent technology and research firm developing the infrastructure operated by 4ORM Finance — Canada's institution-grade RWA exchange and digital settlement network.">
+<meta name="description" content="KCS Capital is the independent technology and research firm developing the infrastructure operated by 4ORM Finance, Canada's institution-grade RWA exchange and digital settlement network.">
 <meta property="og:title" content="KCS Capital | Where the Future of Finance Is Built">
-<meta property="og:description" content="Independent technology and research powering 4ORM Finance — Canada's institution-grade RWA exchange and digital settlement network.">
+<meta property="og:description" content="Independent technology and research powering 4ORM Finance, Canada's institution-grade RWA exchange and digital settlement network.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,18 +40,16 @@ nav.scrolled{
   background:rgba(4,5,8,.93);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
   border-bottom:1px solid var(--border);padding:1rem 3rem;
 }
-.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-.nav-mark{
-  width:38px;height:38px;border:1px solid var(--border-b);
-  display:flex;align-items:center;justify-content:center;position:relative;
+.nav-logo{display:flex;align-items:center;gap:.85rem;text-decoration:none}
+.nav-logo-img{
+  width:44px;height:44px;object-fit:contain;
+  display:block;flex-shrink:0;
+  filter:invert(1) brightness(1.15);
+  /* The supplied KCS Capital logo is black-on-transparent (or white-on-black).
+     Use the filter above if your file is black-on-white; remove it if white-on-transparent. */
 }
-.nav-mark::before{
-  content:'';position:absolute;inset:4px;
-  border:1px solid rgba(201,136,42,.3);
-}
-.nav-mark span{font-family:var(--ui);font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.05em}
-.nav-name{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
-.nav-sub{font-family:var(--ui);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-top:-1px}
+.nav-name{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);display:block;line-height:1}
+.nav-sub{font-family:var(--ui);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-top:4px;line-height:1}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
 .nav-links a{
   font-family:var(--ui);font-size:10.5px;font-weight:500;
@@ -79,7 +77,7 @@ nav.scrolled{
   position:relative;height:100vh;min-height:720px;
   display:flex;align-items:center;overflow:hidden;
 }
-/* Calgary skyline 4K video — replace src in <video> tag with your file */
+/* Calgary skyline 4K video. Replace src in <video> tag with your file */
 #hero-video{
   position:absolute;inset:0;width:100%;height:100%;
   object-fit:cover;object-position:center center;
@@ -345,11 +343,11 @@ nav.scrolled{
 }
 .stat-suf{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold-l)}
 .stat-lbl{
-  font-family:var(--ui);font-size:10px;font-weight:500;
-  letter-spacing:.15em;text-transform:uppercase;color:var(--white-dim);
-  margin-top:.5rem;display:block;
+  font-family:var(--ui);font-size:12.5px;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--white-dim);
+  margin-top:.75rem;display:block;line-height:1.35;
 }
-.stat-src{font-size:10px;color:rgba(168,164,160,.45);margin-top:.2rem;display:block;line-height:1.4}
+.stat-src{font-size:12px;color:rgba(168,164,160,.6);margin-top:.5rem;display:block;line-height:1.5}
 
 /* ── PROVEN MODEL (JPMorgan Onyx comparable) ──────────────── */
 #proven{background:var(--black);position:relative;overflow:hidden}
@@ -382,10 +380,10 @@ nav.scrolled{
 .team-name{font-family:var(--serif);font-size:1.55rem;font-weight:400;color:var(--white);line-height:1.15;margin-bottom:.5rem;letter-spacing:-.01em}
 .team-title{font-family:var(--ui);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:1.1rem;display:block}
 .team-bio{font-size:.84rem;color:rgba(242,237,232,.55);line-height:1.7}
-.team-open{background:var(--surface-2);padding:2rem 1.75rem;border:1px dashed var(--border-b);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.team-open-tag{font-family:var(--ui);font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block}
-.team-open-title{font-family:var(--serif);font-size:1.35rem;font-weight:300;color:var(--white);line-height:1.25;margin-bottom:.5rem;letter-spacing:-.01em}
-.team-open-body{font-size:.82rem;color:rgba(242,237,232,.5);line-height:1.6}
+.team-open{background:var(--surface-2);padding:2.25rem 2rem;border:1px dashed var(--border-b);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:1 / -1}
+.team-open-tag{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;display:block}
+.team-open-title{font-family:var(--serif);font-size:1.65rem;font-weight:300;color:var(--white);line-height:1.25;margin-bottom:.6rem;letter-spacing:-.01em}
+.team-open-body{font-size:.98rem;color:rgba(242,237,232,.6);line-height:1.65;max-width:760px}
 
 section{padding:7rem 3rem}
 .s-eye{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
@@ -546,10 +544,14 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 <!-- NAV -->
 <nav id="main-nav">
   <a href="/" class="nav-logo">
-    <div class="nav-mark"><span>KCS</span></div>
+    <!-- Upload your logo file to /assets/kcs-capital-logo.png in the repo.
+         If your file is a black mark on transparent/white background, remove the
+         "filter:invert(1)..." line from .nav-logo-img CSS. -->
+    <img src="/assets/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img"
+         onerror="this.style.display='none'">
     <div>
       <span class="nav-name">KCS Capital</span>
-      <span class="nav-sub">Independent Technology &amp; Research</span>
+      <span class="nav-sub">Research &middot; Technology &middot; Education</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -597,11 +599,11 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   <div class="hero-vignette-bottom" aria-hidden="true"></div>
 
   <div class="hero-floats" aria-hidden="true">
-    <span class="float-label" style="--fx:10%;--fy:67%;--fd:0s">Bank of Canada &mdash; Project Samara</span>
-    <span class="float-label" style="--fx:68%;--fy:73%;--fd:3.5s">ATB Financial &mdash; $43B Discovery</span>
-    <span class="float-label" style="--fx:80%;--fy:57%;--fd:1.8s">JPMorgan Kinexys &mdash; $1.5T+</span>
-    <span class="float-label" style="--fx:52%;--fy:81%;--fd:6s">McKinsey &mdash; 75% CAGR to 2030</span>
-    <span class="float-label" style="--fx:32%;--fy:76%;--fd:9s">BlackRock BUIDL &mdash; $18B AUM</span>
+    <span class="float-label" style="--fx:10%;--fy:67%;--fd:0s">Bank of Canada &middot; Project Samara</span>
+    <span class="float-label" style="--fx:68%;--fy:73%;--fd:3.5s">ATB Financial &middot; $43B Discovery</span>
+    <span class="float-label" style="--fx:80%;--fy:57%;--fd:1.8s">JPMorgan Kinexys &middot; $1.5T+</span>
+    <span class="float-label" style="--fx:52%;--fy:81%;--fd:6s">McKinsey &middot; 75% CAGR to 2030</span>
+    <span class="float-label" style="--fx:32%;--fy:76%;--fd:9s">BlackRock BUIDL &middot; $18B AUM</span>
   </div>
 
   <div class="hud-tl" aria-hidden="true"></div>
@@ -616,15 +618,15 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   </div>
 
   <div class="hud-status" aria-hidden="true">
-    <span class="hud-line">SYS &mdash; INFRA_DEVELOPMENT</span>
-    <span class="hud-line">REG &mdash; CIRO_PATHWAY</span>
-    <span class="hud-line">STRUCT &mdash; HOLDCO / OPCO / CUSTODYCO</span>
+    <span class="hud-line">SYS / INFRA_DEVELOPMENT</span>
+    <span class="hud-line">REG / CIRO_PATHWAY</span>
+    <span class="hud-line">STRUCT / HOLDCO &middot; OPCO &middot; CUSTODYCO</span>
   </div>
 
   <div class="hero-content" id="hero-content">
     <div class="hero-eyebrow">
       <div class="eyebrow-tick"></div>
-      <span class="eyebrow-text">KCS Capital &mdash; Independent Technology &amp; Research</span>
+      <span class="eyebrow-text">KCS Capital &middot; Independent Technology &amp; Research</span>
     </div>
     <h1 class="hero-h1">
       <span class="line-block">
@@ -640,7 +642,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
     </h1>
     <div class="hero-divider"></div>
     <p class="hero-sub">
-      KCS Capital is the independent technology and research firm developing the infrastructure operated by <strong style="color:var(--gold-l);font-weight:500">4ORM Finance</strong> &mdash; Canada's institution-grade RWA exchange and digital settlement network. Built to the standards validated by the Bank of Canada's Project Samara. Regulator-aligned. Independently governed. Canadian sovereign.
+      KCS Capital is the independent technology and research firm developing the infrastructure operated by <strong style="color:var(--gold-l);font-weight:500">4ORM Finance</strong>, Canada's institution-grade RWA exchange and digital settlement network. Built to the standards validated by the Bank of Canada's Project Samara. Regulator-aligned. Independently governed. Canadian sovereign.
     </p>
     <div class="hero-ctas">
       <a href="/contact" class="btn-p">Request Investor Kit <span>&rarr;</span></a>
@@ -655,7 +657,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 
   <div class="hero-badge" aria-hidden="true">
     <div class="badge-dot"></div>
-    <span class="badge-txt">Pre-Seed Active &mdash; <strong>ATB Financial Discovery Engagement</strong></span>
+    <span class="badge-txt">Pre-Seed Active &middot; <strong>ATB Financial Discovery Engagement</strong></span>
   </div>
 </section>
 
@@ -678,7 +680,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   </div>
   <div class="stat-item reveal d3">
     <span class="stat-num">$<span class="counter" data-t="43">0</span><span class="stat-suf">B</span></span>
-    <span class="stat-lbl">ATB Financial &mdash; Anchor Discovery</span>
+    <span class="stat-lbl">ATB Financial Anchor Discovery</span>
     <span class="stat-src">Deposits, lending, AUA · ATB FY2025 Annual Report</span>
   </div>
 </div>
@@ -690,28 +692,28 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
       <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Who We Serve</span></div>
       <h2 class="s-title reveal">Built for the institutions<br><em>that move Canadian capital</em></h2>
     </div>
-    <p class="s-body reveal" style="max-width:340px">Banks. Custodians. Credit unions. Asset managers. The 4ORM Finance platform is institutional infrastructure for the firms that already carry Canada's regulatory burden &mdash; not retail.</p>
+    <p class="s-body reveal" style="max-width:340px">Banks. Custodians. Credit unions. Asset managers. The 4ORM Finance platform is institutional infrastructure for the firms that already carry Canada's regulatory burden. Not retail.</p>
   </div>
   <div class="serve-grid">
     <div class="sc reveal">
       <span class="sc-num">01</span>
       <div class="sc-title">Tier-1 Banks &amp; Crown Institutions</div>
       <div class="sc-aud">Settlement, tokenized deposits, collateral mobility</div>
-      <p class="sc-body">You're already piloting tokenized settlement. Project Samara proved the model. 4ORM Finance is the neutral, multi-institution infrastructure layer that doesn't force any single bank to own the rails &mdash; the Canadian answer to JPMorgan Onyx.</p>
+      <p class="sc-body">You're already piloting tokenized settlement. Project Samara proved the model. 4ORM Finance is the neutral, multi-institution infrastructure layer that doesn't force any single bank to own the rails. Think of it as the Canadian answer to JPMorgan Onyx.</p>
       <a href="/contact" class="sc-cta">Discovery Engagement &rarr;</a>
     </div>
     <div class="sc reveal d2">
       <span class="sc-num">02</span>
       <div class="sc-title">Credit Unions &amp; Provincial Banks</div>
       <div class="sc-aud">Community banking, regional financial institutions</div>
-      <p class="sc-body">Tier-1 dominance and rising compliance costs are squeezing your margins. 4ORM Finance is purpose-built so community banks can offer the same tokenized products as the majors &mdash; without building or owning the infrastructure yourselves.</p>
+      <p class="sc-body">Tier-1 dominance and rising compliance costs are squeezing your margins. 4ORM Finance is purpose-built so community banks can offer the same tokenized products as the majors, without building or owning the infrastructure yourselves.</p>
       <a href="/contact" class="sc-cta">Partner Programs &rarr;</a>
     </div>
     <div class="sc reveal d4">
       <span class="sc-num">03</span>
       <div class="sc-title">Issuer &amp; Originator Partners</div>
       <div class="sc-aud">Exempt market dealers, real estate, private credit, energy, custodians</div>
-      <p class="sc-body">If you're an issuer like Ocree, T-RIZE, or Pineapple Financial, you've already built the regulatory pathway and the assets. What you don't have is the bank channel. 4ORM Finance brings ATB Financial and the Tier-1 distribution pipeline. You keep your dealer registration and asset specialization &mdash; we provide the institution-grade marketplace, secondary liquidity, and bank settlement rails. Tokenize through us and your assets reach the institutions you couldn't reach alone.</p>
+      <p class="sc-body">If you're an issuer like Ocree, T-RIZE, or Pineapple Financial, you've already built the regulatory pathway and the assets. What you don't have is the bank channel. 4ORM Finance brings ATB Financial and the Tier-1 distribution pipeline. You keep your dealer registration and asset specialization. We provide the institution-grade marketplace, secondary liquidity, and bank settlement rails. Tokenize through us and your assets reach the institutions you couldn't reach alone.</p>
       <a href="/contact" class="sc-cta">Partner Programs &rarr;</a>
     </div>
   </div>
@@ -724,7 +726,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
       <div>
         <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">The 4ORM Finance Platform</span></div>
         <h2 class="s-title reveal">Six capabilities.<br><em>One regulated rail.</em></h2>
-        <p class="s-body reveal">4ORM Finance is full-stack institutional infrastructure &mdash; not a crypto exchange. Digital settlement, tokenized deposits, RWA issuance, collateral mobility, marketplace, and trust digitization, designed end-to-end for Canadian regulatory frameworks. KCS Capital develops the technology; 4ORM Finance operates the platform as a separately governed regulated entity.</p>
+        <p class="s-body reveal">4ORM Finance is full-stack institutional infrastructure. Not a crypto exchange. Digital settlement, tokenized deposits, RWA issuance, collateral mobility, marketplace, and trust digitization, designed end-to-end for Canadian regulatory frameworks. KCS Capital develops the technology. 4ORM Finance operates the platform as a separately governed regulated entity.</p>
       </div>
       <div style="text-align:right" class="reveal">
         <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">Platform Status</div>
@@ -734,16 +736,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
     </div>
     <div class="pillars">
       <div class="pillar reveal"><div class="p-num">01</div><div class="p-title">Digital Settlement Network</div><p class="p-body">Instant, auditable settlement for institutional transactions. Near real-time replacement for multi-day settlement cycles, freeing trapped capital and reducing counterparty risk.</p></div>
-      <div class="pillar reveal d2"><div class="p-num">02</div><div class="p-title">Tokenized CAD Deposits</div><p class="p-body">Bank-issued digital deposits for institutional use only. Not retail stablecoins &mdash; CAD-denominated bank deposits issued by regulated financial institutions, operated under existing banking regulation.</p></div>
+      <div class="pillar reveal d2"><div class="p-num">02</div><div class="p-title">Tokenized CAD Deposits</div><p class="p-body">Bank-issued digital deposits for institutional use only. Not retail stablecoins. These are CAD-denominated bank deposits issued by regulated financial institutions, operated under existing banking regulation.</p></div>
       <div class="pillar reveal d4"><div class="p-num">03</div><div class="p-title">RWA Issuance &amp; Registry</div><p class="p-body">Native infrastructure for tokenizing real-world assets. Smart contract development, asset registry, and on-chain binding to legal and economic claims with full audit trails.</p></div>
-      <div class="pillar reveal"><div class="p-num">04</div><div class="p-title">Tokenized Collateral Engine</div><p class="p-body">Real-time collateralization and margin efficiency. Mobilizes illiquid Canadian assets &mdash; CRE, energy royalties, equipment, private credit &mdash; into institutional-grade collateral instruments.</p></div>
+      <div class="pillar reveal"><div class="p-num">04</div><div class="p-title">Tokenized Collateral Engine</div><p class="p-body">Real-time collateralization and margin efficiency. Mobilizes illiquid Canadian assets like CRE, energy royalties, equipment, and private credit into institutional-grade collateral instruments.</p></div>
       <div class="pillar reveal d2"><div class="p-num">05</div><div class="p-title">Regulated RWA Marketplace</div><p class="p-body">Secondary market liquidity for institutional assets. Transparent pricing, fractional ownership, multi-bank settlement corridors, all operating under CIRO marketplace oversight.</p></div>
       <div class="pillar reveal d4"><div class="p-num">06</div><div class="p-title">Trust &amp; Estate Digitization</div><p class="p-body">Digital representation of trust and estate holdings. Modernizes administration of Canadian fiduciary assets while preserving the legal and tax frameworks institutions already operate within.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PROVEN MODEL — JPMorgan Onyx comparable -->
+<!-- PROVEN MODEL: JPMorgan Onyx comparable -->
 <section id="proven">
   <div class="proven-in">
     <div class="proven-hdr">
@@ -751,7 +753,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
         <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Proven Model</span></div>
         <h2 class="s-title reveal">JPMorgan built Onyx for one bank.<br><em>We're building Canada's version for all of them.</em></h2>
       </div>
-      <p class="s-body reveal" style="max-width:380px">JPMorgan's Onyx Digital Assets validated the economic and operational case for tokenized settlement at institutional scale. 4ORM Finance applies the same architecture &mdash; with one structural difference that matters for every other bank in the market.</p>
+      <p class="s-body reveal" style="max-width:380px">JPMorgan's Onyx Digital Assets validated the economic and operational case for tokenized settlement at institutional scale. 4ORM Finance applies the same architecture, with one structural difference that matters for every other bank in the market.</p>
     </div>
     <div class="proven-grid reveal">
       <div class="proven-col">
@@ -761,17 +763,17 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
           <div class="proven-stat"><span class="proven-stat-num">$1T+</span><span class="proven-stat-lbl">Notional settled across tokenized deposits</span></div>
           <div class="proven-stat"><span class="proven-stat-num">$300B+</span><span class="proven-stat-lbl">Intraday repo &amp; collateral processed</span></div>
         </div>
-        <p class="proven-body">Onyx onboarded dozens of Tier-1 counterparties &mdash; BlackRock, BNY Mellon, major asset managers. It proved that tokenized settlement reduces multi-day cycles to near real-time, cuts reconciliation overhead, and unlocks intraday liquidity. Live institutional settlement, not retail crypto.</p>
+        <p class="proven-body">Onyx onboarded dozens of Tier-1 counterparties: BlackRock, BNY Mellon, major asset managers. It proved that tokenized settlement reduces multi-day cycles to near real-time, cuts reconciliation overhead, and unlocks intraday liquidity. Live institutional settlement, not retail crypto.</p>
         <div class="proven-tag">Proprietary &middot; Single-Bank Infrastructure</div>
       </div>
       <div class="proven-col">
         <div class="proven-col-tag">The 4ORM Finance Difference</div>
         <h3 class="proven-col-h">Neutral Multi-Institution Infrastructure</h3>
         <div class="proven-stat-row">
-          <div class="proven-stat"><span class="proven-stat-num">$43B</span><span class="proven-stat-lbl">ATB Financial anchor &mdash; Canadian Crown institution</span></div>
+          <div class="proven-stat"><span class="proven-stat-num">$43B</span><span class="proven-stat-lbl">ATB Financial anchor, Canadian Crown institution</span></div>
           <div class="proven-stat"><span class="proven-stat-num">3-Entity</span><span class="proven-stat-lbl">HoldCo / OpCo / CustodyCo per CIRO</span></div>
         </div>
-        <p class="proven-body">Onyx serves one bank's balance sheet. 4ORM Finance is purpose-built as neutral, multi-institution infrastructure for Canada &mdash; designed so ATB, credit unions, Tier-1 banks, custodians, and issuers can all participate equally on shared rails. No single institution controls it. Every participant benefits from network effects.</p>
+        <p class="proven-body">Onyx serves one bank's balance sheet. 4ORM Finance is purpose-built as neutral, multi-institution infrastructure for Canada. Designed so ATB, credit unions, Tier-1 banks, custodians, and issuers can all participate equally on shared rails. No single institution controls it. Every participant benefits from network effects.</p>
         <div class="proven-tag">Neutral &middot; Multi-Institution &middot; Canadian-Sovereign</div>
       </div>
     </div>
@@ -796,9 +798,9 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
       </div>
     </div>
     <div>
-      <p class="alb-para reveal">On March 6, 2026, the Bank of Canada completed Project Samara &mdash; Canada's first tokenized bond trial &mdash; with RBC, TD, and Export Development Canada. C$100 million in tokenized bonds. Full lifecycle: issuance, bidding, coupon payments, secondary trading, redemption. Regulatory sign-off from the OSC, AMF, and CIRO. The question of whether Canada will operate on tokenized rails has been answered.</p>
-      <p class="alb-para reveal d2">Alberta is where Canada is answering the next question. The Financial Innovation Act created Canada's first regulatory sandbox. Bill 13 is streamlining the legislative path. CIRO published its Digital Asset Custody Framework in February 2026. ATB Financial &mdash; a $43 billion Crown institution &mdash; is in active discovery with 4ORM Finance.</p>
-      <p class="alb-para reveal d3">What Canada has: credible asset issuers (T-RIZE, Ocree, Pineapple Financial with $13.7B in tokenized mortgages), stablecoin infrastructure (Cybrid, Stablecorp's QCAD, Loon), qualified custodians (Tetra Trust, Balance Trust, Brane Trust). What Canada does not yet have: a neutral, institution-grade exchange and settlement network connecting these layers. That's the gap 4ORM Finance is built to close &mdash; and KCS Capital is the firm developing the technology to do it.</p>
+      <p class="alb-para reveal">On March 6, 2026, the Bank of Canada completed Project Samara, Canada's first tokenized bond trial, with RBC, TD, and Export Development Canada. C$100 million in tokenized bonds. Full lifecycle: issuance, bidding, coupon payments, secondary trading, redemption. Regulatory sign-off from the OSC, AMF, and CIRO. The question of whether Canada will operate on tokenized rails has been answered.</p>
+      <p class="alb-para reveal d2">Alberta is where Canada is answering the next question. The Financial Innovation Act created Canada's first regulatory sandbox. Bill 13 is streamlining the legislative path. CIRO published its Digital Asset Custody Framework in February 2026. ATB Financial, a $43 billion Crown institution, is in active discovery with 4ORM Finance.</p>
+      <p class="alb-para reveal d3">What Canada has: credible asset issuers (T-RIZE, Ocree, Pineapple Financial with $13.7B in tokenized mortgages), stablecoin infrastructure (Cybrid, Stablecorp's QCAD, Loon), qualified custodians (Tetra Trust, Balance Trust, Brane Trust). What Canada does not yet have: a neutral, institution-grade exchange and settlement network connecting these layers. That's the gap 4ORM Finance is built to close. KCS Capital is the firm developing the technology to do it.</p>
       <a href="/insights" class="alb-link reveal d4">Read: Canada's Window for Domestic RWA Infrastructure &rarr;</a>
     </div>
   </div>
@@ -819,25 +821,25 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
         <span class="team-role">Founder &middot; CEO</span>
         <div class="team-name">Chad R. Johnston</div>
         <span class="team-title">Strategy &middot; Vision &middot; Execution</span>
-        <p class="team-bio">Systems builder with deep experience across blockchain, digital finance, and capital markets. Multi-year research into legacy financial systems, governance frameworks, and macroeconomic transition. Background leading 100+ person teams in oil &amp; gas &mdash; high-risk, high-pressure operations where the margin for error is zero. That discipline is the foundation of how KCS builds infrastructure.</p>
+        <p class="team-bio">Systems builder. Founded and operated a digital asset education business serving tens of thousands of investors. Six years across capital markets, blockchain research, and digital asset investment. Background leading 100+ person teams on oil and gas projects exceeding $100 million, where execution is critical to health and life. That operational discipline is the foundation of how KCS Capital is built.</p>
       </div>
       <div class="team-card reveal d2">
-        <span class="team-role">Co-Founder &middot; CRO</span>
+        <span class="team-role">Co-Founder &middot; Relations Advisor</span>
         <div class="team-name">Sam Mraiheen</div>
         <span class="team-title">Strategic Partnerships &middot; Institutional Relations</span>
-        <p class="team-bio">Global partnerships and institutional relations leader with experience building cross-border relationships across finance, technology, and emerging markets. Sam leads enterprise partnership positioning and international stakeholder engagement &mdash; the relationship infrastructure beneath the technical infrastructure.</p>
+        <p class="team-bio">Global partnerships and institutional relations leader with experience building cross-border relationships across various global markets in finance, banking, and technology. Sam leads enterprise partnership positioning and international stakeholder engagement, the relationship infrastructure that lets the technology infrastructure scale.</p>
       </div>
       <div class="team-card reveal d4">
-        <span class="team-role">Partner &middot; President</span>
+        <span class="team-role">Partner &middot; Brand &amp; Growth Advisor</span>
         <div class="team-name">Kevin Wong</div>
-        <span class="team-title">Go-To-Market &middot; Institutional Adoption</span>
-        <p class="team-bio">Growth and go-to-market strategist with deep background in brand development and institutional positioning. Kevin leads GTM strategy, partner acquisition, and the operational pathway by which technical platforms reach institutional adoption.</p>
+        <span class="team-title">Marketing &middot; Creative &middot; Brand</span>
+        <p class="team-bio">Growth and go-to-market strategist with deep background in brand development and creative positioning. Kevin leads brand, website, marketing, and creative development for KCS Capital, bridging the gap between institutional technology, corporations, people, and education.</p>
       </div>
       <div class="team-card reveal">
-        <span class="team-role">Advisor &middot; Business Development</span>
-        <div class="team-name">Hermione Green</div>
-        <span class="team-title">Capital Raising &middot; Partnership Strategy</span>
-        <p class="team-bio">14+ years across capital raising, investor relations, brand strategy, board development, and stakeholder engagement. Deep expertise positioning complex platforms for enterprise and government adoption.</p>
+        <span class="team-role">Advisor &middot; Systems Architecture</span>
+        <div class="team-name">Zahiruddin Sandeela</div>
+        <span class="team-title">TOGAF 9.1 &middot; 20+ Years Enterprise Architecture</span>
+        <p class="team-bio">Senior Enterprise and Systems Architect with 20+ years designing systems in regulated environments across banking, insurance, public sector, and large enterprise. TOGAF 9.1 Certified. Deep experience in Interac payments modernization, AML compliance, identity management, and audit controls at Vancity, ICBC, UBC, and Safeway. Advises on target-state systems architecture, identity, asset lifecycle, and bank-facing control models.</p>
       </div>
       <div class="team-card reveal d2">
         <span class="team-role">Advisor &middot; Capital Markets</span>
@@ -845,10 +847,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
         <span class="team-title">Founder, Mench Capital</span>
         <p class="team-bio">Seasoned capital markets advisor with experience structuring private investments, growth financing, and strategic capital partnerships. Institutional perspective on capital formation, investor strategy, and disciplined deployment of early- and growth-stage capital.</p>
       </div>
+      <div class="team-card reveal d4">
+        <span class="team-role">Advisor &middot; Legal Counsel</span>
+        <div class="team-name"><a href="https://www.linkedin.com/in/michael-stephens-lawyer/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Michael Stephens</a></div>
+        <span class="team-title">Partner, Fasken (Vancouver)</span>
+        <p class="team-bio">Information technology law Partner in the Vancouver office of Fasken. Recognized leader in the British Columbia technology ecosystem. Represents companies through every stage of development, with a focus on early-stage entrepreneurs, start-ups, and emerging growth companies. Experienced M&amp;A and securities lawyer counselling founders, executives, and boards on corporate strategy, fundraising, board governance, and strategic transactions from foundation through IPO or exit.</p>
+      </div>
       <div class="team-open reveal d4">
         <span class="team-open-tag">Open Mandate &middot; Active</span>
         <div class="team-open-title">CTO &amp; Chief Compliance Officer</div>
-        <p class="team-open-body">Two senior hires open for Q2&ndash;Q3 2026. Engineering and regulatory leadership for the 4ORM Finance OpCo and CustodyCo build. Referrals welcome.</p>
+        <p class="team-open-body">Two senior hires open for Q2 to Q3 2026. Engineering and regulatory leadership for the 4ORM Finance OpCo and CustodyCo build. Referrals welcome.</p>
       </div>
     </div>
   </div>
@@ -865,9 +873,9 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
       <div class="trust-div"></div>
       <div class="trust-item"><div class="trust-dot"></div><span class="trust-lbl">Alberta Sandbox</span></div>
       <div class="trust-div"></div>
-      <div class="trust-item"><div class="trust-dot"></div><span class="trust-lbl">ATB Financial &mdash; $43B Discovery</span></div>
+      <div class="trust-item"><div class="trust-dot"></div><span class="trust-lbl">ATB Financial $43B Discovery</span></div>
       <div class="trust-div"></div>
-      <div class="trust-item"><div class="trust-dot"></div><span class="trust-lbl">Project Samara &mdash; Referenced Architecture</span></div>
+      <div class="trust-item"><div class="trust-dot"></div><span class="trust-lbl">Project Samara Referenced Architecture</span></div>
       <div class="trust-div"></div>
       <div class="trust-live"><div class="trust-live-dot"></div><span class="trust-live-txt">Pre-Seed Active &middot; Closing Q2 2026</span></div>
     </div>
@@ -899,7 +907,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
         <div class="ic-body">
           <span class="ic-tag">RWA Infrastructure</span>
           <h3 class="ic-title" style="margin-top:.7rem">Project Samara &amp; the Canadian Tokenization Pathway</h3>
-          <p class="ic-ex">How the Bank of Canada's March 2026 tokenized bond trial &mdash; with RBC, TD, and EDC &mdash; rewrote the regulatory and operational case for domestic RWA infrastructure. And what banks need to do next.</p>
+          <p class="ic-ex">How the Bank of Canada's March 2026 tokenized bond trial with RBC, TD, and EDC rewrote the regulatory and operational case for domestic RWA infrastructure. And what banks need to do next.</p>
           <div class="ic-meta"><span class="ic-date">May 2026</span><a href="/insights" class="ic-read">Read More &rarr;</a></div>
         </div>
       </div>
@@ -944,7 +952,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
         <div class="ic-body">
           <span class="ic-tag">Market Intelligence</span>
           <h3 class="ic-title" style="margin-top:.7rem">Canada's $1.9B RWA Infrastructure TAM: Sized and Defended</h3>
-          <p class="ic-ex">A bottom-up read of Canada's RWA infrastructure revenue pools &mdash; settlement, issuance, custody, marketplace, repatriation &mdash; sourced from McKinsey, BCG, PwC, KPMG, and ATB's audited FY2025 base data.</p>
+          <p class="ic-ex">A bottom-up read of Canada's RWA infrastructure revenue pools across settlement, issuance, custody, marketplace, and repatriation. Sourced from McKinsey, BCG, PwC, KPMG, and ATB's audited FY2025 base data.</p>
           <div class="ic-meta"><span class="ic-date">March 2026</span><a href="/insights" class="ic-read">Read More &rarr;</a></div>
         </div>
       </div>
@@ -956,7 +964,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 <section id="cta">
   <div class="cta-eye reveal">Pre-Seed &middot; Closing Q2 2026</div>
   <h2 class="cta-title reveal d1">Canada doesn't need another crypto exchange.<br><em>It needs a settlement layer.</em></h2>
-  <p class="cta-body reveal d2">The Bank of Canada has proven the architecture works. Tier-1 banks are running pilots. CIRO has published the custody framework. Canada's RWA infrastructure opportunity is $350M to $1.9B in annual revenue pools &mdash; $1.33B to $8.3B cumulative over five years. The institutions that build this layer now will define the standard for decades.</p>
+  <p class="cta-body reveal d2">The Bank of Canada has proven the architecture works. Tier-1 banks are running pilots. CIRO has published the custody framework. Canada's RWA infrastructure opportunity is $350M to $1.9B in annual revenue pools. That's $1.33B to $8.3B cumulative over five years. The institutions that build this layer now will define the standard for decades.</p>
   <div class="cta-acts reveal d3">
     <a href="/contact" class="btn-p">Request Investor Kit &rarr;</a>
     <a href="/contact?type=institutional" class="btn-s">Institutional Discovery Engagement &rarr;</a>

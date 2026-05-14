@@ -30,7 +30,6 @@ nav.scrolled{
 .nav-logo-img{
   height:56px;width:auto;max-width:230px;
   object-fit:contain;display:block;flex-shrink:0;
-  mix-blend-mode:screen;
 }
 /* Hide redundant text wordmark, the logo image already says "KCS CAPITAL".
    If the image fails to load, the browser's alt-text fallback shows "KCS Capital". */
@@ -196,33 +195,19 @@ nav.scrolled{
   position:relative;z-index:20;
   padding:0 3rem;max-width:960px;
 }
-/* Big logo, fades into the open space on the right of the hero after 3s */
+/* Big logo, fades into the open space on the right of the hero after 2.4s */
 .hero-logo-mark{
   position:absolute;z-index:15;
   left:68%;top:50%;
+  width:clamp(620px,56vw,1200px);
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
   opacity:0;
   animation:heroLogoIn 1.8s cubic-bezier(.16,1,.3,1) forwards;
   animation-delay:2.4s;
 }
-/* Live-text logo, stays perfectly sharp at any size */
-.hero-logo-type{position:relative;display:inline-block;text-align:center;line-height:1}
-.hlt-kcs{
-  display:block;
-  font-family:var(--serif);font-weight:600;
-  font-size:clamp(14rem,28vw,30rem);
-  letter-spacing:-.045em;line-height:.82;
-  color:var(--white);
-}
-.hlt-cap{
-  position:absolute;left:50%;top:50%;
-  transform:translate(-50%,-50%);
-  font-family:var(--ui);font-weight:700;
-  font-size:clamp(1.4rem,3vw,3rem);
-  letter-spacing:.4em;text-transform:uppercase;
-  color:var(--white);white-space:nowrap;
-  text-shadow:0 0 22px rgba(4,5,8,.96),0 0 8px rgba(4,5,8,.96);
+.hero-logo-img{
+  width:100%;height:auto;display:block;
 }
 @keyframes heroLogoIn{
   from{opacity:0;transform:translate(-50%,-50%) scale(.94)}

@@ -247,6 +247,7 @@
 </footer>
 <script>
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
+(function(){var p=(location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/');var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var h=(a.getAttribute('href')||'').replace(/\.html$/,'').replace(/\/$/,'')||'/';if(h===p){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(p.indexOf('/brief')===0&&h==='/briefs')a.classList.add('nav-active');if(p==='/investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
 </script>
 </body>

@@ -13,16 +13,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
-.page-hero{position:relative;padding:9rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
+.page-hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
 .page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
-.page-hero-in{max-width:1200px;margin:0 auto;position:relative}
+.page-hero-in{max-width:1200px;margin:0 auto;position:relative;width:100%}
 .page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
 .page-eyebrow-tick{width:36px;height:1px;background:var(--gold)}
 .page-eyebrow-text{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
-.page-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:980px}
+.page-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:300;line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:980px}
 .page-h1 em{font-style:italic;color:var(--gold)}
 .page-lead{font-family:var(--body);font-size:1.18rem;color:rgba(242,237,232,.7);line-height:1.7;max-width:760px;font-weight:300}
-.page-section{padding:6rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.page-section{padding:7rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
 .page-section.dark{background:var(--black)}
 .page-section-in{max-width:1200px;margin:0 auto}
 .page-section-hdr{margin-bottom:3rem;max-width:780px}
@@ -39,7 +39,7 @@
 .prose h3{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:2.25rem 0 .9rem;line-height:1.3}
 .prose h2{font-family:var(--serif);font-size:1.9rem;font-weight:300;color:var(--white);margin:2.5rem 0 1rem;letter-spacing:-.01em;line-height:1.2}
 .prose ul{list-style:none;margin-bottom:1.5rem}
-.prose ul li{padding-left:1.25rem;position:relative;margin-bottom:.6rem;line-height:1.7}
+.prose ul li{padding-left:1.25rem;position:relative;margin-bottom:.9rem;line-height:1.7}
 .prose ul li::before{content:'';position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--gold)}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
@@ -72,7 +72,7 @@
     <li><a href="/briefs">KCS Briefs</a></li>
     <li><a href="/partners">Partners</a></li>
     <li><a href="/contact">Contact</a></li>
-    <li><a href="/investors" class="nav-cta">Investor Kit</a></li>
+    <li><a href="/investors" class="nav-cta">Access Data Room</a></li>
   </ul>
 </nav>
 
@@ -87,64 +87,67 @@
   <div class="team-in">
     <div class="team-grid">
       <div class="team-card reveal">
-        <span class="team-role">Founder &middot; CEO</span>
+        <img src="/team-chad.png" alt="Chad R. Johnston" class="team-photo" onerror="this.style.display='none'">
+        <span class="team-role">Founder</span>
         <div class="team-name">Chad R. Johnston</div>
-        <span class="team-title">Strategy &middot; Vision &middot; Execution</span>
+        <span class="team-title">Chief Executive Officer</span>
         <p class="team-bio">Systems builder. Founded and operated a digital asset education business serving tens of thousands of investors. Six years across capital markets, blockchain research, and digital asset investment. Background leading 100+ person teams on oil and gas projects exceeding $100 million, where execution is critical to health and life. That operational discipline is the foundation of how KCS Capital is built.</p>
       </div>
       <div class="team-card reveal d2">
-        <span class="team-role">Co-Founder &middot; Relations Advisor</span>
+        <img src="/team-sam.png" alt="Sam Mraiheen" class="team-photo" onerror="this.style.display='none'">
+        <span class="team-role">Co-Founder</span>
         <div class="team-name">Sam Mraiheen</div>
-        <span class="team-title">Strategic Partnerships &middot; Institutional Relations</span>
+        <span class="team-title">Relations Advisor</span>
         <p class="team-bio">Global partnerships and institutional relations leader with experience building cross-border relationships across various global markets in finance, banking, and technology. Sam leads enterprise partnership positioning and international stakeholder engagement, the relationship infrastructure that lets the technology infrastructure scale.</p>
       </div>
       <div class="team-card reveal d4">
-        <span class="team-role">Partner &middot; Brand &amp; Growth Advisor</span>
+        <img src="/team-kevin.png" alt="Kevin Wong" class="team-photo" onerror="this.style.display='none'">
+        <span class="team-role">Partner</span>
         <div class="team-name">Kevin Wong</div>
-        <span class="team-title">Marketing &middot; Creative &middot; Brand</span>
+        <span class="team-title">Brand &amp; Growth Advisor</span>
         <p class="team-bio">Growth and go-to-market strategist with deep background in brand development and creative positioning. Kevin leads brand, website, marketing, and creative development for KCS Capital, bridging the gap between institutional technology, corporations, people, and education.</p>
       </div>
       <div class="team-card reveal">
+        <img src="/team-don.png" alt="Don Hickling" class="team-photo" onerror="this.style.display='none'">
         <span class="team-role">President of the Board</span>
         <div class="team-name">Don Hickling</div>
         <span class="team-title">Governance &middot; Operations &middot; Networks</span>
         <p class="team-bio">Entrepreneur and operator with 25+ years of experience building and scaling successful businesses. Don brings hands-on leadership experience, deep regional networks, operational discipline, and long-term perspective on business growth and blockchain investing.</p>
       </div>
       <div class="team-card reveal d2">
+        <img src="/team-bruce.png" alt="Bruce Fair" class="team-photo" onerror="this.style.display='none'">
         <span class="team-role">Advisor &middot; Capital Markets</span>
         <div class="team-name">Bruce Fair</div>
         <span class="team-title">Founder, Mench Capital</span>
         <p class="team-bio">Seasoned capital markets advisor with experience structuring private investments, growth financing, and strategic capital partnerships. Institutional perspective on capital formation, investor strategy, and disciplined deployment of early- and growth-stage capital.</p>
       </div>
       <div class="team-card reveal d4">
+        <img src="/team-mike.png" alt="Michael Stephens" class="team-photo" onerror="this.style.display='none'">
         <span class="team-role">Advisor &middot; Legal Counsel</span>
         <div class="team-name"><a href="https://www.linkedin.com/in/michael-stephens-lawyer/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Michael Stephens</a></div>
         <span class="team-title">Partner, Fasken (Vancouver)</span>
         <p class="team-bio">Information technology law Partner in the Vancouver office of Fasken. Recognized leader in the British Columbia technology ecosystem. Represents companies through every stage of development, with a focus on early-stage entrepreneurs, start-ups, and emerging growth companies. Experienced M&amp;A and securities lawyer counselling founders, executives, and boards on corporate strategy, fundraising, board governance, and strategic transactions from foundation through IPO or exit.</p>
       </div>
       <div class="team-card reveal">
+        <img src="/team-zed.png" alt="Zahiruddin Sandeela" class="team-photo" onerror="this.style.display='none'">
         <span class="team-role">Advisor &middot; Systems Architecture</span>
         <div class="team-name">Zahiruddin Sandeela</div>
         <span class="team-title">TOGAF 9.1 &middot; 20+ Years Enterprise Architecture</span>
         <p class="team-bio">Senior Enterprise and Systems Architect with 20+ years designing systems in regulated environments across banking, insurance, public sector, and large enterprise. TOGAF 9.1 Certified. Deep experience in Interac payments modernization, AML compliance, identity management, and audit controls at Vancity, ICBC, UBC, and Safeway. Advises on target-state systems architecture, identity, asset lifecycle, and bank-facing control models.</p>
       </div>
       <div class="team-card reveal d2">
+        <img src="/team-angelo.png" alt="Angelo Aquino" class="team-photo" onerror="this.style.display='none'">
         <span class="team-role">Advisor &middot; Hard Assets</span>
         <div class="team-name">Angelo Aquino</div>
         <span class="team-title">Precious Metals &middot; Bullion &middot; Mining</span>
         <p class="team-bio">Hard asset advisor with deep expertise in precious metals, mining bullion, and tangible asset valuation. Advises on the asset side of tokenization, ensuring that what gets represented digitally is verifiable, vaulted, and audit-ready.</p>
       </div>
       <div class="team-card reveal d4">
+        <img src="/team-dean.png" alt="Dean Hesse" class="team-photo" onerror="this.style.display='none'">
         <span class="team-role">Advisor &middot; Research</span>
         <div class="team-name">Dean Hesse</div>
         <span class="team-title">Market Research &middot; Strategy</span>
         <p class="team-bio">Research advisor focused on market structure, digital asset trends, and the institutional adoption curve. Brings analytical rigour to the questions of where the system is breaking and where it is going.</p>
-      </div>
-      <div class="team-card reveal">
-        <span class="team-role">Operations &middot; Coordinator</span>
-        <div class="team-name">Krisztina Giran</div>
-        <span class="team-title">Operations &middot; Client Coordination</span>
-        <p class="team-bio">Coordinates internal operations and external client engagements. The connective tissue across founders, advisors, partners, and investors. Ensures the firm runs the same way the platform is designed to run: disciplined, documented, audit-ready.</p>
       </div>
       <div class="team-open reveal d4">
         <span class="team-open-tag">Open Mandate &middot; Active</span>

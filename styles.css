@@ -31,7 +31,7 @@ nav.scrolled{
   height:56px;width:auto;max-width:230px;
   object-fit:contain;display:block;flex-shrink:0;
 }
-/* Hide redundant text wordmark — the logo image already says "KCS CAPITAL".
+/* Hide redundant text wordmark, the logo image already says "KCS CAPITAL".
    If the image fails to load, the browser's alt-text fallback shows "KCS Capital". */
 .nav-name{display:none}
 .nav-sub{font-family:var(--ui);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;line-height:1.3;border-left:1px solid var(--border-b);padding-left:1.2rem}
@@ -361,8 +361,8 @@ nav.scrolled{
 .team-hdr{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;margin-bottom:4rem}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;background:transparent}
 
-.team-photo{width:100%;aspect-ratio:1 / 1;object-fit:cover;object-position:center 22%;display:block;margin-bottom:1.5rem;filter:grayscale(.2) contrast(1.03) brightness(.97);transition:filter .45s ease}
-.team-card:hover .team-photo{filter:grayscale(0) contrast(1) brightness(1)}
+.team-photo{width:64%;max-width:210px;aspect-ratio:1 / 1;object-fit:cover;object-position:center 18%;display:block;margin:.25rem auto 1.7rem;border-radius:50%;border:2px solid rgba(201,136,42,.4);box-shadow:0 0 0 5px var(--surface-2),0 10px 28px rgba(0,0,0,.45);filter:grayscale(.2) contrast(1.03) brightness(.97);transition:filter .45s ease,border-color .45s ease,transform .45s ease,box-shadow .45s ease}
+.team-card:hover .team-photo{filter:grayscale(0) contrast(1) brightness(1);border-color:rgba(201,136,42,.85);transform:translateY(-3px);box-shadow:0 0 0 5px var(--surface-3),0 14px 34px rgba(0,0,0,.5)}
 .team-card{background:var(--surface-2);padding:2rem 1.75rem;border:1px solid var(--border);transition:border-color .35s,background .3s}
 .team-card:hover{border-color:var(--border-b);background:var(--surface-3)}
 .team-role{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:block}
@@ -385,7 +385,7 @@ section{padding:7rem 3rem}
 #serve{background:var(--surface);position:relative;overflow:hidden}
 #serve::before{content:'';position:absolute;top:-80px;right:-80px;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.05) 0%,transparent 70%);pointer-events:none}
 .serve-hdr{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem}
-.serve-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px}
+.serve-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .sc{
   background:var(--surface-2);padding:2.5rem;
   border:1px solid var(--border);position:relative;overflow:hidden;cursor:pointer;
@@ -394,7 +394,7 @@ section{padding:7rem 3rem}
 .sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .35s ease}
 .sc:hover{border-color:var(--border-b);background:rgba(15,18,22,.95)}
 .sc:hover::after{transform:scaleX(1)}
-.sc-num{font-family:var(--serif);font-size:4.5rem;font-weight:400;color:rgba(201,136,42,.13);line-height:1;margin-bottom:1.5rem;display:block}
+.sc-num{display:none}
 .sc-title{font-family:var(--ui);font-size:16.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:.7rem}
 .sc-aud{font-family:var(--body);font-size:15px;color:var(--gold);margin-bottom:1.45rem;font-style:italic}
 .sc-body{font-family:var(--body);font-size:15px;color:rgba(242,237,232,.75);line-height:1.7;margin-bottom:1.95rem}
@@ -418,14 +418,14 @@ section{padding:7rem 3rem}
 .fa{display:flex;align-items:center;justify-content:center;padding:0 1rem}
 .fa-line{width:40px;height:1px;background:var(--border-b);position:relative}
 .fa-line::after{content:'';position:absolute;right:-1px;top:-3px;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent;border-left:6px solid var(--gold-d)}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .pillar{padding:2.25rem 2rem;border:1px solid var(--border);background:var(--surface);position:relative;overflow:hidden;display:flex;flex-direction:column}
 .pillar::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform .4s ease}
 .pillar:hover::before{transform:scaleY(1)}
 .p-num{display:none}
 .p-title{font-family:var(--ui);font-size:17px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin:.85rem 0 .65rem}
 .p-body{font-size:15px;color:rgba(242,237,232,.78);line-height:1.75;margin-top:.45rem}
-/* Pillar visual stat — a small data tag at top of each platform module */
+/* Pillar visual stat, a small data tag at top of each platform module */
 .p-stat-row{display:flex;align-items:center;gap:.65rem;margin-top:1.25rem;padding-top:1.1rem;border-top:1px dashed var(--border)}
 .p-stat-icon{width:32px;height:32px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(201,136,42,.05)}
 .p-stat-icon svg{width:16px;height:16px;display:block}
@@ -465,8 +465,8 @@ section{padding:7rem 3rem}
 .trust-live-dot{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:liveP 2s infinite;flex-shrink:0}
 @keyframes liveP{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
 .trust-live-txt{font-family:var(--ui);font-size:13.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#22C55E;white-space:nowrap}
-.trust-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5px;background:var(--border)}
-.trust-card{background:var(--surface);padding:1.6rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;border-bottom:2px solid transparent;transition:border-color .35s,background .3s;position:relative;overflow:hidden}
+.trust-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;background:transparent}
+.trust-card{background:var(--surface);padding:1.6rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;border:1px solid var(--border);transition:border-color .35s,background .3s;position:relative;overflow:hidden}
 .trust-card:hover{border-bottom-color:var(--gold);background:var(--surface-2)}
 .trust-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .4s ease}
 .trust-card:hover::before{height:100%}
@@ -482,7 +482,7 @@ section{padding:7rem 3rem}
 .ins-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem}
 .ins-all{font-family:var(--ui);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:.55rem;border-bottom:1px solid var(--gold-d);padding-bottom:3px;transition:gap .2s}
 .ins-all:hover{gap:.75rem}
-.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px}
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .ic{background:var(--surface-2);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:border-color .3s;display:flex;flex-direction:column}
 .ic:hover{border-color:var(--border-b)}
 .ic-img{height:130px;overflow:hidden;position:relative;background:var(--surface-3)}
@@ -554,7 +554,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   .proven-col{padding:2rem 1.5rem}
 }
 
-/* MARKET INTELLIGENCE — credibility strip under stats bar */
+/* MARKET INTELLIGENCE, credibility strip under stats bar */
 #mkt-intel{background:var(--surface);border-bottom:1px solid var(--border);padding:5rem 3rem;position:relative;overflow:hidden}
 #mkt-intel::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .mi-in{max-width:1200px;margin:0 auto}
@@ -565,8 +565,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 .mi-title{font-family:var(--serif);font-size:clamp(1.9rem,3.3vw,2.7rem);font-weight:300;line-height:1.2;letter-spacing:-.015em;color:var(--white);margin-bottom:1.1rem}
 .mi-title em{font-style:italic;color:var(--gold)}
 .mi-sub{font-family:var(--body);font-size:15px;color:rgba(242,237,232,.72);line-height:1.7}
-.mi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border)}
-.mi-card{background:var(--surface-2);padding:2rem 1.6rem;display:flex;flex-direction:column;gap:.6rem;border-top:1px solid transparent;transition:border-top-color .35s,background .3s}
+.mi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;background:transparent}
+.mi-card{background:var(--surface-2);padding:2rem 1.6rem;display:flex;flex-direction:column;gap:.6rem;border:1px solid var(--border);transition:border-color .35s,background .3s}
 .mi-card:hover{border-top-color:var(--gold);background:var(--surface-3)}
 .mi-card-num{font-family:var(--serif);font-size:2.7rem;font-weight:400;color:var(--gold);line-height:1;letter-spacing:-.01em}
 .mi-card-label{font-family:var(--ui);font-size:13.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--white);line-height:1.4;margin-top:.4rem}
@@ -619,8 +619,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 .lnd-momentum{margin-top:3.5rem}
 .lnd-momentum-hdr{font-family:var(--ui);font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--white-dim);margin-bottom:1.75rem;display:flex;align-items:center;gap:.75rem}
 .lnd-momentum-hdr::before{content:'';width:24px;height:1px;background:var(--gold)}
-.lnd-momentum-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
-.lnd-mc{background:var(--surface);padding:2.1rem 1.85rem;display:flex;flex-direction:column;gap:.7rem;border-bottom:2px solid transparent;transition:border-bottom-color .35s,background .3s}
+.lnd-momentum-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;background:transparent}
+.lnd-mc{background:var(--surface);padding:2.1rem 1.85rem;display:flex;flex-direction:column;gap:.7rem;border:1px solid var(--border);transition:border-color .35s,background .3s}
 .lnd-mc:hover{border-bottom-color:var(--gold);background:var(--surface-2)}
 .lnd-mc-date{font-family:var(--ui);font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .lnd-mc-title{font-family:var(--serif);font-size:1.55rem;font-weight:400;color:var(--white);line-height:1.3;letter-spacing:-.005em}
@@ -637,3 +637,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   .lnd-momentum-grid{grid-template-columns:1fr}
   #landscape{padding:5rem 1.5rem}
 }
+
+/* Expandable full bios on team cards */
+.team-full{margin-top:1.1rem}
+.team-full summary{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45rem;border-bottom:1px solid var(--gold-d);padding-bottom:3px;transition:border-color .2s}
+.team-full summary::-webkit-details-marker{display:none}
+.team-full summary::after{content:'+';font-family:var(--serif);font-size:16px;line-height:1;margin-top:-2px}
+.team-full[open] summary::after{content:'\2013'}
+.team-full summary:hover{border-color:var(--gold)}
+.team-full-body{margin-top:1.35rem;padding-top:1.35rem;border-top:1px dashed var(--border)}
+.team-full-body p{font-size:15px;color:rgba(242,237,232,.66);line-height:1.78;margin-bottom:1rem}
+.team-full-body p:last-child{margin-bottom:0}
+.team-full-quote{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--gold-l);line-height:1.55;margin-bottom:.5rem !important}
+.team-full-quote-attr{font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}

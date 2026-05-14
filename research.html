@@ -42,9 +42,9 @@
 .prose ul li{padding-left:1.25rem;position:relative;margin-bottom:.9rem;line-height:1.7}
 .prose ul li::before{content:'';position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--gold)}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
-.cs-card{background:var(--surface-2);padding:2rem 1.75rem;display:flex;flex-direction:column;border-bottom:2px solid transparent;transition:border-color .35s,background .3s;cursor:pointer;text-decoration:none}
-.cs-card:hover{border-bottom-color:var(--gold);background:var(--surface-3)}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;background:transparent}
+.cs-card{background:var(--surface-2);padding:2rem 1.75rem;display:flex;flex-direction:column;border:1px solid var(--border);transition:border-color .35s,background .3s;cursor:pointer;text-decoration:none}
+.cs-card:hover{border-color:var(--border-b);background:var(--surface-3)}
 .cs-tag{font-family:var(--ui);font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
 .cs-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:.75rem;letter-spacing:-.01em}
 .cs-summary{font-size:.88rem;color:rgba(242,237,232,.6);line-height:1.65;flex:1;margin-bottom:1.25rem}
@@ -65,6 +65,7 @@
     <span class="nav-sub">Research &middot; Technology &middot; Education</span>
   </a>
   <ul class="nav-links">
+    <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/solutions">Solutions</a></li>
     <li><a href="/team">Team</a></li>
@@ -80,7 +81,7 @@
   <div class="page-hero-in">
     <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">KCS Capital Research</span></div>
     <h1 class="page-h1 reveal">Case studies.<br><em>Read the work behind the platform.</em></h1>
-    <p class="page-lead reveal">Original research and reference case studies KCS Capital has produced during the foundational phase. Canadian RWA infrastructure, regulatory frameworks, ecosystem mapping, and the institutional tokenization curve. Sourced from primary documents, public filings, and the 4ORM Master Pro Forma.</p>
+    <p class="page-lead reveal">Original research and reference case studies KCS Capital has produced during the foundational phase. Canadian RWA infrastructure, regulatory frameworks, ecosystem mapping, and the institutional tokenization curve. Sourced from primary documents, public filings, and the 4orm Master Pro Forma.</p>
   </div>
 </section>
 <section class="page-section">
@@ -100,7 +101,7 @@
       <a href="/contact?type=case-study" class="cs-card reveal d2">
         <span class="cs-tag">Market &amp; TAM</span>
         <h3 class="cs-title">Canada's $1.9B RWA Infrastructure TAM: Sized and Defended</h3>
-        <p class="cs-summary">A bottom-up read of Canada's RWA infrastructure revenue pools across settlement, issuance, custody, marketplace, and repatriation. Sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4ORM Master Pro Forma.</p>
+        <p class="cs-summary">A bottom-up read of Canada's RWA infrastructure revenue pools across settlement, issuance, custody, marketplace, and repatriation. Sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</p>
         <div class="cs-meta"><span class="cs-date">Mar 2026</span><span class="cs-read">Request &rarr;</span></div>
       </a>
       <a href="https://www.kcs-capital.com/post/unlocking-alberta-s-wealth-through-tokenization-a-new-path-to-liquidity-and-social-impact-1" target="_blank" rel="noopener" class="cs-card reveal d4">
@@ -142,13 +143,13 @@
       <a href="/contact?type=case-study" class="cs-card reveal d4">
         <span class="cs-tag">Ecosystem</span>
         <h3 class="cs-title">Canadian Stablecoin Infrastructure: QCAD, CADC, and the CAD Settlement Layer</h3>
-        <p class="cs-summary">Stablecorp's QCAD. Loon's regulated CAD stablecoin. Cybrid's payments rail. What Canada's emerging CAD settlement infrastructure looks like and how 4ORM Finance interoperates.</p>
+        <p class="cs-summary">Stablecorp's QCAD. Loon's regulated CAD stablecoin. Cybrid's payments rail. What Canada's emerging CAD settlement infrastructure looks like and how 4orm Finance interoperates.</p>
         <div class="cs-meta"><span class="cs-date">Feb 2026</span><span class="cs-read">Request &rarr;</span></div>
       </a>
       <a href="/contact?type=case-study" class="cs-card reveal">
         <span class="cs-tag">Ecosystem</span>
         <h3 class="cs-title">Qualified Digital Custody in Canada</h3>
-        <p class="cs-summary">Mapping Canada's qualified custody landscape: Tetra Trust, Balance Trust, Brane Trust. Capital tiers, regulatory standing, supported asset types, and how 4ORM Finance's CustodyCo entity sits alongside them.</p>
+        <p class="cs-summary">Mapping Canada's qualified custody landscape: Tetra Trust, Balance Trust, Brane Trust. Capital tiers, regulatory standing, supported asset types, and how 4orm Finance's CustodyCo entity sits alongside them.</p>
         <div class="cs-meta"><span class="cs-date">Feb 2026</span><span class="cs-read">Request &rarr;</span></div>
       </a>
       <a href="/contact?type=case-study" class="cs-card reveal d2">
@@ -187,7 +188,7 @@
         <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
         KCS Capital
       </div>
-      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4ORM Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
       <div class="foot-soc">
         <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
         <a href="#" class="foot-sb" aria-label="Twitter">X</a>
@@ -206,7 +207,7 @@
       </ul>
     </div>
     <div>
-      <div class="foot-col-t">4ORM Finance</div>
+      <div class="foot-col-t">4orm Finance</div>
       <ul class="foot-links">
         <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
         <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
@@ -237,7 +238,7 @@
   </div>
   <div class="foot-bot">
     <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
-    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4ORM Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4ORM Master Pro Forma.</div>
+    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
   </div>
 </footer>
 <script>

@@ -39,7 +39,7 @@ nav.scrolled{
 .nav-links a{
   font-family:var(--ui);font-size:11.5px;font-weight:600;
   letter-spacing:.1em;text-transform:uppercase;color:var(--white-dim);
-  text-decoration:none;transition:color .2s;position:relative;
+  text-decoration:none;transition:color .2s;position:relative;white-space:nowrap;
 }
 .nav-links a::after{
   content:'';position:absolute;bottom:-3px;left:0;right:0;
@@ -49,7 +49,7 @@ nav.scrolled{
 .nav-links a:hover::after{transform:scaleX(1)}
 .nav-cta{
   font-family:var(--ui) !important;font-size:11.5px !important;font-weight:700 !important;
-  letter-spacing:.1em !important;text-transform:uppercase !important;
+  letter-spacing:.1em !important;text-transform:uppercase !important;white-space:nowrap;
   color:var(--black) !important;background:var(--gold);
   padding:.6rem 1.2rem;text-decoration:none;
   transition:background .25s !important;
@@ -211,9 +211,9 @@ nav.scrolled{
 }
 @keyframes heroLogoIn{
   from{opacity:0;transform:translate(-50%,-50%) scale(.94)}
-  to{opacity:.9;transform:translate(-50%,-50%) scale(1)}
+  to{opacity:.2;transform:translate(-50%,-50%) scale(1)}
 }
-@media(max-width:1200px){.hero-logo-mark{display:none}}
+@media(max-width:1280px){.hero-logo-mark{display:none}}
 .hero-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   margin-bottom:2.25rem;

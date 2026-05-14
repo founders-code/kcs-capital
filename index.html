@@ -40,16 +40,15 @@ nav.scrolled{
   background:rgba(4,5,8,.93);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
   border-bottom:1px solid var(--border);padding:1rem 3rem;
 }
-.nav-logo{display:flex;align-items:center;gap:.85rem;text-decoration:none}
+.nav-logo{display:flex;align-items:center;gap:1.1rem;text-decoration:none}
 .nav-logo-img{
-  width:44px;height:44px;object-fit:contain;
-  display:block;flex-shrink:0;
-  filter:invert(1) brightness(1.15);
-  /* The supplied KCS Capital logo is black-on-transparent (or white-on-black).
-     Use the filter above if your file is black-on-white; remove it if white-on-transparent. */
+  height:38px;width:auto;max-width:170px;
+  object-fit:contain;display:block;flex-shrink:0;
 }
-.nav-name{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);display:block;line-height:1}
-.nav-sub{font-family:var(--ui);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-top:4px;line-height:1}
+/* Hide redundant text wordmark — the logo image already says "KCS CAPITAL".
+   If the image fails to load, the browser's alt-text fallback shows "KCS Capital". */
+.nav-name{display:none}
+.nav-sub{font-family:var(--ui);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;line-height:1.2;border-left:1px solid var(--border-b);padding-left:1.1rem}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
 .nav-links a{
   font-family:var(--ui);font-size:10.5px;font-weight:500;
@@ -544,15 +543,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 <!-- NAV -->
 <nav id="main-nav">
   <a href="/" class="nav-logo">
-    <!-- Upload your logo file to /assets/kcs-capital-logo.png in the repo.
-         If your file is a black mark on transparent/white background, remove the
-         "filter:invert(1)..." line from .nav-logo-img CSS. -->
-    <img src="/assets/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img"
-         onerror="this.style.display='none'">
-    <div>
-      <span class="nav-name">KCS Capital</span>
-      <span class="nav-sub">Research &middot; Technology &middot; Education</span>
-    </div>
+    <!-- Logo file lives at repo root as kcs-capital-logo.png.
+         Source is the white-on-black wordmark. No inversion filter applied. -->
+    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
   </a>
   <ul class="nav-links">
     <li><a href="/about">About</a></li>
@@ -577,8 +571,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
     Until a file is uploaded, the canvas animation + dark background renders alone.
   -->
   <video id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-         poster="">
-    <source src="" type="video/mp4">
+         poster="/calgary-skyline-poster.jpg">
+    <source src="/calgary-skyline-4k.mp4" type="video/mp4">
   </video>
   <div class="hero-video-overlay" aria-hidden="true"></div>
 

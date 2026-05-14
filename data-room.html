@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
-.page-hero{position:relative;padding:9rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
+.page-hero{position:relative;padding:10rem 3rem 7.5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
 .page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
 .page-hero-in{max-width:1200px;margin:0 auto;position:relative}
 .page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
@@ -22,7 +22,7 @@
 .page-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:980px}
 .page-h1 em{font-style:italic;color:var(--gold)}
 .page-lead{font-family:var(--body);font-size:1.18rem;color:rgba(242,237,232,.7);line-height:1.7;max-width:780px;font-weight:300}
-.page-section{padding:6rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.page-section{padding:8.5rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
 .page-section.dark{background:var(--black)}
 .page-section-in{max-width:1200px;margin:0 auto}
 .page-section-hdr{margin-bottom:3rem;max-width:820px}
@@ -44,18 +44,21 @@
 .dr-embed-label::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,136,42,.18)}
 .dr-embed-open{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.1rem;text-decoration:none;transition:background .25s}
 .dr-embed-open:hover{background:var(--gold-l)}
-.dr-embed-frame{width:100%;height:540px;border:1px solid var(--border);background:var(--black);display:block}
-.dr-locked{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:540px;border:1px dashed var(--border-b);background:var(--black);padding:3rem 2rem}
-.dr-locked-icon{width:46px;height:46px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--gold);font-family:var(--serif);font-size:1.5rem}
-.dr-locked-title{font-family:var(--serif);font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:.75rem;letter-spacing:-.01em}
-.dr-locked-body{font-family:var(--body);font-size:1rem;color:rgba(242,237,232,.66);line-height:1.75;max-width:480px;margin-bottom:1.75rem}
+.dr-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4.5rem 2.5rem;background:radial-gradient(ellipse at 50% 0%,rgba(201,136,42,.06) 0%,transparent 70%),var(--black);border:1px solid var(--border)}
+.dr-panel-icon{width:64px;height:64px;border:1px solid var(--gold-d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.75rem;color:var(--gold);font-family:var(--serif);font-size:1.9rem;background:rgba(201,136,42,.05)}
+.dr-panel-title{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--white);margin-bottom:.85rem;letter-spacing:-.01em;line-height:1.2}
+.dr-panel-body{font-family:var(--body);font-size:1.02rem;color:rgba(242,237,232,.7);line-height:1.8;max-width:540px;margin-bottom:2rem}
+.dr-panel-acts{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;justify-content:center}
+.dr-panel-secondary{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-d);padding-bottom:3px;transition:color .2s,border-color .2s}
+.dr-panel-secondary:hover{color:var(--gold-l);border-color:var(--gold)}
+.dr-embed-open.lg{font-size:12px;padding:.95rem 1.9rem}
 .dr-note{font-family:var(--body);font-size:12.5px;color:rgba(154,149,144,.7);line-height:1.65;margin-top:1.25rem}
 .dr-index{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--border);margin-top:2.5rem}
 .dr-doc{background:var(--surface-2);padding:1.6rem 1.75rem;display:flex;flex-direction:column;gap:.4rem}
 .dr-doc-tag{font-family:var(--ui);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .dr-doc-name{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);line-height:1.3;letter-spacing:-.01em}
 .dr-doc-desc{font-family:var(--body);font-size:.92rem;color:rgba(242,237,232,.6);line-height:1.6}
-@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .dr-index{grid-template-columns:1fr}}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:8rem 1.5rem 5rem} .page-section{padding:5.5rem 1.5rem} .dr-index{grid-template-columns:1fr} .dr-panel{padding:3rem 1.5rem}}
 </style>
 </head>
 <body>
@@ -91,31 +94,25 @@
   <div class="page-section-in">
     <div class="page-section-hdr">
       <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Open The Data Room</span></div>
-      <h2 class="page-section-h2 reveal">Browse the full file tree.<br><em>Securely, through Google Drive.</em></h2>
-      <p class="page-section-body reveal">The data room is hosted on Google Drive. If your email has been granted access, the live folder appears below and you can open any document. If not, request access and we will add you, usually within one business day.</p>
+      <h2 class="page-section-h2 reveal">The full document folder,<br><em>secured through Google Drive.</em></h2>
+      <p class="page-section-body reveal">The data room is hosted on Google Drive. If your Google account has been granted access, the button below opens the complete file tree. If not, request access and a member of the team will add you, usually within one business day.</p>
     </div>
 
     <div class="dr-embed-wrap reveal">
       <div class="dr-embed-bar">
         <span class="dr-embed-label">KCS Capital &amp; 4orm Finance &middot; Data Room</span>
-        <a class="dr-embed-open" href="https://drive.google.com/drive/folders/1RDAZukF_6Qz91PQ95qNAU1DS-OdHOBQg?usp=sharing" target="_blank" rel="noopener">Open in Google Drive &rarr;</a>
       </div>
-      <!-- Google Drive file-tree embed. Shows the live folder to anyone whose
-           Google account has been granted access; others see Google's access screen. -->
-      <iframe class="dr-embed-frame"
-              src="https://drive.google.com/embeddedfolderview?id=1RDAZukF_6Qz91PQ95qNAU1DS-OdHOBQg#list"
-              title="KCS Capital Data Room"></iframe>
-    </div>
-    <p class="dr-note reveal">Access is controlled entirely by Google Drive. Only Google accounts that have been explicitly granted access can open the files. KCS Capital does not store a separate password; if you are not on the access list, the folder will not open for you.</p>
-
-    <div class="dr-embed-wrap reveal" style="margin-top:1.5rem">
-      <div class="dr-locked">
-        <div class="dr-locked-icon">&#9679;</div>
-        <div class="dr-locked-title">Not on the access list yet?</div>
-        <p class="dr-locked-body">The data room is reserved for qualified institutional and accredited parties. Request access below and a member of the team will review and grant it.</p>
-        <a href="mailto:founders@kcs-capital.com?subject=Data Room Access Request" class="dr-embed-open">Request Access &rarr;</a>
+      <div class="dr-panel">
+        <div class="dr-panel-icon">&#9673;</div>
+        <div class="dr-panel-title">Open the live data room</div>
+        <p class="dr-panel-body">The complete document folder, pitch deck, executive summary, five-year model, corporate structure, and regulatory positioning, opens in Google Drive. Access is controlled entirely by Google: only accounts that have been explicitly granted access can see the files.</p>
+        <div class="dr-panel-acts">
+          <a class="dr-embed-open lg" href="https://drive.google.com/drive/folders/1RDAZukF_6Qz91PQ95qNAU1DS-OdHOBQg?usp=sharing" target="_blank" rel="noopener">Open the Data Room &rarr;</a>
+          <a class="dr-panel-secondary" href="mailto:founders@kcs-capital.com?subject=Data Room Access Request">Request Access</a>
+        </div>
       </div>
     </div>
+    <p class="dr-note reveal">There is no separate website password. Access is granted and revoked entirely through Google Drive sharing. If you are not on the access list, the folder will not open for you.</p>
   </div>
 </section>
 

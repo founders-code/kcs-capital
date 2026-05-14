@@ -199,7 +199,7 @@ nav.scrolled{
 .hero-logo-mark{
   position:absolute;z-index:15;
   left:68%;top:50%;
-  width:clamp(620px,56vw,1200px);
+  width:clamp(720px,66vw,1500px);
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
   opacity:0;

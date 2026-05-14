@@ -206,8 +206,8 @@ nav.scrolled{
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
   opacity:0;
-  animation:heroLogoIn 2.5s cubic-bezier(.16,1,.3,1) forwards;
-  animation-delay:5.9s;
+  animation:heroLogoIn 3s cubic-bezier(.16,1,.3,1) forwards;
+  animation-delay:5.8s;
 }
 .hero-logo-img{
   width:100%;height:auto;display:block;

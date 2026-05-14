@@ -198,7 +198,7 @@ nav.scrolled{
 /* Big logo, positioned to the right of the headline. Real logo, full strength. */
 .hero-logo-mark{
   position:absolute;z-index:15;
-  left:68%;top:38%;
+  left:68%;top:41%;
   width:clamp(640px,56vw,1180px);
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
@@ -237,7 +237,9 @@ nav.scrolled{
   letter-spacing:-.025em;color:var(--white);
   margin-bottom:0;
 }
-.line-block{display:flex;align-items:flex-end;flex-wrap:nowrap;gap:.26em;overflow:hidden;padding-bottom:.06em}
+.line-block{display:flex;align-items:flex-end;flex-wrap:nowrap;gap:.7em;overflow:hidden;padding-bottom:.06em}
+/* Narrower screens (Sam's range) tighten the headline word gap */
+@media(max-width:1380px){.line-block{gap:.26em}}
 .word-mask{
   display:inline-block;overflow:hidden;
   line-height:1.05;vertical-align:bottom;

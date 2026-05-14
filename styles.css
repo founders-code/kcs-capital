@@ -213,7 +213,10 @@ nav.scrolled{
   from{opacity:0;transform:translate(-50%,-50%) scale(.94)}
   to{opacity:.9;transform:translate(-50%,-50%) scale(1)}
 }
-@media(max-width:1200px){.hero-logo-mark{display:none}}
+/* Hero logo steps down in size on narrower screens so it never sits over the copy */
+@media(max-width:1600px){.hero-logo-mark{width:clamp(420px,40vw,760px);left:74%}}
+@media(max-width:1380px){.hero-logo-mark{width:clamp(280px,27vw,460px);left:81%}}
+@media(max-width:1080px){.hero-logo-mark{display:none}}
 .hero-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   margin-bottom:2.25rem;

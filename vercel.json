@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/insights", "destination": "/research", "permanent": true },
+    { "source": "/platform", "destination": "/solutions", "permanent": true },
+    { "source": "/ourteam", "destination": "/team", "permanent": true },
+    { "source": "/missionstatement", "destination": "/about", "permanent": true },
+    { "source": "/blog", "destination": "/hot-topics", "permanent": true }
+  ]
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service | KCS Capital</title>
+<meta name="description" content="KCS Capital terms of service.">
+<meta property="og:title" content="Terms of Service | KCS Capital">
+<meta property="og:description" content="KCS Capital terms of service.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.page-hero{position:relative;padding:9rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
+.page-hero-in{max-width:1200px;margin:0 auto;position:relative}
+.page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
+.page-eyebrow-tick{width:36px;height:1px;background:var(--gold)}
+.page-eyebrow-text{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.page-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:980px}
+.page-h1 em{font-style:italic;color:var(--gold)}
+.page-lead{font-family:var(--body);font-size:1.18rem;color:rgba(242,237,232,.7);line-height:1.7;max-width:760px;font-weight:300}
+.page-section{padding:6rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.page-section.dark{background:var(--black)}
+.page-section-in{max-width:1200px;margin:0 auto}
+.page-section-hdr{margin-bottom:3rem;max-width:780px}
+.page-section-eye{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
+.page-section-eye-dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.page-section-eye-txt{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.page-section-h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.15;letter-spacing:-.02em;color:var(--white);margin-bottom:1.25rem}
+.page-section-h2 em{font-style:italic;color:var(--gold)}
+.page-section-body{font-family:var(--body);font-size:1.05rem;color:rgba(242,237,232,.62);line-height:1.8}
+.prose{max-width:760px;color:rgba(242,237,232,.72);font-family:var(--body);font-size:1.05rem;line-height:1.85}
+.prose p{margin-bottom:1.25rem}
+.prose strong{color:var(--white);font-weight:500}
+.prose em{color:var(--gold);font-style:italic}
+.prose h3{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:2.25rem 0 .9rem;line-height:1.3}
+.prose h2{font-family:var(--serif);font-size:1.9rem;font-weight:300;color:var(--white);margin:2.5rem 0 1rem;letter-spacing:-.01em;line-height:1.2}
+.prose ul{list-style:none;margin-bottom:1.5rem}
+.prose ul li{padding-left:1.25rem;position:relative;margin-bottom:.6rem;line-height:1.7}
+.prose ul li::before{content:'';position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--gold)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
+.cs-card{background:var(--surface-2);padding:2rem 1.75rem;display:flex;flex-direction:column;border-bottom:2px solid transparent;transition:border-color .35s,background .3s;cursor:pointer;text-decoration:none}
+.cs-card:hover{border-bottom-color:var(--gold);background:var(--surface-3)}
+.cs-tag{font-family:var(--ui);font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.cs-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:.75rem;letter-spacing:-.01em}
+.cs-summary{font-size:.88rem;color:rgba(242,237,232,.6);line-height:1.65;flex:1;margin-bottom:1.25rem}
+.cs-meta{display:flex;align-items:center;justify-content:space-between;font-family:var(--ui);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase}
+.cs-date{color:rgba(168,164,160,.5)}
+.cs-read{color:var(--gold);font-weight:600}
+.cs-filter{display:flex;gap:1.5px;background:var(--border);margin-bottom:1px;flex-wrap:wrap}
+.cs-filter-btn{background:var(--surface-2);padding:.7rem 1.4rem;font-family:var(--ui);font-size:9.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white-dim);cursor:pointer;border:none;transition:color .2s,background .2s}
+.cs-filter-btn.active,.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .cs-grid{grid-template-columns:1fr}}
+@media(min-width:901px) and (max-width:1200px){.cs-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="/" class="nav-logo">
+    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/solutions">Solutions</a></li>
+    <li><a href="/team">Team</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/briefs">KCS Briefs</a></li>
+    <li><a href="/partners">Partners</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/investors" class="nav-cta">Investor Kit</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero"><div class="page-hero-in"><div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Terms of Service</span></div><h1 class="page-h1 reveal">Terms of Service</h1><p class="page-lead reveal">Last updated: May 2026. Working draft. Final version pending review by legal counsel.</p></div></section>
+<section class="page-section"><div class="page-section-in"><div class="prose reveal" style="max-width:880px">
+<h3>No Investment Advice</h3>
+<p>Nothing on this website constitutes investment, legal, tax, or financial advice. Information provided is for general informational purposes only. KCS Capital is not registered as an investment dealer or adviser. Any offering of securities will be made only to accredited investors via a confidential private placement memorandum or equivalent disclosure document.</p>
+<h3>No Offer or Solicitation</h3>
+<p>This website does not constitute an offer to sell or a solicitation of an offer to buy any securities, services, or products. Forward-looking statements are speculative and involve risks.</p>
+<h3>Independent Operation</h3>
+<p>KCS Capital Inc. and 4ORM Finance are separately governed Canadian entities. References to 4ORM Finance on this site describe a platform operated under independent governance per the CIRO Digital Asset Custody Framework.</p>
+<h3>Intellectual Property</h3>
+<p>All content on this site is the property of KCS Capital Inc. or its licensors and is protected by Canadian and international intellectual property laws.</p>
+<h3>Governing Law</h3>
+<p>These terms are governed by the laws of the Province of Alberta and the federal laws of Canada applicable therein.</p>
+<h3>Contact</h3>
+<p>Questions about these terms can be directed to <a href="mailto:admin@kcs-capital.com" style="color:var(--gold-l)">admin@kcs-capital.com</a>.</p>
+</div></div></section>
+
+<footer>
+  <div class="foot-main">
+    <div>
+      <div class="foot-brand">
+        <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+        KCS Capital
+      </div>
+      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4ORM Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+      <div class="foot-soc">
+        <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
+        <a href="#" class="foot-sb" aria-label="Twitter">X</a>
+      </div>
+    </div>
+    <div>
+      <div class="foot-col-t">KCS Capital</div>
+      <ul class="foot-links">
+        <li><a href="/about">About the Firm</a></li>
+        <li><a href="/team">Team &amp; Advisors</a></li>
+        <li><a href="/research">Research &amp; Case Studies</a></li>
+        <li><a href="/briefs">KCS Briefs</a></li>
+        <li><a href="/careers">Join Our Team</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/investors">Invest With Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-t">4ORM Finance</div>
+      <ul class="foot-links">
+        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+        <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
+        <li><a href="/partners">For Issuers</a></li>
+        <li><a href="/partners">For Custodians</a></li>
+        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
+        <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-t">Offices</div>
+      <ul class="foot-links">
+        <li style="margin-bottom:1rem">
+          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
+          <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
+        </li>
+        <li style="margin-bottom:1rem">
+          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
+          <a href="tel:17786515255">1-778-651-5255</a>
+        </li>
+        <li>
+          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
+          <a href="tel:17802663050">1-780-266-3050</a>
+        </li>
+        <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4ORM Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4ORM Master Pro Forma.</div>
+  </div>
+</footer>
+<script>
+(function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+</script>
+</body>
+</html>

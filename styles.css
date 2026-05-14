@@ -211,9 +211,9 @@ nav.scrolled{
 }
 @keyframes heroLogoIn{
   from{opacity:0;transform:translate(-50%,-50%) scale(.94)}
-  to{opacity:.2;transform:translate(-50%,-50%) scale(1)}
+  to{opacity:.32;transform:translate(-50%,-50%) scale(1)}
 }
-@media(max-width:1280px){.hero-logo-mark{display:none}}
+@media(max-width:1000px){.hero-logo-mark{display:none}}
 .hero-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   margin-bottom:2.25rem;

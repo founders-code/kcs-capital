@@ -213,10 +213,8 @@ nav.scrolled{
   from{opacity:0;transform:translate(-50%,-50%) scale(.94)}
   to{opacity:.9;transform:translate(-50%,-50%) scale(1)}
 }
-/* Hero logo steps down in size on narrower screens so it never sits over the copy */
-@media(max-width:1600px){.hero-logo-mark{width:clamp(480px,44vw,860px);left:74%}}
-@media(max-width:1380px){.hero-logo-mark{width:clamp(360px,32vw,560px);left:80%;top:34%}}
-@media(max-width:1080px){.hero-logo-mark{display:none}}
+/* Hero logo shows on the main wide screen only; hidden entirely below 1380px */
+@media(max-width:1380px){.hero-logo-mark{display:none}}
 .hero-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   margin-bottom:2.25rem;
@@ -237,13 +235,12 @@ nav.scrolled{
   letter-spacing:-.025em;color:var(--white);
   margin-bottom:0;
 }
-.line-block{display:flex;align-items:flex-end;flex-wrap:nowrap;gap:.7em;overflow:hidden;padding-bottom:.06em}
-/* Narrower screens (Sam's range) tighten the headline word gap */
-@media(max-width:1380px){.line-block{gap:.26em}}
+/* Original block layout, every screen: words wrap naturally, never clipped or forced */
+.line-block{display:block;padding-bottom:.06em}
+.word-gap{display:inline-block;width:.3em}
 .word-mask{
   display:inline-block;overflow:hidden;
   line-height:1.05;vertical-align:bottom;
-  flex-shrink:0;
 }
 .word-inner{
   display:block;
@@ -573,7 +570,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   nav,nav.scrolled{padding:1rem 1.5rem}
   .trust-grid{grid-template-columns:1fr}
   #trust{padding:3rem 1.5rem}
-  .nav-links{display:none}
   .hero-content{padding:0 1.5rem}
   section{padding:5rem 1.5rem}
   #stats-bar{padding:2rem 1.5rem;grid-template-columns:1fr 1fr}
@@ -951,3 +947,43 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 .quote-attr::before{content:'';display:block;width:30px;height:1px;background:var(--gold-d)}
 .quote-attr span{color:var(--white-dim);font-weight:600}
 @media(max-width:900px){.quote-band{padding:5rem 1.5rem}}
+
+/* ============================================================
+   MOBILE NAV  (hamburger menu, pure-CSS checkbox toggle)
+   ============================================================ */
+.nav-toggle-cb{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.nav-toggle{display:none}
+@media(max-width:1024px){
+  nav{padding:1rem 1.25rem}
+  nav.scrolled{padding:.85rem 1.25rem}
+  .nav-sub{display:none}
+  .nav-logo-img{height:44px}
+  .nav-toggle{
+    display:flex;flex-direction:column;justify-content:center;gap:5px;
+    width:48px;height:48px;flex-shrink:0;cursor:pointer;z-index:210;
+    border:1px solid var(--gold-d);background:rgba(201,136,42,.1);
+    transition:border-color .25s,background .25s;
+  }
+  .nav-toggle:hover{border-color:var(--gold);background:rgba(201,136,42,.18)}
+  .nav-toggle span{display:block;width:22px;height:2px;background:var(--gold);margin:0 auto;border-radius:1px;transition:transform .3s ease,opacity .2s ease}
+  .nav-links{
+    position:fixed;top:0;right:0;bottom:0;
+    width:min(82vw,340px);
+    flex-direction:column;align-items:stretch;justify-content:flex-start;
+    gap:0;margin:0;padding:6.5rem 2rem 2.5rem;
+    background:rgba(4,5,8,.98);
+    -webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);
+    border-left:1px solid var(--border-b);
+    transform:translateX(100%);transition:transform .38s cubic-bezier(.16,1,.3,1);
+    z-index:200;overflow-y:auto;
+  }
+  .nav-toggle-cb:checked ~ .nav-links{transform:translateX(0)}
+  .nav-links li{width:100%;border-bottom:1px solid var(--border)}
+  .nav-links li:last-child{border-bottom:none}
+  .nav-links a{display:block;width:100%;padding:1.15rem 0;font-size:13px;letter-spacing:.12em}
+  .nav-links a::after{display:none}
+  .nav-cta{display:block !important;margin-top:1.6rem;text-align:center;padding:.95rem 1.5rem !important}
+  .nav-toggle-cb:checked ~ .nav-toggle span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle-cb:checked ~ .nav-toggle span:nth-child(2){opacity:0}
+  .nav-toggle-cb:checked ~ .nav-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+}

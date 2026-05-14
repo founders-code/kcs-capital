@@ -204,7 +204,7 @@ nav.scrolled{
   pointer-events:none;
   opacity:0;
   animation:heroLogoIn 1.8s cubic-bezier(.16,1,.3,1) forwards;
-  animation-delay:2.4s;
+  animation-delay:6.2s;
 }
 .hero-logo-img{
   width:100%;height:auto;display:block;
@@ -245,12 +245,12 @@ nav.scrolled{
 .word-inner{
   display:block;
   transform:translateY(108%);
-  animation:wordUp 1.4s cubic-bezier(.16,1,.3,1) forwards;
+  animation:wordUp 1.5s cubic-bezier(.16,1,.3,1) forwards;
 }
 .w1 .word-inner{animation-delay:.6s}
-.w2 .word-inner{animation-delay:1.25s}
-.w3 .word-inner{animation-delay:1.9s}
-.w4 .word-inner{animation-delay:2.55s}
+.w2 .word-inner{animation-delay:1.3s}
+.w3 .word-inner{animation-delay:2s}
+.w4 .word-inner{animation-delay:2.7s}
 .w-gold .word-inner{color:var(--gold);font-style:italic}
 .w-period{font-family:var(--serif);font-style:italic;color:rgba(201,136,42,.6)}
 @keyframes wordUp{to{transform:translateY(0)}}
@@ -258,7 +258,7 @@ nav.scrolled{
   width:0;height:2px;
   background:linear-gradient(90deg,var(--gold),transparent);
   margin:1.6rem 0;
-  animation:drawLine .9s ease forwards;animation-delay:3.2s;
+  animation:drawLine .9s ease forwards;animation-delay:3.5s;
 }
 @keyframes drawLine{to{width:90px}}
 .hero-sub{
@@ -266,12 +266,12 @@ nav.scrolled{
   color:rgba(242,237,232,.78);line-height:1.7;
   max-width:600px;margin-bottom:2.25rem;
   opacity:0;transform:translateY(12px);
-  animation:fadeUp .9s ease forwards;animation-delay:3.7s;
+  animation:fadeUp .9s ease forwards;animation-delay:4.1s;
 }
 .hero-ctas{
   display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
   opacity:0;
-  animation:fadeUp .8s ease forwards;animation-delay:4.2s;
+  animation:fadeUp .8s ease forwards;animation-delay:4.7s;
 }
 .btn-p{
   font-family:var(--ui);font-size:14px;font-weight:700;

@@ -14,8 +14,11 @@
 <link rel="stylesheet" href="/styles.css">
 <style>
 .page-hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
-.page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
-.page-hero-in{max-width:1200px;margin:0 auto;position:relative;width:100%}
+.page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none;z-index:3}
+.hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-bg-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(100deg,rgba(8,8,9,.95) 0%,rgba(8,8,9,.82) 38%,rgba(8,8,9,.55) 68%,rgba(8,8,9,.42) 100%)}
+.hero-bg-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,9,.55) 0%,transparent 22%,transparent 70%,rgba(8,8,9,.85) 100%)}
+.page-hero-in{max-width:1200px;margin:0 auto;position:relative;width:100%;z-index:4}
 .page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
 .page-eyebrow-tick{width:36px;height:1px;background:var(--gold)}
 .page-eyebrow-text{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
@@ -81,6 +84,10 @@
 </nav>
 
 <section class="page-hero">
+  <video id="partners-hero-video" class="hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="/partners-city-bridge-poster.jpg">
+    <source src="/partners-city-bridge.mp4" type="video/mp4">
+  </video>
+  <div class="hero-bg-overlay" aria-hidden="true"></div>
   <div class="page-hero-in">
     <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Partner With Us</span></div>
     <h1 class="page-h1 reveal">Three partnership tracks.<br><em>All institutional.</em></h1>
@@ -250,6 +257,7 @@
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+(function(){var v=document.getElementById('partners-hero-video');if(!v)return;var slow=function(){v.playbackRate=0.8;};slow();v.addEventListener('loadedmetadata',slow);v.addEventListener('play',slow);})();
 </script>
 </body>
 </html>

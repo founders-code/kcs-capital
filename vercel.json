@@ -6,6 +6,7 @@
     { "source": "/platform", "destination": "/solutions", "permanent": true },
     { "source": "/ourteam", "destination": "/team", "permanent": true },
     { "source": "/missionstatement", "destination": "/about", "permanent": true },
-    { "source": "/blog", "destination": "/hot-topics", "permanent": true }
+    { "source": "/blog", "destination": "/hot-topics", "permanent": true },
+    { "source": "/investors", "destination": "/data-room", "permanent": true }
   ]
 }

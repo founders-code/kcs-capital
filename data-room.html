@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Room | KCS Capital</title>
+<meta name="description" content="The KCS Capital and 4orm Finance data room. Access-controlled materials for qualified institutional and accredited parties.">
+<meta property="og:title" content="Data Room | KCS Capital">
+<meta property="og:description" content="The KCS Capital and 4orm Finance data room. Access-controlled materials for qualified institutional and accredited parties.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.page-hero{position:relative;padding:9rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
+.page-hero-in{max-width:1200px;margin:0 auto;position:relative}
+.page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
+.page-eyebrow-tick{width:36px;height:1px;background:var(--gold)}
+.page-eyebrow-text{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.page-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:980px}
+.page-h1 em{font-style:italic;color:var(--gold)}
+.page-lead{font-family:var(--body);font-size:1.18rem;color:rgba(242,237,232,.7);line-height:1.7;max-width:780px;font-weight:300}
+.page-section{padding:6rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.page-section.dark{background:var(--black)}
+.page-section-in{max-width:1200px;margin:0 auto}
+.page-section-hdr{margin-bottom:3rem;max-width:820px}
+.page-section-eye{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
+.page-section-eye-dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.page-section-eye-txt{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.page-section-h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.15;letter-spacing:-.02em;color:var(--white);margin-bottom:1.25rem}
+.page-section-h2 em{font-style:italic;color:var(--gold)}
+.page-section-body{font-family:var(--body);font-size:1.05rem;color:rgba(242,237,232,.62);line-height:1.8}
+.prose{max-width:760px;color:rgba(242,237,232,.72);font-family:var(--body);font-size:1.05rem;line-height:1.85}
+.prose p{margin-bottom:1.25rem}
+.prose strong{color:var(--white);font-weight:500}
+.prose em{color:var(--gold);font-style:italic}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+/* Data room embed + access */
+.dr-embed-wrap{margin-top:2.5rem;border:1px solid var(--border-b);background:var(--surface-2);padding:1.25rem}
+.dr-embed-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.dr-embed-label{font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.55rem}
+.dr-embed-label::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,136,42,.18)}
+.dr-embed-open{font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.1rem;text-decoration:none;transition:background .25s}
+.dr-embed-open:hover{background:var(--gold-l)}
+.dr-embed-frame{width:100%;height:540px;border:1px solid var(--border);background:var(--black);display:block}
+.dr-locked{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:540px;border:1px dashed var(--border-b);background:var(--black);padding:3rem 2rem}
+.dr-locked-icon{width:46px;height:46px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--gold);font-family:var(--serif);font-size:1.5rem}
+.dr-locked-title{font-family:var(--serif);font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:.75rem;letter-spacing:-.01em}
+.dr-locked-body{font-family:var(--body);font-size:1rem;color:rgba(242,237,232,.66);line-height:1.75;max-width:480px;margin-bottom:1.75rem}
+.dr-note{font-family:var(--body);font-size:12.5px;color:rgba(154,149,144,.7);line-height:1.65;margin-top:1.25rem}
+.dr-index{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--border);margin-top:2.5rem}
+.dr-doc{background:var(--surface-2);padding:1.6rem 1.75rem;display:flex;flex-direction:column;gap:.4rem}
+.dr-doc-tag{font-family:var(--ui);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.dr-doc-name{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);line-height:1.3;letter-spacing:-.01em}
+.dr-doc-desc{font-family:var(--body);font-size:.92rem;color:rgba(242,237,232,.6);line-height:1.6}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .dr-index{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="/" class="nav-logo">
+    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/solutions">Solutions</a></li>
+    <li><a href="/team">Team</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/briefs">KCS Briefs</a></li>
+    <li><a href="/partners">Partners</a></li>
+    <li><a href="/regulator">Regulator</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-in">
+    <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Data Room &middot; By Request</span></div>
+    <h1 class="page-h1 reveal">The data room.<br><em>Everything, in one place.</em></h1>
+    <p class="page-lead reveal">A single, access-controlled home for the KCS Capital and 4orm Finance materials: pitch deck, executive summary, the five-year financial model, corporate structure, and regulatory positioning. Access is granted to qualified institutional and accredited parties.</p>
+  </div>
+</section>
+
+<!-- ============ THE DATA ROOM ============ -->
+<section class="page-section">
+  <div class="page-section-in">
+    <div class="page-section-hdr">
+      <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Open The Data Room</span></div>
+      <h2 class="page-section-h2 reveal">Browse the full file tree.<br><em>Securely, through Google Drive.</em></h2>
+      <p class="page-section-body reveal">The data room is hosted on Google Drive. If your email has been granted access, the live folder appears below and you can open any document. If not, request access and we will add you, usually within one business day.</p>
+    </div>
+
+    <div class="dr-embed-wrap reveal">
+      <div class="dr-embed-bar">
+        <span class="dr-embed-label">KCS Capital &amp; 4orm Finance &middot; Data Room</span>
+        <a class="dr-embed-open" href="https://drive.google.com/drive/folders/1RDAZukF_6Qz91PQ95qNAU1DS-OdHOBQg?usp=sharing" target="_blank" rel="noopener">Open in Google Drive &rarr;</a>
+      </div>
+      <!-- Google Drive file-tree embed. Shows the live folder to anyone whose
+           Google account has been granted access; others see Google's access screen. -->
+      <iframe class="dr-embed-frame"
+              src="https://drive.google.com/embeddedfolderview?id=1RDAZukF_6Qz91PQ95qNAU1DS-OdHOBQg#list"
+              title="KCS Capital Data Room"></iframe>
+    </div>
+    <p class="dr-note reveal">Access is controlled entirely by Google Drive. Only Google accounts that have been explicitly granted access can open the files. KCS Capital does not store a separate password; if you are not on the access list, the folder will not open for you.</p>
+
+    <div class="dr-embed-wrap reveal" style="margin-top:1.5rem">
+      <div class="dr-locked">
+        <div class="dr-locked-icon">&#9679;</div>
+        <div class="dr-locked-title">Not on the access list yet?</div>
+        <p class="dr-locked-body">The data room is reserved for qualified institutional and accredited parties. Request access below and a member of the team will review and grant it.</p>
+        <a href="mailto:founders@kcs-capital.com?subject=Data Room Access Request" class="dr-embed-open">Request Access &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INSIDE ============ -->
+<section class="page-section dark">
+  <div class="page-section-in">
+    <div class="page-section-hdr">
+      <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">What's Inside</span></div>
+      <h2 class="page-section-h2 reveal">The full picture,<br><em>organized for diligence.</em></h2>
+      <p class="page-section-body reveal">The data room is structured so an institutional or accredited reviewer can move from thesis to numbers to structure without chasing documents.</p>
+    </div>
+    <div class="dr-index reveal">
+      <div class="dr-doc">
+        <span class="dr-doc-tag">01 &middot; Overview</span>
+        <span class="dr-doc-name">Pitch Deck</span>
+        <span class="dr-doc-desc">The 4orm Finance thesis, market, product, and roadmap in presentation form.</span>
+      </div>
+      <div class="dr-doc">
+        <span class="dr-doc-tag">02 &middot; Overview</span>
+        <span class="dr-doc-name">Executive Summary</span>
+        <span class="dr-doc-desc">A concise written summary of the opportunity, the build plan, and the team.</span>
+      </div>
+      <div class="dr-doc">
+        <span class="dr-doc-tag">03 &middot; Financials</span>
+        <span class="dr-doc-name">Five-Year Financial Model</span>
+        <span class="dr-doc-desc">The full pro forma: revenue drivers, cost structure, scenarios, and sensitivities.</span>
+      </div>
+      <div class="dr-doc">
+        <span class="dr-doc-tag">04 &middot; Structure</span>
+        <span class="dr-doc-name">Corporate Structure</span>
+        <span class="dr-doc-desc">The KCS Capital and 4orm Finance entities, and the HoldCo / OpCo / CustodyCo design.</span>
+      </div>
+      <div class="dr-doc">
+        <span class="dr-doc-tag">05 &middot; Regulatory</span>
+        <span class="dr-doc-name">Regulatory Positioning</span>
+        <span class="dr-doc-desc">How the architecture maps to the CIRO custody framework and Canadian securities law.</span>
+      </div>
+      <div class="dr-doc">
+        <span class="dr-doc-tag">06 &middot; Research</span>
+        <span class="dr-doc-name">Research &amp; Case Studies</span>
+        <span class="dr-doc-desc">The reference analyses behind the market sizing and the institutional thesis.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARKET CONTEXT ============ -->
+<section class="page-section">
+  <div class="page-section-in">
+    <div class="page-section-hdr">
+      <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Market Context</span></div>
+      <h2 class="page-section-h2 reveal">Why this, why now.</h2>
+    </div>
+    <div id="stats-bar" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:transparent;margin-top:2rem">
+      <div class="stat-item reveal"><span class="stat-num">$<span class="counter" data-t="2">2</span><span class="stat-suf">T</span></span><span class="stat-lbl">Global Tokenized RWA Market by 2030</span><span class="stat-src">McKinsey base case &middot; 75% CAGR</span></div>
+      <div class="stat-item reveal d1"><span class="stat-num">$<span class="counter" data-t="1">1</span><span class="stat-suf">.9B/yr</span></span><span class="stat-lbl">Canadian RWA Infrastructure TAM</span><span class="stat-src">4orm Master Pro Forma &middot; Annual fee pools</span></div>
+      <div class="stat-item reveal d2"><span class="stat-num">$<span class="counter" data-t="100">100</span><span class="stat-suf">M</span></span><span class="stat-lbl">Bank of Canada Project Samara</span><span class="stat-src">Reference architecture validated March 2026</span></div>
+      <div class="stat-item reveal d3"><span class="stat-num"><span class="counter" data-t="3">3</span></span><span class="stat-lbl">Regulated Entities</span><span class="stat-src">HoldCo / OpCo / CustodyCo per CIRO framework</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta-eye reveal">Request Access</div>
+  <h2 class="cta-title reveal d1">Ready to review<br><em>the full data room?</em></h2>
+  <p class="cta-body reveal d2">Send a note from a verified institutional or accredited email. We will review the request, grant Google Drive access, and offer a 30-minute deep-dive call with the founders.</p>
+  <div class="cta-acts reveal d3">
+    <a href="mailto:founders@kcs-capital.com?subject=Data Room Access Request" class="btn-p">Request Access &rarr;</a>
+    <a href="/contact" class="btn-s">Schedule A Deep-Dive &rarr;</a>
+  </div>
+  <p style="max-width:680px;margin:2.5rem auto 0;font-size:11px;color:rgba(168,164,160,.5);line-height:1.7">This page is for informational purposes only and does not constitute an offer to sell, or the solicitation of an offer to buy, any securities. Any securities offering by KCS Capital Inc. would be made solely to qualified investors pursuant to available prospectus exemptions under applicable Canadian securities laws, and only by means of definitive offering documentation.</p>
+</section>
+
+<footer>
+  <div class="foot-main">
+    <div>
+      <div class="foot-brand">
+        <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+        KCS Capital
+      </div>
+      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+      <div class="foot-soc">
+        <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
+        <a href="#" class="foot-sb" aria-label="Twitter">X</a>
+      </div>
+    </div>
+    <div>
+      <div class="foot-col-t">KCS Capital</div>
+      <ul class="foot-links">
+        <li><a href="/about">About the Firm</a></li>
+        <li><a href="/team">Team &amp; Advisors</a></li>
+        <li><a href="/research">Research &amp; Case Studies</a></li>
+        <li><a href="/briefs">KCS Briefs</a></li>
+        <li><a href="/regulator">Regulator</a></li>
+        <li><a href="/careers">Join Our Team</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/data-room">Data Room</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-t">4orm Finance</div>
+      <ul class="foot-links">
+        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+        <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
+        <li><a href="/partners">For Issuers</a></li>
+        <li><a href="/partners">For Custodians</a></li>
+        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
+        <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-t">Offices</div>
+      <ul class="foot-links">
+        <li style="margin-bottom:1rem">
+          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
+          <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
+        </li>
+        <li style="margin-bottom:1rem">
+          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
+          <a href="tel:17786515255">1-778-651-5255</a>
+        </li>
+        <li>
+          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
+          <a href="tel:17802663050">1-780-266-3050</a>
+        </li>
+        <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
+  </div>
+</footer>
+<script>
+(function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+(function(){document.querySelectorAll('.counter').forEach(function(c){var t=+c.getAttribute('data-t'),s=0,d=1400,st=null;function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/d,1);c.textContent=Math.floor(p*t);if(p<1)requestAnimationFrame(step);else c.textContent=t;}var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){requestAnimationFrame(step);io.disconnect();}});});io.observe(c);});})();
+</script>
+</body>
+</html>

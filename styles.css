@@ -199,8 +199,8 @@ nav.scrolled{
 /* Big logo, fades into the open space on the right of the hero after 3s */
 .hero-logo-mark{
   position:absolute;z-index:15;
-  right:4%;top:50%;
-  width:clamp(260px,24vw,460px);
+  left:68%;top:50%;
+  width:clamp(620px,56vw,1200px);
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
   opacity:0;
@@ -212,8 +212,8 @@ nav.scrolled{
   mix-blend-mode:screen;
 }
 @keyframes heroLogoIn{
-  from{opacity:0;transform:translateY(-50%) scale(.94)}
-  to{opacity:.9;transform:translateY(-50%) scale(1)}
+  from{opacity:0;transform:translate(-50%,-50%) scale(.94)}
+  to{opacity:.9;transform:translate(-50%,-50%) scale(1)}
 }
 @media(max-width:1200px){.hero-logo-mark{display:none}}
 .hero-eyebrow{

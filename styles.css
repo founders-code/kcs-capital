@@ -391,9 +391,11 @@ nav.scrolled{
 .team-photo{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block;transform:scale(1.1);transform-origin:center center;filter:grayscale(.2) contrast(1.03) brightness(.97);transition:filter .45s ease,transform .45s ease}
 .team-card:hover .team-photo{filter:grayscale(0) contrast(1) brightness(1);transform:scale(1.15)}
 /* Per-photo framing tweak: lift Sam's head to match the row */
-/* All team headshots now share one uniform treatment (scale 1.1, centered) so heads
-   read at a consistent size. Per-image nudges can be added back here if a specific
-   source photo is cropped unusually. */
+/* All team headshots share one uniform treatment (scale 1.1, centered) so heads
+   read at a consistent size. Per-image nudges below for photos cropped unusually. */
+/* Chad — slightly larger head, image dropped down a touch in the circle */
+.team-photo[src="/team-chad.png"]{transform:scale(1.18);object-position:center 20%}
+.team-card:hover .team-photo[src="/team-chad.png"]{transform:scale(1.24)}
 .team-card{background:var(--surface-2);padding:2rem 1.75rem;border:1px solid var(--border);transition:border-color .35s,background .3s}
 .team-card:hover{border-color:var(--border-b);background:var(--surface-3)}
 .team-role{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:block}

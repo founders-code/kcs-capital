@@ -67,6 +67,49 @@
 .dr-doc-name{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);line-height:1.3;letter-spacing:-.01em}
 .dr-doc-desc{font-family:var(--body);font-size:.92rem;color:rgba(242,237,232,.6);line-height:1.6}
 @media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:8rem 1.5rem 5rem} .page-section{padding:5.5rem 1.5rem} .dr-index{grid-template-columns:1fr} .dr-panel{padding:3rem 1.5rem}}
+/* ===== Data Room access modal ===== */
+.dr-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:flex-start;justify-content:center;background:rgba(4,5,8,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:5vh 1.5rem;overflow-y:auto}
+.dr-modal.open{display:flex;animation:drFade .3s ease}
+@keyframes drFade{from{opacity:0}to{opacity:1}}
+.dr-modal-card{position:relative;background:var(--surface-2);border:1px solid var(--border-b);border-top:3px solid var(--gold);max-width:640px;width:100%;margin:auto;padding:3rem 3rem 2.75rem;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.dr-modal-close{position:absolute;top:1rem;right:1rem;width:42px;height:42px;border:1px solid var(--border-b);background:transparent;color:var(--gold);font-family:var(--serif);font-size:1.6rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s}
+.dr-modal-close:hover{background:rgba(201,136,42,.12);border-color:var(--gold)}
+.dr-modal-eyebrow{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.dr-modal-h{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);line-height:1.2;margin-bottom:.7rem;letter-spacing:-.01em}
+.dr-modal-sub{font-family:var(--body);font-size:.98rem;color:rgba(242,237,232,.7);line-height:1.65;margin-bottom:1.9rem}
+.dr-form{display:flex;flex-direction:column;gap:1.6rem}
+.dr-fields{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.dr-field{display:flex;flex-direction:column;gap:.4rem}
+.dr-field label{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(242,237,232,.6)}
+.dr-field label .req{color:var(--gold);margin-left:.2rem}
+.dr-field input{background:var(--black);border:1px solid var(--border-b);color:var(--white);font-family:var(--body);font-size:.95rem;padding:.7rem .85rem;outline:none;transition:border-color .25s}
+.dr-field input:focus{border-color:var(--gold)}
+.dr-field input::placeholder{color:rgba(154,149,144,.5)}
+.dr-q{border-top:1px solid var(--border);padding-top:1.4rem}
+.dr-q-num{font-family:var(--ui);font-size:9px;font-weight:700;letter-spacing:.16em;color:var(--gold-d);margin-bottom:.4rem}
+.dr-q-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);line-height:1.3;margin-bottom:.85rem}
+.dr-opts{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.dr-opt{position:relative;display:flex;align-items:flex-start;gap:.55rem;background:var(--black);border:1px solid var(--border-b);padding:.7rem .8rem;cursor:pointer;transition:border-color .2s,background .2s}
+.dr-opt:hover{border-color:rgba(201,136,42,.5)}
+.dr-opt input{position:absolute;opacity:0;width:0;height:0}
+.dr-opt .dot{flex-shrink:0;width:13px;height:13px;border-radius:50%;border:1.5px solid rgba(201,136,42,.5);margin-top:1px;position:relative;transition:border-color .2s}
+.dr-opt .dot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--gold);transform:scale(0);transition:transform .2s}
+.dr-opt input:checked ~ .dot{border-color:var(--gold)}
+.dr-opt input:checked ~ .dot::after{transform:scale(1)}
+.dr-opt:has(input:checked){border-color:var(--gold);background:var(--surface-3)}
+.dr-opt span:last-child{font-family:var(--body);font-size:.86rem;color:rgba(242,237,232,.72);line-height:1.4}
+.dr-form-btn{font-family:var(--ui);font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--black);background:var(--gold);border:none;padding:.95rem 1.8rem;cursor:pointer;transition:background .25s;align-self:flex-start}
+.dr-form-btn:hover{background:var(--gold-l)}
+.dr-modal-note{font-family:var(--body);font-size:11px;color:rgba(154,149,144,.65);line-height:1.6;margin-top:-.4rem}
+.dr-modal-receipt{display:none;text-align:center;padding:1rem 0}
+.dr-modal-receipt .dr-modal-check{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 1.5rem}
+.dr-modal-receipt h2{font-family:var(--serif);font-size:1.9rem;font-weight:400;color:var(--white);margin-bottom:.9rem}
+.dr-modal-receipt p{font-family:var(--body);font-size:1rem;color:rgba(242,237,232,.72);line-height:1.7;max-width:450px;margin:0 auto 1.6rem}
+@media(max-width:680px){
+  .dr-modal-card{padding:2.5rem 1.5rem 2rem}
+  .dr-fields,.dr-opts{grid-template-columns:1fr}
+  .dr-modal-close{top:.6rem;right:.6rem;width:36px;height:36px}
+}
 </style>
 </head>
 <body>
@@ -87,7 +130,7 @@
     <li><a href="/partners">Partners</a></li>
     <li><a href="/regulator">Regulator</a></li>
     <li><a href="/contact">Contact</a></li>
-    <li><a href="/request-access" class="nav-cta">Access Data Room</a></li>
+    <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
   </ul>
 </nav>
 
@@ -128,7 +171,7 @@
         <p class="dr-panel-body">The complete document folder, pitch deck, executive summary, five-year model, corporate structure, and regulatory positioning, opens in Google Drive. Access is controlled entirely by Google: only accounts that have been explicitly granted access can see the files.</p>
         <div class="dr-panel-acts">
           <a class="dr-embed-open lg" href="https://drive.google.com/drive/folders/1RDAZukF_6Qz91PQ95qNAU1DS-OdHOBQg?usp=sharing" target="_blank" rel="noopener">Open the Data Room &rarr;</a>
-          <a class="dr-panel-secondary" href="mailto:founders@kcs-capital.com?subject=Data Room Access Request">Request Access</a>
+          <a class="dr-panel-secondary js-dr-open" href="#">Request Access</a>
         </div>
       </div>
     </div>
@@ -200,7 +243,7 @@
   <h2 class="cta-title reveal d1">Ready to review<br><em>the full data room?</em></h2>
   <p class="cta-body reveal d2">Send a note from a verified institutional or accredited email. We will review the request, grant Google Drive access, and offer a 30-minute deep-dive call with the founders.</p>
   <div class="cta-acts reveal d3">
-    <a href="mailto:founders@kcs-capital.com?subject=Data Room Access Request" class="btn-p">Request Access &rarr;</a>
+    <a href="#" class="btn-p js-dr-open">Request Access &rarr;</a>
     <a href="/contact" class="btn-s">Schedule A Deep-Dive &rarr;</a>
   </div>
   <p style="max-width:680px;margin:2.5rem auto 0;font-size:11px;color:rgba(168,164,160,.5);line-height:1.7">This page is for informational purposes only and does not constitute an offer to sell, or the solicitation of an offer to buy, any securities. Any securities offering by KCS Capital Inc. would be made solely to qualified investors pursuant to available prospectus exemptions under applicable Canadian securities laws, and only by means of definitive offering documentation.</p>
@@ -267,8 +310,101 @@
     <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
   </div>
 </footer>
+
+<!-- ===== DATA ROOM ACCESS MODAL ===== -->
+<div class="dr-modal" id="dr-modal" role="dialog" aria-modal="true" aria-label="Request data room access">
+  <div class="dr-modal-card">
+    <button class="dr-modal-close" id="dr-modal-close" type="button" aria-label="Close">&times;</button>
+    <div id="dr-modal-form-wrap">
+      <div class="dr-modal-eyebrow">Data Room Access</div>
+      <h2 class="dr-modal-h">A few questions, then you're in.</h2>
+      <p class="dr-modal-sub">Fill this out to get access to the Google Drive data room &mdash; or close this window if you already have access and just need to sign in.</p>
+      <form id="dr-access-form" class="dr-form" novalidate>
+        <div class="dr-fields">
+          <div class="dr-field"><label for="dr-name">Full name <span class="req">*</span></label><input type="text" id="dr-name" name="Name" placeholder="Jane Doe" required></div>
+          <div class="dr-field"><label for="dr-email">Email <span class="req">*</span></label><input type="email" id="dr-email" name="Email" placeholder="jane@firm.com" required></div>
+          <div class="dr-field"><label for="dr-firm">Firm / organization</label><input type="text" id="dr-firm" name="Firm" placeholder="Optional"></div>
+          <div class="dr-field"><label for="dr-phone">Phone</label><input type="tel" id="dr-phone" name="Phone" placeholder="Optional"></div>
+        </div>
+        <div class="dr-q">
+          <div class="dr-q-num">Question 1 of 4</div>
+          <div class="dr-q-title">Which best describes you?</div>
+          <div class="dr-opts">
+            <label class="dr-opt"><input type="radio" name="Investor type" value="Accredited individual investor" required><span class="dot"></span><span>Accredited individual investor</span></label>
+            <label class="dr-opt"><input type="radio" name="Investor type" value="Family office"><span class="dot"></span><span>Family office</span></label>
+            <label class="dr-opt"><input type="radio" name="Investor type" value="Institutional investor"><span class="dot"></span><span>Institutional investor (fund, bank, asset manager)</span></label>
+            <label class="dr-opt"><input type="radio" name="Investor type" value="Strategic / corporate investor"><span class="dot"></span><span>Strategic / corporate investor</span></label>
+          </div>
+        </div>
+        <div class="dr-q">
+          <div class="dr-q-num">Question 2 of 4</div>
+          <div class="dr-q-title">What allocation range are you exploring?</div>
+          <div class="dr-opts">
+            <label class="dr-opt"><input type="radio" name="Allocation range" value="Under $100K" required><span class="dot"></span><span>Under $100K</span></label>
+            <label class="dr-opt"><input type="radio" name="Allocation range" value="$100K - $500K"><span class="dot"></span><span>$100K &ndash; $500K</span></label>
+            <label class="dr-opt"><input type="radio" name="Allocation range" value="$500K - $2M"><span class="dot"></span><span>$500K &ndash; $2M</span></label>
+            <label class="dr-opt"><input type="radio" name="Allocation range" value="$2M+"><span class="dot"></span><span>$2M+</span></label>
+          </div>
+        </div>
+        <div class="dr-q">
+          <div class="dr-q-num">Question 3 of 4</div>
+          <div class="dr-q-title">What is your timeline for a decision?</div>
+          <div class="dr-opts">
+            <label class="dr-opt"><input type="radio" name="Timeline" value="Actively allocating now" required><span class="dot"></span><span>Actively allocating now</span></label>
+            <label class="dr-opt"><input type="radio" name="Timeline" value="Within 1-3 months"><span class="dot"></span><span>Within 1&ndash;3 months</span></label>
+            <label class="dr-opt"><input type="radio" name="Timeline" value="Within 3-6 months"><span class="dot"></span><span>Within 3&ndash;6 months</span></label>
+            <label class="dr-opt"><input type="radio" name="Timeline" value="Exploratory / longer horizon"><span class="dot"></span><span>Exploratory / longer horizon</span></label>
+          </div>
+        </div>
+        <div class="dr-q">
+          <div class="dr-q-num">Question 4 of 4</div>
+          <div class="dr-q-title">What is drawing you to KCS Capital?</div>
+          <div class="dr-opts">
+            <label class="dr-opt"><input type="radio" name="Area of interest" value="The 4orm Finance RWA exchange opportunity" required><span class="dot"></span><span>The 4orm Finance RWA exchange opportunity</span></label>
+            <label class="dr-opt"><input type="radio" name="Area of interest" value="Canadian digital-finance infrastructure thesis"><span class="dot"></span><span>The Canadian digital-finance infrastructure thesis</span></label>
+            <label class="dr-opt"><input type="radio" name="Area of interest" value="Strategic partnership potential"><span class="dot"></span><span>Strategic partnership potential</span></label>
+            <label class="dr-opt"><input type="radio" name="Area of interest" value="General interest in the space"><span class="dot"></span><span>General interest in the space</span></label>
+          </div>
+        </div>
+        <button type="submit" class="dr-form-btn">Submit &amp; Request Access &rarr;</button>
+        <p class="dr-modal-note">Your information is used only to review this request. KCS Capital Inc. is an independent technology and research firm; this form is not an offer or solicitation of securities.</p>
+      </form>
+    </div>
+    <div class="dr-modal-receipt" id="dr-modal-receipt">
+      <div class="dr-modal-check">&#10003;</div>
+      <h2>Request received.</h2>
+      <p>Thank you. A member of the KCS Capital team will review your submission and grant your Google account access to the data room &mdash; typically within one business day, and within 48 hours at the latest.</p>
+      <button type="button" class="dr-form-btn" id="dr-modal-done" style="align-self:center">Continue to the Data Room</button>
+    </div>
+  </div>
+</div>
+
 <script>
-(function(){if(/[?&]requested=1/.test(location.search)){var b=document.getElementById('dr-confirm');if(b){b.style.display='block';window.scrollTo(0,0);}}})();
+(function(){
+  var modal=document.getElementById('dr-modal');if(!modal)return;
+  var closeBtn=document.getElementById('dr-modal-close');
+  var form=document.getElementById('dr-access-form');
+  var formWrap=document.getElementById('dr-modal-form-wrap');
+  var receipt=document.getElementById('dr-modal-receipt');
+  var doneBtn=document.getElementById('dr-modal-done');
+  function openM(){modal.classList.add('open');document.body.style.overflow='hidden';}
+  function closeM(){modal.classList.remove('open');document.body.style.overflow='';try{sessionStorage.setItem('drModalSeen','1');}catch(e){}}
+  /* Auto-open on first arrival this session; manual triggers still work after */
+  try{if(!sessionStorage.getItem('drModalSeen'))openM();}catch(e){openM();}
+  closeBtn.addEventListener('click',closeM);
+  doneBtn.addEventListener('click',closeM);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeM();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM();});
+  document.querySelectorAll('.js-dr-open').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openM();});});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    /* To capture submissions automatically, POST this FormData to a backend (e.g. Formspree) here. */
+    formWrap.style.display='none';
+    receipt.style.display='block';
+    try{sessionStorage.setItem('drModalSeen','1');}catch(e){}
+  });
+})();
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();

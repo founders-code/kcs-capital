@@ -600,8 +600,14 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   .hero-divider{animation-delay:.9s}
   .hero-sub{animation-delay:1.4s}
   .hero-ctas{animation-delay:2s}
-  section{padding:5rem 1.5rem}
-  #cta{padding:5.5rem 1.5rem}
+  section{padding:3.75rem 1.5rem}
+  #cta{padding:5rem 1.5rem}
+  /* Mobile: trim the long homepage — hide Research, Briefs, and the Status Board sections */
+  #insights,#briefs-home,#trust{display:none}
+  /* Homepage team cards on mobile: keep it to name, title, and a one-sentence bio */
+  .team-card:has(.team-more) .team-bio{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  /* Pull "Canada's Validation Moment" up into the space below the quote band */
+  #alberta{padding-top:2rem}
   /* Mobile stats: even 2x2 grid on a black field, symmetric padding, content centered */
   #stats-bar{padding:2.25rem 1.25rem;grid-template-columns:1fr 1fr;gap:1px;background:var(--black)}
   .stat-item{padding:1.7rem .85rem;border-right:none;background:var(--surface);display:flex;flex-direction:column;justify-content:center;text-align:center}

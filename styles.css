@@ -377,18 +377,23 @@ nav.scrolled{
 /* Chad — slightly larger head, image dropped down a touch in the circle */
 .team-photo[src="/team-chad.png"]{transform:scale(1.18);object-position:center 20%}
 .team-card:hover .team-photo[src="/team-chad.png"]{transform:scale(1.24)}
-.team-card{background:var(--surface-2);padding:2rem 1.75rem;border:1px solid var(--border);transition:border-color .35s,background .3s}
+/* Sam — head 10% larger; Kevin — head 5% larger */
+.team-photo[src="/team-sam.png"]{transform:scale(1.21)}
+.team-card:hover .team-photo[src="/team-sam.png"]{transform:scale(1.27)}
+.team-photo[src="/team-kevin.png"]{transform:scale(1.155)}
+.team-card:hover .team-photo[src="/team-kevin.png"]{transform:scale(1.21)}
+.team-card{background:var(--surface-2);padding:2rem 1.75rem;border:1px solid var(--border);transition:border-color .35s,background .3s;display:flex;flex-direction:column}
 .team-card:hover{border-color:var(--border-b);background:var(--surface-3)}
 .team-role{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:block}
 .team-name{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);line-height:1.15;margin-bottom:.6rem;letter-spacing:-.01em}
 .team-title{font-family:var(--ui);font-size:13.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:1.25rem;display:block}
 .team-bio{font-size:15px;color:rgba(242,237,232,.8);line-height:1.75}
 .team-card{scroll-margin-top:110px}
-/* Homepage "Read more" link on each team card */
-.team-more{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;font-family:var(--ui);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s}
+/* Homepage "Read more" link on each team card — pinned to the bottom of the card */
+.team-more{display:inline-flex;align-self:flex-start;align-items:center;gap:.4rem;margin-top:auto;padding-top:1.25rem;font-family:var(--ui);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
 .team-more:hover{color:var(--gold-l);border-color:var(--gold-d)}
-/* Team page card action row: Read Full Bio + LinkedIn */
-.team-card-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:1.1rem}
+/* Team page card action row: Read Full Bio + LinkedIn — pinned to the bottom of the card */
+.team-card-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:auto;padding-top:1.4rem}
 .team-li{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white-dim);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s}
 .team-li:hover{color:var(--gold);border-color:var(--gold-d)}
 .team-open{background:var(--surface-2);padding:2.25rem 2rem;border:1px dashed var(--border-b);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:1 / -1}

@@ -259,24 +259,18 @@
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
 (function(){
   var form=document.getElementById('access-form');
-  var panel=document.getElementById('form-panel');
-  var receipt=document.getElementById('receipt');
   if(!form)return;
   form.addEventListener('submit',function(e){
     e.preventDefault(); /* remove this line if you wire a real form backend via the form's action attribute */
     /* HTML5 validation: ensure required fields + one radio per question */
     if(!form.checkValidity()){form.reportValidity();return;}
-    var fd=new FormData(form);
-    var lines=[];
-    fd.forEach(function(v,k){ if(String(v).trim()!=='') lines.push(k+': '+v); });
-    var subject='Data Room Access Request — '+(fd.get('Name')||'');
-    var body='New data room access request from the KCS Capital website:\n\n'+lines.join('\n')+'\n\n— Submitted via /request-access';
-    /* Static-site send path: open the visitor's email client pre-addressed to us */
-    try{ window.location.href='mailto:founders@kcs-capital.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body); }catch(err){}
-    /* Show the confirmation receipt */
-    panel.style.display='none';
-    receipt.style.display='block';
-    window.scrollTo({top:0,behavior:'smooth'});
+    /*
+      To capture submissions automatically, POST the FormData to a backend
+      (e.g. Formspree) here before redirecting. Without a backend the answers
+      are not stored — the visitor is simply taken to the data room.
+    */
+    /* Take the visitor to the data room with a confirmation flag */
+    window.location.href='/data-room?requested=1';
   });
 })();
 </script>

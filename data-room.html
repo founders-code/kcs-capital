@@ -16,6 +16,11 @@
 .page-hero{position:relative;padding:10rem 3rem 7.5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
 .page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
 .page-hero-in{max-width:1200px;margin:0 auto;position:relative}
+.dr-confirm{display:none;background:linear-gradient(90deg,rgba(201,136,42,.18),rgba(201,136,42,.05));border:1px solid var(--gold-d);border-left:2px solid var(--gold);padding:1.2rem 1.5rem;margin-bottom:2.75rem}
+.dr-confirm-in{display:flex;align-items:center;gap:1rem}
+.dr-confirm-check{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.dr-confirm p{font-family:var(--body);font-size:1rem;color:rgba(242,237,232,.85);line-height:1.6;margin:0}
+.dr-confirm strong{color:var(--gold-l);font-weight:600}
 .page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
 .page-eyebrow-tick{width:36px;height:1px;background:var(--gold)}
 .page-eyebrow-text{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
@@ -85,6 +90,12 @@
 
 <section class="page-hero">
   <div class="page-hero-in">
+    <div class="dr-confirm" id="dr-confirm" role="status">
+      <div class="dr-confirm-in">
+        <span class="dr-confirm-check">&#10003;</span>
+        <p><strong>Request received.</strong> Someone from the KCS Capital team will be in touch shortly to give you access to the data room.</p>
+      </div>
+    </div>
     <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Data Room &middot; By Request</span></div>
     <h1 class="page-h1 reveal">The data room.<br><em>Everything, in one place.</em></h1>
     <p class="page-lead reveal">A single, access-controlled home for the KCS Capital and 4orm Finance materials: pitch deck, executive summary, the five-year financial model, corporate structure, and regulatory positioning. Access is granted to qualified institutional and accredited parties.</p>
@@ -250,6 +261,7 @@
   </div>
 </footer>
 <script>
+(function(){if(/[?&]requested=1/.test(location.search)){var b=document.getElementById('dr-confirm');if(b){b.style.display='block';window.scrollTo(0,0);}}})();
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();

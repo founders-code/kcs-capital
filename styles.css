@@ -206,8 +206,8 @@ nav.scrolled{
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
   opacity:0;
-  animation:heroLogoIn 3s cubic-bezier(.16,1,.3,1) forwards;
-  animation-delay:7.6s;
+  animation:heroLogoIn 3.6s cubic-bezier(.16,1,.3,1) forwards;
+  animation-delay:5.8s;
 }
 .hero-logo-img{width:100%;height:auto;display:block;}
 @keyframes heroLogoIn{
@@ -221,7 +221,7 @@ nav.scrolled{
   margin-bottom:2.25rem;
   opacity:0;transform:translateY(16px);
   animation:fadeUp 1s cubic-bezier(.16,1,.3,1) forwards;
-  animation-delay:.5s;
+  animation-delay:.35s;
 }
 .eyebrow-tick{width:36px;height:1px;background:var(--gold)}
 .eyebrow-text{
@@ -247,12 +247,12 @@ nav.scrolled{
 .word-inner{
   display:block;
   transform:translateY(108%);
-  animation:wordUp 2s cubic-bezier(.16,1,.3,1) forwards;
+  animation:wordUp 1.9s cubic-bezier(.16,1,.3,1) forwards;
 }
-.w1 .word-inner{animation-delay:.9s}
-.w2 .word-inner{animation-delay:1.9s}
-.w3 .word-inner{animation-delay:2.9s}
-.w4 .word-inner{animation-delay:3.9s}
+.w1 .word-inner{animation-delay:.6s}
+.w2 .word-inner{animation-delay:1.3s}
+.w3 .word-inner{animation-delay:2s}
+.w4 .word-inner{animation-delay:2.7s}
 .w-gold .word-inner{color:var(--gold);font-style:italic}
 .w-period{font-family:var(--serif);font-style:italic;color:rgba(201,136,42,.6)}
 @keyframes wordUp{to{transform:translateY(0)}}
@@ -260,7 +260,7 @@ nav.scrolled{
   width:0;height:2px;
   background:linear-gradient(90deg,var(--gold),transparent);
   margin:1.6rem 0;
-  animation:drawLine 1.1s ease forwards;animation-delay:4.6s;
+  animation:drawLine 1.2s ease forwards;animation-delay:3.5s;
 }
 @keyframes drawLine{to{width:90px}}
 .hero-sub{
@@ -268,12 +268,12 @@ nav.scrolled{
   color:rgba(242,237,232,.78);line-height:1.7;
   max-width:640px;margin-bottom:2.25rem;
   opacity:0;transform:translateY(12px);
-  animation:fadeUp 1.2s ease forwards;animation-delay:5.5s;
+  animation:fadeUp 1.3s ease forwards;animation-delay:4.1s;
 }
 .hero-ctas{
   display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
   opacity:0;
-  animation:fadeUp 1.1s ease forwards;animation-delay:6.5s;
+  animation:fadeUp 1.2s ease forwards;animation-delay:4.7s;
 }
 .btn-p{
   font-family:var(--ui);font-size:14px;font-weight:700;
@@ -595,10 +595,17 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   .hero-h1{font-size:clamp(3.4rem,13.5vw,5rem);line-height:1.05}
   .word-mask{white-space:normal;overflow:visible}
   .word-inner{transform:none;animation:none}
+  /* Mobile: the headline shows instantly, so bring the rest of the hero copy in faster */
+  .hero-eyebrow{animation-delay:.2s}
+  .hero-divider{animation-delay:.9s}
+  .hero-sub{animation-delay:1.4s}
+  .hero-ctas{animation-delay:2s}
   section{padding:5rem 1.5rem}
   #cta{padding:5.5rem 1.5rem}
-  #stats-bar{padding:2rem 1.5rem;grid-template-columns:1fr 1fr}
-  .stat-item{padding:0 1rem}
+  /* Mobile stats: even 2x2 grid — consistent gridlines, uniform padding, content centered */
+  #stats-bar{padding:2.5rem 1.5rem;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+  .stat-item{padding:1.7rem 1rem;border-right:none;background:var(--surface);display:flex;flex-direction:column;justify-content:center}
+  .stat-item:first-child{padding-left:1rem}
   .foot-main{grid-template-columns:1fr;gap:2rem}
   .hud-status,.hud-coords,.float-label{display:none}
   .team-grid{grid-template-columns:1fr}

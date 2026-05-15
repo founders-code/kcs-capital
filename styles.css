@@ -201,7 +201,7 @@ nav.scrolled{
 /* Big KCS logo in the open space to the right of the headline — ~15% smaller than before */
 .hero-logo-mark{
   position:absolute;z-index:15;
-  left:68%;top:41%;
+  left:68%;top:39.5%;
   width:clamp(540px,47.6vw,1000px);
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;

@@ -196,28 +196,8 @@ nav.scrolled{
 @keyframes hudLineFade{0%,100%{opacity:.7}50%{opacity:1}}
 .hero-content{
   position:relative;z-index:20;
-  padding:0 3rem;max-width:960px;width:100%;
+  padding:0 3rem 0 6.5rem;max-width:1000px;width:100%;
 }
-/* Big logo, positioned to the right of the headline. Real logo, full strength. */
-.hero-logo-mark{
-  position:absolute;z-index:15;
-  left:68%;top:41%;
-  width:clamp(640px,56vw,1180px);
-  display:flex;align-items:center;justify-content:center;
-  pointer-events:none;
-  opacity:0;
-  animation:heroLogoIn 3s cubic-bezier(.16,1,.3,1) forwards;
-  animation-delay:5.8s;
-}
-.hero-logo-img{
-  width:100%;height:auto;display:block;
-}
-@keyframes heroLogoIn{
-  from{opacity:0;transform:translate(-50%,-50%) scale(.94)}
-  to{opacity:.9;transform:translate(-50%,-50%) scale(1)}
-}
-/* Hero logo shows on the main wide screen only; hidden entirely below 1380px */
-@media(max-width:1380px){.hero-logo-mark{display:none}}
 .hero-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   margin-bottom:2.25rem;
@@ -233,18 +213,19 @@ nav.scrolled{
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 .hero-h1{
   font-family:var(--serif);
-  font-size:clamp(4.5rem,9vw,8.6rem);
-  font-weight:300;line-height:1;
+  font-size:clamp(2.4rem,5.9vw,5.1rem);
+  font-weight:300;line-height:1.04;
   letter-spacing:-.025em;color:var(--white);
   margin-bottom:0;
 }
-/* Original block layout, every screen: words wrap naturally, never clipped or forced */
+/* Two-line headline: each line is one mask, kept on a single line on desktop */
 .line-block{display:block;padding-bottom:.06em}
 .word-gap{display:inline-block;width:.3em}
 .word-mask{
-  display:inline-block;overflow:hidden;
+  display:inline-block;overflow:hidden;white-space:nowrap;
   line-height:1.05;vertical-align:bottom;
 }
+.hero-gold{color:var(--gold);font-style:italic}
 .word-inner{
   display:block;
   transform:translateY(108%);
@@ -265,9 +246,9 @@ nav.scrolled{
 }
 @keyframes drawLine{to{width:90px}}
 .hero-sub{
-  font-family:var(--body);font-size:15px;font-weight:300;
+  font-family:var(--body);font-size:17px;font-weight:300;
   color:rgba(242,237,232,.78);line-height:1.7;
-  max-width:600px;margin-bottom:2.25rem;
+  max-width:640px;margin-bottom:2.25rem;
   opacity:0;transform:translateY(12px);
   animation:fadeUp .9s ease forwards;animation-delay:4.1s;
 }
@@ -578,6 +559,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   .trust-grid{grid-template-columns:1fr}
   #trust{padding:3rem 1.5rem}
   .hero-content{padding:0 1.5rem}
+  /* On phones, let the headline wrap naturally with no clip — drop the single-line constraint */
+  .hero-h1{font-size:clamp(2.1rem,8.4vw,3rem)}
+  .word-mask{white-space:normal;overflow:visible}
+  .word-inner{transform:none;animation:none}
   section{padding:5rem 1.5rem}
   #cta{padding:5.5rem 1.5rem}
   #stats-bar{padding:2rem 1.5rem;grid-template-columns:1fr 1fr}

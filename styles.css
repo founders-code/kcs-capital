@@ -206,8 +206,8 @@ nav.scrolled{
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;
   opacity:0;
-  animation:heroLogoIn 3.6s cubic-bezier(.16,1,.3,1) forwards;
-  animation-delay:5.8s;
+  animation:heroLogoIn 4.7s cubic-bezier(.16,1,.3,1) forwards;
+  animation-delay:3.9s;
 }
 .hero-logo-img{width:100%;height:auto;display:block;}
 @keyframes heroLogoIn{
@@ -268,7 +268,7 @@ nav.scrolled{
   color:rgba(242,237,232,.78);line-height:1.7;
   max-width:640px;margin-bottom:2.25rem;
   opacity:0;transform:translateY(12px);
-  animation:fadeUp 1.3s ease forwards;animation-delay:4.1s;
+  animation:fadeUp 1.7s ease forwards;animation-delay:4.1s;
 }
 .hero-ctas{
   display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
@@ -602,10 +602,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
   .hero-ctas{animation-delay:2s}
   section{padding:5rem 1.5rem}
   #cta{padding:5.5rem 1.5rem}
-  /* Mobile stats: even 2x2 grid — consistent gridlines, uniform padding, content centered */
-  #stats-bar{padding:2.5rem 1.5rem;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
-  .stat-item{padding:1.7rem 1rem;border-right:none;background:var(--surface);display:flex;flex-direction:column;justify-content:center}
-  .stat-item:first-child{padding-left:1rem}
+  /* Mobile stats: even 2x2 grid on a black field, symmetric padding, content centered */
+  #stats-bar{padding:2.25rem 1.25rem;grid-template-columns:1fr 1fr;gap:1px;background:var(--black)}
+  .stat-item{padding:1.7rem .85rem;border-right:none;background:var(--surface);display:flex;flex-direction:column;justify-content:center;text-align:center}
+  .stat-item:first-child{padding-left:.85rem}
   .foot-main{grid-template-columns:1fr;gap:2rem}
   .hud-status,.hud-coords,.float-label{display:none}
   .team-grid{grid-template-columns:1fr}

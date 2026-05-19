@@ -87,16 +87,40 @@
 
 <section class="page-hero">
   <div class="page-hero-in">
-    <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Get In Touch</span></div>
-    <h1 class="page-h1 reveal">Send us a note.<br><em>We will respond within two business days.</em></h1>
-    <p class="page-lead reveal">Investors, institutional partners, journalists, prospective hires, and curious operators. Use the form below or pick up the phone.</p>
+    <!-- Default hero (hidden when ?sent=1 in URL) -->
+    <div id="contact-hero-default">
+      <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Get In Touch</span></div>
+      <h1 class="page-h1 reveal">Send us a note.<br><em>We will respond within two business days.</em></h1>
+      <p class="page-lead reveal">Investors, institutional partners, journalists, prospective hires, and curious operators. Use the form below or pick up the phone.</p>
+    </div>
+    <!-- Success state (shown after Formspree redirect) -->
+    <div id="contact-hero-success" style="display:none">
+      <div class="page-eyebrow"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text" style="color:var(--gold)">Message Received</span></div>
+      <h1 class="page-h1">Thank you.<br><em>Your message has been received.</em></h1>
+      <p class="page-lead">A member of the KCS Capital team will respond within two business days. For time-sensitive matters please call <a href="tel:17783632423" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-d)">+1 (778) 363-2423</a>.</p>
+    </div>
   </div>
 </section>
+<script>
+  (function(){
+    try {
+      if (new URLSearchParams(window.location.search).get('sent') === '1') {
+        var d = document.getElementById('contact-hero-default');
+        var s = document.getElementById('contact-hero-success');
+        if (d) d.style.display = 'none';
+        if (s) s.style.display = 'block';
+        window.scrollTo(0, 0);
+      }
+    } catch(e) { /* no-op */ }
+  })();
+</script>
 <section class="page-section">
   <div class="page-section-in two-col">
     <div class="reveal">
       <div class="page-section-eye"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Contact Form</span></div>
-      <form action="mailto:admin@kcs-capital.com" method="POST" enctype="text/plain" style="margin-top:2rem">
+      <form action="https://formspree.io/f/xzdwdbqb" method="POST" style="margin-top:2rem">
+        <input type="hidden" name="_subject" value="New KCS Capital Contact Form Submission">
+        <input type="hidden" name="_next" value="https://www.kcs-capital.com/contact?sent=1">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem">
           <div>
             <label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">First name</label>

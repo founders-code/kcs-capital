@@ -216,6 +216,13 @@ nav.scrolled{
 }
 /* Hero logo shows on the main wide screen only; hidden below 1380px */
 @media(max-width:1380px){.hero-logo-mark{display:none}}
+/* Laptop / narrower-desktop range (14" + 16" MacBook, ~1440-1800 viewports):
+   keep the layout but shrink the headline and push the logo further into the corner
+   so they don't collide. Wide-monitor (1801px+) stays exactly as-is. */
+@media(min-width:1381px) and (max-width:1800px){
+  .hero-h1{font-size:clamp(3.4rem,5.4vw,6.4rem);line-height:1.04}
+  .hero-logo-mark{left:80%;width:clamp(360px,30vw,600px)}
+}
 .hero-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   margin-bottom:2.25rem;

@@ -510,8 +510,13 @@
       <div class="foot-nl">
         <div class="foot-nl-hdr">KCS Capital Research</div>
         <div class="foot-nl-desc">Monthly research on Canadian RWA markets, CIRO &amp; CSA frameworks, and institutional tokenization.</div>
-        <input type="email" placeholder="your@email.com" aria-label="Email for newsletter">
-        <button type="submit">Subscribe &rarr;</button>
+        <form class="foot-nl-form" id="foot-nl-form" action="https://formspree.io/f/mredpebq" method="POST">
+          <input type="hidden" name="_subject" value="New Research Subscriber">
+          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+          <input type="email" name="email" placeholder="your@email.com" aria-label="Email for research updates" required>
+          <button type="submit">Subscribe &rarr;</button>
+          <div class="foot-nl-msg" id="foot-nl-msg" style="display:none"></div>
+        </form>
       </div>
     </div>
     <div>
@@ -557,7 +562,7 @@
     </div>
   </div>
   <div class="foot-bot">
-    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Terms</a></div>
+    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
     <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
   </div>
 </footer>
@@ -565,6 +570,30 @@
 <script>
 /* Slow the Calgary skyline hero video to 90% speed */
 (function(){var v=document.getElementById('hero-video');if(!v)return;var slow=function(){v.playbackRate=0.9;};slow();v.addEventListener('loadedmetadata',slow);v.addEventListener('play',slow);})();
+/* Footer research-subscribe — AJAX submit to Formspree */
+(function(){
+  var f=document.getElementById('foot-nl-form');if(!f)return;
+  var btn=f.querySelector('button');var msg=document.getElementById('foot-nl-msg');
+  f.addEventListener('submit',async function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();return;}
+    if(btn){btn.disabled=true;btn.textContent='Subscribing...';}
+    try{
+      var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      if(r.ok){
+        f.reset();
+        if(btn){btn.textContent='Subscribed ✓';}
+        if(msg){msg.textContent='Thank you — you’re on the list. We’ll be in touch with new research.';msg.style.color='var(--gold-l)';msg.style.display='block';}
+      }else{
+        if(btn){btn.disabled=false;btn.innerHTML='Subscribe →';}
+        if(msg){msg.textContent='Something went wrong. Please try again, or email contact@kcs-capital.com.';msg.style.color='#e8a8a3';msg.style.display='block';}
+      }
+    }catch(err){
+      if(btn){btn.disabled=false;btn.innerHTML='Subscribe →';}
+      if(msg){msg.textContent='Network problem. Please try again, or email contact@kcs-capital.com.';msg.style.color='#e8a8a3';msg.style.display='block';}
+    }
+  });
+})();
 </script>
 <script>
 class HeroScene {

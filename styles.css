@@ -575,6 +575,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 .foot-nl input:focus{border-color:var(--border-b)}
 .foot-nl button{background:var(--gold);border:none;padding:.7rem;font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--black);cursor:pointer;transition:background .2s}
 .foot-nl button:hover{background:var(--gold-l)}
+.foot-nl-form{display:flex;flex-direction:column;gap:.45rem}
+.foot-nl-msg{font-family:var(--body);font-size:11px;line-height:1.5;margin-top:.15rem}
 .foot-bot{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .foot-legal{font-size:10.5px;color:rgba(168,164,160,.38);line-height:1.6}
 .foot-legal a{color:rgba(168,164,160,.45);text-decoration:none}

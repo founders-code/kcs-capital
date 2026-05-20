@@ -995,6 +995,44 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:5rem
 @media(max-width:900px){.quote-band{padding:5rem 1.5rem}}
 
 /* ============================================================
+   POSITIONING BAND  (category-definition statement)
+   ============================================================ */
+.position-band{
+  background:var(--black);
+  padding:7rem 3rem;
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.position-band::before{
+  content:'';position:absolute;top:-140px;left:-120px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,136,42,.08) 0%,transparent 70%);pointer-events:none;
+}
+.position-band::after{
+  content:'';position:absolute;left:0;top:0;width:46px;height:1px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.position-in{max-width:1100px;margin:0 auto;position:relative}
+.position-eye{
+  font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:2.25rem;display:flex;align-items:center;gap:.7rem;
+}
+.position-eye::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.position-most{
+  font-family:var(--serif);font-weight:300;font-style:italic;
+  font-size:clamp(1.3rem,2.4vw,1.85rem);
+  line-height:1.45;color:var(--white-dim);
+  max-width:760px;margin-bottom:1.5rem;
+}
+.position-we{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(2.1rem,4.4vw,3.7rem);
+  line-height:1.18;letter-spacing:-.02em;color:var(--white);
+  max-width:1000px;
+}
+.position-we em{font-style:italic;color:var(--gold)}
+@media(max-width:900px){.position-band{padding:4.5rem 1.5rem}}
+
+/* ============================================================
    NAV DROPDOWN — Engagement (Partners / Regulator / Contact)
    ============================================================ */
 .nav-drop{position:relative}

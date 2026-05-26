@@ -53,7 +53,7 @@
 .cs-read{color:var(--gold);font-weight:600}
 .cs-filter{display:flex;gap:1.5px;background:var(--border);margin-bottom:1px;flex-wrap:wrap}
 .cs-filter-btn{background:var(--surface-2);padding:.7rem 1.4rem;font-family:var(--ui);font-size:9.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white-dim);cursor:pointer;border:none;transition:color .2s,background .2s}
-.cs-filter-btn.active,.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
+.cs-filter-btn.active.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
 @media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .cs-grid{grid-template-columns:1fr}}
 @media(min-width:901px) and (max-width:1200px){.cs-grid{grid-template-columns:repeat(2,1fr)}}
 /* KCS Briefs - horizontal stacked card list (editorial blog layout) */
@@ -68,313 +68,313 @@
 .ic-ex{font-size:1rem;flex:0 1 auto;margin-bottom:1.3rem;color:rgba(242,237,232,.68)}
 .ic-meta{margin-top:.2rem}
 @media(max-width:760px){
-  .ins-grid{gap:1.9rem}
-  .ic{flex-direction:column}
-  .ic-img{width:100%;min-height:0;height:215px}
-  .ic-body{padding:1.7rem 1.5rem}
-  .ic-title{font-size:1.5rem}
+ .ins-grid{gap:1.9rem}
+ .ic{flex-direction:column}
+ .ic-img{width:100%;min-height:0;height:215px}
+ .ic-body{padding:1.7rem 1.5rem}
+ .ic-title{font-size:1.5rem}
 }
 </style>
 </head>
 <body>
 <nav id="main-nav">
-  <a href="/" class="nav-logo">
-    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
-    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
-  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/solutions">Solutions</a></li>
-    <li><a href="/team">Team</a></li>
-    <li><a href="/research">Research</a></li>
-    <li><a href="/briefs">KCS Briefs</a></li>
-    <li class="nav-drop">
-      <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
-      <ul class="nav-drop-menu">
-        <li><a href="/partners">Partners</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </li>
-    <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
-  </ul>
+ <a href="/" class="nav-logo">
+ <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+ <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+ </a>
+ <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
+ <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+ <ul class="nav-links">
+ <li><a href="/">Home</a></li>
+ <li><a href="/about">About</a></li>
+ <li><a href="/solutions">Solutions</a></li>
+ <li><a href="/team">Team</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li class="nav-drop">
+ <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
+ <ul class="nav-drop-menu">
+ <li><a href="/partners">Partners</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/contact">Contact</a></li>
+ </ul>
+ </li>
+ <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
+ </ul>
 </nav>
 
 <section class="page-hero">
-  <div class="page-hero-in">
-    <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">KCS Briefs</span></div>
-    <h1 class="page-h1 reveal">Current commentary<br><em>from inside the build.</em></h1>
-    <p class="page-lead reveal">Short-form analysis on Canadian digital finance, RWA infrastructure, and regulatory developments. Read in five minutes or less. Faster cadence than our case-study research, same institutional voice.</p>
-  </div>
+ <div class="page-hero-in">
+ <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">KCS Briefs</span></div>
+ <h1 class="page-h1 reveal">Current commentary<br><em>from inside the build.</em></h1>
+ <p class="page-lead reveal">Short-form analysis on Canadian digital finance, RWA infrastructure, and regulatory developments. Read in five minutes or less. Faster cadence than our case-study research, same institutional voice.</p>
+ </div>
 </section>
 <section id="insights" class="page-section">
-  <div class="ins-in">
-    <div class="ins-hdr reveal">
-      <div>
-        <div class="s-eye"><div class="s-eye-dot"></div><span class="s-eye-txt">Published</span></div>
-        <h2 class="page-section-h2" style="margin-bottom:0">Thought leadership,<br><em>from inside the build.</em></h2>
-      </div>
-    </div>
-    <div class="ins-grid">
+ <div class="ins-in">
+ <div class="ins-hdr reveal">
+ <div>
+ <div class="s-eye"><div class="s-eye-dot"></div><span class="s-eye-txt">Published</span></div>
+ <h2 class="page-section-h2" style="margin-bottom:0">Thought leadership,<br><em>from inside the build.</em></h2>
+ </div>
+ </div>
+ <div class="ins-grid">
 
-      <a class="ic reveal" href="/brief-alberta-tokenization" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1420"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">ALBERTA TOKENIZATION</text></svg>
-          <img src="/brief-alberta-tokenization.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Tokenization</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Unlocking Alberta's Wealth Through Tokenization</h3>
-          <p class="ic-ex">Alberta's resource base is one of the largest on Earth. What if a portion of that value could be put to work today, without selling the asset, by converting future revenue into regulated, liquid instruments, and directing the liquidity to housing and community infrastructure?</p>
-          <div class="ic-meta"><span class="ic-date">Feb 2026 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal" href="/brief-alberta-tokenization" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1420"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">ALBERTA TOKENIZATION</text></svg>
+ <img src="/brief-alberta-tokenization.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Tokenization</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Unlocking Alberta's Wealth Through Tokenization</h3>
+ <p class="ic-ex">Alberta's resource base is one of the largest on Earth. What if a portion of that value could be put to work today, without selling the asset, by converting future revenue into regulated, liquid instruments, and directing the liquidity to housing and community infrastructure?</p>
+ <div class="ic-meta"><span class="ic-date">Feb 2026 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d2" href="/brief-two-tier-finance" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#140A0A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">RESILIENT RAILS</text></svg>
-          <img src="/brief-two-tier-finance.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Thesis</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Separating Leverage From Livelihood</h3>
-          <p class="ic-ex">A thought-experiment: should everyday finance and macro leverage sit on the same rail at all? What transparent, fully-reserved, asset-referenced settlement infrastructure could mean for household resilience.</p>
-          <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d2" href="/brief-two-tier-finance" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#140A0A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">RESILIENT RAILS</text></svg>
+ <img src="/brief-two-tier-finance.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Thesis</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Separating Leverage From Livelihood</h3>
+ <p class="ic-ex">A thought-experiment: should everyday finance and macro leverage sit on the same rail at all? What transparent, fully-reserved, asset-referenced settlement infrastructure could mean for household resilience.</p>
+ <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d4" href="/brief-public-finance-infrastructure" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A0F0A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">PUBLIC FINANCE</text></svg>
-          <img src="/brief-public-finance-infrastructure.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Public Finance</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Governments Fail Because Their Financial Infrastructure Is Outdated</h3>
-          <p class="ic-ex">Most public spending failures are not governance failures, they are infrastructure failures. Why programmable, verifiable financial rails move the conversation from "trust us" to "verify the system."</p>
-          <div class="ic-meta"><span class="ic-date">Feb 2026 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d4" href="/brief-public-finance-infrastructure" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A0F0A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">PUBLIC FINANCE</text></svg>
+ <img src="/brief-public-finance-infrastructure.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Public Finance</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Governments Fail Because Their Financial Infrastructure Is Outdated</h3>
+ <p class="ic-ex">Most public spending failures are not governance failures, they are infrastructure failures. Why programmable, verifiable financial rails move the conversation from "trust us" to "verify the system."</p>
+ <div class="ic-meta"><span class="ic-date">Feb 2026 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal" href="/brief-ai-debt-gdp" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1018"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">AI &amp; THE DEBT TRAP</text></svg>
-          <img src="/brief-ai-debt-gdp.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Macro Hypothesis</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Can AI Outgrow the Debt Trap?</h3>
-          <p class="ic-ex">Global debt has crossed $324 trillion. A hypothesis worth testing: can AI-driven productivity, compute economies, and programmable digital currency grow the denominator fast enough to matter, and what verifiable infrastructure would it require?</p>
-          <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 9 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal" href="/brief-ai-debt-gdp" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1018"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">AI &amp; THE DEBT TRAP</text></svg>
+ <img src="/brief-ai-debt-gdp.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Macro Hypothesis</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Can AI Outgrow the Debt Trap?</h3>
+ <p class="ic-ex">Global debt has crossed $324 trillion. A hypothesis worth testing: can AI-driven productivity, compute economies, and programmable digital currency grow the denominator fast enough to matter, and what verifiable infrastructure would it require?</p>
+ <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 9 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d2" href="/brief-rwa-market-opportunity" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1414"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">WHERE RWAs LIVE</text></svg>
-          <img src="/brief-rwa-market-opportunity.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Market</span>
-          <h3 class="ic-title" style="margin-top:.7rem">The Market Opportunity: Where RWAs Actually Live</h3>
-          <p class="ic-ex">Tokenized real-world assets are projected to reach into the trillions this decade. But the opportunity is not the headline number, it is the institutions, custody frameworks, and settlement rails that decide where that value can actually move.</p>
-          <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d2" href="/brief-rwa-market-opportunity" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1414"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">WHERE RWAs LIVE</text></svg>
+ <img src="/brief-rwa-market-opportunity.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Market</span>
+ <h3 class="ic-title" style="margin-top:.7rem">The Market Opportunity: Where RWAs Actually Live</h3>
+ <p class="ic-ex">Tokenized real-world assets are projected to reach into the trillions this decade. But the opportunity is not the headline number, it is the institutions, custody frameworks, and settlement rails that decide where that value can actually move.</p>
+ <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d4" href="/brief-real-assets-debt-reset" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#140F0A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">WHEN IOUs BREAK</text></svg>
-          <img src="/brief-real-assets-debt-reset.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Thesis</span>
-          <h3 class="ic-title" style="margin-top:.7rem">When IOUs Break: Why Real Assets Need Verifiable Rails</h3>
-          <p class="ic-ex">Every paper claim is a promise that someone keeps their word. A macro thesis on why real-world assets, transparently recorded and verifiably settled, behave differently when confidence in promises is tested. Not investment advice.</p>
-          <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 9 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d4" href="/brief-real-assets-debt-reset" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#140F0A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">WHEN IOUs BREAK</text></svg>
+ <img src="/brief-real-assets-debt-reset.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Thesis</span>
+ <h3 class="ic-title" style="margin-top:.7rem">When IOUs Break: Why Real Assets Need Verifiable Rails</h3>
+ <p class="ic-ex">Every paper claim is a promise that someone keeps their word. A macro thesis on why real-world assets, transparently recorded and verifiably settled, behave differently when confidence in promises is tested. Not investment advice.</p>
+ <div class="ic-meta"><span class="ic-date">Mar 2026 &middot; 9 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal" href="/brief-when-trust-fails" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#1A0D0D"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">WHEN TRUST FAILS</text></svg>
-          <img src="/brief-when-trust-fails.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Regulatory</span>
-          <h3 class="ic-title" style="margin-top:.7rem">When "Trust Us" Fails: Canada's Record Crypto Penalty</h3>
-          <p class="ic-ex">A record AML penalty, an exchange takedown that needed a foreign tip, and a flash crash that reached Canadian retirement accounts. The lesson is not that crypto exists, it is that black-box infrastructure fails in predictable ways, and we now have the tools to build rails you can verify.</p>
-          <div class="ic-meta"><span class="ic-date">Nov 2025 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal" href="/brief-when-trust-fails" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#1A0D0D"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">WHEN TRUST FAILS</text></svg>
+ <img src="/brief-when-trust-fails.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Regulatory</span>
+ <h3 class="ic-title" style="margin-top:.7rem">When "Trust Us" Fails: Canada's Record Crypto Penalty</h3>
+ <p class="ic-ex">A record AML penalty, an exchange takedown that needed a foreign tip, and a flash crash that reached Canadian retirement accounts. The lesson is not that crypto exists, it is that black-box infrastructure fails in predictable ways, and we now have the tools to build rails you can verify.</p>
+ <div class="ic-meta"><span class="ic-date">Nov 2025 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d2" href="/brief-emergency-money-fort-mcmurray" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#1A140A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">EMERGENCY MONEY</text></svg>
-          <img src="/brief-emergency-money-fort-mcmurray.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Public Resilience</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Emergency Money, Without the Wait</h3>
-          <p class="ic-ex">The 2016 Fort McMurray wildfire forced 88,000 people to flee. The aid was generous; what failed people was speed. What would relief look like if the money could move as fast as the fire did, on regulated, supervised rails?</p>
-          <div class="ic-meta"><span class="ic-date">Nov 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d2" href="/brief-emergency-money-fort-mcmurray" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#1A140A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">EMERGENCY MONEY</text></svg>
+ <img src="/brief-emergency-money-fort-mcmurray.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Public Resilience</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Emergency Money, Without the Wait</h3>
+ <p class="ic-ex">The 2016 Fort McMurray wildfire forced 88,000 people to flee. The aid was generous; what failed people was speed. What would relief look like if the money could move as fast as the fire did, on regulated, supervised rails?</p>
+ <div class="ic-meta"><span class="ic-date">Nov 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d4" href="/brief-canada-budget-stable-finance" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1410"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">A SAFER PATH</text></svg>
-          <img src="/brief-canada-budget-stable-finance.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Policy</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Canada's New Budget Signals a Safer Path to Stable Finance</h3>
-          <p class="ic-ex">Budget 2025, finalized OSFI guidance, live RPAA supervision, and harmonized tax reporting. Individually technical, together they quietly assemble the foundation for digital settlement that is fast, transparent, and boring in the best possible way.</p>
-          <div class="ic-meta"><span class="ic-date">Nov 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d4" href="/brief-canada-budget-stable-finance" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1410"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">A SAFER PATH</text></svg>
+ <img src="/brief-canada-budget-stable-finance.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Policy</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Canada's New Budget Signals a Safer Path to Stable Finance</h3>
+ <p class="ic-ex">Budget 2025, finalized OSFI guidance, live RPAA supervision, and harmonized tax reporting. Individually technical, together they quietly assemble the foundation for digital settlement that is fast, transparent, and boring in the best possible way.</p>
+ <div class="ic-meta"><span class="ic-date">Nov 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal" href="/brief-the-shift-has-begun" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1118"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">THE SHIFT HAS BEGUN</text></svg>
-          <img src="/brief-the-shift-has-begun.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Perspective</span>
-          <h3 class="ic-title" style="margin-top:.7rem">The Shift Has Begun: Why Canada Needs Creative, Stable Infrastructure</h3>
-          <p class="ic-ex">Interest-rate volatility, payments modernization, and clearer regulation are reshaping Canadian money. The shift is not a threat to manage, it is an opening, and the constructive question is what gets built into the gap, and who builds it.</p>
-          <div class="ic-meta"><span class="ic-date">Oct 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal" href="/brief-the-shift-has-begun" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1118"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">THE SHIFT HAS BEGUN</text></svg>
+ <img src="/brief-the-shift-has-begun.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Perspective</span>
+ <h3 class="ic-title" style="margin-top:.7rem">The Shift Has Begun: Why Canada Needs Creative, Stable Infrastructure</h3>
+ <p class="ic-ex">Interest-rate volatility, payments modernization, and clearer regulation are reshaping Canadian money. The shift is not a threat to manage, it is an opening, and the constructive question is what gets built into the gap, and who builds it.</p>
+ <div class="ic-meta"><span class="ic-date">Oct 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d2" href="/brief-blockchain-solar" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#14110A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">BLOCKCHAIN &amp; SOLAR</text></svg>
-          <img src="/brief-blockchain-solar.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Real-World Assets</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Plug Into the Future: Blockchain and Global Solar</h3>
-          <p class="ic-ex">From fractionalized solar cells in Zimbabwe to tokenized energy output in Europe, four real projects show real-world-asset rails already financing utility-scale renewables. The structural lesson, and what it would take to do it credibly in Canada.</p>
-          <div class="ic-meta"><span class="ic-date">Aug 2025 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d2" href="/brief-blockchain-solar" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#14110A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">BLOCKCHAIN &amp; SOLAR</text></svg>
+ <img src="/brief-blockchain-solar.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Real-World Assets</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Plug Into the Future: Blockchain and Global Solar</h3>
+ <p class="ic-ex">From fractionalized solar cells in Zimbabwe to tokenized energy output in Europe, four real projects show real-world-asset rails already financing utility-scale renewables. The structural lesson, and what it would take to do it credibly in Canada.</p>
+ <div class="ic-meta"><span class="ic-date">Aug 2025 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d4" href="/brief-local-profits-amazon-shopify" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0F0A14"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">AMAZON VS SHOPIFY</text></svg>
-          <img src="/brief-local-profits-amazon-shopify.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Capital &amp; Policy</span>
-          <h3 class="ic-title" style="margin-top:.7rem">When "Local" Means Keeping Profits at Home: Amazon Canada vs Shopify</h3>
-          <p class="ic-ex">One company channels Canadian profit to a foreign parent; the other reinvests at home. Both operate lawfully. The deeper question is transparency, how clearly anyone can actually see where Canadian capital ends up.</p>
-          <div class="ic-meta"><span class="ic-date">Jul 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d4" href="/brief-local-profits-amazon-shopify" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0F0A14"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">AMAZON VS SHOPIFY</text></svg>
+ <img src="/brief-local-profits-amazon-shopify.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Capital &amp; Policy</span>
+ <h3 class="ic-title" style="margin-top:.7rem">When "Local" Means Keeping Profits at Home: Amazon Canada vs Shopify</h3>
+ <p class="ic-ex">One company channels Canadian profit to a foreign parent; the other reinvests at home. Both operate lawfully. The deeper question is transparency, how clearly anyone can actually see where Canadian capital ends up.</p>
+ <div class="ic-meta"><span class="ic-date">Jul 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal" href="/brief-too-taxed-to-grow" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#14100A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">TOO TAXED TO GROW</text></svg>
-          <img src="/brief-too-taxed-to-grow.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Small Business</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Too Taxed to Grow: Canadian SMBs Under the Tax Burden</h3>
-          <p class="ic-ex">The CFIB survey data on SMB tax pressure is stark. But underneath the rate debate, which belongs to legislators, sits a second squeeze: the timing of money. That part is an infrastructure problem, and a solvable one.</p>
-          <div class="ic-meta"><span class="ic-date">Jul 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal" href="/brief-too-taxed-to-grow" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#14100A"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">TOO TAXED TO GROW</text></svg>
+ <img src="/brief-too-taxed-to-grow.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Small Business</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Too Taxed to Grow: Canadian SMBs Under the Tax Burden</h3>
+ <p class="ic-ex">The CFIB survey data on SMB tax pressure is stark. But underneath the rate debate, which belongs to legislators, sits a second squeeze: the timing of money. That part is an infrastructure problem, and a solvable one.</p>
+ <div class="ic-meta"><span class="ic-date">Jul 2025 &middot; 7 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-      <a class="ic reveal d2" href="/brief-equity-debt-bitcoin-reserves" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1014"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">FINANCING STRATEGIES</text></svg>
-          <img src="/brief-equity-debt-bitcoin-reserves.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Corporate Finance</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Equity, Debt &amp; Digital-Asset Reserves: How Canadian Companies Finance Growth</h3>
-          <p class="ic-ex">Equity, debt, and, for a few firms, digital assets on the balance sheet. An evenhanded comparison, and the question underneath all of it: every strategy now depends on custody and verification you can actually trust. Not investment advice.</p>
-          <div class="ic-meta"><span class="ic-date">Jul 2025 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
+ <a class="ic reveal d2" href="/brief-equity-debt-bitcoin-reserves" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1014"/><text x="20" y="70" fill="#C9882A" opacity=".55" font-size="11" font-family="sans-serif" letter-spacing="3">FINANCING STRATEGIES</text></svg>
+ <img src="/brief-equity-debt-bitcoin-reserves.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Corporate Finance</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Equity, Debt &amp; Digital-Asset Reserves: How Canadian Companies Finance Growth</h3>
+ <p class="ic-ex">Equity, debt, and, for a few firms, digital assets on the balance sheet. An evenhanded comparison, and the question underneath all of it: every strategy now depends on custody and verification you can actually trust. Not investment advice.</p>
+ <div class="ic-meta"><span class="ic-date">Jul 2025 &middot; 8 min</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
 
-    </div>
+ </div>
 
-    <div style="margin-top:4rem;padding-top:2.5rem;border-top:1px dashed var(--border)" class="reveal">
-      <p style="color:rgba(242,237,232,.5);font-size:.9rem">The full KCS Capital archive has been migrated, fourteen briefs, each rewritten, updated, and sourced. New pieces are published on a rolling basis.</p>
-    </div>
-  </div>
+ <div style="margin-top:4rem;padding-top:2.5rem;border-top:1px dashed var(--border)" class="reveal">
+ <p style="color:rgba(242,237,232,.5);font-size:.9rem">The full KCS Capital archive has been migrated, fourteen briefs, each rewritten, updated, and sourced. New pieces are published on a rolling basis.</p>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <div class="foot-main">
-    <div>
-      <div class="foot-brand">
-        <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
-        KCS Capital
-      </div>
-      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
-      <div class="foot-soc">
-        <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
-        <a href="#" class="foot-sb" aria-label="Twitter">X</a>
-      </div>
-    </div>
-    <div>
-      <div class="foot-col-t">KCS Capital</div>
-      <ul class="foot-links">
-        <li><a href="/about">About the Firm</a></li>
-        <li><a href="/team">Team &amp; Advisors</a></li>
-        <li><a href="/research">Research</a></li>
-        <li><a href="/briefs">KCS Briefs</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/careers">Careers</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/data-room">Data Room</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">4orm Finance</div>
-      <ul class="foot-links">
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
-        <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
-        <li><a href="/partners">For Issuers</a></li>
-        <li><a href="/partners">For Custodians</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
-        <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">Offices</div>
-      <ul class="foot-links">
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
-          <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
-        </li>
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
-          <a href="tel:17786515255">1-778-651-5255</a>
-        </li>
-        <li>
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
-          <a href="tel:17802663050">1-780-266-3050</a>
-        </li>
-        <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bot">
-    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
-    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
-  </div>
+ <div class="foot-main">
+ <div>
+ <div class="foot-brand">
+ <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+ KCS Capital
+ </div>
+ <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+ <div class="foot-soc">
+ <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
+ <a href="#" class="foot-sb" aria-label="Twitter">X</a>
+ </div>
+ </div>
+ <div>
+ <div class="foot-col-t">KCS Capital</div>
+ <ul class="foot-links">
+ <li><a href="/about">About the Firm</a></li>
+ <li><a href="/team">Team &amp; Advisors</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/careers">Careers</a></li>
+ <li><a href="/contact">Contact</a></li>
+ <li><a href="/data-room">Data Room</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">4orm Finance</div>
+ <ul class="foot-links">
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+ <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
+ <li><a href="/partners">For Issuers</a></li>
+ <li><a href="/partners">For Custodians</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
+ <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">Offices</div>
+ <ul class="foot-links">
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
+ <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
+ </li>
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
+ <a href="tel:17786515255">1-778-651-5255</a>
+ </li>
+ <li>
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
+ <a href="tel:17802663050">1-780-266-3050</a>
+ </li>
+ <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="foot-bot">
+ <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+ <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
+ </div>
 </footer>
 <script>
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal.reveal-l').forEach(function(el){o.observe(el);});})();
 </script>
 </body>
 </html>

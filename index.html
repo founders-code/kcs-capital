@@ -17,1014 +17,1014 @@
 
 <!-- NAV -->
 <nav id="main-nav">
-  <a href="/" class="nav-logo">
-    <!-- Logo file lives at repo root as kcs-capital-logo.png.
-         Source is the white-on-black wordmark. No inversion filter applied. -->
-    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
-    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
-  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/solutions">Solutions</a></li>
-    <li><a href="/team">Team</a></li>
-    <li><a href="/research">Research</a></li>
-    <li><a href="/briefs">KCS Briefs</a></li>
-    <li class="nav-drop">
-      <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
-      <ul class="nav-drop-menu">
-        <li><a href="/partners">Partners</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </li>
-    <li><a href="tel:17783632423" class="nav-cta">Call Us</a></li>
-  </ul>
+ <a href="/" class="nav-logo">
+ <!-- Logo file lives at repo root as kcs-capital-logo.png.
+ Source is the white-on-black wordmark. No inversion filter applied. -->
+ <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+ <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+ </a>
+ <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
+ <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+ <ul class="nav-links">
+ <li><a href="/">Home</a></li>
+ <li><a href="/about">About</a></li>
+ <li><a href="/solutions">Solutions</a></li>
+ <li><a href="/team">Team</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li class="nav-drop">
+ <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
+ <ul class="nav-drop-menu">
+ <li><a href="/partners">Partners</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/contact">Contact</a></li>
+ </ul>
+ </li>
+ <li><a href="tel:17783632423" class="nav-cta">Call Us</a></li>
+ </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero" aria-label="Hero">
-  <!--
-    Calgary skyline 4K background video.
-    To add your video: drop the file in the repo (e.g. /assets/calgary-skyline-4k.mp4)
-    and update the src attribute below. Recommended specs:
-      - 4K (3840x2160) or 1080p fallback
-      - 8-15 second seamless loop
-      - H.264 MP4, target ~10-25 MB compressed
-      - Add a poster="/assets/calgary-skyline-poster.jpg" for instant first paint
-    Until a file is uploaded, the canvas animation + dark background renders alone.
-  -->
-  <video id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-         poster="/calgary-skyline-poster.jpg">
-    <source src="/calgary-skyline-4k.mp4" type="video/mp4">
-  </video>
-  <div class="hero-video-overlay" aria-hidden="true"></div>
+ <!--
+ Calgary skyline 4K background video.
+ To add your video: drop the file in the repo (e.g. /assets/calgary-skyline-4k.mp4)
+ and update the src attribute below. Recommended specs:
+ - 4K (3840x2160) or 1080p fallback
+ - 8-15 second seamless loop
+ - H.264 MP4, target ~10-25 MB compressed
+ - Add a poster="/assets/calgary-skyline-poster.jpg" for instant first paint
+ Until a file is uploaded, the canvas animation + dark background renders alone.
+ -->
+ <video id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
+ poster="/calgary-skyline-poster.jpg">
+ <source src="/calgary-skyline-4k.mp4" type="video/mp4">
+ </video>
+ <div class="hero-video-overlay" aria-hidden="true"></div>
 
-  <div class="hero-aurora" aria-hidden="true">
-    <div class="aurora-band ab-1"></div>
-    <div class="aurora-band ab-2"></div>
-    <div class="aurora-band ab-3"></div>
-  </div>
-  <svg class="hero-grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <filter id="gf"><feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-    <rect width="100%" height="100%" filter="url(#gf)" opacity=".045"/>
-  </svg>
-  <div class="hero-scanlines" aria-hidden="true"></div>
-  <div class="hero-scanner" aria-hidden="true"></div>
-  <div class="hero-beam" aria-hidden="true"></div>
-  <div class="hero-vignette" aria-hidden="true"></div>
-  <div class="hero-vignette-bottom" aria-hidden="true"></div>
+ <div class="hero-aurora" aria-hidden="true">
+ <div class="aurora-band ab-1"></div>
+ <div class="aurora-band ab-2"></div>
+ <div class="aurora-band ab-3"></div>
+ </div>
+ <svg class="hero-grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <filter id="gf"><feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+ <rect width="100%" height="100%" filter="url(#gf)" opacity=".045"/>
+ </svg>
+ <div class="hero-scanlines" aria-hidden="true"></div>
+ <div class="hero-scanner" aria-hidden="true"></div>
+ <div class="hero-beam" aria-hidden="true"></div>
+ <div class="hero-vignette" aria-hidden="true"></div>
+ <div class="hero-vignette-bottom" aria-hidden="true"></div>
 
-  <div class="hero-floats" aria-hidden="true">
-    <span class="float-label" style="--fx:10%;--fy:67%;--fd:0s">Bank of Canada &middot; Project Samara</span>
-    <span class="float-label" style="--fx:68%;--fy:73%;--fd:3.5s">Pineapple Financial &middot; $13.7B Tokenized Mortgages</span>
-    <span class="float-label" style="--fx:80%;--fy:57%;--fd:1.8s">JPMorgan Kinexys &middot; $1.5T+</span>
-    <span class="float-label" style="--fx:52%;--fy:81%;--fd:6s">McKinsey &middot; 75% CAGR to 2030</span>
-    <span class="float-label" style="--fx:32%;--fy:76%;--fd:9s">BlackRock BUIDL &middot; $18B AUM</span>
-    <span class="float-label" style="--fx:18%;--fy:55%;--fd:5s">Ocree Capital &middot; Ontario Exempt Market Dealer</span>
-    <span class="float-label" style="--fx:42%;--fy:62%;--fd:11s">T-RIZE Group &middot; Quebec Tokenized Real Estate</span>
-    <span class="float-label" style="--fx:74%;--fy:65%;--fd:7.5s">AuCan Gold &middot; $2.5B Tokenized Mining Bullion</span>
-    <span class="float-label" style="--fx:8%;--fy:80%;--fd:4s">Tetra Trust &middot; Canada's First Qualified Digital Custodian</span>
-  </div>
+ <div class="hero-floats" aria-hidden="true">
+ <span class="float-label" style="--fx:10%;--fy:67%;--fd:0s">Bank of Canada &middot; Project Samara</span>
+ <span class="float-label" style="--fx:68%;--fy:73%;--fd:3.5s">Pineapple Financial &middot; $13.7B Tokenized Mortgages</span>
+ <span class="float-label" style="--fx:80%;--fy:57%;--fd:1.8s">JPMorgan Kinexys &middot; $1.5T+</span>
+ <span class="float-label" style="--fx:52%;--fy:81%;--fd:6s">McKinsey &middot; 75% CAGR to 2030</span>
+ <span class="float-label" style="--fx:32%;--fy:76%;--fd:9s">BlackRock BUIDL &middot; $18B AUM</span>
+ <span class="float-label" style="--fx:18%;--fy:55%;--fd:5s">Ocree Capital &middot; Ontario Exempt Market Dealer</span>
+ <span class="float-label" style="--fx:42%;--fy:62%;--fd:11s">T-RIZE Group &middot; Quebec Tokenized Real Estate</span>
+ <span class="float-label" style="--fx:74%;--fy:65%;--fd:7.5s">AuCan Gold &middot; $2.5B Tokenized Mining Bullion</span>
+ <span class="float-label" style="--fx:8%;--fy:80%;--fd:4s">Tetra Trust &middot; Canada's First Qualified Digital Custodian</span>
+ </div>
 
-  <div class="hud-tl" aria-hidden="true"></div>
-  <div class="hud-tr" aria-hidden="true"></div>
-  <div class="hud-bl" aria-hidden="true"></div>
-  <div class="hud-br" aria-hidden="true"></div>
+ <div class="hud-tl" aria-hidden="true"></div>
+ <div class="hud-tr" aria-hidden="true"></div>
+ <div class="hud-bl" aria-hidden="true"></div>
+ <div class="hud-br" aria-hidden="true"></div>
 
-  <div class="hud-coords" aria-hidden="true">
-    <span class="coord-val">51.0447&deg; N</span>
-    <span class="coord-val">114.0719&deg; W</span>
-    <span class="coord-val" style="color:rgba(201,136,42,.18);margin-top:2px">CALGARY, AB</span>
-  </div>
+ <div class="hud-coords" aria-hidden="true">
+ <span class="coord-val">51.0447&deg; N</span>
+ <span class="coord-val">114.0719&deg; W</span>
+ <span class="coord-val" style="color:rgba(201,136,42,.18);margin-top:2px">CALGARY, AB</span>
+ </div>
 
-  <div class="hud-status" aria-hidden="true">
-    <span class="hud-line">SYS / INFRA_DEVELOPMENT</span>
-    <span class="hud-line">REG / CIRO_PATHWAY</span>
-    <span class="hud-line">STRUCT / HOLDCO &middot; OPCO &middot; CUSTODYCO</span>
-  </div>
+ <div class="hud-status" aria-hidden="true">
+ <span class="hud-line">SYS / INFRA_DEVELOPMENT</span>
+ <span class="hud-line">REG / CIRO_PATHWAY</span>
+ <span class="hud-line">STRUCT / HOLDCO &middot; OPCO &middot; CUSTODYCO</span>
+ </div>
 
-  <!-- Big KCS logo fades into the open space to the right of the headline -->
-  <div class="hero-logo-mark" aria-hidden="true">
-    <img src="/kcs-capital-logo.png" alt="" class="hero-logo-img" onerror="this.parentElement.style.display='none'">
-  </div>
+ <!-- Big KCS logo fades into the open space to the right of the headline -->
+ <div class="hero-logo-mark" aria-hidden="true">
+ <img src="/kcs-capital-logo.png" alt="" class="hero-logo-img" onerror="this.parentElement.style.display='none'">
+ </div>
 
-  <div class="hero-content" id="hero-content">
-    <h1 class="hero-h1">
-      <span class="line-block">
-        <span class="word-mask w1"><span class="word-inner">Where the future</span></span>
-      </span>
-      <span class="line-block">
-        <span class="word-mask w2"><span class="word-inner">of finance <em class="hero-gold">is built.</em></span></span>
-      </span>
-    </h1>
-    <div class="hero-divider"></div>
-    <p class="hero-sub">
-      KCS Capital is the independent technology and research firm developing the infrastructure operated by <strong style="color:var(--gold-l);font-weight:500">4orm Finance</strong>, Canada's institution-grade RWA exchange and digital settlement network. Built to the standards validated by the Bank of Canada's Project Samara. Regulator-aligned. Independently governed. Canadian sovereign.
-    </p>
-    <div class="hero-ctas">
-      <a href="/data-room" class="btn-p">Request Access to Data Room <span>&rarr;</span></a>
-      <a href="/research" class="btn-s">Read Our Research <span>&rarr;</span></a>
-    </div>
-  </div>
+ <div class="hero-content" id="hero-content">
+ <h1 class="hero-h1">
+ <span class="line-block">
+ <span class="word-mask w1"><span class="word-inner">Where the future</span></span>
+ </span>
+ <span class="line-block">
+ <span class="word-mask w2"><span class="word-inner">of finance <em class="hero-gold">is built.</em></span></span>
+ </span>
+ </h1>
+ <div class="hero-divider"></div>
+ <p class="hero-sub">
+ KCS Capital is the independent technology and research firm developing the infrastructure operated by <strong style="color:var(--gold-l);font-weight:500">4orm Finance</strong>, Canada's institution-grade RWA exchange and digital settlement network. Built to the standards validated by the Bank of Canada's Project Samara. Regulator-aligned. Independently governed. Canadian sovereign.
+ </p>
+ <div class="hero-ctas">
+ <a href="/data-room" class="btn-p">Request Access to Data Room <span>&rarr;</span></a>
+ <a href="/research" class="btn-s">Read Our Research <span>&rarr;</span></a>
+ </div>
+ </div>
 
-  <div class="hero-scroll" aria-hidden="true">
-    <div class="scroll-line"></div>
-    <span class="scroll-txt">Scroll</span>
-  </div>
+ <div class="hero-scroll" aria-hidden="true">
+ <div class="scroll-line"></div>
+ <span class="scroll-txt">Scroll</span>
+ </div>
 
-  <div class="hero-badge" aria-hidden="true">
-    <div class="badge-dot"></div>
-    <span class="badge-txt">Pre-Seed Active &middot; <strong>Closing Q2 2026</strong></span>
-  </div>
+ <div class="hero-badge" aria-hidden="true">
+ <div class="badge-dot"></div>
+ <span class="badge-txt">Pre-Seed Active &middot; <strong>Closing Q2 2026</strong></span>
+ </div>
 </section>
 
 <!-- STATS BAR -->
 <div id="stats-bar">
-  <div class="stat-item reveal">
-    <span class="stat-num">$<span class="counter" data-t="2">0</span><span class="stat-suf">T</span></span>
-    <span class="stat-lbl">Global Tokenized RWA Market by 2030</span>
-    <span class="stat-src">McKinsey base case · 75% CAGR across asset classes</span>
-  </div>
-  <div class="stat-item reveal d1">
-    <span class="stat-num">$<span class="counter" data-t="26">0</span><span class="stat-suf">.5B</span></span>
-    <span class="stat-lbl">On-Chain RWA Value Today</span>
-    <span class="stat-src">5x growth in 3 years · March 2026 on-chain data</span>
-  </div>
-  <div class="stat-item reveal d2">
-    <span class="stat-num">$<span class="counter" data-t="1">0</span><span class="stat-suf">.9B/yr</span></span>
-    <span class="stat-lbl">Canadian RWA Infrastructure TAM</span>
-    <span class="stat-src">Annual fee pools · 4orm Master Pro Forma</span>
-  </div>
-  <div class="stat-item reveal d3">
-    <span class="stat-num">$<span class="counter" data-t="100">0</span><span class="stat-suf">M</span></span>
-    <span class="stat-lbl">Bank of Canada Project Samara</span>
-    <span class="stat-src">Tokenized bond pilot · RBC, TD, EDC · March 2026</span>
-  </div>
+ <div class="stat-item reveal">
+ <span class="stat-num">$<span class="counter" data-t="2">0</span><span class="stat-suf">T</span></span>
+ <span class="stat-lbl">Global Tokenized RWA Market by 2030</span>
+ <span class="stat-src">McKinsey base case · 75% CAGR across asset classes</span>
+ </div>
+ <div class="stat-item reveal d1">
+ <span class="stat-num">$<span class="counter" data-t="26">0</span><span class="stat-suf">.5B</span></span>
+ <span class="stat-lbl">On-Chain RWA Value Today</span>
+ <span class="stat-src">5x growth in 3 years · March 2026 on-chain data</span>
+ </div>
+ <div class="stat-item reveal d2">
+ <span class="stat-num">$<span class="counter" data-t="1">0</span><span class="stat-suf">.9B/yr</span></span>
+ <span class="stat-lbl">Canadian RWA Infrastructure TAM</span>
+ <span class="stat-src">Annual fee pools · 4orm Master Pro Forma</span>
+ </div>
+ <div class="stat-item reveal d3">
+ <span class="stat-num">$<span class="counter" data-t="100">0</span><span class="stat-suf">M</span></span>
+ <span class="stat-lbl">Bank of Canada Project Samara</span>
+ <span class="stat-src">Tokenized bond pilot · RBC, TD, EDC · March 2026</span>
+ </div>
 </div>
 <!-- POSITIONING BAND: category-definition statement -->
 <section class="position-band">
-  <div class="position-in">
-    <div class="position-eye reveal">The Distinction</div>
-    <p class="position-most reveal">Most tokenization companies are building tokenized assets.</p>
-    <h2 class="position-we reveal">We are building the <em>institutional infrastructure layer</em> that allows Canada to safely operate tokenized finance at scale.</h2>
-  </div>
+ <div class="position-in">
+ <div class="position-eye reveal">The Distinction</div>
+ <p class="position-most reveal">Most tokenization companies are building tokenized assets.</p>
+ <h2 class="position-we reveal">We are building the <em>institutional infrastructure layer</em> that allows Canada to safely operate tokenized finance at scale.</h2>
+ </div>
 </section>
 <!-- WHO WE SERVE -->
 <section id="serve">
-  <div class="serve-hdr">
-    <div>
-      <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Who We Serve</span></div>
-      <h2 class="s-title reveal">Built for the institutions<br><em>that move Canadian capital</em></h2>
-    </div>
-    <p class="s-body reveal" style="max-width:340px">Banks. Custodians. Credit unions. Asset managers. The 4orm Finance platform is institutional infrastructure for the firms that already carry Canada's regulatory burden. Not retail.</p>
-  </div>
-  <div class="serve-grid">
-    <div class="sc reveal">
-      <span class="sc-num">01</span>
-      <div class="sc-title">Tier-1 Banks &amp; Crown Institutions</div>
-      <div class="sc-aud">Settlement, tokenized deposits, collateral mobility</div>
-      <p class="sc-body">You're already piloting tokenized settlement. Project Samara proved the model. 4orm Finance is the neutral, multi-institution infrastructure layer that doesn't force any single bank to own the rails. Think of it as the Canadian answer to JPMorgan Onyx.</p>
-      <a href="/contact?type=institutional" class="sc-cta">Discovery Engagement &rarr;</a>
-    </div>
-    <div class="sc reveal d2">
-      <span class="sc-num">02</span>
-      <div class="sc-title">Credit Unions &amp; Provincial Banks</div>
-      <div class="sc-aud">Community banking, regional financial institutions</div>
-      <p class="sc-body">Tier-1 dominance and rising compliance costs are squeezing your margins. 4orm Finance is purpose-built so community banks can offer the same tokenized products as the majors, without building or owning the infrastructure yourselves.</p>
-      <a href="/contact" class="sc-cta">Partner Programs &rarr;</a>
-    </div>
-    <div class="sc reveal d4">
-      <span class="sc-num">03</span>
-      <div class="sc-title">Issuer &amp; Originator Partners</div>
-      <div class="sc-aud">Exempt market dealers, real estate, private credit, energy, mining and precious metals, custodians</div>
-      <p class="sc-body">If you're an issuer like Ocree Capital, T-RIZE, Pineapple Financial, or AuCan Gold, you've already built the assets and the regulatory pathway. What you don't have yet is the institutional bridge: a marketplace with bank counterparties, secondary liquidity, an institutional investor pool, and a way to offload at scale. 4orm Finance is being built to be that bridge. You keep your dealer registration and asset specialization. We connect issuers to the institutions, liquidity, and markets your assets are designed to reach.</p>
-      <a href="/contact" class="sc-cta">Partner Programs &rarr;</a>
-    </div>
-  </div>
+ <div class="serve-hdr">
+ <div>
+ <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Who We Serve</span></div>
+ <h2 class="s-title reveal">Built for the institutions<br><em>that move Canadian capital</em></h2>
+ </div>
+ <p class="s-body reveal" style="max-width:340px">Banks. Custodians. Credit unions. Asset managers. The 4orm Finance platform is institutional infrastructure for the firms that already carry Canada's regulatory burden. Not retail.</p>
+ </div>
+ <div class="serve-grid">
+ <div class="sc reveal">
+ <span class="sc-num">01</span>
+ <div class="sc-title">Tier-1 Banks &amp; Crown Institutions</div>
+ <div class="sc-aud">Settlement, tokenized deposits, collateral mobility</div>
+ <p class="sc-body">You're already piloting tokenized settlement. Project Samara proved the model. 4orm Finance is the neutral, multi-institution infrastructure layer that doesn't force any single bank to own the rails. Think of it as the Canadian answer to JPMorgan Onyx.</p>
+ <a href="/contact?type=institutional" class="sc-cta">Discovery Engagement &rarr;</a>
+ </div>
+ <div class="sc reveal d2">
+ <span class="sc-num">02</span>
+ <div class="sc-title">Credit Unions &amp; Provincial Banks</div>
+ <div class="sc-aud">Community banking, regional financial institutions</div>
+ <p class="sc-body">Tier-1 dominance and rising compliance costs are squeezing your margins. 4orm Finance is purpose-built so community banks can offer the same tokenized products as the majors, without building or owning the infrastructure yourselves.</p>
+ <a href="/contact" class="sc-cta">Partner Programs &rarr;</a>
+ </div>
+ <div class="sc reveal d4">
+ <span class="sc-num">03</span>
+ <div class="sc-title">Issuer &amp; Originator Partners</div>
+ <div class="sc-aud">Exempt market dealers, real estate, private credit, energy, mining and precious metals, custodians</div>
+ <p class="sc-body">If you're an issuer like Ocree Capital, T-RIZE, Pineapple Financial, or AuCan Gold, you've already built the assets and the regulatory pathway. What you don't have yet is the institutional bridge: a marketplace with bank counterparties, secondary liquidity, an institutional investor pool, and a way to offload at scale. 4orm Finance is being built to be that bridge. You keep your dealer registration and asset specialization. We connect issuers to the institutions, liquidity, and markets your assets are designed to reach.</p>
+ <a href="/contact" class="sc-cta">Partner Programs &rarr;</a>
+ </div>
+ </div>
 </section>
 
 <!-- PLATFORM -->
 <section id="platform">
-  <div class="plat-in">
-    <div class="plat-top">
-      <div>
-        <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">The 4orm Finance Platform</span></div>
-        <h2 class="s-title reveal">Six capabilities.<br><em>One regulated rail.</em></h2>
-        <p class="s-body reveal">4orm Finance is full-stack institutional infrastructure. Not a crypto exchange. Digital settlement, tokenized deposits, RWA issuance, collateral mobility, marketplace, and trust digitization, designed end-to-end for Canadian regulatory frameworks. KCS Capital develops the technology. 4orm Finance operates the platform as a separately governed regulated entity.</p>
-      </div>
-      <div style="text-align:right" class="reveal">
-        <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">Platform Status</div>
-        <div style="font-family:var(--body);font-size:12.5px;color:rgba(242,237,232,.48)">Pre-Seed &middot; Architecture &amp; Discovery</div>
-        <div style="margin-top:1rem;font-family:var(--ui);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(168,164,160,.38)">OSFI &middot; CSA &middot; CIRO &middot; FINTRAC</div>
-      </div>
-    </div>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="p-num">01</div><div class="p-title">Digital Settlement Network</div><p class="p-body">Instant, auditable settlement for institutional transactions. Near real-time replacement for multi-day settlement cycles, freeing trapped capital and reducing counterparty risk.</p>
-        <div class="p-stat-row">
-          <div class="p-stat-icon"><svg viewBox="0 0 24 24"><polyline points="3 12 9 6 15 12 21 6"/><polyline points="3 18 9 12 15 18 21 12"/></svg></div>
-          <div class="p-stat-text"><span class="p-stat-val">T+0</span><span class="p-stat-lbl">Near Real-Time Settlement</span></div>
-        </div>
-      </div>
-      <div class="pillar reveal d2"><div class="p-num">02</div><div class="p-title">Tokenized CAD Deposits</div><p class="p-body">Bank-issued digital deposits for institutional use only. Not retail stablecoins. These are CAD-denominated bank deposits issued by regulated financial institutions, operated under existing banking regulation.</p>
-        <div class="p-stat-row">
-          <div class="p-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="15" x2="14" y2="15"/></svg></div>
-          <div class="p-stat-text"><span class="p-stat-val">1:1</span><span class="p-stat-lbl">CAD-Backed &middot; Bank-Issued</span></div>
-        </div>
-      </div>
-      <div class="pillar reveal d4"><div class="p-num">03</div><div class="p-title">RWA Issuance &amp; Registry</div><p class="p-body">Native infrastructure for tokenizing real-world assets. Smart contract development, asset registry, and on-chain binding to legal and economic claims with full audit trails.</p>
-        <div class="p-stat-row">
-          <div class="p-stat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 22 8 22 16 12 22 2 16 2 8 12 2"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div>
-          <div class="p-stat-text"><span class="p-stat-val">Smart</span><span class="p-stat-lbl">Multi-Asset Registry</span></div>
-        </div>
-      </div>
-      <div class="pillar reveal"><div class="p-num">04</div><div class="p-title">Tokenized Collateral Engine</div><p class="p-body">Real-time collateralization and margin efficiency. Mobilizes illiquid Canadian assets like CRE, energy royalties, mining bullion, equipment, and private credit into institutional-grade collateral instruments.</p>
-        <div class="p-stat-row">
-          <div class="p-stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></svg></div>
-          <div class="p-stat-text"><span class="p-stat-val">Real-Time</span><span class="p-stat-lbl">Margin Efficiency</span></div>
-        </div>
-      </div>
-      <div class="pillar reveal d2"><div class="p-num">05</div><div class="p-title">Regulated RWA Marketplace</div><p class="p-body">Secondary market liquidity for institutional assets. Transparent pricing, fractional ownership, multi-bank settlement corridors, all operating under CIRO marketplace oversight.</p>
-        <div class="p-stat-row">
-          <div class="p-stat-icon"><svg viewBox="0 0 24 24"><line x1="3" y1="20" x2="3" y2="10"/><line x1="9" y1="20" x2="9" y2="6"/><line x1="15" y1="20" x2="15" y2="14"/><line x1="21" y1="20" x2="21" y2="4"/></svg></div>
-          <div class="p-stat-text"><span class="p-stat-val">24 / 7</span><span class="p-stat-lbl">Secondary Liquidity</span></div>
-        </div>
-      </div>
-      <div class="pillar reveal d4"><div class="p-num">06</div><div class="p-title">Trust &amp; Estate Digitization</div><p class="p-body">Digital representation of trust and estate holdings. Modernizes administration of Canadian fiduciary assets while preserving the legal and tax frameworks institutions already operate within.</p>
-        <div class="p-stat-row">
-          <div class="p-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3 L4 7 L4 13 C 4 17 8 20 12 21 C 16 20 20 17 20 13 L 20 7 Z"/></svg></div>
-          <div class="p-stat-text"><span class="p-stat-val">Fiduciary</span><span class="p-stat-lbl">Trust &amp; Estate Grade</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="plat-in">
+ <div class="plat-top">
+ <div>
+ <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">The 4orm Finance Platform</span></div>
+ <h2 class="s-title reveal">Six capabilities.<br><em>One regulated rail.</em></h2>
+ <p class="s-body reveal">4orm Finance is full-stack institutional infrastructure. Not a crypto exchange. Digital settlement, tokenized deposits, RWA issuance, collateral mobility, marketplace, and trust digitization, designed end-to-end for Canadian regulatory frameworks. KCS Capital develops the technology. 4orm Finance operates the platform as a separately governed regulated entity.</p>
+ </div>
+ <div style="text-align:right" class="reveal">
+ <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">Platform Status</div>
+ <div style="font-family:var(--body);font-size:12.5px;color:rgba(242,237,232,.48)">Pre-Seed &middot; Architecture &amp; Discovery</div>
+ <div style="margin-top:1rem;font-family:var(--ui);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(168,164,160,.38)">OSFI &middot; CSA &middot; CIRO &middot; FINTRAC</div>
+ </div>
+ </div>
+ <div class="pillars">
+ <div class="pillar reveal"><div class="p-num">01</div><div class="p-title">Digital Settlement Network</div><p class="p-body">Instant, auditable settlement for institutional transactions. Near real-time replacement for multi-day settlement cycles, freeing trapped capital and reducing counterparty risk.</p>
+ <div class="p-stat-row">
+ <div class="p-stat-icon"><svg viewBox="0 0 24 24"><polyline points="3 12 9 6 15 12 21 6"/><polyline points="3 18 9 12 15 18 21 12"/></svg></div>
+ <div class="p-stat-text"><span class="p-stat-val">T+0</span><span class="p-stat-lbl">Near Real-Time Settlement</span></div>
+ </div>
+ </div>
+ <div class="pillar reveal d2"><div class="p-num">02</div><div class="p-title">Tokenized CAD Deposits</div><p class="p-body">Bank-issued digital deposits for institutional use only. Not retail stablecoins. These are CAD-denominated bank deposits issued by regulated financial institutions, operated under existing banking regulation.</p>
+ <div class="p-stat-row">
+ <div class="p-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="15" x2="14" y2="15"/></svg></div>
+ <div class="p-stat-text"><span class="p-stat-val">1:1</span><span class="p-stat-lbl">CAD-Backed &middot; Bank-Issued</span></div>
+ </div>
+ </div>
+ <div class="pillar reveal d4"><div class="p-num">03</div><div class="p-title">RWA Issuance &amp; Registry</div><p class="p-body">Native infrastructure for tokenizing real-world assets. Smart contract development, asset registry, and on-chain binding to legal and economic claims with full audit trails.</p>
+ <div class="p-stat-row">
+ <div class="p-stat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 22 8 22 16 12 22 2 16 2 8 12 2"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div>
+ <div class="p-stat-text"><span class="p-stat-val">Smart</span><span class="p-stat-lbl">Multi-Asset Registry</span></div>
+ </div>
+ </div>
+ <div class="pillar reveal"><div class="p-num">04</div><div class="p-title">Tokenized Collateral Engine</div><p class="p-body">Real-time collateralization and margin efficiency. Mobilizes illiquid Canadian assets like CRE, energy royalties, mining bullion, equipment, and private credit into institutional-grade collateral instruments.</p>
+ <div class="p-stat-row">
+ <div class="p-stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></svg></div>
+ <div class="p-stat-text"><span class="p-stat-val">Real-Time</span><span class="p-stat-lbl">Margin Efficiency</span></div>
+ </div>
+ </div>
+ <div class="pillar reveal d2"><div class="p-num">05</div><div class="p-title">Regulated RWA Marketplace</div><p class="p-body">Secondary market liquidity for institutional assets. Transparent pricing, fractional ownership, multi-bank settlement corridors, all operating under CIRO marketplace oversight.</p>
+ <div class="p-stat-row">
+ <div class="p-stat-icon"><svg viewBox="0 0 24 24"><line x1="3" y1="20" x2="3" y2="10"/><line x1="9" y1="20" x2="9" y2="6"/><line x1="15" y1="20" x2="15" y2="14"/><line x1="21" y1="20" x2="21" y2="4"/></svg></div>
+ <div class="p-stat-text"><span class="p-stat-val">24 / 7</span><span class="p-stat-lbl">Secondary Liquidity</span></div>
+ </div>
+ </div>
+ <div class="pillar reveal d4"><div class="p-num">06</div><div class="p-title">Trust &amp; Estate Digitization</div><p class="p-body">Digital representation of trust and estate holdings. Modernizes administration of Canadian fiduciary assets while preserving the legal and tax frameworks institutions already operate within.</p>
+ <div class="p-stat-row">
+ <div class="p-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3 L4 7 L4 13 C 4 17 8 20 12 21 C 16 20 20 17 20 13 L 20 7 Z"/></svg></div>
+ <div class="p-stat-text"><span class="p-stat-val">Fiduciary</span><span class="p-stat-lbl">Trust &amp; Estate Grade</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 
 <!-- CANADIAN TOKENIZATION LANDSCAPE -->
 <section id="landscape">
-  <div class="lnd-in">
-    <div class="lnd-hdr">
-      <div>
-        <div class="lnd-eye reveal">
-          <span class="lnd-eye-dot"></span>
-          <span class="lnd-eye-txt">Canadian Tokenization Landscape</span>
-        </div>
-        <h2 class="lnd-title reveal">The market is forming.<br><em>Right now.</em></h2>
-      </div>
-      <p class="lnd-sub reveal d2">Canada has no central registry for tokenization projects. KCS Capital maintains its own ecosystem map. Below is our current read on the active landscape and where it is heading.</p>
-    </div>
+ <div class="lnd-in">
+ <div class="lnd-hdr">
+ <div>
+ <div class="lnd-eye reveal">
+ <span class="lnd-eye-dot"></span>
+ <span class="lnd-eye-txt">Canadian Tokenization Landscape</span>
+ </div>
+ <h2 class="lnd-title reveal">The market is forming.<br><em>Right now.</em></h2>
+ </div>
+ <p class="lnd-sub reveal d2">Canada has no central registry for tokenization projects. KCS Capital maintains its own ecosystem map. Below is our current read on the active landscape and where it is heading.</p>
+ </div>
 
-    <div class="lnd-cols reveal">
-      <div class="lnd-col now">
-        <span class="lnd-col-tag"><span class="blip"></span>Today &middot; 2026</span>
-        <div class="lnd-col-headline">75&ndash;175</div>
-        <div class="lnd-col-label">Meaningful Canadian tokenization projects</div>
-        <ul class="lnd-breakdown">
-          <li>Live operational products <strong>10&ndash;25</strong></li>
-          <li>Active pilots &amp; institutional discovery <strong>30&ndash;60</strong></li>
-          <li>Early-stage / stealth buildouts <strong>40&ndash;90</strong></li>
-          <li>Institutional infrastructure initiatives <strong>15&ndash;30</strong></li>
-          <li>Stablecoin / tokenized deposit / rail <strong>5&ndash;15</strong></li>
-          <li>Regulatory &amp; sandbox pilots <strong>10&ndash;20</strong></li>
-        </ul>
-      </div>
-      <div class="lnd-arrow">
-        <div class="lnd-arrow-inner">
-          <span class="lnd-arrow-line"></span>
-          <span class="lnd-arrow-yrs">Five-Year Horizon</span>
-          <span class="lnd-arrow-line"></span>
-        </div>
-      </div>
-      <div class="lnd-col future">
-        <span class="lnd-col-tag"><span class="blip"></span>Projected &middot; 2031</span>
-        <div class="lnd-col-headline"><em>250&ndash;600</em></div>
-        <div class="lnd-col-label">Meaningful Canadian tokenization projects</div>
-        <ul class="lnd-breakdown">
-          <li>Institutional infrastructure players <strong>25&ndash;50</strong></li>
-          <li>Asset tokenization platforms <strong>100&ndash;250</strong></li>
-          <li>Real estate tokenization ecosystems <strong>50&ndash;150</strong></li>
-          <li>Stablecoin &amp; payment rail systems <strong>15&ndash;40</strong></li>
-          <li>Bank-integrated tokenization systems <strong>10&ndash;20</strong></li>
-          <li>Total ecosystem growth <strong>3&ndash;4x</strong></li>
-        </ul>
-      </div>
-    </div>
-    <p class="lnd-source reveal"><strong>Source</strong>KCS Capital ecosystem mapping. Compiled from public company announcements, regulatory filings, CSA Project Tokenization participation, and Canadian startup ecosystem data. No central registry of Canadian tokenization projects exists; ranges reflect KCS Capital's market mapping methodology, May 2026.</p>
+ <div class="lnd-cols reveal">
+ <div class="lnd-col now">
+ <span class="lnd-col-tag"><span class="blip"></span>Today &middot; 2026</span>
+ <div class="lnd-col-headline">75 to 175</div>
+ <div class="lnd-col-label">Meaningful Canadian tokenization projects</div>
+ <ul class="lnd-breakdown">
+ <li>Live operational products <strong>10 to 25</strong></li>
+ <li>Active pilots &amp; institutional discovery <strong>30 to 60</strong></li>
+ <li>Early-stage / stealth buildouts <strong>40 to 90</strong></li>
+ <li>Institutional infrastructure initiatives <strong>15 to 30</strong></li>
+ <li>Stablecoin / tokenized deposit / rail <strong>5 to 15</strong></li>
+ <li>Regulatory &amp; sandbox pilots <strong>10 to 20</strong></li>
+ </ul>
+ </div>
+ <div class="lnd-arrow">
+ <div class="lnd-arrow-inner">
+ <span class="lnd-arrow-line"></span>
+ <span class="lnd-arrow-yrs">Five-Year Horizon</span>
+ <span class="lnd-arrow-line"></span>
+ </div>
+ </div>
+ <div class="lnd-col future">
+ <span class="lnd-col-tag"><span class="blip"></span>Projected &middot; 2031</span>
+ <div class="lnd-col-headline"><em>250 to 600</em></div>
+ <div class="lnd-col-label">Meaningful Canadian tokenization projects</div>
+ <ul class="lnd-breakdown">
+ <li>Institutional infrastructure players <strong>25 to 50</strong></li>
+ <li>Asset tokenization platforms <strong>100 to 250</strong></li>
+ <li>Real estate tokenization ecosystems <strong>50 to 150</strong></li>
+ <li>Stablecoin &amp; payment rail systems <strong>15 to 40</strong></li>
+ <li>Bank-integrated tokenization systems <strong>10 to 20</strong></li>
+ <li>Total ecosystem growth <strong>3 to 4x</strong></li>
+ </ul>
+ </div>
+ </div>
+ <p class="lnd-source reveal"><strong>Source</strong>KCS Capital ecosystem mapping. Compiled from public company announcements, regulatory filings, CSA Project Tokenization participation, and Canadian startup ecosystem data. No central registry of Canadian tokenization projects exists; ranges reflect KCS Capital's market mapping methodology, May 2026.</p>
 
-    <div class="lnd-momentum">
-      <div class="lnd-momentum-hdr">Recent Institutional Momentum</div>
-      <div class="lnd-momentum-grid">
-        <div class="lnd-mc reveal">
-          <span class="lnd-mc-date">Q2 2026</span>
-          <span class="lnd-mc-title">CSA Launches Project Tokenization</span>
-          <p class="lnd-mc-body">Canadian Securities Administrators formally elevated tokenization to a national regulatory initiative. The market structure question has moved from "if" to "who builds it."</p>
-        </div>
-        <div class="lnd-mc reveal d2">
-          <span class="lnd-mc-date">2026</span>
-          <span class="lnd-mc-title">BMO &middot; CME &middot; Google Cloud Tokenized Cash</span>
-          <p class="lnd-mc-body">Bank of Montreal announced tokenized cash and deposit infrastructure built with CME and Google Cloud. A second Tier-1 Canadian bank moving on production-grade tokenized infrastructure.</p>
-        </div>
-        <div class="lnd-mc reveal d4">
-          <span class="lnd-mc-date">Mar 2026</span>
-          <span class="lnd-mc-title">Bank of Canada Project Samara</span>
-          <p class="lnd-mc-body">$100M tokenized bond trial completed with RBC, TD, and EDC. Full lifecycle, regulatory sign-off from OSC, AMF, and CIRO. The reference architecture for what comes next.</p>
-        </div>
-      </div>
-      <div class="lnd-players">
-        <div class="lnd-players-label">Visible Canadian Participants</div>
-        <div class="lnd-players-list">
-          <span class="lnd-player">Bank of Canada</span>
-          <span class="lnd-player">BMO</span>
-          <span class="lnd-player">RBC</span>
-          <span class="lnd-player">TD</span>
-          <span class="lnd-player">EDC</span>
-          <span class="lnd-player">Polymath</span>
-          <span class="lnd-player">WonderFi</span>
-          <span class="lnd-player">Balance</span>
-          <span class="lnd-player">Aquanow</span>
-          <span class="lnd-player">TokenGX</span>
-          <span class="lnd-player">3iQ</span>
-          <span class="lnd-player">Purpose Investments</span>
-          <span class="lnd-player">Tetra Trust</span>
-          <span class="lnd-player">Stablecorp</span>
-          <span class="lnd-player">Ocree Capital</span>
-          <span class="lnd-player">T-RIZE</span>
-          <span class="lnd-player">Pineapple Financial</span>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="lnd-momentum">
+ <div class="lnd-momentum-hdr">Recent Institutional Momentum</div>
+ <div class="lnd-momentum-grid">
+ <div class="lnd-mc reveal">
+ <span class="lnd-mc-date">Q2 2026</span>
+ <span class="lnd-mc-title">CSA Launches Project Tokenization</span>
+ <p class="lnd-mc-body">Canadian Securities Administrators formally elevated tokenization to a national regulatory initiative. The market structure question has moved from "if" to "who builds it."</p>
+ </div>
+ <div class="lnd-mc reveal d2">
+ <span class="lnd-mc-date">2026</span>
+ <span class="lnd-mc-title">BMO &middot; CME &middot; Google Cloud Tokenized Cash</span>
+ <p class="lnd-mc-body">Bank of Montreal announced tokenized cash and deposit infrastructure built with CME and Google Cloud. A second Tier-1 Canadian bank moving on production-grade tokenized infrastructure.</p>
+ </div>
+ <div class="lnd-mc reveal d4">
+ <span class="lnd-mc-date">Mar 2026</span>
+ <span class="lnd-mc-title">Bank of Canada Project Samara</span>
+ <p class="lnd-mc-body">$100M tokenized bond trial completed with RBC, TD, and EDC. Full lifecycle, regulatory sign-off from OSC, AMF, and CIRO. The reference architecture for what comes next.</p>
+ </div>
+ </div>
+ <div class="lnd-players">
+ <div class="lnd-players-label">Visible Canadian Participants</div>
+ <div class="lnd-players-list">
+ <span class="lnd-player">Bank of Canada</span>
+ <span class="lnd-player">BMO</span>
+ <span class="lnd-player">RBC</span>
+ <span class="lnd-player">TD</span>
+ <span class="lnd-player">EDC</span>
+ <span class="lnd-player">Polymath</span>
+ <span class="lnd-player">WonderFi</span>
+ <span class="lnd-player">Balance</span>
+ <span class="lnd-player">Aquanow</span>
+ <span class="lnd-player">TokenGX</span>
+ <span class="lnd-player">3iQ</span>
+ <span class="lnd-player">Purpose Investments</span>
+ <span class="lnd-player">Tetra Trust</span>
+ <span class="lnd-player">Stablecorp</span>
+ <span class="lnd-player">Ocree Capital</span>
+ <span class="lnd-player">T-RIZE</span>
+ <span class="lnd-player">Pineapple Financial</span>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- QUOTE BAND -->
 <section class="quote-band">
-  <div class="quote-band-in reveal">
-    <span class="quote-eye">The Thesis</span>
-    <span class="quote-mark">&ldquo;</span>
-    <p class="quote-text">A rising tide <em>raises all ships.</em></p>
-  </div>
+ <div class="quote-band-in reveal">
+ <span class="quote-eye">The Thesis</span>
+ <span class="quote-mark">&ldquo;</span>
+ <p class="quote-text">A rising tide <em>raises all ships.</em></p>
+ </div>
 </section>
 
 <!-- ALBERTA -->
 <section id="alberta">
-  <div class="alb-in">
-    <div>
-      <div class="s-eye reveal-l"><div class="s-eye-dot"></div><span class="s-eye-txt">Canada's Validation Moment</span></div>
-      <h2 class="s-title alb-r reveal-l">The Bank of Canada has answered the question.<br><em>The remaining question is who builds it.</em></h2>
-      <div class="alb-assets reveal-l d2">
-        <div class="asset"><div class="asset-ico">&#9672;</div><div class="asset-nm">Project Samara</div><div class="asset-desc">$100M tokenized bond trial &middot; Mar 2026</div></div>
-        <div class="asset"><div class="asset-ico">&#9670;</div><div class="asset-nm">RBC &middot; TD &middot; EDC</div><div class="asset-desc">Tier-1 participants in the pilot</div></div>
-        <div class="asset"><div class="asset-ico">&#9671;</div><div class="asset-nm">OSC &middot; AMF &middot; CIRO</div><div class="asset-desc">Full regulatory sign-off achieved</div></div>
-        <div class="asset"><div class="asset-ico">&#9673;</div><div class="asset-nm">Pineapple Financial</div><div class="asset-desc">$13.7B tokenized mortgage portfolio</div></div>
-      </div>
-    </div>
-    <div>
-      <p class="alb-para reveal">On March 6, 2026, the Bank of Canada completed Project Samara, Canada's first tokenized bond trial, with RBC, TD, and Export Development Canada. C$100 million in tokenized bonds. Full lifecycle: issuance, bidding, coupon payments, secondary trading, redemption. Regulatory sign-off from the OSC, AMF, and CIRO. The question of whether Canada will operate on tokenized rails has been answered.</p>
-      <p class="alb-para reveal d2">Alberta is where Canada is answering the next question. The Financial Innovation Act created Canada's first regulatory sandbox. Bill 13 is streamlining the legislative path. CIRO published its Digital Asset Custody Framework in February 2026. The institutional infrastructure layer that connects Canada's banks, custodians, and issuers does not yet exist. 4orm Finance is built to be that layer.</p>
-      <p class="alb-para reveal d3">What Canada has: credible asset issuers (T-RIZE, Ocree Capital, Pineapple Financial with $13.7B in tokenized mortgages, AuCan Gold with $2.5B in tokenized mining bullion), stablecoin infrastructure (Cybrid, Stablecorp's QCAD, Loon), qualified custodians (Tetra Trust, Balance Trust, Brane Trust), and a regulated assets blockchain in Polymesh. What Canada does not yet have: institutional liquidity, a bank-aligned secondary market, an investor pool, or a settlement layer connecting these issuers to the buy-side. That's the bridge 4orm Finance is being built to be. KCS Capital is the firm developing the technology to do it.</p>
-      <a href="/research" class="alb-link reveal d4">Read: Canada's Window for Domestic RWA Infrastructure &rarr;</a>
-    </div>
-  </div>
+ <div class="alb-in">
+ <div>
+ <div class="s-eye reveal-l"><div class="s-eye-dot"></div><span class="s-eye-txt">Canada's Validation Moment</span></div>
+ <h2 class="s-title alb-r reveal-l">The Bank of Canada has answered the question.<br><em>The remaining question is who builds it.</em></h2>
+ <div class="alb-assets reveal-l d2">
+ <div class="asset"><div class="asset-ico">&#9672;</div><div class="asset-nm">Project Samara</div><div class="asset-desc">$100M tokenized bond trial &middot; Mar 2026</div></div>
+ <div class="asset"><div class="asset-ico">&#9670;</div><div class="asset-nm">RBC &middot; TD &middot; EDC</div><div class="asset-desc">Tier-1 participants in the pilot</div></div>
+ <div class="asset"><div class="asset-ico">&#9671;</div><div class="asset-nm">OSC &middot; AMF &middot; CIRO</div><div class="asset-desc">Full regulatory sign-off achieved</div></div>
+ <div class="asset"><div class="asset-ico">&#9673;</div><div class="asset-nm">Pineapple Financial</div><div class="asset-desc">$13.7B tokenized mortgage portfolio</div></div>
+ </div>
+ </div>
+ <div>
+ <p class="alb-para reveal">On March 6, 2026, the Bank of Canada completed Project Samara, Canada's first tokenized bond trial, with RBC, TD, and Export Development Canada. C$100 million in tokenized bonds. Full lifecycle: issuance, bidding, coupon payments, secondary trading, redemption. Regulatory sign-off from the OSC, AMF, and CIRO. The question of whether Canada will operate on tokenized rails has been answered.</p>
+ <p class="alb-para reveal d2">Alberta is where Canada is answering the next question. The Financial Innovation Act created Canada's first regulatory sandbox. Bill 13 is streamlining the legislative path. CIRO published its Digital Asset Custody Framework in February 2026. The institutional infrastructure layer that connects Canada's banks, custodians, and issuers does not yet exist. 4orm Finance is built to be that layer.</p>
+ <p class="alb-para reveal d3">What Canada has: credible asset issuers (T-RIZE, Ocree Capital, Pineapple Financial with $13.7B in tokenized mortgages, AuCan Gold with $2.5B in tokenized mining bullion), stablecoin infrastructure (Cybrid, Stablecorp's QCAD, Loon), qualified custodians (Tetra Trust, Balance Trust, Brane Trust), and a regulated assets blockchain in Polymesh. What Canada does not yet have: institutional liquidity, a bank-aligned secondary market, an investor pool, or a settlement layer connecting these issuers to the buy-side. That's the bridge 4orm Finance is being built to be. KCS Capital is the firm developing the technology to do it.</p>
+ <a href="/research" class="alb-link reveal d4">Read: Canada's Window for Domestic RWA Infrastructure &rarr;</a>
+ </div>
+ </div>
 </section>
 
 
 
 <!-- TRUST -->
 <div id="trust">
-  <div class="trust-in">
-    <div class="trust-header">
-      <div class="trust-header-left">
-        <span class="trust-eye-dot"></span>
-        <span class="trust-hdr">Regulatory &amp; Infrastructure Status Board</span>
-      </div>
-      <div class="trust-live"><div class="trust-live-dot"></div><span class="trust-live-txt">Pre-Seed Active &middot; Closing Q2 2026</span></div>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-card reveal">
-        <span class="trust-card-status amber"><span class="blip"></span>Pathway</span>
-        <span class="trust-card-label">CIRO Custody Framework</span>
-        <span class="trust-card-sub">Three-entity separation, tier 2 target</span>
-      </div>
-      <div class="trust-card reveal d1">
-        <span class="trust-card-status amber"><span class="blip"></span>Pathway</span>
-        <span class="trust-card-label">OSFI &middot; CSA &middot; FINTRAC</span>
-        <span class="trust-card-sub">Sandbox application Q3 2026</span>
-      </div>
-      <div class="trust-card reveal d2">
-        <span class="trust-card-status green"><span class="blip"></span>Active</span>
-        <span class="trust-card-label">Alberta Sandbox</span>
-        <span class="trust-card-sub">Financial Innovation Act &middot; Bill 13</span>
-      </div>
-      <div class="trust-card reveal d3">
-        <span class="trust-card-status green"><span class="blip"></span>Verified</span>
-        <span class="trust-card-label">Project Samara Architecture</span>
-        <span class="trust-card-sub">Bank of Canada reference model</span>
-      </div>
-      <div class="trust-card reveal d4">
-        <span class="trust-card-status"><span class="blip"></span>Structured</span>
-        <span class="trust-card-label">HoldCo / OpCo / CustodyCo</span>
-        <span class="trust-card-sub">Corp chart per CIRO framework</span>
-      </div>
-    </div>
-  </div>
+ <div class="trust-in">
+ <div class="trust-header">
+ <div class="trust-header-left">
+ <span class="trust-eye-dot"></span>
+ <span class="trust-hdr">Regulatory &amp; Infrastructure Status Board</span>
+ </div>
+ <div class="trust-live"><div class="trust-live-dot"></div><span class="trust-live-txt">Pre-Seed Active &middot; Closing Q2 2026</span></div>
+ </div>
+ <div class="trust-grid">
+ <div class="trust-card reveal">
+ <span class="trust-card-status amber"><span class="blip"></span>Pathway</span>
+ <span class="trust-card-label">CIRO Custody Framework</span>
+ <span class="trust-card-sub">Three-entity separation, tier 2 target</span>
+ </div>
+ <div class="trust-card reveal d1">
+ <span class="trust-card-status amber"><span class="blip"></span>Pathway</span>
+ <span class="trust-card-label">OSFI &middot; CSA &middot; FINTRAC</span>
+ <span class="trust-card-sub">Sandbox application Q3 2026</span>
+ </div>
+ <div class="trust-card reveal d2">
+ <span class="trust-card-status green"><span class="blip"></span>Active</span>
+ <span class="trust-card-label">Alberta Sandbox</span>
+ <span class="trust-card-sub">Financial Innovation Act &middot; Bill 13</span>
+ </div>
+ <div class="trust-card reveal d3">
+ <span class="trust-card-status green"><span class="blip"></span>Verified</span>
+ <span class="trust-card-label">Project Samara Architecture</span>
+ <span class="trust-card-sub">Bank of Canada reference model</span>
+ </div>
+ <div class="trust-card reveal d4">
+ <span class="trust-card-status"><span class="blip"></span>Structured</span>
+ <span class="trust-card-label">HoldCo / OpCo / CustodyCo</span>
+ <span class="trust-card-sub">Corp chart per CIRO framework</span>
+ </div>
+ </div>
+ </div>
 </div>
 
 <!-- KCS BRIEFS -->
 <section id="briefs-home">
-  <div class="ins-in">
-    <div class="ins-hdr">
-      <div>
-        <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Short-Form Analysis</span></div>
-        <h2 class="s-title reveal" style="margin-bottom:0">KCS <em>Briefs</em></h2>
-      </div>
-      <a href="/briefs" class="ins-all reveal">View All Briefs &rarr;</a>
-    </div>
-    <div class="ins-grid">
-      <a class="ic reveal" href="/brief-when-trust-fails" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#1A0D0D"/><text x="20" y="70" fill="#C9882A" opacity=".5" font-size="10" font-family="sans-serif" letter-spacing="3">WHEN TRUST FAILS</text></svg>
-          <img src="/brief-when-trust-fails.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Regulatory</span>
-          <h3 class="ic-title" style="margin-top:.7rem">When "Trust Us" Fails: Canada's Record Crypto Penalty</h3>
-          <p class="ic-ex">A record AML penalty, an exchange takedown, and a flash crash that reached Canadian retirement accounts. The lesson is not that crypto exists, it is that black-box infrastructure fails in predictable ways.</p>
-          <div class="ic-meta"><span class="ic-date">Nov 2025</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
-      <a class="ic reveal d2" href="/brief-rwa-market-opportunity" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1414"/><text x="20" y="70" fill="#C9882A" opacity=".5" font-size="10" font-family="sans-serif" letter-spacing="3">WHERE RWAs LIVE</text></svg>
-          <img src="/brief-rwa-market-opportunity.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Market</span>
-          <h3 class="ic-title" style="margin-top:.7rem">The Market Opportunity: Where RWAs Actually Live</h3>
-          <p class="ic-ex">Tokenized real-world assets are projected to reach into the trillions this decade. But the opportunity is not the headline number, it is the institutions, custody frameworks, and settlement rails.</p>
-          <div class="ic-meta"><span class="ic-date">Mar 2026</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
-      <a class="ic reveal d4" href="/brief-alberta-tokenization" style="text-decoration:none">
-        <div class="ic-img">
-          <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1420"/><text x="20" y="70" fill="#C9882A" opacity=".5" font-size="10" font-family="sans-serif" letter-spacing="3">ALBERTA TOKENIZATION</text></svg>
-          <img src="/brief-alberta-tokenization.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-        </div>
-        <div class="ic-body">
-          <span class="ic-tag">Tokenization</span>
-          <h3 class="ic-title" style="margin-top:.7rem">Unlocking Alberta's Wealth Through Tokenization</h3>
-          <p class="ic-ex">Alberta's resource base is one of the largest on Earth. What if a portion of that value could be put to work today, without selling the asset, by converting future revenue into regulated, liquid instruments?</p>
-          <div class="ic-meta"><span class="ic-date">Feb 2026</span><span class="ic-read">Read Brief &rarr;</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
+ <div class="ins-in">
+ <div class="ins-hdr">
+ <div>
+ <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Short-Form Analysis</span></div>
+ <h2 class="s-title reveal" style="margin-bottom:0">KCS <em>Briefs</em></h2>
+ </div>
+ <a href="/briefs" class="ins-all reveal">View All Briefs &rarr;</a>
+ </div>
+ <div class="ins-grid">
+ <a class="ic reveal" href="/brief-when-trust-fails" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#1A0D0D"/><text x="20" y="70" fill="#C9882A" opacity=".5" font-size="10" font-family="sans-serif" letter-spacing="3">WHEN TRUST FAILS</text></svg>
+ <img src="/brief-when-trust-fails.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Regulatory</span>
+ <h3 class="ic-title" style="margin-top:.7rem">When "Trust Us" Fails: Canada's Record Crypto Penalty</h3>
+ <p class="ic-ex">A record AML penalty, an exchange takedown, and a flash crash that reached Canadian retirement accounts. The lesson is not that crypto exists, it is that black-box infrastructure fails in predictable ways.</p>
+ <div class="ic-meta"><span class="ic-date">Nov 2025</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
+ <a class="ic reveal d2" href="/brief-rwa-market-opportunity" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1414"/><text x="20" y="70" fill="#C9882A" opacity=".5" font-size="10" font-family="sans-serif" letter-spacing="3">WHERE RWAs LIVE</text></svg>
+ <img src="/brief-rwa-market-opportunity.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Market</span>
+ <h3 class="ic-title" style="margin-top:.7rem">The Market Opportunity: Where RWAs Actually Live</h3>
+ <p class="ic-ex">Tokenized real-world assets are projected to reach into the trillions this decade. But the opportunity is not the headline number, it is the institutions, custody frameworks, and settlement rails.</p>
+ <div class="ic-meta"><span class="ic-date">Mar 2026</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
+ <a class="ic reveal d4" href="/brief-alberta-tokenization" style="text-decoration:none">
+ <div class="ic-img">
+ <svg width="100%" height="130" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="400" height="130" fill="#0A1420"/><text x="20" y="70" fill="#C9882A" opacity=".5" font-size="10" font-family="sans-serif" letter-spacing="3">ALBERTA TOKENIZATION</text></svg>
+ <img src="/brief-alberta-tokenization.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+ </div>
+ <div class="ic-body">
+ <span class="ic-tag">Tokenization</span>
+ <h3 class="ic-title" style="margin-top:.7rem">Unlocking Alberta's Wealth Through Tokenization</h3>
+ <p class="ic-ex">Alberta's resource base is one of the largest on Earth. What if a portion of that value could be put to work today, without selling the asset, by converting future revenue into regulated, liquid instruments?</p>
+ <div class="ic-meta"><span class="ic-date">Feb 2026</span><span class="ic-read">Read Brief &rarr;</span></div>
+ </div>
+ </a>
+ </div>
+ </div>
 </section>
 
 <!-- CTA -->
 <section id="cta">
-  <div class="cta-eye reveal">Pre-Seed &middot; Closing Q2 2026</div>
-  <h2 class="cta-title reveal d1">Canada doesn't need another crypto exchange.<br><em>It needs a settlement layer.</em></h2>
-  <p class="cta-body reveal d2">The Bank of Canada has proven the architecture works. Tier-1 banks are running pilots. CIRO has published the custody framework. Canada's RWA infrastructure opportunity is $350M to $1.9B in annual revenue pools. That's $1.33B to $8.3B cumulative over five years. The institutions that build this layer now will define the standard for decades.</p>
-  <div class="cta-acts reveal d3">
-    <a href="/data-room" class="btn-p">Request Access to Data Room &rarr;</a>
-    <a href="/contact" class="btn-s">Institutional Discovery Engagement &rarr;</a>
-  </div>
+ <div class="cta-eye reveal">Pre-Seed &middot; Closing Q2 2026</div>
+ <h2 class="cta-title reveal d1">Canada doesn't need another crypto exchange.<br><em>It needs a settlement layer.</em></h2>
+ <p class="cta-body reveal d2">The Bank of Canada has proven the architecture works. Tier-1 banks are running pilots. CIRO has published the custody framework. Canada's RWA infrastructure opportunity is $350M to $1.9B in annual revenue pools. That's $1.33B to $8.3B cumulative over five years. The institutions that build this layer now will define the standard for decades.</p>
+ <div class="cta-acts reveal d3">
+ <a href="/data-room" class="btn-p">Request Access to Data Room &rarr;</a>
+ <a href="/contact" class="btn-s">Institutional Discovery Engagement &rarr;</a>
+ </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="foot-main">
-    <div>
-      <div class="foot-brand">
-        <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
-        KCS Capital
-      </div>
-      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
-      <div class="foot-soc">
-        <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
-        <a href="#" class="foot-sb" aria-label="Twitter">X</a>
-      </div>
-      <div class="foot-nl">
-        <div class="foot-nl-hdr">KCS Capital Research</div>
-        <div class="foot-nl-desc">Monthly research on Canadian RWA markets, CIRO &amp; CSA frameworks, and institutional tokenization.</div>
-        <form class="foot-nl-form" id="foot-nl-form" action="https://formspree.io/f/mredpebq" method="POST">
-          <input type="hidden" name="_subject" value="New Research Subscriber">
-          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
-          <input type="email" name="email" placeholder="your@email.com" aria-label="Email for research updates" required>
-          <button type="submit">Subscribe &rarr;</button>
-          <div class="foot-nl-msg" id="foot-nl-msg" style="display:none"></div>
-        </form>
-      </div>
-    </div>
-    <div>
-      <div class="foot-col-t">KCS Capital</div>
-      <ul class="foot-links">
-        <li><a href="/about">About the Firm</a></li>
-        <li><a href="/research">Research</a></li>
-        <li><a href="/team">Team &amp; Advisors</a></li>
-        <li><a href="/briefs">KCS Briefs</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/data-room">Investor Relations</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">4orm Finance</div>
-      <ul class="foot-links">
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">For Banks &amp; Crown FIs &#8599;</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">For Issuers &#8599;</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">For Custodians &#8599;</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Technical Documentation &#8599;</a></li>
-        <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">Offices</div>
-      <ul class="foot-links">
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
-          <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
-        </li>
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
-          <a href="tel:17786515255">1-778-651-5255</a>
-        </li>
-        <li>
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
-          <a href="tel:17802663050">1-780-266-3050</a>
-        </li>
-        <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bot">
-    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
-    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
-  </div>
+ <div class="foot-main">
+ <div>
+ <div class="foot-brand">
+ <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+ KCS Capital
+ </div>
+ <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+ <div class="foot-soc">
+ <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
+ <a href="#" class="foot-sb" aria-label="Twitter">X</a>
+ </div>
+ <div class="foot-nl">
+ <div class="foot-nl-hdr">KCS Capital Research</div>
+ <div class="foot-nl-desc">Monthly research on Canadian RWA markets, CIRO &amp; CSA frameworks, and institutional tokenization.</div>
+ <form class="foot-nl-form" id="foot-nl-form" action="https://formspree.io/f/mredpebq" method="POST">
+ <input type="hidden" name="_subject" value="New Research Subscriber">
+ <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+ <input type="email" name="email" placeholder="your@email.com" aria-label="Email for research updates" required>
+ <button type="submit">Subscribe &rarr;</button>
+ <div class="foot-nl-msg" id="foot-nl-msg" style="display:none"></div>
+ </form>
+ </div>
+ </div>
+ <div>
+ <div class="foot-col-t">KCS Capital</div>
+ <ul class="foot-links">
+ <li><a href="/about">About the Firm</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/team">Team &amp; Advisors</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/contact">Contact</a></li>
+ <li><a href="/data-room">Investor Relations</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">4orm Finance</div>
+ <ul class="foot-links">
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">For Banks &amp; Crown FIs &#8599;</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">For Issuers &#8599;</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">For Custodians &#8599;</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Technical Documentation &#8599;</a></li>
+ <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">Offices</div>
+ <ul class="foot-links">
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
+ <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
+ </li>
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
+ <a href="tel:17786515255">1-778-651-5255</a>
+ </li>
+ <li>
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
+ <a href="tel:17802663050">1-780-266-3050</a>
+ </li>
+ <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="foot-bot">
+ <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+ <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
+ </div>
 </footer>
 
 <script>
 /* Slow the Calgary skyline hero video to 90% speed */
 (function(){var v=document.getElementById('hero-video');if(!v)return;var slow=function(){v.playbackRate=0.9;};slow();v.addEventListener('loadedmetadata',slow);v.addEventListener('play',slow);})();
-/* Footer research-subscribe — AJAX submit to Formspree */
+/* Footer research-subscribe, AJAX submit to Formspree */
 (function(){
-  var f=document.getElementById('foot-nl-form');if(!f)return;
-  var btn=f.querySelector('button');var msg=document.getElementById('foot-nl-msg');
-  f.addEventListener('submit',async function(e){
-    e.preventDefault();
-    if(!f.checkValidity()){f.reportValidity();return;}
-    if(btn){btn.disabled=true;btn.textContent='Subscribing...';}
-    try{
-      var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
-      if(r.ok){
-        f.reset();
-        if(btn){btn.textContent='Subscribed ✓';}
-        if(msg){msg.textContent='Thank you — you’re on the list. We’ll be in touch with new research.';msg.style.color='var(--gold-l)';msg.style.display='block';}
-      }else{
-        if(btn){btn.disabled=false;btn.innerHTML='Subscribe →';}
-        if(msg){msg.textContent='Something went wrong. Please try again, or email contact@kcs-capital.com.';msg.style.color='#e8a8a3';msg.style.display='block';}
-      }
-    }catch(err){
-      if(btn){btn.disabled=false;btn.innerHTML='Subscribe →';}
-      if(msg){msg.textContent='Network problem. Please try again, or email contact@kcs-capital.com.';msg.style.color='#e8a8a3';msg.style.display='block';}
-    }
-  });
+ var f=document.getElementById('foot-nl-form');if(!f)return;
+ var btn=f.querySelector('button');var msg=document.getElementById('foot-nl-msg');
+ f.addEventListener('submit',async function(e){
+ e.preventDefault();
+ if(!f.checkValidity()){f.reportValidity();return;}
+ if(btn){btn.disabled=true;btn.textContent='Subscribing...';}
+ try{
+ var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+ if(r.ok){
+ f.reset();
+ if(btn){btn.textContent='Subscribed ✓';}
+ if(msg){msg.textContent='Thank you, you’re on the list. We’ll be in touch with new research.';msg.style.color='var(--gold-l)';msg.style.display='block';}
+ }else{
+ if(btn){btn.disabled=false;btn.innerHTML='Subscribe →';}
+ if(msg){msg.textContent='Something went wrong. Please try again, or email contact@kcs-capital.com.';msg.style.color='#e8a8a3';msg.style.display='block';}
+ }
+ }catch(err){
+ if(btn){btn.disabled=false;btn.innerHTML='Subscribe →';}
+ if(msg){msg.textContent='Network problem. Please try again, or email contact@kcs-capital.com.';msg.style.color='#e8a8a3';msg.style.display='block';}
+ }
+ });
 })();
 </script>
 <script>
 class HeroScene {
-  constructor(canvas) {
-    this.canvas = canvas;
-    this.ctx = canvas.getContext('2d');
-    this.t = 0;
-    this.lastTs = 0;
-    this.W = 0;
-    this.H = 0;
-    this.vY = 0;
-    this.nodes = [];
-    this.connections = [];
-    this.traces = [];
-    this.particles = [];
-    this.mouse = { x: 0.5, y: 0.5 };
-    this.mouseTarget = { x: 0.5, y: 0.5 };
-  }
-  resize() {
-    this.W = this.canvas.width = this.canvas.offsetWidth;
-    this.H = this.canvas.height = this.canvas.offsetHeight;
-    this.vY = this.H * 0.43;
-    this._buildScene();
-  }
-  _buildScene() {
-    const { W, H, vY } = this;
-    const floorH = H - vY;
-    this.nodes = [];
-    const total = 72;
-    for (let i = 0; i < total; i++) {
-      const inSky = i < 18;
-      const rawY = inSky
-        ? vY * (0.05 + Math.random() * 0.85)
-        : vY + floorH * (0.05 + Math.random() * 0.88);
-      const depth = inSky ? 0 : (rawY - vY) / floorH;
-      const halfW = W / 2;
-      const spread = inSky ? 1 : depth;
-      const x = halfW + (Math.random() - 0.5) * W * spread * 0.96;
-      this.nodes.push({
-        x, y: rawY,
-        baseSize: inSky ? (Math.random() * 1.2 + 0.4) : (Math.random() * 2.2 + 0.6),
-        pulsePhase: Math.random() * Math.PI * 2,
-        pulseSpeed: 0.4 + Math.random() * 1.1,
-        type: inSky ? 'sky' : 'floor',
-        depth: inSky ? 0 : depth,
-        major: Math.random() < 0.15,
-      });
-    }
-    this.connections = [];
-    const maxD = Math.min(W, H) * 0.22;
-    for (let i = 0; i < this.nodes.length; i++) {
-      for (let j = i + 1; j < this.nodes.length; j++) {
-        const dx = this.nodes[i].x - this.nodes[j].x;
-        const dy = this.nodes[i].y - this.nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < maxD) {
-          const h = ((i * 37 + j * 19 + i * j * 3) % 100) / 100;
-          this.connections.push({
-            a: i, b: j, dist,
-            cycleDur: 3 + h * 6,
-            cycleOff: h,
-            maxAlpha: 0.18 + (1 - dist / maxD) * 0.22,
-          });
-        }
-      }
-    }
-    this.traces = [];
-    const eligible = this.connections.filter(c => c.dist > 70);
-    const numT = Math.min(10, Math.floor(eligible.length * 0.09));
-    for (let i = 0; i < numT; i++) {
-      const c = eligible[Math.floor(Math.random() * eligible.length)];
-      this.traces.push({
-        conn: c,
-        t: Math.random(),
-        speed: 0.12 + Math.random() * 0.18,
-        dir: Math.random() > 0.5 ? 1 : -1,
-        trailLen: 6 + Math.floor(Math.random() * 6),
-      });
-    }
-    this.particles = [];
-    for (let i = 0; i < 55; i++) {
-      this.particles.push(this._makeParticle(true));
-    }
-  }
-  _makeParticle(randomY = false) {
-    const { W, H } = this;
-    return {
-      x: Math.random() * W,
-      y: randomY ? Math.random() * H : H + 5,
-      vy: -(0.06 + Math.random() * 0.22),
-      vx: (Math.random() - 0.5) * 0.08,
-      opacity: Math.random() * 0.28,
-      size: Math.random() * 1.2 + 0.3,
-      drift: Math.random() * Math.PI * 2,
-    };
-  }
-  _drawGrid() {
-    const { ctx, W, H, vY, t } = this;
-    const floorH = H - vY;
-    const VP = W / 2;
-    const numV = 22;
-    for (let i = 0; i <= numV; i++) {
-      const xFloor = (i / numV) * W;
-      const alpha = 0.04 + (Math.abs(i - numV / 2) / (numV / 2)) * 0.02;
-      ctx.strokeStyle = `rgba(201,136,42,${alpha})`;
-      ctx.lineWidth = 0.5;
-      ctx.beginPath();
-      ctx.moveTo(VP, vY);
-      ctx.lineTo(xFloor, H);
-      ctx.stroke();
-    }
-    const scrollSpeed = 0.05;
-    const rawOff = (t * scrollSpeed) % 1;
-    const numH = 22;
-    for (let i = 0; i < numH; i++) {
-      let raw = ((i / numH) + rawOff) % 1;
-      const pt = raw * raw;
-      const y = vY + floorH * pt;
-      if (y > H + 2) continue;
-      const spread = pt;
-      const xL = VP - VP * spread;
-      const xR = VP + (W - VP) * spread;
-      const alpha = pt * 0.14;
-      ctx.strokeStyle = `rgba(201,136,42,${alpha})`;
-      ctx.lineWidth = 0.5;
-      ctx.beginPath();
-      ctx.moveTo(xL, y);
-      ctx.lineTo(xR, y);
-      ctx.stroke();
-    }
-    const hg = ctx.createLinearGradient(0, vY - 35, 0, vY + 35);
-    hg.addColorStop(0, 'rgba(201,136,42,0)');
-    hg.addColorStop(0.5, 'rgba(201,136,42,0.075)');
-    hg.addColorStop(1, 'rgba(201,136,42,0)');
-    ctx.fillStyle = hg;
-    ctx.fillRect(0, vY - 35, W, 70);
-    ctx.strokeStyle = 'rgba(201,136,42,0.32)';
-    ctx.lineWidth = 0.75;
-    ctx.beginPath();
-    ctx.moveTo(0, vY);
-    ctx.lineTo(W, vY);
-    ctx.stroke();
-    const vpg = ctx.createRadialGradient(VP, vY, 0, VP, vY, 200);
-    vpg.addColorStop(0, 'rgba(232,193,112,0.12)');
-    vpg.addColorStop(1, 'rgba(232,193,112,0)');
-    ctx.fillStyle = vpg;
-    ctx.fillRect(VP - 200, vY - 20, 400, 40);
-  }
-  _drawSky() {
-    const { ctx, W, vY } = this;
-    const sg = ctx.createLinearGradient(0, 0, 0, vY);
-    sg.addColorStop(0, 'rgba(201,136,42,0.025)');
-    sg.addColorStop(0.5, 'rgba(201,136,42,0.012)');
-    sg.addColorStop(1, 'rgba(201,136,42,0)');
-    ctx.fillStyle = sg;
-    ctx.fillRect(0, 0, W, vY);
-  }
-  _drawConnections() {
-    const { ctx, nodes, connections, t } = this;
-    connections.forEach(c => {
-      const ph = ((t / c.cycleDur) + c.cycleOff) % 1;
-      let a;
-      if (ph < 0.12) a = (ph / 0.12) * c.maxAlpha;
-      else if (ph < 0.55) a = c.maxAlpha;
-      else if (ph < 0.72) a = ((0.72 - ph) / 0.17) * c.maxAlpha;
-      else a = 0;
-      if (a <= 0.005) return;
-      const na = nodes[c.a], nb = nodes[c.b];
-      ctx.strokeStyle = `rgba(201,136,42,${a})`;
-      ctx.lineWidth = 0.5;
-      ctx.beginPath();
-      ctx.moveTo(na.x, na.y);
-      ctx.lineTo(nb.x, nb.y);
-      ctx.stroke();
-    });
-  }
-  _drawNodes() {
-    const { ctx, nodes, t } = this;
-    nodes.forEach(nd => {
-      const pulse = 0.5 + 0.5 * Math.sin(t * nd.pulseSpeed + nd.pulsePhase);
-      const alphaBase = nd.major ? 0.75 : (nd.type === 'sky' ? 0.35 : 0.48);
-      const alpha = alphaBase * (0.45 + 0.55 * pulse);
-      const s = nd.baseSize;
-      ctx.save();
-      ctx.translate(nd.x, nd.y);
-      const od = s * 4.5;
-      ctx.beginPath();
-      ctx.moveTo(0, -od); ctx.lineTo(od, 0);
-      ctx.lineTo(0, od); ctx.lineTo(-od, 0);
-      ctx.closePath();
-      ctx.strokeStyle = `rgba(201,136,42,${alpha * 0.28})`;
-      ctx.lineWidth = 0.5;
-      ctx.stroke();
-      const id2 = s * 1.8;
-      ctx.beginPath();
-      ctx.moveTo(0, -id2); ctx.lineTo(id2, 0);
-      ctx.lineTo(0, id2); ctx.lineTo(-id2, 0);
-      ctx.closePath();
-      ctx.fillStyle = `rgba(201,136,42,${alpha * 0.55})`;
-      ctx.fill();
-      ctx.strokeStyle = `rgba(232,193,112,${alpha * 0.4})`;
-      ctx.lineWidth = 0.5;
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(0, 0, s * 0.7, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(232,193,112,${alpha})`;
-      ctx.fill();
-      if (pulse > 0.65 && nd.major) {
-        const rR = s * 6 * ((pulse - 0.65) / 0.35);
-        const rA = (1 - (pulse - 0.65) / 0.35) * 0.22;
-        ctx.beginPath();
-        ctx.arc(0, 0, rR, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(201,136,42,${rA})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-      }
-      ctx.restore();
-    });
-  }
-  _drawTraces() {
-    const { ctx, nodes, traces } = this;
-    traces.forEach(tr => {
-      const na = nodes[tr.conn.a], nb = nodes[tr.conn.b];
-      const headX = na.x + (nb.x - na.x) * tr.t;
-      const headY = na.y + (nb.y - na.y) * tr.t;
-      for (let i = tr.trailLen; i >= 1; i--) {
-        const trailT = Math.max(0, Math.min(1, tr.t - i * 0.018 * tr.dir));
-        const tx = na.x + (nb.x - na.x) * trailT;
-        const ty = na.y + (nb.y - na.y) * trailT;
-        const tA = (1 - i / tr.trailLen) * 0.85;
-        const tR = Math.max(0.2, 2.2 - i * 0.18);
-        ctx.beginPath();
-        ctx.arc(tx, ty, tR, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(232,193,112,${tA})`;
-        ctx.fill();
-      }
-      const glowR = ctx.createRadialGradient(headX, headY, 0, headX, headY, 7);
-      glowR.addColorStop(0, 'rgba(232,193,112,0.9)');
-      glowR.addColorStop(0.4, 'rgba(201,136,42,0.4)');
-      glowR.addColorStop(1, 'rgba(201,136,42,0)');
-      ctx.fillStyle = glowR;
-      ctx.beginPath();
-      ctx.arc(headX, headY, 7, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.arc(headX, headY, 2, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(242,237,232,0.95)';
-      ctx.fill();
-    });
-  }
-  _drawParticles() {
-    const { ctx, particles } = this;
-    particles.forEach(p => {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201,136,42,${p.opacity})`;
-      ctx.fill();
-    });
-  }
-  _drawStars() {
-    const { ctx, W, vY, t } = this;
-    if (!this._stars) {
-      this._stars = Array.from({ length: 60 }, (_, i) => ({
-        x: ((i * 137.508) % W),
-        y: ((i * 89.3) % vY),
-        size: 0.3 + (i % 5) * 0.15,
-        twinkle: i * 0.37,
-        speed: 0.3 + (i % 7) * 0.2,
-      }));
-    }
-    this._stars.forEach(s => {
-      const tw = 0.4 + 0.6 * Math.pow(0.5 + 0.5 * Math.sin(t * s.speed + s.twinkle), 2);
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(242,237,232,${tw * 0.35})`;
-      ctx.fill();
-    });
-  }
-  _update(dt) {
-    this.t += dt;
-    this.mouse.x += (this.mouseTarget.x - this.mouse.x) * 0.05;
-    this.mouse.y += (this.mouseTarget.y - this.mouse.y) * 0.05;
-    this.traces.forEach(tr => {
-      tr.t += tr.speed * dt * tr.dir;
-      if (tr.t >= 1) { tr.t = 1; tr.dir = -1; }
-      if (tr.t <= 0) { tr.t = 0; tr.dir = 1; }
-    });
-    this.particles.forEach((p, i) => {
-      p.y += p.vy;
-      p.x += p.vx + Math.sin(this.t * 0.25 + p.drift) * 0.05;
-      if (p.y < -8) {
-        this.particles[i] = this._makeParticle(false);
-      }
-    });
-  }
-  _draw() {
-    const { ctx, W, H } = this;
-    ctx.clearRect(0, 0, W, H);
-    const mx = (this.mouse.x - 0.5) * 12;
-    const my = (this.mouse.y - 0.5) * 6;
-    ctx.save();
-    ctx.translate(mx * 0.3, my * 0.3);
-    this._drawSky();
-    this._drawStars();
-    this._drawGrid();
-    this._drawConnections();
-    this._drawNodes();
-    this._drawTraces();
-    this._drawParticles();
-    ctx.restore();
-  }
-  _loop(ts) {
-    const dt = Math.min((ts - this.lastTs) / 1000, 0.05);
-    this.lastTs = ts;
-    this._update(dt);
-    this._draw();
-    requestAnimationFrame(ts => this._loop(ts));
-  }
-  start() {
-    this.resize();
-    window.addEventListener('resize', () => this.resize(), { passive: true });
-    window.addEventListener('mousemove', (e) => {
-      this.mouseTarget.x = e.clientX / window.innerWidth;
-      this.mouseTarget.y = e.clientY / window.innerHeight;
-    }, { passive: true });
-    requestAnimationFrame(ts => { this.lastTs = ts; this._loop(ts); });
-  }
+ constructor(canvas) {
+ this.canvas = canvas;
+ this.ctx = canvas.getContext('2d');
+ this.t = 0;
+ this.lastTs = 0;
+ this.W = 0;
+ this.H = 0;
+ this.vY = 0;
+ this.nodes = [];
+ this.connections = [];
+ this.traces = [];
+ this.particles = [];
+ this.mouse = { x: 0.5, y: 0.5 };
+ this.mouseTarget = { x: 0.5, y: 0.5 };
+ }
+ resize() {
+ this.W = this.canvas.width = this.canvas.offsetWidth;
+ this.H = this.canvas.height = this.canvas.offsetHeight;
+ this.vY = this.H * 0.43;
+ this._buildScene();
+ }
+ _buildScene() {
+ const { W, H, vY } = this;
+ const floorH = H - vY;
+ this.nodes = [];
+ const total = 72;
+ for (let i = 0; i < total; i++) {
+ const inSky = i < 18;
+ const rawY = inSky
+ ? vY * (0.05 + Math.random() * 0.85)
+ : vY + floorH * (0.05 + Math.random() * 0.88);
+ const depth = inSky ? 0 : (rawY - vY) / floorH;
+ const halfW = W / 2;
+ const spread = inSky ? 1 : depth;
+ const x = halfW + (Math.random() - 0.5) * W * spread * 0.96;
+ this.nodes.push({
+ x, y: rawY,
+ baseSize: inSky ? (Math.random() * 1.2 + 0.4) : (Math.random() * 2.2 + 0.6),
+ pulsePhase: Math.random() * Math.PI * 2,
+ pulseSpeed: 0.4 + Math.random() * 1.1,
+ type: inSky ? 'sky' : 'floor',
+ depth: inSky ? 0 : depth,
+ major: Math.random() < 0.15,
+ });
+ }
+ this.connections = [];
+ const maxD = Math.min(W, H) * 0.22;
+ for (let i = 0; i < this.nodes.length; i++) {
+ for (let j = i + 1; j < this.nodes.length; j++) {
+ const dx = this.nodes[i].x - this.nodes[j].x;
+ const dy = this.nodes[i].y - this.nodes[j].y;
+ const dist = Math.sqrt(dx * dx + dy * dy);
+ if (dist < maxD) {
+ const h = ((i * 37 + j * 19 + i * j * 3) % 100) / 100;
+ this.connections.push({
+ a: i, b: j, dist,
+ cycleDur: 3 + h * 6,
+ cycleOff: h,
+ maxAlpha: 0.18 + (1 - dist / maxD) * 0.22,
+ });
+ }
+ }
+ }
+ this.traces = [];
+ const eligible = this.connections.filter(c => c.dist > 70);
+ const numT = Math.min(10, Math.floor(eligible.length * 0.09));
+ for (let i = 0; i < numT; i++) {
+ const c = eligible[Math.floor(Math.random() * eligible.length)];
+ this.traces.push({
+ conn: c,
+ t: Math.random(),
+ speed: 0.12 + Math.random() * 0.18,
+ dir: Math.random() > 0.5 ? 1 : -1,
+ trailLen: 6 + Math.floor(Math.random() * 6),
+ });
+ }
+ this.particles = [];
+ for (let i = 0; i < 55; i++) {
+ this.particles.push(this._makeParticle(true));
+ }
+ }
+ _makeParticle(randomY = false) {
+ const { W, H } = this;
+ return {
+ x: Math.random() * W,
+ y: randomY ? Math.random() * H : H + 5,
+ vy: -(0.06 + Math.random() * 0.22),
+ vx: (Math.random() - 0.5) * 0.08,
+ opacity: Math.random() * 0.28,
+ size: Math.random() * 1.2 + 0.3,
+ drift: Math.random() * Math.PI * 2,
+ };
+ }
+ _drawGrid() {
+ const { ctx, W, H, vY, t } = this;
+ const floorH = H - vY;
+ const VP = W / 2;
+ const numV = 22;
+ for (let i = 0; i <= numV; i++) {
+ const xFloor = (i / numV) * W;
+ const alpha = 0.04 + (Math.abs(i - numV / 2) / (numV / 2)) * 0.02;
+ ctx.strokeStyle = `rgba(201,136,42,${alpha})`;
+ ctx.lineWidth = 0.5;
+ ctx.beginPath();
+ ctx.moveTo(VP, vY);
+ ctx.lineTo(xFloor, H);
+ ctx.stroke();
+ }
+ const scrollSpeed = 0.05;
+ const rawOff = (t * scrollSpeed) % 1;
+ const numH = 22;
+ for (let i = 0; i < numH; i++) {
+ let raw = ((i / numH) + rawOff) % 1;
+ const pt = raw * raw;
+ const y = vY + floorH * pt;
+ if (y > H + 2) continue;
+ const spread = pt;
+ const xL = VP - VP * spread;
+ const xR = VP + (W - VP) * spread;
+ const alpha = pt * 0.14;
+ ctx.strokeStyle = `rgba(201,136,42,${alpha})`;
+ ctx.lineWidth = 0.5;
+ ctx.beginPath();
+ ctx.moveTo(xL, y);
+ ctx.lineTo(xR, y);
+ ctx.stroke();
+ }
+ const hg = ctx.createLinearGradient(0, vY - 35, 0, vY + 35);
+ hg.addColorStop(0, 'rgba(201,136,42,0)');
+ hg.addColorStop(0.5, 'rgba(201,136,42,0.075)');
+ hg.addColorStop(1, 'rgba(201,136,42,0)');
+ ctx.fillStyle = hg;
+ ctx.fillRect(0, vY - 35, W, 70);
+ ctx.strokeStyle = 'rgba(201,136,42,0.32)';
+ ctx.lineWidth = 0.75;
+ ctx.beginPath();
+ ctx.moveTo(0, vY);
+ ctx.lineTo(W, vY);
+ ctx.stroke();
+ const vpg = ctx.createRadialGradient(VP, vY, 0, VP, vY, 200);
+ vpg.addColorStop(0, 'rgba(232,193,112,0.12)');
+ vpg.addColorStop(1, 'rgba(232,193,112,0)');
+ ctx.fillStyle = vpg;
+ ctx.fillRect(VP - 200, vY - 20, 400, 40);
+ }
+ _drawSky() {
+ const { ctx, W, vY } = this;
+ const sg = ctx.createLinearGradient(0, 0, 0, vY);
+ sg.addColorStop(0, 'rgba(201,136,42,0.025)');
+ sg.addColorStop(0.5, 'rgba(201,136,42,0.012)');
+ sg.addColorStop(1, 'rgba(201,136,42,0)');
+ ctx.fillStyle = sg;
+ ctx.fillRect(0, 0, W, vY);
+ }
+ _drawConnections() {
+ const { ctx, nodes, connections, t } = this;
+ connections.forEach(c => {
+ const ph = ((t / c.cycleDur) + c.cycleOff) % 1;
+ let a;
+ if (ph < 0.12) a = (ph / 0.12) * c.maxAlpha;
+ else if (ph < 0.55) a = c.maxAlpha;
+ else if (ph < 0.72) a = ((0.72 - ph) / 0.17) * c.maxAlpha;
+ else a = 0;
+ if (a <= 0.005) return;
+ const na = nodes[c.a], nb = nodes[c.b];
+ ctx.strokeStyle = `rgba(201,136,42,${a})`;
+ ctx.lineWidth = 0.5;
+ ctx.beginPath();
+ ctx.moveTo(na.x, na.y);
+ ctx.lineTo(nb.x, nb.y);
+ ctx.stroke();
+ });
+ }
+ _drawNodes() {
+ const { ctx, nodes, t } = this;
+ nodes.forEach(nd => {
+ const pulse = 0.5 + 0.5 * Math.sin(t * nd.pulseSpeed + nd.pulsePhase);
+ const alphaBase = nd.major ? 0.75 : (nd.type === 'sky' ? 0.35 : 0.48);
+ const alpha = alphaBase * (0.45 + 0.55 * pulse);
+ const s = nd.baseSize;
+ ctx.save();
+ ctx.translate(nd.x, nd.y);
+ const od = s * 4.5;
+ ctx.beginPath();
+ ctx.moveTo(0, -od); ctx.lineTo(od, 0);
+ ctx.lineTo(0, od); ctx.lineTo(-od, 0);
+ ctx.closePath();
+ ctx.strokeStyle = `rgba(201,136,42,${alpha * 0.28})`;
+ ctx.lineWidth = 0.5;
+ ctx.stroke();
+ const id2 = s * 1.8;
+ ctx.beginPath();
+ ctx.moveTo(0, -id2); ctx.lineTo(id2, 0);
+ ctx.lineTo(0, id2); ctx.lineTo(-id2, 0);
+ ctx.closePath();
+ ctx.fillStyle = `rgba(201,136,42,${alpha * 0.55})`;
+ ctx.fill();
+ ctx.strokeStyle = `rgba(232,193,112,${alpha * 0.4})`;
+ ctx.lineWidth = 0.5;
+ ctx.stroke();
+ ctx.beginPath();
+ ctx.arc(0, 0, s * 0.7, 0, Math.PI * 2);
+ ctx.fillStyle = `rgba(232,193,112,${alpha})`;
+ ctx.fill();
+ if (pulse > 0.65 && nd.major) {
+ const rR = s * 6 * ((pulse - 0.65) / 0.35);
+ const rA = (1 - (pulse - 0.65) / 0.35) * 0.22;
+ ctx.beginPath();
+ ctx.arc(0, 0, rR, 0, Math.PI * 2);
+ ctx.strokeStyle = `rgba(201,136,42,${rA})`;
+ ctx.lineWidth = 1;
+ ctx.stroke();
+ }
+ ctx.restore();
+ });
+ }
+ _drawTraces() {
+ const { ctx, nodes, traces } = this;
+ traces.forEach(tr => {
+ const na = nodes[tr.conn.a], nb = nodes[tr.conn.b];
+ const headX = na.x + (nb.x - na.x) * tr.t;
+ const headY = na.y + (nb.y - na.y) * tr.t;
+ for (let i = tr.trailLen; i >= 1; i--) {
+ const trailT = Math.max(0, Math.min(1, tr.t - i * 0.018 * tr.dir));
+ const tx = na.x + (nb.x - na.x) * trailT;
+ const ty = na.y + (nb.y - na.y) * trailT;
+ const tA = (1 - i / tr.trailLen) * 0.85;
+ const tR = Math.max(0.2, 2.2 - i * 0.18);
+ ctx.beginPath();
+ ctx.arc(tx, ty, tR, 0, Math.PI * 2);
+ ctx.fillStyle = `rgba(232,193,112,${tA})`;
+ ctx.fill();
+ }
+ const glowR = ctx.createRadialGradient(headX, headY, 0, headX, headY, 7);
+ glowR.addColorStop(0, 'rgba(232,193,112,0.9)');
+ glowR.addColorStop(0.4, 'rgba(201,136,42,0.4)');
+ glowR.addColorStop(1, 'rgba(201,136,42,0)');
+ ctx.fillStyle = glowR;
+ ctx.beginPath();
+ ctx.arc(headX, headY, 7, 0, Math.PI * 2);
+ ctx.fill();
+ ctx.beginPath();
+ ctx.arc(headX, headY, 2, 0, Math.PI * 2);
+ ctx.fillStyle = 'rgba(242,237,232,0.95)';
+ ctx.fill();
+ });
+ }
+ _drawParticles() {
+ const { ctx, particles } = this;
+ particles.forEach(p => {
+ ctx.beginPath();
+ ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+ ctx.fillStyle = `rgba(201,136,42,${p.opacity})`;
+ ctx.fill();
+ });
+ }
+ _drawStars() {
+ const { ctx, W, vY, t } = this;
+ if (!this._stars) {
+ this._stars = Array.from({ length: 60 }, (_, i) => ({
+ x: ((i * 137.508) % W),
+ y: ((i * 89.3) % vY),
+ size: 0.3 + (i % 5) * 0.15,
+ twinkle: i * 0.37,
+ speed: 0.3 + (i % 7) * 0.2,
+ }));
+ }
+ this._stars.forEach(s => {
+ const tw = 0.4 + 0.6 * Math.pow(0.5 + 0.5 * Math.sin(t * s.speed + s.twinkle), 2);
+ ctx.beginPath();
+ ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+ ctx.fillStyle = `rgba(242,237,232,${tw * 0.35})`;
+ ctx.fill();
+ });
+ }
+ _update(dt) {
+ this.t += dt;
+ this.mouse.x += (this.mouseTarget.x - this.mouse.x) * 0.05;
+ this.mouse.y += (this.mouseTarget.y - this.mouse.y) * 0.05;
+ this.traces.forEach(tr => {
+ tr.t += tr.speed * dt * tr.dir;
+ if (tr.t >= 1) { tr.t = 1; tr.dir = -1; }
+ if (tr.t <= 0) { tr.t = 0; tr.dir = 1; }
+ });
+ this.particles.forEach((p, i) => {
+ p.y += p.vy;
+ p.x += p.vx + Math.sin(this.t * 0.25 + p.drift) * 0.05;
+ if (p.y < -8) {
+ this.particles[i] = this._makeParticle(false);
+ }
+ });
+ }
+ _draw() {
+ const { ctx, W, H } = this;
+ ctx.clearRect(0, 0, W, H);
+ const mx = (this.mouse.x - 0.5) * 12;
+ const my = (this.mouse.y - 0.5) * 6;
+ ctx.save();
+ ctx.translate(mx * 0.3, my * 0.3);
+ this._drawSky();
+ this._drawStars();
+ this._drawGrid();
+ this._drawConnections();
+ this._drawNodes();
+ this._drawTraces();
+ this._drawParticles();
+ ctx.restore();
+ }
+ _loop(ts) {
+ const dt = Math.min((ts - this.lastTs) / 1000, 0.05);
+ this.lastTs = ts;
+ this._update(dt);
+ this._draw();
+ requestAnimationFrame(ts => this._loop(ts));
+ }
+ start() {
+ this.resize();
+ window.addEventListener('resize', () => this.resize(), { passive: true });
+ window.addEventListener('mousemove', (e) => {
+ this.mouseTarget.x = e.clientX / window.innerWidth;
+ this.mouseTarget.y = e.clientY / window.innerHeight;
+ }, { passive: true });
+ requestAnimationFrame(ts => { this.lastTs = ts; this._loop(ts); });
+ }
 }
-/* Hero particle/star canvas removed — overlay no longer rendered over the Calgary video */
+/* Hero particle/star canvas removed, overlay no longer rendered over the Calgary video */
 (function(){var c=document.getElementById('hero-canvas');if(c)new HeroScene(c).start();})();
 
 (function(){
-  const content = document.getElementById('hero-content');
-  const floats  = document.querySelector('.hero-floats');
-  const aurora  = document.querySelector('.hero-aurora');
-  const hud     = document.querySelectorAll('.hud-tl,.hud-tr,.hud-bl,.hud-br');
-  let mx = 0, my = 0, cx = 0, cy = 0;
-  window.addEventListener('mousemove', (e) => {
-    mx = (e.clientX / window.innerWidth - 0.5) * 2;
-    my = (e.clientY / window.innerHeight - 0.5) * 2;
-  }, { passive: true });
-  function tick() {
-    cx += (mx - cx) * 0.06;
-    cy += (my - cy) * 0.06;
-    if (content) content.style.transform = `translate(${cx * 5}px, ${cy * 3}px)`;
-    if (floats)  floats.style.transform  = `translate(${-cx * 12}px, ${-cy * 8}px)`;
-    if (aurora)  aurora.style.transform  = `translate(${cx * 18}px, ${cy * 10}px)`;
-    hud.forEach(h => {
-      h.style.transform = `translate(${cx * 3}px, ${cy * 2}px)`;
-    });
-    requestAnimationFrame(tick);
-  }
-  tick();
+ const content = document.getElementById('hero-content');
+ const floats = document.querySelector('.hero-floats');
+ const aurora = document.querySelector('.hero-aurora');
+ const hud = document.querySelectorAll('.hud-tl.hud-tr.hud-bl.hud-br');
+ let mx = 0, my = 0, cx = 0, cy = 0;
+ window.addEventListener('mousemove', (e) => {
+ mx = (e.clientX / window.innerWidth - 0.5) * 2;
+ my = (e.clientY / window.innerHeight - 0.5) * 2;
+ }, { passive: true });
+ function tick() {
+ cx += (mx - cx) * 0.06;
+ cy += (my - cy) * 0.06;
+ if (content) content.style.transform = `translate(${cx * 5}px, ${cy * 3}px)`;
+ if (floats) floats.style.transform = `translate(${-cx * 12}px, ${-cy * 8}px)`;
+ if (aurora) aurora.style.transform = `translate(${cx * 18}px, ${cy * 10}px)`;
+ hud.forEach(h => {
+ h.style.transform = `translate(${cx * 3}px, ${cy * 2}px)`;
+ });
+ requestAnimationFrame(tick);
+ }
+ tick();
 })();
 
 (function(){
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
+ const nav = document.getElementById('main-nav');
+ window.addEventListener('scroll', () => {
+ nav.classList.toggle('scrolled', window.scrollY > 60);
+ }, { passive: true });
 })();
 
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 
 (function(){
-  const canvas = document.getElementById('hero-canvas');
-  const content = document.getElementById('hero-content');
-  const aurora = document.querySelector('.hero-aurora');
-  window.addEventListener('scroll', () => {
-    const sy = window.scrollY;
-    if (canvas)  canvas.style.transform  = `translateY(${sy * 0.35}px)`;
-    if (content) content.style.transform = (content._mouseT || '') + ` translateY(${sy * 0.18}px)`;
-    if (aurora)  aurora.style.transform  = `translateY(${sy * 0.25}px)`;
-  }, { passive: true });
+ const canvas = document.getElementById('hero-canvas');
+ const content = document.getElementById('hero-content');
+ const aurora = document.querySelector('.hero-aurora');
+ window.addEventListener('scroll', () => {
+ const sy = window.scrollY;
+ if (canvas) canvas.style.transform = `translateY(${sy * 0.35}px)`;
+ if (content) content.style.transform = (content._mouseT || '') + ` translateY(${sy * 0.18}px)`;
+ if (aurora) aurora.style.transform = `translateY(${sy * 0.25}px)`;
+ }, { passive: true });
 })();
 
 (function(){
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal,.reveal-l').forEach(el => obs.observe(el));
+ const obs = new IntersectionObserver((entries) => {
+ entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+ }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+ document.querySelectorAll('.reveal.reveal-l').forEach(el => obs.observe(el));
 })();
 
 (function(){
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting && !e.target.dataset.done) {
-        e.target.dataset.done = '1';
-        const target = parseInt(e.target.dataset.t);
-        const dur = 1800;
-        const start = performance.now();
-        function step(now) {
-          const p = Math.min((now - start) / dur, 1);
-          const ease = 1 - Math.pow(1 - p, 3);
-          e.target.textContent = Math.round(ease * target);
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.counter').forEach(el => obs.observe(el));
+ const obs = new IntersectionObserver((entries) => {
+ entries.forEach(e => {
+ if (e.isIntersecting && !e.target.dataset.done) {
+ e.target.dataset.done = '1';
+ const target = parseInt(e.target.dataset.t);
+ const dur = 1800;
+ const start = performance.now();
+ function step(now) {
+ const p = Math.min((now - start) / dur, 1);
+ const ease = 1 - Math.pow(1 - p, 3);
+ e.target.textContent = Math.round(ease * target);
+ if (p < 1) requestAnimationFrame(step);
+ }
+ requestAnimationFrame(step);
+ }
+ });
+ }, { threshold: 0.5 });
+ document.querySelectorAll('.counter').forEach(el => obs.observe(el));
 })();
 
 (function(){
-  document.querySelectorAll('.sc').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = `perspective(700px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(2px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-      card.style.transition = 'transform .45s ease';
-      setTimeout(() => card.style.transition = '', 450);
-    });
-  });
+ document.querySelectorAll('.sc').forEach(card => {
+ card.addEventListener('mousemove', (e) => {
+ const r = card.getBoundingClientRect();
+ const x = (e.clientX - r.left) / r.width - 0.5;
+ const y = (e.clientY - r.top) / r.height - 0.5;
+ card.style.transform = `perspective(700px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(2px)`;
+ });
+ card.addEventListener('mouseleave', () => {
+ card.style.transform = '';
+ card.style.transition = 'transform .45s ease';
+ setTimeout(() => card.style.transition = '', 450);
+ });
+ });
 })();
 
 (function(){
-  const paras = document.querySelectorAll('.alb-para');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        paras.forEach(p => p.classList.remove('active'));
-        e.target.classList.add('active');
-      }
-    });
-  }, { threshold: 0.75 });
-  paras.forEach(p => obs.observe(p));
+ const paras = document.querySelectorAll('.alb-para');
+ const obs = new IntersectionObserver((entries) => {
+ entries.forEach(e => {
+ if (e.isIntersecting) {
+ paras.forEach(p => p.classList.remove('active'));
+ e.target.classList.add('active');
+ }
+ });
+ }, { threshold: 0.75 });
+ paras.forEach(p => obs.observe(p));
 })();
 </script>
 </body>

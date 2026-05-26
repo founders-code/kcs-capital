@@ -53,36 +53,36 @@
 .cs-read{color:var(--gold);font-weight:600}
 .cs-filter{display:flex;gap:1.5px;background:var(--border);margin-bottom:1px;flex-wrap:wrap}
 .cs-filter-btn{background:var(--surface-2);padding:.7rem 1.4rem;font-family:var(--ui);font-size:9.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white-dim);cursor:pointer;border:none;transition:color .2s,background .2s}
-.cs-filter-btn.active,.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
+.cs-filter-btn.active.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
 @media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .cs-grid{grid-template-columns:1fr}}
 @media(min-width:901px) and (max-width:1200px){.cs-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <nav id="main-nav">
-  <a href="/" class="nav-logo">
-    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
-    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
-  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/solutions">Solutions</a></li>
-    <li><a href="/team">Team</a></li>
-    <li><a href="/research">Research</a></li>
-    <li><a href="/briefs">KCS Briefs</a></li>
-    <li class="nav-drop">
-      <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
-      <ul class="nav-drop-menu">
-        <li><a href="/partners">Partners</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </li>
-    <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
-  </ul>
+ <a href="/" class="nav-logo">
+ <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+ <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+ </a>
+ <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
+ <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+ <ul class="nav-links">
+ <li><a href="/">Home</a></li>
+ <li><a href="/about">About</a></li>
+ <li><a href="/solutions">Solutions</a></li>
+ <li><a href="/team">Team</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li class="nav-drop">
+ <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
+ <ul class="nav-drop-menu">
+ <li><a href="/partners">Partners</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/contact">Contact</a></li>
+ </ul>
+ </li>
+ <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
+ </ul>
 </nav>
 
 <section class="page-hero"><div class="page-hero-in"><div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Terms of Service</span></div><h1 class="page-h1 reveal">Terms of Service</h1><p class="page-lead reveal">Last updated: May 2026. Working draft. Final version pending review by legal counsel.</p></div></section>
@@ -102,70 +102,70 @@
 </div></div></section>
 
 <footer>
-  <div class="foot-main">
-    <div>
-      <div class="foot-brand">
-        <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
-        KCS Capital
-      </div>
-      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
-      <div class="foot-soc">
-        <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
-        <a href="#" class="foot-sb" aria-label="Twitter">X</a>
-      </div>
-    </div>
-    <div>
-      <div class="foot-col-t">KCS Capital</div>
-      <ul class="foot-links">
-        <li><a href="/about">About the Firm</a></li>
-        <li><a href="/team">Team &amp; Advisors</a></li>
-        <li><a href="/research">Research</a></li>
-        <li><a href="/briefs">KCS Briefs</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/careers">Careers</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/data-room">Data Room</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">4orm Finance</div>
-      <ul class="foot-links">
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
-        <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
-        <li><a href="/partners">For Issuers</a></li>
-        <li><a href="/partners">For Custodians</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
-        <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">Offices</div>
-      <ul class="foot-links">
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
-          <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
-        </li>
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
-          <a href="tel:17786515255">1-778-651-5255</a>
-        </li>
-        <li>
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
-          <a href="tel:17802663050">1-780-266-3050</a>
-        </li>
-        <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bot">
-    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
-    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
-  </div>
+ <div class="foot-main">
+ <div>
+ <div class="foot-brand">
+ <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+ KCS Capital
+ </div>
+ <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+ <div class="foot-soc">
+ <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
+ <a href="#" class="foot-sb" aria-label="Twitter">X</a>
+ </div>
+ </div>
+ <div>
+ <div class="foot-col-t">KCS Capital</div>
+ <ul class="foot-links">
+ <li><a href="/about">About the Firm</a></li>
+ <li><a href="/team">Team &amp; Advisors</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/careers">Careers</a></li>
+ <li><a href="/contact">Contact</a></li>
+ <li><a href="/data-room">Data Room</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">4orm Finance</div>
+ <ul class="foot-links">
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+ <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
+ <li><a href="/partners">For Issuers</a></li>
+ <li><a href="/partners">For Custodians</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
+ <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">Offices</div>
+ <ul class="foot-links">
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
+ <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
+ </li>
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
+ <a href="tel:17786515255">1-778-651-5255</a>
+ </li>
+ <li>
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
+ <a href="tel:17802663050">1-780-266-3050</a>
+ </li>
+ <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="foot-bot">
+ <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+ <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
+ </div>
 </footer>
 <script>
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal.reveal-l').forEach(function(el){o.observe(el);});})();
 </script>
 </body>
 </html>

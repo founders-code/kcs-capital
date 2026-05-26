@@ -53,244 +53,244 @@
 .cs-read{color:var(--gold);font-weight:600}
 .cs-filter{display:flex;gap:1.5px;background:var(--border);margin-bottom:1px;flex-wrap:wrap}
 .cs-filter-btn{background:var(--surface-2);padding:.7rem 1.4rem;font-family:var(--ui);font-size:9.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white-dim);cursor:pointer;border:none;transition:color .2s,background .2s}
-.cs-filter-btn.active,.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
+.cs-filter-btn.active.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
 @media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .cs-grid{grid-template-columns:1fr}}
 @media(min-width:901px) and (max-width:1200px){.cs-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <nav id="main-nav">
-  <a href="/" class="nav-logo">
-    <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
-    <span class="nav-sub">Research &middot; Technology &middot; Education</span>
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
-  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/solutions">Solutions</a></li>
-    <li><a href="/team">Team</a></li>
-    <li><a href="/research">Research</a></li>
-    <li><a href="/briefs">KCS Briefs</a></li>
-    <li class="nav-drop">
-      <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
-      <ul class="nav-drop-menu">
-        <li><a href="/partners">Partners</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </li>
-    <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
-  </ul>
+ <a href="/" class="nav-logo">
+ <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
+ <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+ </a>
+ <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
+ <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+ <ul class="nav-links">
+ <li><a href="/">Home</a></li>
+ <li><a href="/about">About</a></li>
+ <li><a href="/solutions">Solutions</a></li>
+ <li><a href="/team">Team</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li class="nav-drop">
+ <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
+ <ul class="nav-drop-menu">
+ <li><a href="/partners">Partners</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/contact">Contact</a></li>
+ </ul>
+ </li>
+ <li><a href="/data-room" class="nav-cta">Access Data Room</a></li>
+ </ul>
 </nav>
 
 <section class="page-hero">
-  <div class="page-hero-in">
-    <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Join Our Team</span></div>
-    <h1 class="page-h1 reveal">Build the rails<br><em>that move Canadian capital.</em></h1>
-    <p class="page-lead reveal">KCS Capital and 4orm Finance are hiring. We are building institution-grade financial infrastructure with the operational discipline of an oil sands project and the regulatory rigour of a CIRO-registered marketplace. If you want to do generational work, this is where it gets done.</p>
-  </div>
+ <div class="page-hero-in">
+ <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Join Our Team</span></div>
+ <h1 class="page-h1 reveal">Build the rails<br><em>that move Canadian capital.</em></h1>
+ <p class="page-lead reveal">KCS Capital and 4orm Finance are hiring. We are building institution-grade financial infrastructure with the operational discipline of an oil sands project and the regulatory rigour of a CIRO-registered marketplace. If you want to do generational work, this is where it gets done.</p>
+ </div>
 </section>
 
 <!-- HIRING (moved from homepage) -->
 <section id="hiring">
-  <div class="hire-in">
-    <div class="hire-hdr">
-      <div class="hire-hdr-l">
-        <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Now Hiring &middot; 2026</span></div>
-        <h2 class="s-title reveal">Three roles.<br><em>Building the core.</em></h2>
-        <p class="s-body reveal">We are assembling the founding technical team for the 4orm Finance build. These are senior, high-ownership roles for people who want to build regulated financial infrastructure from the ground up, alongside an experienced enterprise architect and an institutional advisory bench.</p>
-      </div>
-    </div>
-    <div class="hire-grid">
-      <a class="hire-card reveal" href="#cto">
-        <span class="hire-status">Open Now</span>
-        <div class="hire-role">Chief Technology Officer</div>
-        <span class="hire-tag">Engineering Leadership &middot; Regulated Infrastructure</span>
-        <p class="hire-desc">Lead engineering delivery for the 4orm Finance build. The architecture, regulatory framework, advisory bench, and capital plan are already in place. We are selectively recruiting the principal who will own the engineering organization from first production deployment through institutional adoption.</p>
-        <span class="hire-foot">View Role &rarr;</span>
-      </a>
-      <a class="hire-card reveal d1" href="#backend">
-        <span class="hire-status">Open Now</span>
-        <div class="hire-role">Senior Back-End Engineer</div>
-        <span class="hire-tag">Tokenization &middot; Settlement &middot; Custody</span>
-        <p class="hire-desc">Ship the tokenization engine, atomic settlement, and custody integrations behind 4orm Finance. Work daily with our Senior Enterprise Architect on system design and under the CTO on delivery. Polymesh (Substrate / Rust) plus EVM where Canadian regulated assets demand it.</p>
-        <span class="hire-foot">View Role &rarr;</span>
-      </a>
-      <a class="hire-card reveal d2" href="#frontend">
-        <span class="hire-status">Open Now</span>
-        <div class="hire-role">Senior Front-End Engineer</div>
-        <span class="hire-tag">Institutional Platform &middot; Trading &amp; Supervision UI</span>
-        <p class="hire-desc">Build the institutional-grade interface that banks, custodians, and asset managers will operate the 4orm platform through. Dashboards, onboarding, admin and supervision consoles, regulator-facing audit views. React / TypeScript across data-dense financial interfaces.</p>
-        <span class="hire-foot">View Role &rarr;</span>
-      </a>
-    </div>
-  </div>
+ <div class="hire-in">
+ <div class="hire-hdr">
+ <div class="hire-hdr-l">
+ <div class="s-eye reveal"><div class="s-eye-dot"></div><span class="s-eye-txt">Now Hiring &middot; 2026</span></div>
+ <h2 class="s-title reveal">Three roles.<br><em>Building the core.</em></h2>
+ <p class="s-body reveal">We are assembling the founding technical team for the 4orm Finance build. These are senior, high-ownership roles for people who want to build regulated financial infrastructure from the ground up, alongside an experienced enterprise architect and an institutional advisory bench.</p>
+ </div>
+ </div>
+ <div class="hire-grid">
+ <a class="hire-card reveal" href="#cto">
+ <span class="hire-status">Open Now</span>
+ <div class="hire-role">Chief Technology Officer</div>
+ <span class="hire-tag">Engineering Leadership &middot; Regulated Infrastructure</span>
+ <p class="hire-desc">Lead engineering delivery for the 4orm Finance build. The architecture, regulatory framework, advisory bench, and capital plan are already in place. We are selectively recruiting the principal who will own the engineering organization from first production deployment through institutional adoption.</p>
+ <span class="hire-foot">View Role &rarr;</span>
+ </a>
+ <a class="hire-card reveal d1" href="#backend">
+ <span class="hire-status">Open Now</span>
+ <div class="hire-role">Senior Back-End Engineer</div>
+ <span class="hire-tag">Tokenization &middot; Settlement &middot; Custody</span>
+ <p class="hire-desc">Ship the tokenization engine, atomic settlement, and custody integrations behind 4orm Finance. Work daily with our Senior Enterprise Architect on system design and under the CTO on delivery. Polymesh (Substrate / Rust) plus EVM where Canadian regulated assets demand it.</p>
+ <span class="hire-foot">View Role &rarr;</span>
+ </a>
+ <a class="hire-card reveal d2" href="#frontend">
+ <span class="hire-status">Open Now</span>
+ <div class="hire-role">Senior Front-End Engineer</div>
+ <span class="hire-tag">Institutional Platform &middot; Trading &amp; Supervision UI</span>
+ <p class="hire-desc">Build the institutional-grade interface that banks, custodians, and asset managers will operate the 4orm platform through. Dashboards, onboarding, admin and supervision consoles, regulator-facing audit views. React / TypeScript across data-dense financial interfaces.</p>
+ <span class="hire-foot">View Role &rarr;</span>
+ </a>
+ </div>
+ </div>
 </section>
 
 <!-- ============ DETAILED ROLE: CTO ============ -->
 <section class="page-section" id="cto">
-  <div class="page-section-in">
-    <div class="page-section-hdr" style="max-width:880px">
-      <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Role 01 &middot; Open Now</span></div>
-      <h2 class="page-section-h2 reveal">Chief Technology Officer.<br><em>Lead engineering for the institutional infrastructure layer.</em></h2>
-      <p class="page-section-body reveal" style="margin-top:1.5rem">KCS Capital is selectively recruiting a Chief Technology Officer to lead delivery of 4orm Finance &mdash; a neutral, multi-institution platform for the firms that already carry Canada's regulatory burden. The architecture, the regulatory framework, the advisory bench, and the capital plan are in place. We are recruiting the principal who will own delivery from first production deployment through institutional adoption.</p>
-      <p class="page-section-body reveal" style="margin-top:1rem">You will partner directly with our Senior Enterprise Architect on target-state design, with our Securities Compliance Advisor on regulator-facing controls, and with the founders on roadmap and institutional engagement. You will hire and lead the engineering team beneath you.</p>
-    </div>
-    <div class="prose reveal" style="max-width:880px;margin-top:2.5rem">
-      <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">What you'll own</h3>
-      <ul>
-        <li>Engineering across the full 4orm stack &mdash; tokenization, matching and settlement, custody integration, regulator-facing controls</li>
-        <li>The technical relationship with CIRO, CSA, OSFI, and bank counterparties</li>
-        <li>Hiring and leading the principal engineering team across tokenization, matching, security, and compliance</li>
-        <li>The technical narrative carried to institutional clients, partners, and LPs</li>
-      </ul>
-      <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:1.75rem 0 1rem">What we're looking for</h3>
-      <ul>
-        <li>12+ years building production systems, with 5+ at executive or principal level</li>
-        <li>Direct experience shipping a regulated exchange, ATS, payments platform, or banking-grade settlement system</li>
-        <li>Background from a regulated venue or institutional fintech (TMX, Coinbase Institutional, Onyx, Fireblocks, Polymath, Securitize, Stripe, RBC / BMO Capital Markets, or equivalent)</li>
-        <li>Real comfort with regulators &mdash; CIRO, CSA, OSFI, NYDFS, FCA, or MAS experience materially preferred</li>
-        <li>Leadership at scale &mdash; you have built engineering organizations, not just shipped features</li>
-      </ul>
-      <p style="margin-top:1.75rem;font-size:12px;color:rgba(242,237,232,.55);font-style:italic">Discussions are confidential.</p>
-      <a href="mailto:contact@kcs-capital.com?subject=CTO%20%E2%80%94%20Exploratory%20Conversation" style="display:inline-block;margin-top:1.25rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border-b);padding:.85rem 1.5rem">Explore The Role &rarr;</a>
-    </div>
-  </div>
+ <div class="page-section-in">
+ <div class="page-section-hdr" style="max-width:880px">
+ <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Role 01 &middot; Open Now</span></div>
+ <h2 class="page-section-h2 reveal">Chief Technology Officer.<br><em>Lead engineering for the institutional infrastructure layer.</em></h2>
+ <p class="page-section-body reveal" style="margin-top:1.5rem">KCS Capital is selectively recruiting a Chief Technology Officer to lead delivery of 4orm Finance, a neutral, multi-institution platform for the firms that already carry Canada's regulatory burden. The architecture, the regulatory framework, the advisory bench, and the capital plan are in place. We are recruiting the principal who will own delivery from first production deployment through institutional adoption.</p>
+ <p class="page-section-body reveal" style="margin-top:1rem">You will partner directly with our Senior Enterprise Architect on target-state design, with our Securities Compliance Advisor on regulator-facing controls, and with the founders on roadmap and institutional engagement. You will hire and lead the engineering team beneath you.</p>
+ </div>
+ <div class="prose reveal" style="max-width:880px;margin-top:2.5rem">
+ <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">What you'll own</h3>
+ <ul>
+ <li>Engineering across the full 4orm stack, tokenization, matching and settlement, custody integration, regulator-facing controls</li>
+ <li>The technical relationship with CIRO, CSA, OSFI, and bank counterparties</li>
+ <li>Hiring and leading the principal engineering team across tokenization, matching, security, and compliance</li>
+ <li>The technical narrative carried to institutional clients, partners, and LPs</li>
+ </ul>
+ <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:1.75rem 0 1rem">What we're looking for</h3>
+ <ul>
+ <li>12+ years building production systems, with 5+ at executive or principal level</li>
+ <li>Direct experience shipping a regulated exchange, ATS, payments platform, or banking-grade settlement system</li>
+ <li>Background from a regulated venue or institutional fintech (TMX, Coinbase Institutional, Onyx, Fireblocks, Polymath, Securitize, Stripe, RBC / BMO Capital Markets, or equivalent)</li>
+ <li>Real comfort with regulators, CIRO, CSA, OSFI, NYDFS, FCA, or MAS experience materially preferred</li>
+ <li>Leadership at scale, you have built engineering organizations, not just shipped features</li>
+ </ul>
+ <p style="margin-top:1.75rem;font-size:12px;color:rgba(242,237,232,.55);font-style:italic">Discussions are confidential.</p>
+ <a href="mailto:contact@kcs-capital.com?subject=CTO%20%E2%80%94%20Exploratory%20Conversation" style="display:inline-block;margin-top:1.25rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border-b);padding:.85rem 1.5rem">Explore The Role &rarr;</a>
+ </div>
+ </div>
 </section>
 
 <!-- ============ DETAILED ROLE: SENIOR BACK-END ENGINEER ============ -->
 <section class="page-section dark" id="backend">
-  <div class="page-section-in">
-    <div class="page-section-hdr" style="max-width:880px">
-      <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Role 02 &middot; Open Now</span></div>
-      <h2 class="page-section-h2 reveal">Senior Back-End Engineer.<br><em>Tokenization, settlement, custody.</em></h2>
-      <p class="page-section-body reveal" style="margin-top:1.5rem">KCS Capital is recruiting a Senior Back-End Engineer to build the core infrastructure of 4orm Finance &mdash; tokenization, atomic settlement, custody integrations, and the audit and reconciliation layer the CIRO Digital Asset Custody Framework requires. You will work daily alongside our Senior Enterprise Architect (TOGAF 9.1) on system design and under the Chief Technology Officer on delivery.</p>
-    </div>
-    <div class="prose reveal" style="max-width:880px;margin-top:2.5rem">
-      <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">What you'll build</h3>
-      <ul>
-        <li>The 4orm tokenization engine &mdash; Polymesh (Substrate / Rust) plus EVM (Solidity) where Canadian regulated assets demand it</li>
-        <li>Atomic settlement, pre- and post-trade risk, and the API surface that institutional counterparties integrate against</li>
-        <li>Custody integrations with Tetra Trust, Balance Trust, Brane Trust, and Fireblocks</li>
-        <li>The audit, control, and reconciliation rails required for CIRO oversight</li>
-      </ul>
-      <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:1.75rem 0 1rem">What we're looking for</h3>
-      <ul>
-        <li>7+ years backend / distributed systems, with 3+ years shipping production smart contracts <em>or</em> settlement infrastructure</li>
-        <li>Background from a regulated venue or tokenization platform (Polymath, Securitize, Tokeny, Fireblocks, ConsenSys Codefi, TMX, Nasdaq, Coinbase Institutional, or equivalent)</li>
-        <li>Solidity plus Polymesh (Substrate / Rust) strongly preferred; Rust / Go / TypeScript across the broader stack</li>
-        <li>Smart-contract audit history (Trail of Bits, OpenZeppelin, CertiK exposure). Public repos and shipped systems matter more than certifications</li>
-      </ul>
-      <a href="mailto:contact@kcs-capital.com?subject=Senior%20Back-End%20Engineer%20%E2%80%94%20Exploratory%20Conversation" style="display:inline-block;margin-top:1.75rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border-b);padding:.85rem 1.5rem">Explore The Role &rarr;</a>
-    </div>
-  </div>
+ <div class="page-section-in">
+ <div class="page-section-hdr" style="max-width:880px">
+ <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Role 02 &middot; Open Now</span></div>
+ <h2 class="page-section-h2 reveal">Senior Back-End Engineer.<br><em>Tokenization, settlement, custody.</em></h2>
+ <p class="page-section-body reveal" style="margin-top:1.5rem">KCS Capital is recruiting a Senior Back-End Engineer to build the core infrastructure of 4orm Finance, tokenization, atomic settlement, custody integrations, and the audit and reconciliation layer the CIRO Digital Asset Custody Framework requires. You will work daily alongside our Senior Enterprise Architect (TOGAF 9.1) on system design and under the Chief Technology Officer on delivery.</p>
+ </div>
+ <div class="prose reveal" style="max-width:880px;margin-top:2.5rem">
+ <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">What you'll build</h3>
+ <ul>
+ <li>The 4orm tokenization engine, Polymesh (Substrate / Rust) plus EVM (Solidity) where Canadian regulated assets demand it</li>
+ <li>Atomic settlement, pre- and post-trade risk, and the API surface that institutional counterparties integrate against</li>
+ <li>Custody integrations with Tetra Trust, Balance Trust, Brane Trust, and Fireblocks</li>
+ <li>The audit, control, and reconciliation rails required for CIRO oversight</li>
+ </ul>
+ <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:1.75rem 0 1rem">What we're looking for</h3>
+ <ul>
+ <li>7+ years backend / distributed systems, with 3+ years shipping production smart contracts <em>or</em> settlement infrastructure</li>
+ <li>Background from a regulated venue or tokenization platform (Polymath, Securitize, Tokeny, Fireblocks, ConsenSys Codefi, TMX, Nasdaq, Coinbase Institutional, or equivalent)</li>
+ <li>Solidity plus Polymesh (Substrate / Rust) strongly preferred; Rust / Go / TypeScript across the broader stack</li>
+ <li>Smart-contract audit history (Trail of Bits, OpenZeppelin, CertiK exposure). Public repos and shipped systems matter more than certifications</li>
+ </ul>
+ <a href="mailto:contact@kcs-capital.com?subject=Senior%20Back-End%20Engineer%20%E2%80%94%20Exploratory%20Conversation" style="display:inline-block;margin-top:1.75rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border-b);padding:.85rem 1.5rem">Explore The Role &rarr;</a>
+ </div>
+ </div>
 </section>
 
 <!-- ============ DETAILED ROLE: SENIOR FRONT-END ENGINEER ============ -->
 <section class="page-section" id="frontend">
-  <div class="page-section-in">
-    <div class="page-section-hdr" style="max-width:880px">
-      <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Role 03 &middot; Open Now</span></div>
-      <h2 class="page-section-h2 reveal">Senior Front-End Engineer.<br><em>The institutional interface.</em></h2>
-      <p class="page-section-body reveal" style="margin-top:1.5rem">KCS Capital is recruiting a Senior Front-End Engineer to lead the user-facing build of 4orm Finance &mdash; institutional dashboards, KYC and onboarding flows, admin and supervision consoles, and the regulator-facing audit interfaces. You will partner with the Chief Technology Officer and the Senior Enterprise Architect on design system and architecture, and own the front-end stack end to end.</p>
-    </div>
-    <div class="prose reveal" style="max-width:880px;margin-top:2.5rem">
-      <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">What you'll build</h3>
-      <ul>
-        <li>The institutional client interface &mdash; issuance, settlement, position management, reporting</li>
-        <li>Onboarding and KYC flows that satisfy Canadian exempt-market and qualified-investor requirements</li>
-        <li>Admin and supervision consoles, including the regulator-facing read-only views into the audit trail</li>
-        <li>A composable design system that scales across institutional client, issuer, custodian, and regulator personas</li>
-      </ul>
-      <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:1.75rem 0 1rem">What we're looking for</h3>
-      <ul>
-        <li>6+ years front-end engineering, with material experience on financial, trading, or regulated-data interfaces</li>
-        <li>React / TypeScript fluency; strong systems thinking for data-dense interfaces</li>
-        <li>Background from a regulated venue, fintech, or institutional SaaS (TMX, Wealthsimple, Stripe, Plaid, Onyx, Securitize, FrontFundr, Capiche, or equivalent)</li>
-        <li>Genuine product instinct &mdash; institutional users need clarity under complexity, not flair</li>
-        <li>Accessibility, performance, and security as defaults, not afterthoughts</li>
-      </ul>
-      <a href="mailto:contact@kcs-capital.com?subject=Senior%20Front-End%20Engineer%20%E2%80%94%20Exploratory%20Conversation" style="display:inline-block;margin-top:1.75rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border-b);padding:.85rem 1.5rem">Explore The Role &rarr;</a>
-    </div>
-  </div>
+ <div class="page-section-in">
+ <div class="page-section-hdr" style="max-width:880px">
+ <div class="page-section-eye reveal"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Role 03 &middot; Open Now</span></div>
+ <h2 class="page-section-h2 reveal">Senior Front-End Engineer.<br><em>The institutional interface.</em></h2>
+ <p class="page-section-body reveal" style="margin-top:1.5rem">KCS Capital is recruiting a Senior Front-End Engineer to lead the user-facing build of 4orm Finance, institutional dashboards, KYC and onboarding flows, admin and supervision consoles, and the regulator-facing audit interfaces. You will partner with the Chief Technology Officer and the Senior Enterprise Architect on design system and architecture, and own the front-end stack end to end.</p>
+ </div>
+ <div class="prose reveal" style="max-width:880px;margin-top:2.5rem">
+ <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">What you'll build</h3>
+ <ul>
+ <li>The institutional client interface, issuance, settlement, position management, reporting</li>
+ <li>Onboarding and KYC flows that satisfy Canadian exempt-market and qualified-investor requirements</li>
+ <li>Admin and supervision consoles, including the regulator-facing read-only views into the audit trail</li>
+ <li>A composable design system that scales across institutional client, issuer, custodian, and regulator personas</li>
+ </ul>
+ <h3 style="font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:1.75rem 0 1rem">What we're looking for</h3>
+ <ul>
+ <li>6+ years front-end engineering, with material experience on financial, trading, or regulated-data interfaces</li>
+ <li>React / TypeScript fluency; strong systems thinking for data-dense interfaces</li>
+ <li>Background from a regulated venue, fintech, or institutional SaaS (TMX, Wealthsimple, Stripe, Plaid, Onyx, Securitize, FrontFundr, Capiche, or equivalent)</li>
+ <li>Genuine product instinct, institutional users need clarity under complexity, not flair</li>
+ <li>Accessibility, performance, and security as defaults, not afterthoughts</li>
+ </ul>
+ <a href="mailto:contact@kcs-capital.com?subject=Senior%20Front-End%20Engineer%20%E2%80%94%20Exploratory%20Conversation" style="display:inline-block;margin-top:1.75rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border-b);padding:.85rem 1.5rem">Explore The Role &rarr;</a>
+ </div>
+ </div>
 </section>
 <section id="cta">
-  <div class="cta-eye reveal">Open Application</div>
-  <h2 class="cta-title reveal d1">Do not see your role?<br><em>Tell us why we should make one.</em></h2>
-  <p class="cta-body reveal d2">We are early. The org chart is still being drawn. If you bring something we cannot ignore, the role can be built around you.</p>
-  <div class="cta-acts reveal d3">
-    <a href="mailto:contact@kcs-capital.com?subject=Open Application" class="btn-p">Open Application &rarr;</a>
-    <a href="/team" class="btn-s">Meet The Team &rarr;</a>
-  </div>
+ <div class="cta-eye reveal">Open Application</div>
+ <h2 class="cta-title reveal d1">Do not see your role?<br><em>Tell us why we should make one.</em></h2>
+ <p class="cta-body reveal d2">We are early. The org chart is still being drawn. If you bring something we cannot ignore, the role can be built around you.</p>
+ <div class="cta-acts reveal d3">
+ <a href="mailto:contact@kcs-capital.com?subject=Open Application" class="btn-p">Open Application &rarr;</a>
+ <a href="/team" class="btn-s">Meet The Team &rarr;</a>
+ </div>
 </section>
 
 <footer>
-  <div class="foot-main">
-    <div>
-      <div class="foot-brand">
-        <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
-        KCS Capital
-      </div>
-      <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
-      <div class="foot-soc">
-        <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
-        <a href="#" class="foot-sb" aria-label="Twitter">X</a>
-      </div>
-    </div>
-    <div>
-      <div class="foot-col-t">KCS Capital</div>
-      <ul class="foot-links">
-        <li><a href="/about">About the Firm</a></li>
-        <li><a href="/team">Team &amp; Advisors</a></li>
-        <li><a href="/research">Research</a></li>
-        <li><a href="/briefs">KCS Briefs</a></li>
-        <li><a href="/regulator">Regulator</a></li>
-        <li><a href="/careers">Careers</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/data-room">Data Room</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">4orm Finance</div>
-      <ul class="foot-links">
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
-        <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
-        <li><a href="/partners">For Issuers</a></li>
-        <li><a href="/partners">For Custodians</a></li>
-        <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
-        <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-t">Offices</div>
-      <ul class="foot-links">
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
-          <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
-        </li>
-        <li style="margin-bottom:1rem">
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
-          <a href="tel:17786515255">1-778-651-5255</a>
-        </li>
-        <li>
-          <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
-          <a href="tel:17802663050">1-780-266-3050</a>
-        </li>
-        <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bot">
-    <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
-    <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
-  </div>
+ <div class="foot-main">
+ <div>
+ <div class="foot-brand">
+ <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+ KCS Capital
+ </div>
+ <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+ <div class="foot-soc">
+ <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
+ <a href="#" class="foot-sb" aria-label="Twitter">X</a>
+ </div>
+ </div>
+ <div>
+ <div class="foot-col-t">KCS Capital</div>
+ <ul class="foot-links">
+ <li><a href="/about">About the Firm</a></li>
+ <li><a href="/team">Team &amp; Advisors</a></li>
+ <li><a href="/research">Research</a></li>
+ <li><a href="/briefs">KCS Briefs</a></li>
+ <li><a href="/regulator">Regulator</a></li>
+ <li><a href="/careers">Careers</a></li>
+ <li><a href="/contact">Contact</a></li>
+ <li><a href="/data-room">Data Room</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">4orm Finance</div>
+ <ul class="foot-links">
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+ <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
+ <li><a href="/partners">For Issuers</a></li>
+ <li><a href="/partners">For Custodians</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
+ <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">Offices</div>
+ <ul class="foot-links">
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span>
+ <a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a>
+ </li>
+ <li style="margin-bottom:1rem">
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span>
+ <a href="tel:17786515255">1-778-651-5255</a>
+ </li>
+ <li>
+ <span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span>
+ <a href="tel:17802663050">1-780-266-3050</a>
+ </li>
+ <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="foot-bot">
+ <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+ <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
+ </div>
 </footer>
 <script>
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal.reveal-l').forEach(function(el){o.observe(el);});})();
 </script>
 </body>
 </html>

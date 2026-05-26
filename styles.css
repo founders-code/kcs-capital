@@ -401,11 +401,11 @@ nav.scrolled{
 .team-photo[src="/team-chad.png"]{transform:scale(1.13);object-position:center 26%}
 .team-card:hover .team-photo[src="/team-chad.png"]{transform:scale(1.19)}
 
-.team-photo[src="/team-sam.png"]{transform:scale(1.1);object-position:center 30%}
-.team-card:hover .team-photo[src="/team-sam.png"]{transform:scale(1.16)}
+.team-photo[src="/team-sam.png"]{transform:scale(1.21);object-position:center 28%}
+.team-card:hover .team-photo[src="/team-sam.png"]{transform:scale(1.27)}
 
-.team-photo[src="/team-kevin.png"]{transform:scale(1.13);object-position:center 26%}
-.team-card:hover .team-photo[src="/team-kevin.png"]{transform:scale(1.19)}
+.team-photo[src="/team-kevin.png"]{transform:scale(1.24);object-position:center 26%}
+.team-card:hover .team-photo[src="/team-kevin.png"]{transform:scale(1.3)}
 
 .team-photo[src="/team-don.png"]{transform:scale(1.13);object-position:center 26%}
 .team-card:hover .team-photo[src="/team-don.png"]{transform:scale(1.19)}
@@ -420,11 +420,18 @@ nav.scrolled{
 .team-photo[src="/team-zed.png"]{transform:scale(1.44);object-position:center 12%}
 .team-card:hover .team-photo[src="/team-zed.png"]{transform:scale(1.5)}
 
-.team-photo[src="/team-angelo.png"]{transform:scale(1.18);object-position:center 24%}
-.team-card:hover .team-photo[src="/team-angelo.png"]{transform:scale(1.24)}
+.team-photo[src="/team-angelo.png"]{transform:scale(1.3);object-position:center 24%}
+.team-card:hover .team-photo[src="/team-angelo.png"]{transform:scale(1.36)}
 
-.team-photo[src="/team-dean.png"]{transform:scale(1.18);object-position:center 24%}
-.team-card:hover .team-photo[src="/team-dean.png"]{transform:scale(1.24)}
+.team-photo[src="/team-dean.png"]{transform:scale(1.3);object-position:center 24%}
+.team-card:hover .team-photo[src="/team-dean.png"]{transform:scale(1.36)}
+
+/* James and Miika — shrunk 5% from base, head positioned lower in the circle */
+.team-photo[src="/team-james.png"]{transform:scale(1.045);object-position:center 38%}
+.team-card:hover .team-photo[src="/team-james.png"]{transform:scale(1.1)}
+
+.team-photo[src="/team-miika.png"]{transform:scale(1.045);object-position:center 38%}
+.team-card:hover .team-photo[src="/team-miika.png"]{transform:scale(1.1)}
 .team-card{background:var(--surface-2);padding:2rem 1.75rem;border:1px solid var(--border);transition:border-color .35s,background .3s;display:flex;flex-direction:column}
 .team-card:hover{border-color:var(--border-b);background:var(--surface-3)}
 .team-role{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:block}

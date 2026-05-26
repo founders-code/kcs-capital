@@ -107,7 +107,7 @@
 .dr-modal-receipt p{font-family:var(--body);font-size:1rem;color:rgba(242,237,232,.72);line-height:1.7;max-width:450px;margin:0 auto 1.6rem}
 @media(max-width:680px){
  .dr-modal-card{padding:2.5rem 1.5rem 2rem}
- .dr-fields.dr-opts{grid-template-columns:1fr}
+ .dr-fields,.dr-opts{grid-template-columns:1fr}
  .dr-modal-close{top:.6rem;right:.6rem;width:36px;height:36px}
 }
 </style>
@@ -432,7 +432,7 @@
 })();
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal.reveal-l').forEach(function(el){o.observe(el);});})();
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
 (function(){document.querySelectorAll('.counter').forEach(function(c){var t=+c.getAttribute('data-t'),s=0,d=1400,st=null;function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/d,1);c.textContent=Math.floor(p*t);if(p<1)requestAnimationFrame(step);else c.textContent=t;}var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){requestAnimationFrame(step);io.disconnect();}});});io.observe(c);});})();
 </script>
 </body>

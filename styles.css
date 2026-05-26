@@ -416,8 +416,14 @@ nav.scrolled{
 .team-photo[src="/team-mike.png"]{transform:scale(1.42);object-position:center 24%}
 .team-card:hover .team-photo[src="/team-mike.png"]{transform:scale(1.48)}
 
-.team-photo[src="/team-zed.png"]{transform:scale(1.42);object-position:center 24%}
-.team-card:hover .team-photo[src="/team-zed.png"]{transform:scale(1.48)}
+.team-photo[src="/team-zed.png"]{transform:scale(1.5);object-position:center 24%}
+.team-card:hover .team-photo[src="/team-zed.png"]{transform:scale(1.56)}
+
+.team-photo[src="/team-angelo.png"]{transform:scale(1.55);object-position:center 22%}
+.team-card:hover .team-photo[src="/team-angelo.png"]{transform:scale(1.61)}
+
+.team-photo[src="/team-dean.png"]{transform:scale(1.55);object-position:center 22%}
+.team-card:hover .team-photo[src="/team-dean.png"]{transform:scale(1.61)}
 .team-card{background:var(--surface-2);padding:2rem 1.75rem;border:1px solid var(--border);transition:border-color .35s,background .3s;display:flex;flex-direction:column}
 .team-card:hover{border-color:var(--border-b);background:var(--surface-3)}
 .team-role{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:block}

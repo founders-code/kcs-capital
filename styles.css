@@ -415,8 +415,8 @@ nav.scrolled{
 .team-photo[src="/team-mike.png"]{transform:scale(1.13);object-position:center 26%}
 .team-card:hover .team-photo[src="/team-mike.png"]{transform:scale(1.19)}
 
-.team-photo[src="/team-zed.png"]{transform:scale(1.44);object-position:center 12%}
-.team-card:hover .team-photo[src="/team-zed.png"]{transform:scale(1.5)}
+.team-photo[src="/team-zed.png"]{transform:scale(1.13);object-position:center 26%}
+.team-card:hover .team-photo[src="/team-zed.png"]{transform:scale(1.19)}
 
 .team-photo[src="/team-angelo.png"]{transform:scale(1.18);object-position:center 24%}
 .team-card:hover .team-photo[src="/team-angelo.png"]{transform:scale(1.24)}

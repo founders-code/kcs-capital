@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canadian Real Estate Tokenization: T-RIZE, Ocree, SORS, and the First Live Wave | KCS Research</title>
+<meta name="description" content="T-RIZE&#x27;s $300M Project Champfleury, the Vision 87 and Vision 60 issuances, Ocree&#x27;s $51.9M Berwick Court, SORS&#x27;s Central Town. Canada now has three credible, regulated real estate tokenization issuers in production. The deep dive on what they built, how it works, and what comes next.">
+<meta property="og:title" content="Canadian Real Estate Tokenization: T-RIZE, Ocree, SORS, and the First Live Wave | KCS Research"><meta property="og:description" content="T-RIZE&#x27;s $300M Project Champfleury, the Vision 87 and Vision 60 issuances, Ocree&#x27;s $51.9M Berwick Court, SORS&#x27;s Central Town. Canada now has three credible, regulated real estate tokenization issuers in production. The deep dive on what they built, how it works, and what comes next."><meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+/* PROGRESS BAR */
+.brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
+.brief-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-l));transition:width .08s linear}
+/* HERO */
+.brief-hero{position:relative;padding:9.5rem 3rem 3.5rem;background:var(--black);overflow:hidden}
+.brief-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.08) 0%,transparent 70%);pointer-events:none}
+.brief-in{max-width:820px;margin:0 auto;position:relative}
+.brief-meta{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem}
+.brief-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--gold-d)}
+.brief-meta .muted{color:rgba(154,149,144,.7)}
+.brief-h1{font-family:var(--serif);font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:300;line-height:1.13;letter-spacing:-.02em;color:var(--white);margin-bottom:1.4rem}
+.brief-h1 em{font-style:italic;color:var(--gold)}
+.brief-lead{font-family:var(--body);font-size:1.2rem;font-weight:300;color:rgba(242,237,232,.74);line-height:1.65;margin-bottom:1.6rem}
+.brief-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.8rem}
+.brief-btn-pdf{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.78rem 1.2rem;border:none;cursor:pointer;text-decoration:none;transition:background .2s}
+.brief-btn-pdf:hover{background:var(--gold-l)}
+.brief-btn-pdf::before{content:'\2193';font-weight:800;font-size:13px}
+.brief-btn-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:transparent;padding:.78rem 1.2rem;border:1px solid var(--border-b);text-decoration:none;transition:color .2s,border-color .2s}
+.brief-btn-back:hover{color:var(--gold-l);border-color:var(--gold)}
+.brief-feature{height:5px;background:linear-gradient(90deg,var(--gold),var(--gold-d) 40%,transparent);max-width:820px;margin:0 auto}
+.brief-body{background:var(--surface);padding:4.5rem 3rem 3rem;border-bottom:1px solid var(--border)}
+/* TOC */
+.brief-toc{max-width:820px;margin:0 auto 3rem;padding:1.5rem 1.75rem;background:var(--surface-2);border:1px solid var(--border);border-left:2px solid var(--gold)}
+.brief-toc-label{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.brief-toc ol{list-style:none;counter-reset:toc;padding:0;margin:0}
+.brief-toc li{counter-increment:toc;font-family:var(--body);font-size:.95rem;color:rgba(242,237,232,.74);padding:.4rem 0 .4rem 2rem;position:relative;line-height:1.4;border-bottom:1px solid var(--border)}
+.brief-toc li:last-child{border-bottom:none}
+.brief-toc li::before{content:counter(toc,decimal-leading-zero);position:absolute;left:0;top:.4rem;font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.brief-toc a{color:inherit;text-decoration:none;transition:color .2s}
+.brief-toc a:hover{color:var(--gold-l)}
+.prose{max-width:820px;margin:0 auto;color:rgba(242,237,232,.82);font-family:var(--body);font-size:1.08rem;line-height:1.9}
+.prose p{margin-bottom:1.5rem}
+.prose strong{color:var(--white);font-weight:500}
+.prose em{color:var(--gold-l);font-style:italic}
+.prose a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-d);transition:border-color .2s}
+.prose a:hover{border-color:var(--gold)}
+.prose h2{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);margin:3rem 0 1.1rem;letter-spacing:-.01em;line-height:1.25;scroll-margin-top:2rem}
+.prose h3{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:2.25rem 0 .9rem}
+.prose ul{list-style:none;margin:0 0 1.5rem}
+.prose ul li{padding-left:1.4rem;position:relative;margin-bottom:.7rem;line-height:1.75}
+.prose ul li::before{content:'';position:absolute;left:0;top:.85em;width:7px;height:1px;background:var(--gold)}
+.brief-section-break{height:1px;background:linear-gradient(90deg,transparent,var(--border) 30%,var(--border) 70%,transparent);max-width:200px;margin:3rem auto}
+.brief-foot-nav{max-width:820px;margin:0 auto;padding:2.5rem 0 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.brief-back{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--gold-d);padding-bottom:3px}
+.brief-back:hover{color:var(--gold-l)}
+/* FLOATING NAV */
+.brief-floating{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;gap:.5rem;z-index:90;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.brief-floating.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.brief-float-btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(8,9,12,.92);padding:.7rem 1rem;border:1px solid var(--border-b);text-decoration:none;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:color .2s,border-color .2s;cursor:pointer}
+.brief-float-btn:hover{color:var(--gold-l);border-color:var(--gold)}
+@media(max-width:768px){
+ .brief-hero{padding:8rem 1.5rem 3rem}
+ .brief-body{padding:3rem 1.5rem 2.5rem}
+ .prose{font-size:1.04rem}
+ .brief-toc{padding:1.2rem 1.4rem}
+ .brief-floating{bottom:1rem;right:1rem}
+ .brief-float-btn{font-size:9.5px;padding:.6rem .85rem}
+}
+/* PRINT STYLESHEET */
+@media print{
+ @page{size:letter;margin:.7in .8in}
+ html,body{background:#fff !important;color:#0a0a0a !important;font-size:11pt}
+ .no-print,nav,footer,.brief-floating,.brief-progress,.brief-actions,.brief-foot-nav{display:none !important}
+ .brief-hero{padding:0 0 1.5rem !important;background:#fff !important;border-bottom:2px solid #b8860b}
+ .brief-hero::before{display:none}
+ .brief-meta{color:#b8860b !important}
+ .brief-meta .muted{color:#666 !important}
+ .brief-h1{color:#0a0a0a !important;font-size:24pt !important;line-height:1.15 !important}
+ .brief-h1 em{color:#b8860b !important}
+ .brief-lead{color:#333 !important;font-size:12pt !important;line-height:1.5 !important}
+ .brief-feature{background:#b8860b !important;margin:1rem 0 !important;height:2px !important}
+ .brief-body{background:#fff !important;padding:1.2rem 0 0 !important;border-bottom:none !important}
+ .prose{color:#1a1a1a !important;font-size:11pt !important;line-height:1.55 !important;max-width:100% !important}
+ .prose p{margin-bottom:.7rem !important}
+ .prose h2{color:#0a0a0a !important;font-size:16pt !important;margin:1.4rem 0 .6rem !important;page-break-after:avoid;break-after:avoid}
+ .prose h3{color:#b8860b !important;font-size:9pt !important;margin:1rem 0 .4rem !important;page-break-after:avoid;break-after:avoid}
+ .prose strong{color:#000 !important}
+ .prose em{color:#7a5218 !important;font-style:italic}
+ .prose a{color:#7a5218 !important;border:none !important;text-decoration:underline}
+ .prose ul{margin:.5rem 0 1rem !important}
+ .prose ul li{margin-bottom:.3rem !important;line-height:1.45 !important;color:#1a1a1a !important}
+ .prose ul li::before{background:#b8860b !important}
+ .brief-section-break{background:#ccc !important;max-width:120px !important;margin:1.4rem auto !important}
+ .brief-toc{display:none !important}
+ article::after{content:"KCS Capital  .  kcs-capital.com  .  contact@kcs-capital.com";display:block;text-align:center;font-family:'DM Sans',sans-serif;font-size:8pt;color:#999;padding-top:.5rem;border-top:1px solid #ddd;margin-top:1.5rem}
+ a[href]::after{content:""}
+}
+/* RESEARCH LEFT SIDEBAR (fixed, dual independent scroll, hides on < 1280px) */
+.research-sidebar{position:fixed;top:100px;left:1.5rem;width:240px;height:calc(100vh - 130px);display:flex;flex-direction:column;z-index:50;font-family:var(--ui);padding-right:.25rem;overflow:hidden}
+.research-sidebar-back{display:inline-flex;align-items:center;gap:.5rem;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-bottom:.8rem;margin-bottom:1.1rem;border-bottom:1px solid var(--border);transition:color .2s,gap .2s;flex:0 0 auto}
+.research-sidebar-back:hover{color:var(--gold-l);gap:.7rem}
+/* Chapter region (top, scrolls independently). Weight 2 of total flex space. */
+.research-sidebar-chapters{display:flex;flex-direction:column;flex:2 1 0;min-height:0}
+.research-sidebar-chap-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;flex:0 0 auto}
+.research-sidebar-chap-list{list-style:none;counter-reset:chap;padding:0 .5rem 0 0;margin:0;overflow-y:scroll;min-height:0;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:rgba(201,136,42,.45) rgba(201,136,42,.07)}
+.research-sidebar-chap-list li{counter-increment:chap;margin:0}
+.research-sidebar-chap-list a{display:flex;gap:.6rem;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.4;color:rgba(242,237,232,.7);text-decoration:none;padding:.42rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
+.research-sidebar-chap-list a::before{content:counter(chap,decimal-leading-zero);font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em;flex-shrink:0;padding-top:.18em}
+.research-sidebar-chap-list a:hover{color:var(--gold-l);padding-left:.3rem}
+.research-sidebar-chap-list li:last-child a{border-bottom:none}
+/* Divider between the two regions (fixed) */
+.research-sidebar-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,136,42,.3) 30%,rgba(201,136,42,.3) 70%,transparent);margin:1.6rem 0;flex:0 0 auto}
+/* Other research region (bottom, scrolls independently). Weight 3 of total flex space. */
+.research-sidebar-other{display:flex;flex-direction:column;flex:3 1 0;min-height:0}
+.research-sidebar-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.85rem;flex:0 0 auto}
+.research-sidebar-list{list-style:none;padding:0 .5rem 0 0;margin:0;overflow-y:scroll;min-height:0;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:rgba(201,136,42,.45) rgba(201,136,42,.07)}
+.research-sidebar-list li{margin:0}
+.research-sidebar-list a{display:block;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.35;color:rgba(242,237,232,.55);text-decoration:none;padding:.5rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
+.research-sidebar-list a:hover{color:var(--gold);padding-left:.4rem}
+.research-sidebar-list li:last-child a{border-bottom:none}
+/* Slim gold scrollbar for both scrollable regions */
+.research-sidebar-chap-list::-webkit-scrollbar,.research-sidebar-list::-webkit-scrollbar{width:5px;-webkit-appearance:none}
+.research-sidebar-chap-list::-webkit-scrollbar-track,.research-sidebar-list::-webkit-scrollbar-track{background:rgba(201,136,42,.07);border-radius:2px}
+.research-sidebar-chap-list::-webkit-scrollbar-thumb,.research-sidebar-list::-webkit-scrollbar-thumb{background:rgba(201,136,42,.45);border-radius:2px}
+.research-sidebar-chap-list::-webkit-scrollbar-thumb:hover,.research-sidebar-list::-webkit-scrollbar-thumb:hover{background:rgba(201,136,42,.7)}
+@media(max-width:1280px){.research-sidebar{display:none}}
+@media print{.research-sidebar{display:none !important}}
+</style></head><body>
+
+<div class="brief-progress no-print"><div class="brief-progress-bar" id="brief-progress-bar"></div></div>
+
+<nav id="main-nav" class="no-print">
+ <a href="/" class="nav-logo"><img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img"><span class="nav-sub">Research &middot; Technology &middot; Education</span></a>
+ <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
+ <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+ <ul class="nav-links">
+ <li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/solutions">Solutions</a></li><li><a href="/team">Team</a></li>
+ <li><a href="/research">Research</a></li><li><a href="/briefs">KCS Briefs</a></li>
+ <li class="nav-drop"><a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
+ <ul class="nav-drop-menu"><li><a href="/partners">Partners</a></li><li><a href="/regulator">Regulator</a></li><li><a href="/contact">Contact</a></li></ul></li>
+ <li><a href="/data-room" class="nav-cta">Access Data Room</a></li></ul>
+</nav>
+
+<article>
+<section class="brief-hero"><div class="brief-in">
+ <div class="brief-meta"><span>KCS Research</span><span class="dot"></span><span>Asset Classes</span><span class="dot"></span><span class="muted">March 2026</span><span class="dot"></span><span class="muted">16 min read</span></div>
+ <h1 class="brief-h1">Canadian Real Estate Tokenization. <em>The First Live Wave.</em></h1>
+ <p class="brief-lead">Three Canadian real estate issuers, T-RIZE Group in Quebec, Ocree Capital in Toronto, and SORS Capital in Ontario, have moved real estate tokenization in Canada out of the conceptual stage and into live, regulated, multi-million-dollar issuance. The asset base in scope across just the announced offerings now exceeds C$400 million. Each issuer is operating under Canadian securities-law structures, using regulated chain infrastructure, with credible distribution partners. This report walks through each program, the technical and regulatory choices each made, what those choices imply for the next 24 months of Canadian real estate tokenization, and the pipeline outlook.</p>
+ <div class="brief-actions no-print">
+  <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <a class="brief-btn-back" href="/research">All Research &rarr;</a>
+ </div>
+</div></section>
+<div class="brief-feature"></div>
+
+<section class="brief-body">
+<aside class="brief-toc no-print">
+ <div class="brief-toc-label">In this report</div>
+ <ol>
+  <li><a href="#executive-summary">Executive summary</a></li>
+  <li><a href="#1-why-real-estate-is-the-first-material-rwa-vertical-in-cana">1 Why real estate is the first material RWA vertical in Canada</a></li>
+  <li><a href="#2-t-rize-group-and-project-champfleury">2 T-RIZE Group and Project Champfleury</a></li>
+  <li><a href="#3-ocree-capital-and-15-berwick-court">3 Ocree Capital and 15 Berwick Court</a></li>
+  <li><a href="#4-sors-capital-and-central-town-apartments">4 SORS Capital and Central Town Apartments</a></li>
+  <li><a href="#5-the-republic-distribution-layer">5 The Republic distribution layer</a></li>
+  <li><a href="#6-what-the-pipeline-looks-like">6 What the pipeline looks like</a></li>
+  <li><a href="#7-the-regulatory-posture-in-plain-terms">7 The regulatory posture, in plain terms</a></li>
+  <li><a href="#8-what-this-implies-for-the-venue-layer">8 What this implies for the venue layer</a></li>
+  <li><a href="#9-the-constructive-read">9 The constructive read</a></li>
+ </ol>
+</aside>
+<div class="prose">
+<h2 id="executive-summary">Executive summary</h2>
+<p>Canadian real estate tokenization moved from research-paper territory into live, regulated, multi-million-dollar issuance in the 2024 to 2026 window. Three issuers, T-RIZE Group in Quebec, Ocree Capital in Toronto, and SORS Capital in Ontario, are operating live offerings under Canadian securities law, on regulated chain infrastructure, with credible distribution partners. The cumulative announced asset base in scope across these issuers exceeds C$400 million, with the underlying project pipeline materially larger.</p>
+<p>The structural significance is not the individual deal sizes, although those matter. The structural significance is that the regulatory pattern, the chain-and-custody choices, and the issuer-and-distribution model have all converged on a recognizable institutional template. That template, fractional regulated digital security plus regulated transfer agent plus qualified Canadian custody plus exempt-market or accredited distribution, is the same template that will scale into Canadian commercial real estate, multifamily housing, mortgage credit, and infrastructure finance over the next several years. This report walks through each issuer, the technical and regulatory choices each made, and what the cumulative effect implies for the broader Canadian real estate financing market.</p>
+<div class="brief-section-break"></div>
+<h2 id="1-why-real-estate-is-the-first-material-rwa-vertical-in-cana">1 Why real estate is the first material RWA vertical in Canada</h2>
+<p>Three structural features make real estate the natural first vertical for Canadian RWA tokenization at scale.</p>
+<p><strong>Cash flow predictability.</strong> A multifamily property generating contracted lease revenue, or a commercial building with multi-year tenancy, produces highly predictable monthly cash flow. That predictability is the input the regulated digital security wrapper is designed to convert into a fractional, transferable, on-chain claim. The conversion is structurally clean for real estate in a way that is not always true for, say, royalty interests or critical-mineral exploration revenue.</p>
+<p><strong>Regulatory familiarity.</strong> Canadian securities regulators have decades of experience with real estate offerings under exempt-market dealer regimes, REIT structures, and limited partnership vehicles. Wrapping a real estate offering in a regulated digital security format is a meaningful technical step but is not a regulatory leap. The same provincial securities frameworks apply.</p>
+<p><strong>Buyer demand for fractional access.</strong> Canadian investors, accredited and institutional, have shown durable demand for real estate exposure. Tokenization addresses the historical friction in that demand: minimum ticket sizes that excluded most accredited buyers from individual property exposure, illiquidity that locked positions for years, and operational opacity that made small-position holdings expensive to manage. Tokenization reduces friction on each dimension.</p>
+<p>The combination produces a structurally favorable environment for real estate to be the first Canadian RWA category to scale. The three issuers profiled below are operating against that backdrop.</p>
+<div class="brief-section-break"></div>
+<h2 id="2-t-rize-group-and-project-champfleury">2 T-RIZE Group and Project Champfleury</h2>
+<p>T-RIZE Group is a Montreal-based tokenization platform and issuer that has been the most publicly active Canadian real estate tokenization operator across 2024 and 2025. The flagship engagement, Project Champfleury, is a C$300 million tokenization mandate covering a 956-unit residential development in Quebec.</p>
+<p>The first market-facing issuance under the Champfleury program, "Vision 87," priced at approximately C$23 million for an 87-unit residential offering. A subsequent issuance, "Vision 60 by Ste-Rose," priced at C$24.2 million for a 60-unit energy-efficient residential project in Laval, Quebec. Both offerings were structured as regulated digital securities issued via T-RIZE's institutional tokenization platform, with Republic acting as the regulated investment distribution partner through its OpenDeal broker-dealer entity.</p>
+<p>The technical implementation runs on EVM-compatible chain infrastructure (with Coinbase Base and Avalanche identified in the program materials), with the legal real estate ownership held by the underlying project SPVs and the digital securities representing the regulated economic claim on those SPVs' equity.</p>
+<p>What T-RIZE has demonstrated structurally:</p>
+<ul>
+<li>Multi-tranche, multi-property issuance under a single program umbrella, allowing investors to choose specific project exposure rather than fund-of-funds-style blended exposure</li>
+<li>Distribution through a regulated US-licensed broker-dealer (Republic / OpenDeal), expanding the addressable buyer base beyond the Canadian exempt-market dealer footprint</li>
+<li>Issuance velocity, two named offerings in under twelve months, that signals operational scaling rather than one-off pilot activity</li>
+<li>Asset class focus on multifamily residential, where the underlying cash flow predictability is high and the regulatory wrap is well-understood</li>
+</ul>
+<p>The C$300 million Champfleury commitment, if executed at the issuance velocity demonstrated, represents a multi-year pipeline of Canadian real estate tokenization activity from a single operator. That is the scale that begins to demand a dedicated institutional secondary venue, which Canada does not yet have at production scale.</p>
+<div class="brief-section-break"></div>
+<h2 id="3-ocree-capital-and-15-berwick-court">3 Ocree Capital and 15 Berwick Court</h2>
+<p>Ocree Capital Inc. is a Toronto-based regulated exempt-market dealer that launched a tokenized real estate investment platform on the Polymesh blockchain in 2025. Its inaugural listing is a C$51.9 million commercial multi-residential property at 15 Berwick Court in Winnipeg, with approximately C$4 million in equity offered as fractional tokens.</p>
+<p>Two design choices set the Ocree program apart from the T-RIZE program in structurally important ways.</p>
+<p><strong>Polymesh as the chain layer.</strong> Polymesh is a public-permissioned blockchain purpose-built for regulated security tokens, originated by Toronto-founded Polymath. It enforces compliance constraints (KYC, AML, transfer restrictions, jurisdictional rules) at the chain layer itself rather than relying on application-level enforcement. For an exempt-market dealer with the regulatory posture Ocree carries, this architectural alignment is significant. The technical and the regulatory speak the same language.</p>
+<p><strong>Single-asset, commercial-property focus.</strong> Ocree's inaugural offering is a single commercial multi-residential property, not a multi-project program. That structural choice produces a smaller initial asset base than T-RIZE's program but a cleaner unit of investor analysis. A buyer of the Ocree token has clean, direct economic exposure to a defined property.</p>
+<p>The C$51.9 million property and C$4 million equity offering size is not large in absolute commercial real estate terms. The structural significance is that it is one of the first regulated commercial real estate tokenization programs in Canada, executed by a licensed Canadian exempt-market dealer, on a Canadian-founded compliant chain, with nationwide securities licensing. That combination is the template for compliant institutional issuance at scale.</p>
+<div class="brief-section-break"></div>
+<h2 id="4-sors-capital-and-central-town-apartments">4 SORS Capital and Central Town Apartments</h2>
+<p>SORS Capital takes a third distinct angle: social-impact and affordable housing tokenization. Its first tokenization project is Central Town Apartments, an existing senior housing complex in London, Ontario, with a decade of stable cash-flow history.</p>
+<p>The technical implementation runs on Blocksquare's real estate tokenization technology, with the tokens offered to investors globally and proceeds earmarked to fund additional affordable housing development. The asset-class significance is the explicit blended-finance posture: investor return paired with measurable social outcome, structured into the offering itself rather than added as commentary.</p>
+<p>For the broader Canadian real estate tokenization landscape, SORS demonstrates a structurally important point. Tokenization is not exclusively an institutional-luxury-real-estate technology. It is equally well-suited to social-impact and affordable-housing financing, where the historical financing constraint has been the cost and operational complexity of structuring deals small enough to match the social need but large enough to attract conventional institutional capital. Tokenization reduces that cost and operational complexity, and a portion of the unlocked capital can be channeled to the affordability layer by design.</p>
+<p>This is not a peripheral use case. The Canadian affordable-housing financing gap, as measured by CMHC's repeated reporting, is in the hundreds of billions of dollars. Tokenization is not the entire answer. But infrastructure that makes blended-finance affordable-housing structures cheaper to issue and easier to administer is part of the answer, and SORS is one of the credible Canadian operators showing what that looks like in production.</p>
+<div class="brief-section-break"></div>
+<h2 id="5-the-republic-distribution-layer">5 The Republic distribution layer</h2>
+<p>A common feature across T-RIZE's program is the use of Republic's regulated broker-dealer (OpenDeal) as the distribution partner. Republic is a US-domiciled, regulated investment platform that has built distribution scale across accredited and qualified-buyer audiences for both equity and tokenized issuances. The relationship matters for two reasons.</p>
+<p><strong>Buyer-base reach.</strong> Canadian exempt-market dealer distribution is real but geographically constrained. Republic extends the addressable buyer base for Canadian-issued tokenized real estate to a cross-border accredited audience. For programs of the scale T-RIZE is operating, that broader buyer base materially affects the speed at which individual issuances clear.</p>
+<p><strong>Compliance-pattern continuity.</strong> Republic operates with US regulatory clearance and the operational discipline that comes with it. When a Canadian issuer uses Republic as the distribution partner, the offering must clear both Canadian and US compliance perimeters. The result is a higher operational bar than either jurisdiction alone, which over time is the kind of constraint that produces a stronger institutional template.</p>
+<p>The structural read is that Canadian real estate tokenization, at issuance scale, depends on cross-jurisdictional distribution partners until the domestic regulated venue layer matures. That dependency is not a weakness; it is a working pattern. Over time, as the domestic Canadian regulated venue layer scales, more of the secondary-market activity will repatriate. The Republic-style cross-border distribution will remain useful for primary issuance and for cross-border buyer access.</p>
+<div class="brief-section-break"></div>
+<h2 id="6-what-the-pipeline-looks-like">6 What the pipeline looks like</h2>
+<p>The three issuers profiled above have publicly disclosed pipeline activity that, in aggregate, exceeds C$1 billion in eligible asset base across the next several years. That figure should be read with the usual caveats: pipeline is not closed issuance, regulatory and market timing affects pacing, and individual deals can move or be re-scoped. With those caveats, the directional pattern is unambiguous.</p>
+<p>Beyond the three named issuers, the underlying Canadian real estate market has structural features that create a much larger pool of tokenization-eligible asset value. Canadian commercial real estate alone (multifamily, office, industrial, retail) is measured in the trillions of dollars of gross asset value. Even a small share of that base becoming tokenization-eligible over a multi-year horizon represents a multi-billion-dollar issuance pipeline.</p>
+<p>The constraint on capturing that pipeline is not the underlying asset base. It is the rate at which:</p>
+<ul>
+<li>Additional regulated Canadian exempt-market dealers structure tokenized issuance programs (Ocree is the early reference; others will follow)</li>
+<li>Republic-style cross-border distribution partners scale Canadian-issuer mandates</li>
+<li>Canadian qualified custody (Tetra Trust, Balance, Brane) scales operational capacity for tokenized real estate custody</li>
+<li>The Canadian regulated multi-institution venue and settlement layer (the layer 4orm Finance is being designed to operate) reaches production scale to support secondary trading</li>
+</ul>
+<p>Each of these is being worked. None is a structural blocker. The composite effect over the next 24 to 36 months is a Canadian real estate tokenization market that scales from low-hundreds of millions in cumulative issuance today to single-digit billions of dollars in cumulative issuance.</p>
+<div class="brief-section-break"></div>
+<h2 id="7-the-regulatory-posture-in-plain-terms">7 The regulatory posture, in plain terms</h2>
+<p>For investors, advisors, and counterparties new to this asset class, it is worth being explicit about the regulatory posture that all three issuers above operate under.</p>
+<p><strong>Securities-law treatment.</strong> Each tokenized real estate offering described in this report is, in Canadian regulatory terms, a security. It is issued under exempt-market prospectus exemptions or under a registered prospectus, distributed through registered dealers, subject to ongoing reporting obligations, and held by qualified custodians where the buyer's structure requires.</p>
+<p><strong>Custody.</strong> The on-chain digital securities are held by the buyer's qualified Canadian digital asset custodian (or, for cross-border buyers, by their qualified custodian in their home jurisdiction). The CIRO Digital Asset Custody Framework, formalized in 2025, defines what "qualified" means in the Canadian context. Tetra Trust, Balance, and Brane are the active Canadian providers operating under that framework.</p>
+<p><strong>Transfer restrictions.</strong> Tokens are not freely transferable in the manner of unregulated crypto. Transfers are constrained to qualified-buyer-to-qualified-buyer movements consistent with the issuance's exemption category, enforced at the smart-contract layer (on Polymesh, this is native; on EVM chains, it is implemented via compliance modules).</p>
+<p><strong>Disclosure.</strong> Issuers are subject to the same disclosure obligations that would apply to an analogous non-tokenized offering. The on-chain attestation layer is additive to, not a replacement for, the conventional disclosure framework.</p>
+<p>This posture is conservative by design. The category was not built by stretching regulatory frameworks to permit untested structures. It was built by translating existing regulatory frameworks into chain-native operational forms. That distinction is what allows institutional buyers to onboard at all.</p>
+<div class="brief-section-break"></div>
+<h2 id="8-what-this-implies-for-the-venue-layer">8 What this implies for the venue layer</h2>
+<p>Canadian real estate tokenization at the issuance scale that the three named issuers (and the next several behind them) are operating at requires the institutional venue layer to mature in parallel. The venue layer functions across four interlocking roles:</p>
+<p><strong>Primary issuance support.</strong> A regulated multi-institution venue provides the standardized issuance, transfer-agent, and distribution rails that individual issuers do not have to build from scratch. As more issuers come online, the marginal cost of issuance drops, which expands the addressable issuer base.</p>
+<p><strong>Secondary-market liquidity.</strong> Tokenized real estate is dramatically more useful as an asset class when there is a regulated secondary market that allows qualified buyers to enter and exit positions on reasonable terms. Today, secondary liquidity in Canadian tokenized real estate is thin. A regulated venue is the structural answer.</p>
+<p><strong>Cross-asset connectivity.</strong> A regulated multi-asset venue allows real estate tokenized issuance to settle against tokenized CAD (QCAD, regulated CADC) and to interact with adjacent asset classes (tokenized mortgages, tokenized commercial credit, tokenized fund instruments) on the same infrastructure. The cross-asset connectivity unlocks structured product design that single-vertical venues cannot support.</p>
+<p><strong>Institutional risk infrastructure.</strong> Repo, lending, and structured product activity against tokenized real estate require institutional-grade venue infrastructure (margining, default management, segregated custody, regulatory reporting). The venue layer is what makes these activities operationally feasible at institutional scale.</p>
+<p>The conclusion mirrors the broader KCS research thesis: the Canadian RWA stack has the issuance layer for real estate (T-RIZE, Ocree, SORS, and others coming behind them), has the chain layer (Polymesh and EVM-compatible regulated chains), has the custody layer (Tetra, Balance, Brane), has the regulated CAD digital cash layer (QCAD, regulated CADC), and has clarifying regulatory frameworks (CIRO custody, CSA staff guidance). What it does not have at production scale is the venue layer that ties everything together. That layer is the institutional opportunity.</p>
+<div class="brief-section-break"></div>
+<h2 id="9-the-constructive-read">9 The constructive read</h2>
+<p>Canadian real estate tokenization is real, regulated, and at a scale that demands serious institutional attention. Three credible issuers (T-RIZE, Ocree, SORS) are operating across multifamily residential, commercial multi-residential, and social-impact affordable housing categories, with cumulative announced asset bases exceeding C$400 million and pipelines that are materially larger. The regulatory pattern, the chain-and-custody architecture, and the distribution model have all converged on a coherent institutional template.</p>
+<p>The constraint on the next phase of scale is not issuer credibility, regulatory clarity, or technical infrastructure. The constraint is the venue layer that enables secondary liquidity, cross-asset connectivity, and institutional risk infrastructure at production scale. That layer is what 4orm Finance is being designed to operate, and the three issuers profiled in this report are among the supply-side counterparties that the venue is being built to serve.</p>
+<h3>Related KCS Capital research</h3>
+<ul>
+<li>KCS Research, "Canadian RWA and Tokenization Ecosystem Map." The fuller ecosystem context.</li>
+<li>KCS Research, "Qualified Digital Custody in Canada." The custody layer the issuance relies on.</li>
+<li>KCS Research, "Canada's $1.9B RWA Infrastructure TAM: Sized and Defended." The fee-pool sizing for the institutional layer.</li>
+</ul>
+<h3>Background and Sources</h3>
+<ul>
+<li>T-RIZE Group press releases and program materials, 2024 and 2025, including Project Champfleury and Vision 87 / Vision 60 disclosures.</li>
+<li>Ocree Capital Inc. and Polymesh joint announcement on the 15 Berwick Court inaugural listing, 2025.</li>
+<li>SORS Capital and Blocksquare announcement on Central Town Apartments tokenization, 2024.</li>
+<li>Republic / OpenDeal broker-dealer program disclosures, 2024 and 2025.</li>
+<li>Canadian Securities Administrators, staff guidance on tokenized securities, 2022 to 2025.</li>
+<li>CIRO, "Digital Asset Custody Framework," 2025.</li>
+<li>CMHC, "Housing supply and affordability reports," 2024 and 2025.</li>
+</ul>
+<p>This report is institutional research from KCS Capital. It is for informational purposes only and does not constitute an offer or solicitation to buy or sell securities. KCS Capital Inc. is an independent technology and research firm; 4orm Finance operates as a separate regulated entity.</p>
+</div>
+</section>
+</article>
+
+<div class="brief-floating no-print" id="brief-floating">
+ <a href="/research" class="brief-float-btn">&larr; All Research</a>
+ <button type="button" class="brief-float-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr; Top</button>
+</div>
+
+<footer class="no-print">
+ <div class="foot-main">
+ <div>
+ <div class="foot-brand">
+ <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
+ KCS Capital
+ </div>
+ <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+ <div class="foot-soc"><a href="#" class="foot-sb" aria-label="LinkedIn">in</a><a href="#" class="foot-sb" aria-label="Twitter">X</a></div>
+ </div>
+ <div>
+ <div class="foot-col-t">KCS Capital</div>
+ <ul class="foot-links">
+ <li><a href="/about">About the Firm</a></li><li><a href="/team">Team &amp; Advisors</a></li>
+ <li><a href="/research">Research</a></li><li><a href="/briefs">KCS Briefs</a></li>
+ <li><a href="/regulator">Regulator</a></li><li><a href="/careers">Careers</a></li>
+ <li><a href="/contact">Contact</a></li><li><a href="/data-room">Data Room</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">4orm Finance</div>
+ <ul class="foot-links">
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
+ <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
+ <li><a href="/partners">For Issuers</a></li>
+ <li><a href="/partners">For Custodians</a></li>
+ <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
+ <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+ </ul>
+ </div>
+ <div>
+ <div class="foot-col-t">Offices</div>
+ <ul class="foot-links">
+ <li style="margin-bottom:1rem"><span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Calgary HQ</span><a href="tel:17783632423" style="display:block">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br>1-778-363-2423</a></li>
+ <li style="margin-bottom:1rem"><span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Vancouver</span><a href="tel:17786515255">1-778-651-5255</a></li>
+ <li><span style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,136,42,.55);display:block;margin-bottom:.3rem">Edmonton</span><a href="tel:17802663050">1-780-266-3050</a></li>
+ <li style="margin-top:.75rem"><a href="mailto:admin@kcs-capital.com">admin@kcs-capital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="foot-bot">
+ <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
+ <div class="foot-reg">KCS Capital Inc. is an independent technology and research firm. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework. This website does not constitute an offer or solicitation to buy or sell securities. Market statistics sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma.</div>
+ </div>
+</footer>
+
+<script>
+(function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
+(function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
+(function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
+</script>
+</body></html>

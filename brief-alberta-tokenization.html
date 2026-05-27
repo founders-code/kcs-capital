@@ -13,6 +13,64 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
+/* PROGRESS BAR */
+.brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
+.brief-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-l));transition:width .08s linear}
+/* FLOATING NAV */
+.brief-floating{position:fixed;bottom:2rem;right:2rem;display:flex;flex-direction:column;gap:.5rem;z-index:200;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.brief-floating.visible{opacity:1;visibility:visible}
+.brief-floating a,.brief-floating button{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(4,5,8,.92);border:1px solid var(--gold-d);padding:.7rem 1rem;text-decoration:none;cursor:pointer;backdrop-filter:blur(8px);transition:background .2s,border-color .2s,color .2s}
+.brief-floating a:hover,.brief-floating button:hover{background:var(--gold);color:var(--black);border-color:var(--gold)}
+/* HERO ACTIONS (Download PDF button) */
+.brief-actions{display:flex;gap:.85rem;margin-top:2.1rem;flex-wrap:wrap}
+.brief-btn-pdf{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.78rem 1.2rem;border:none;cursor:pointer;text-decoration:none;transition:background .2s}
+.brief-btn-pdf:hover{background:var(--gold-l)}
+.brief-btn-pdf::before{content:'\2193';font-weight:800;font-size:13px}
+.brief-btn-ghost{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:transparent;padding:.78rem 1.2rem;border:1px solid var(--gold-d);text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s}
+.brief-btn-ghost:hover{border-color:var(--gold);color:var(--gold-l)}
+/* TABLE OF CONTENTS */
+.brief-toc{max-width:820px;margin:0 auto 3rem;padding:1.7rem 2rem;background:var(--surface-2);border:1px solid var(--border-b);border-left:2px solid var(--gold)}
+.brief-toc-label{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.brief-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.brief-toc li{counter-increment:toc;font-family:var(--body);font-size:.96rem;line-height:1.65;padding:.32rem 0;border-bottom:1px dashed rgba(201,136,42,.12)}
+.brief-toc li:last-child{border-bottom:none}
+.brief-toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.1em;color:var(--gold-d);margin-right:1rem}
+.brief-toc a{color:rgba(242,237,232,.78);text-decoration:none;transition:color .2s}
+.brief-toc a:hover{color:var(--gold)}
+.brief-section-break{height:1px;background:linear-gradient(90deg,transparent,rgba(201,136,42,.18),transparent);margin:3rem 0 2rem}
+/* PRINT STYLESHEET - for "Download PDF" via browser Print to Save as PDF */
+@media print{
+ *,*::before,*::after{background:transparent !important;color:#0a0a0a !important;box-shadow:none !important;text-shadow:none !important}
+ .no-print,nav,footer,.brief-floating,.brief-progress,.brief-actions,.brief-foot-nav{display:none !important}
+ body{font-family:'Georgia',serif !important;font-size:11pt !important;line-height:1.55 !important}
+ .brief-hero{padding:0 0 1.2rem !important}
+ .brief-feature{display:none !important}
+ .brief-body{padding:0 !important;border:none !important}
+ .brief-in,.prose,.brief-toc,.brief-sources{max-width:100% !important;margin:0 !important}
+ .brief-toc{display:none !important}
+ .brief-meta{font-size:8pt !important;color:#666 !important;letter-spacing:.16em !important;margin-bottom:.6rem !important}
+ .brief-meta .dot,.brief-meta .muted{color:#999 !important;background:#999 !important}
+ .brief-h1{font-size:22pt !important;font-weight:600 !important;color:#0a0a0a !important;line-height:1.18 !important;margin-bottom:.5rem !important}
+ .brief-h1 em{color:#7A5218 !important;font-style:italic !important}
+ .brief-lead{font-size:11.5pt !important;color:#333 !important;line-height:1.55 !important;margin-bottom:1.2rem !important}
+ .prose{font-size:10.5pt !important;color:#0a0a0a !important;line-height:1.55 !important}
+ .prose p{margin-bottom:.6rem !important}
+ .prose h2{font-size:14pt !important;color:#0a0a0a !important;margin:1.2rem 0 .5rem !important;page-break-after:avoid !important}
+ .prose h3{font-size:9pt !important;color:#7A5218 !important;letter-spacing:.16em !important;margin:1rem 0 .35rem !important;page-break-after:avoid !important}
+ .prose strong{color:#0a0a0a !important;font-weight:700 !important}
+ .prose em{color:#7A5218 !important}
+ .prose a{color:#7A5218 !important;border:none !important;text-decoration:underline !important}
+ .prose ul li::before{background:#7A5218 !important}
+ .brief-callout{background:#f8f5f0 !important;border:1px solid #ccc !important;border-left:2px solid #7A5218 !important;padding:.6rem .9rem !important;margin:.8rem 0 !important;page-break-inside:avoid !important}
+ .brief-callout p{font-size:10pt !important;color:#0a0a0a !important}
+ .brief-pull{font-size:13pt !important;color:#0a0a0a !important;border-left:2px solid #7A5218 !important;margin:1rem 0 !important;padding-left:.8rem !important;page-break-inside:avoid !important}
+ .brief-sources{border-top:1px dashed #999 !important;margin-top:1.5rem !important;padding-top:1rem !important}
+ .brief-sources h4{font-size:9pt !important;color:#7A5218 !important}
+ .brief-sources li{font-size:9pt !important;color:#444 !important}
+ .brief-section-break{display:none !important}
+ .brief-disclaimer{font-size:8.5pt !important;color:#666 !important;margin-top:1rem !important}
+ @page{margin:.7in;@bottom-left{content:'KCS Capital'}@bottom-right{content:'kcs-capital.com'}}
+}
 .brief-hero{position:relative;padding:9.5rem 3rem 3.5rem;background:var(--black);overflow:hidden}
 .brief-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.08) 0%,transparent 70%);pointer-events:none}
 .brief-in{max-width:820px;margin:0 auto;position:relative}
@@ -59,6 +117,7 @@
 </style>
 </head>
 <body>
+<div class="brief-progress no-print"><div class="brief-progress-bar" id="brief-progress-bar"></div></div>
 <nav id="main-nav">
  <a href="/" class="nav-logo">
  <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
@@ -93,17 +152,31 @@
  </div>
  <h1 class="brief-h1 reveal">Unlocking Alberta's wealth through tokenization: <em>a new path to liquidity and social impact.</em></h1>
  <p class="brief-lead reveal">Alberta's resource base is one of the largest on Earth. The question is not whether that wealth exists. It is whether a portion of it can be put to work today, without selling the asset, by converting future resource-linked revenue into regulated, liquid financial instruments.</p>
+ <div class="brief-actions reveal no-print">
+  <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <a href="/briefs" class="brief-btn-ghost">All KCS Briefs &rarr;</a>
+ </div>
  </div>
 </section>
 <div class="brief-feature"></div>
 
 <section class="brief-body">
- <div class="prose reveal">
+ <aside class="brief-toc no-print">
+  <div class="brief-toc-label">In this brief</div>
+  <ol>
+   <li><a href="#alberta-resource-base">Alberta's resource base</a></li>
+   <li><a href="#how-tokenization-creates-liquidity">How tokenization creates liquidity</a></li>
+   <li><a href="#why-alberta-needs-new-liquidity-now">Why Alberta needs new liquidity now</a></li>
+   <li><a href="#the-model">The model: regulated infrastructure plus a social-impact layer</a></li>
+   <li><a href="#the-bottom-line">The bottom line</a></li>
+  </ol>
+ </aside>
+ <div class="prose">
  <p>When most people picture Alberta's wealth, they picture barrels in the ground. But the real economic engine is not the barrel, it is the <strong>stream of future revenue</strong> the barrel produces: royalties, production value, and the long-dated contracts that sit on top of them. That revenue is real, it is contracted, and it is largely illiquid. It arrives slowly, over decades, while the province's pressing needs, housing chief among them, are immediate.</p>
 
  <p>So here is the thesis worth taking seriously: <em>what if a portion of that future value could be unlocked now, not by selling assets or accelerating production, but by structuring future revenue streams into standardized, regulated, tradable instruments?</em> That is what tokenization actually is when it is done properly. Not speculation. Financial plumbing.</p>
 
- <h2>Alberta's resource base: the scale of the asset</h2>
+ <h2 id="alberta-resource-base">Alberta's resource base: the scale of the asset</h2>
  <p>Alberta holds one of the largest proven crude oil reserves in the world, concentrated in the Athabasca, Cold Lake, and Peace River oil sands regions. Canada's proven reserves are estimated at roughly <strong>160 billion barrels</strong>, the vast majority of it in Alberta, placing the country among the top global holders.</p>
  <p>That base produces enormous ongoing value. The oil and gas sector remains a cornerstone of provincial revenue, and bitumen production alone is measured in the tens of billions of dollars annually. The point is not the headline reserve number, it is the <strong>durability and predictability of the revenue</strong> those reserves generate. Predictable, contracted cash flow is exactly the kind of asset that institutional finance knows how to work with.</p>
 
@@ -112,7 +185,7 @@
  <p>Institutional capital does not finance "oil." It finances <strong>contracted, verifiable cash flow</strong>. The barrier in Alberta has never been the value, it has been the absence of a standardized, regulated, auditable way to package future resource-linked revenue into instruments institutions can actually hold, price, and trade.</p>
  </div>
 
- <h2>How tokenization creates liquidity, without selling the asset</h2>
+ <h2 id="how-tokenization-creates-liquidity">How tokenization creates liquidity, without selling the asset</h2>
  <p>Tokenization does not touch the underlying resource. It takes a future revenue right, a slice of a royalty stream, a structured revenue contract, and represents it as a standardized digital instrument: fractional, traceable, transferable, and issued under securities regulation. The underlying asset stays exactly where it is. What changes is that the future cash flow becomes <strong>financeable today</strong>.</p>
  <p>The mechanics, in plain terms:</p>
  <ul>
@@ -124,12 +197,12 @@
 
  <p class="brief-pull">The real unlock is not the token. It is the standardized, auditable claim and the institutional credit layer it makes possible.</p>
 
- <h2>Why Alberta needs new liquidity now</h2>
+ <h2 id="why-alberta-needs-new-liquidity-now">Why Alberta needs new liquidity now</h2>
  <p>Strong resource revenue and pressing social need exist side by side in Alberta, and the gap between them is largely a <em>timing and structure</em> problem. Housing is the clearest example.</p>
  <p>Canada faces a structural housing shortfall. The Canada Mortgage and Housing Corporation has estimated that the country needs to build millions of additional units beyond the current pace to restore affordability by 2030. In many Alberta cities, a meaningful share of households spend more than 30% of income on shelter, the conventional threshold for housing stress. Provincial and federal programs are real and growing, but the demand is measured in the billions and the funding cadence does not match the urgency.</p>
  <p>This is not an argument that resource revenue should be spent faster. It is an argument that the <strong>structure</strong> connecting long-dated revenue to immediate need is missing. That structure is financial infrastructure, and it is buildable.</p>
 
- <h2>The model: regulated infrastructure plus a social-impact layer</h2>
+ <h2 id="the-model">The model: regulated infrastructure plus a social-impact layer</h2>
  <p>Here is where KCS Capital's work and the platform being developed through 4orm Finance come in. KCS Capital is an independent technology and research firm; 4orm Finance is being designed as Canada's institution-grade real-world asset exchange and digital settlement network. The Alberta concept described here is a <em>use case</em> that would run on exactly that kind of regulated infrastructure. A workable model has four layers:</p>
 
  <h3>1 &middot; A regulated issuance layer</h3>
@@ -149,7 +222,7 @@
  <p>For perspective: roughly <strong>$1 billion</strong> in deployable capital can finance thousands of affordable housing units when paired with provincial and municipal programs. New liquidity at the scale this model contemplates would not be incremental funding, it would be capital at the scale needed to genuinely move the needle on Alberta's longest-standing social challenges.</p>
  </div>
 
- <h2>The bottom line</h2>
+ <h2 id="the-bottom-line">The bottom line</h2>
  <p>Alberta's resource base is vast and its revenue is durable. Tokenization does not extract value from the ground, it converts future resource-linked revenue into liquid, regulated financial assets, leaving core assets and production capacity intact. Even a modest slice, structured properly, represents tens of billions in potential liquidity.</p>
  <p>The opportunity is to architect that infrastructure deliberately, the regulated issuance platform, the institutional credit layer, the impact framework, so the liquidity it creates flows to housing, community services, and measurable social benefit. This is where financial innovation, public purpose, and capital markets intersect. It is the kind of regulated infrastructure 4orm Finance is being built to make possible.</p>
 
@@ -171,6 +244,11 @@
  </div>
 </section>
 </article>
+
+<div class="brief-floating no-print" id="brief-floating">
+ <a href="/briefs">&larr; All Briefs</a>
+ <button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr; Top</button>
+</div>
 
 <footer>
  <div class="foot-main">
@@ -237,6 +315,25 @@
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+/* Reading progress bar */
+(function(){
+ var bar=document.getElementById('brief-progress-bar');
+ var floating=document.getElementById('brief-floating');
+ if(!bar)return;
+ function update(){
+  var h=document.documentElement;
+  var scrollTop=h.scrollTop||document.body.scrollTop;
+  var scrollHeight=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+  var pct=scrollHeight>0?(scrollTop/scrollHeight)*100:0;
+  bar.style.width=pct+'%';
+  if(floating){
+   if(scrollTop>500)floating.classList.add('visible');
+   else floating.classList.remove('visible');
+  }
+ }
+ window.addEventListener('scroll',update,{passive:true});
+ update();
+})();
 </script>
 </body>
 </html>

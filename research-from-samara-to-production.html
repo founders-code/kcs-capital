@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canadian Stablecoin Infrastructure: QCAD, CADC, and the CAD Settlement Layer | KCS Research</title>
-<meta name="description" content="Stablecorp&#x27;s QCAD. Loon&#x27;s regulated CAD stablecoin. Cybrid&#x27;s payments rail. What Canada&#x27;s emerging CAD settlement infrastructure looks like and how 4orm Finance interoperates.">
-<meta property="og:title" content="Canadian Stablecoin Infrastructure: QCAD, CADC, and the CAD Settlement Layer | KCS Research"><meta property="og:description" content="Stablecorp&#x27;s QCAD. Loon&#x27;s regulated CAD stablecoin. Cybrid&#x27;s payments rail. What Canada&#x27;s emerging CAD settlement infrastructure looks like and how 4orm Finance interoperates."><meta property="og:type" content="article">
+<title>From Project Samara to Production: What the Pilot Proved, What it Did Not Build, and the Path to Live Multi-Bank Settlement | KCS Research</title>
+<meta name="description" content="Project Samara proved feasibility for a Canadian-dollar tokenized bond on DLT with wholesale central-bank digital money. What it did not build: production-grade multi-bank settlement, commercialized tokenized deposit infrastructure, live regulated liquidity venues, and scaled custody/audit interoperability. This report maps the gap.">
+<meta property="og:title" content="From Project Samara to Production: What the Pilot Proved, What it Did Not Build, and the Path to Live Multi-Bank Settlement | KCS Research"><meta property="og:description" content="Project Samara proved feasibility for a Canadian-dollar tokenized bond on DLT with wholesale central-bank digital money. What it did not build: production-grade multi-bank settlement, commercialized tokenized deposit infrastructure, live regulated liquidity venues, and scaled custody/audit interoperability. This report maps the gap."><meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
@@ -145,13 +145,14 @@
   <div class="research-sidebar-chap-label">In This Report</div>
   <ol class="research-sidebar-chap-list">
    <li><a href="#executive-summary">Executive summary</a></li>
-   <li><a href="#1-why-cad-denominated-settlement-matters">1 Why CAD-denominated settlement matters</a></li>
-   <li><a href="#2-the-current-canadian-cad-stablecoin-layer">2 The current Canadian CAD stablecoin layer</a></li>
-   <li><a href="#3-the-regulatory-framework">3 The regulatory framework</a></li>
-   <li><a href="#4-what-institutional-grade-settlement-requires">4 What institutional-grade settlement requir...</a></li>
-   <li><a href="#5-interoperability-with-4orm-finance-and-the-institutional-v">5 Interoperability with 4orm Finance and the...</a></li>
-   <li><a href="#6-the-longer-arc">6 The longer arc</a></li>
-   <li><a href="#7-the-constructive-read">7 The constructive read</a></li>
+   <li><a href="#1-what-project-samara-actually-tested">1 What Project Samara actually tested</a></li>
+   <li><a href="#2-what-samara-proved">2 What Samara proved</a></li>
+   <li><a href="#3-what-samara-intentionally-did-not-build">3 What Samara intentionally did not build</a></li>
+   <li><a href="#4-the-missing-layer-between-issuance-and-liquidity">4 The missing layer between issuance and liq...</a></li>
+   <li><a href="#5-why-canada-needs-a-neutral-institutional-venue">5 Why Canada needs a neutral institutional v...</a></li>
+   <li><a href="#6-what-banks-can-build-alone-vs-what-requires-shared-rails">6 What banks can build alone vs what require...</a></li>
+   <li><a href="#7-the-production-blueprint">7 The production blueprint</a></li>
+   <li><a href="#8-the-constructive-read">8 The constructive read</a></li>
   </ol>
  </div>
  <div class="research-sidebar-divider"></div>
@@ -159,7 +160,6 @@
   <div class="research-sidebar-label">Other Research</div>
   <ul class="research-sidebar-list">
     <li><a href="/research-canada-institutional-tokenization-stack">Canada&#x27;s Institutional Tokenization Stack</a></li>
-    <li><a href="/research-from-samara-to-production">From Project Samara to Production</a></li>
     <li><a href="/research-canadian-tokenized-cash-war">The Canadian Tokenized Cash War</a></li>
     <li><a href="/research-rwa-liquidity-gap">The RWA Liquidity Gap</a></li>
     <li><a href="/research-alberta-tokenization-tam">Alberta Resource Tokenization</a></li>
@@ -171,6 +171,7 @@
     <li><a href="/research-ciro-custody-framework">The CIRO Digital Asset Custody Framework, Explained</a></li>
     <li><a href="/research-tokenized-mining-bullion-aucan">Tokenized Mining Bullion</a></li>
     <li><a href="/research-pineapple-mortgage-tokenization">Pineapple Financial</a></li>
+    <li><a href="/research-canadian-stablecoin-infrastructure">Canadian Stablecoin Infrastructure</a></li>
     <li><a href="/research-qualified-digital-custody-canada">Qualified Digital Custody in Canada</a></li>
     <li><a href="/research-blackrock-buidl-institutional-stablecoin-trade">BlackRock BUIDL</a></li>
     <li><a href="/research-capital-repatriation">Capital Repatriation</a></li>
@@ -184,9 +185,9 @@
 
 <article>
 <section class="brief-hero"><div class="brief-in">
- <div class="brief-meta"><span>KCS Research</span><span class="dot"></span><span>Ecosystem</span><span class="dot"></span><span class="muted">February 2026</span><span class="dot"></span><span class="muted">15 min read</span></div>
- <h1 class="brief-h1">Canadian Stablecoin Infrastructure. <em>QCAD, CADC, and the CAD Settlement Layer.</em></h1>
- <p class="brief-lead">A meaningful share of the world&#x27;s tokenized real-world asset activity will settle in regulated, fiat-denominated digital cash, not in volatile crypto. For Canadian issuers and Canadian institutional buyers, that means CAD-denominated settlement instruments, not USD-denominated ones. Canada&#x27;s CAD stablecoin layer is small in absolute terms today, but the regulatory perimeter around it is the most defined in the world. This report maps the active issuers, the regulatory posture, the payments rail interconnects, and what the layer needs to clear in order to serve as institutional settlement.</p>
+ <div class="brief-meta"><span>KCS Research</span><span class="dot"></span><span>Regulatory</span><span class="dot"></span><span class="muted">April 2026</span><span class="dot"></span><span class="muted">14 min read</span></div>
+ <h1 class="brief-h1">From Project Samara to Production. <em>The Infrastructure Path.</em></h1>
+ <p class="brief-lead">Project Samara, the Bank of Canada&#x27;s tokenized bond pilot executed with Export Development Canada as issuer and RBC Capital Markets and TD Securities as joint lead managers, used distributed ledger technology and wholesale central-bank digital money to test issuance, settlement, lifecycle management, and secondary-market functionality. The Bank of Canada described it as an important step in understanding tokenization, DLT, and how they can improve financial instruments for investors, businesses, and the financial community. The pilot proved feasibility. The question now is what production institutional infrastructure has to look like to convert the proof into a live market. This report walks through what Samara proved, what it intentionally did not build, and the structural shape of the next phase of work.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
@@ -199,80 +200,117 @@
  <div class="brief-toc-label">In this report</div>
  <ol>
   <li><a href="#executive-summary">Executive summary</a></li>
-  <li><a href="#1-why-cad-denominated-settlement-matters">1 Why CAD-denominated settlement matters</a></li>
-  <li><a href="#2-the-current-canadian-cad-stablecoin-layer">2 The current Canadian CAD stablecoin layer</a></li>
-  <li><a href="#3-the-regulatory-framework">3 The regulatory framework</a></li>
-  <li><a href="#4-what-institutional-grade-settlement-requires">4 What institutional-grade settlement requires</a></li>
-  <li><a href="#5-interoperability-with-4orm-finance-and-the-institutional-v">5 Interoperability with 4orm Finance and the institutional venue</a></li>
-  <li><a href="#6-the-longer-arc">6 The longer arc</a></li>
-  <li><a href="#7-the-constructive-read">7 The constructive read</a></li>
+  <li><a href="#1-what-project-samara-actually-tested">1 What Project Samara actually tested</a></li>
+  <li><a href="#2-what-samara-proved">2 What Samara proved</a></li>
+  <li><a href="#3-what-samara-intentionally-did-not-build">3 What Samara intentionally did not build</a></li>
+  <li><a href="#4-the-missing-layer-between-issuance-and-liquidity">4 The missing layer between issuance and liquidity</a></li>
+  <li><a href="#5-why-canada-needs-a-neutral-institutional-venue">5 Why Canada needs a neutral institutional venue</a></li>
+  <li><a href="#6-what-banks-can-build-alone-vs-what-requires-shared-rails">6 What banks can build alone vs what requires shared rails</a></li>
+  <li><a href="#7-the-production-blueprint">7 The production blueprint</a></li>
+  <li><a href="#8-the-constructive-read">8 The constructive read</a></li>
  </ol>
 </aside>
 <div class="prose">
 <h2 id="executive-summary">Executive summary</h2>
-<p>A meaningful share of the world's tokenized real-world asset activity will, over the next five years, settle in regulated, fiat-denominated digital cash rather than in volatile crypto. For Canadian issuers and Canadian institutional buyers, that means CAD-denominated regulated stablecoins, not USD. Canada's CAD stablecoin layer is small in absolute terms today, but the regulatory perimeter around it is among the most clearly defined globally, and the early issuers (Stablecorp's QCAD, Loon, Cybrid as the payments rail) are credibly building toward an institutional-grade settlement layer.</p>
-<p>This report maps the active Canadian CAD stablecoin issuers and payments-rail providers, the regulatory framework that governs them, the gaps between today's posture and institutional-grade settlement, and what the layer needs to clear to serve Canadian RWA tokenization at production scale.</p>
+<p>Project Samara, the Bank of Canada's tokenized bond pilot executed with Export Development Canada as the issuer and RBC Capital Markets and TD Securities as joint lead managers, used distributed ledger technology and wholesale central-bank digital money to test the full lifecycle of an institutional bond, including issuance, settlement, lifecycle management, and secondary-market functionality. The Bank of Canada described it as an important step in understanding tokenization, DLT, and how they can improve financial instruments for investors, businesses, and the financial community.</p>
+<p>The pilot proved that the architecture works in a Canadian regulatory context. That settles the feasibility question. The remaining work is structurally different: it is the build of production institutional infrastructure that turns a successful pilot into a live, multi-bank, multi-issuer, scalable, regulated market. This report walks through what Samara proved, what it intentionally did not build, the missing layer between issuance and liquidity, why Canada needs a neutral institutional venue, what individual banks can build alone versus what requires shared rails, and the operational blueprint for the production phase.</p>
 <div class="brief-section-break"></div>
-<h2 id="1-why-cad-denominated-settlement-matters">1 Why CAD-denominated settlement matters</h2>
-<p>A tokenized Canadian government bond does not settle naturally in USDC. A tokenized Canadian mortgage-backed security does not settle naturally in USDT. A tokenized Canadian real estate development does not settle naturally in any foreign-currency-denominated instrument. The economics, the regulatory posture, and the institutional mandates all point to native CAD settlement for Canadian RWAs.</p>
-<p>The reasons are structural:</p>
-<p><strong>Currency basis risk.</strong> Settling a CAD-denominated asset in USD-denominated digital cash imports currency risk that institutional buyers, in many mandates, are explicitly forbidden from holding. Native-currency settlement eliminates the basis risk by construction.</p>
-<p><strong>Regulatory mandate.</strong> Canadian regulated counterparties (banks, pension funds, insurance companies, asset managers operating under provincial securities regulators) face mandate-level constraints on holding foreign-currency-denominated, foreign-issued digital instruments. CAD-denominated, Canadian-regulated digital cash is far easier to clear inside these mandates.</p>
-<p><strong>Capital efficiency.</strong> CAD-denominated settlement against CAD-denominated assets supports cleaner regulatory capital treatment. Foreign-currency stablecoin settlement creates additional risk-weighting questions that regulated counterparties prefer to avoid.</p>
-<p><strong>Monetary policy alignment.</strong> The Bank of Canada's evolving posture on digital cash (wholesale CBDC research, supervisory expectations for private CAD stablecoins) is built around the assumption that the bulk of Canadian institutional digital settlement will, over time, be CAD-denominated. Building production infrastructure in line with that direction is the conservative choice.</p>
-<p>These reasons compound. The net result is that any institutional-grade Canadian RWA infrastructure will need a credible, regulated, CAD-denominated digital cash settlement leg. The question is which CAD instruments will fill that role.</p>
+<h2 id="1-what-project-samara-actually-tested">1 What Project Samara actually tested</h2>
+<p>The pilot's design is worth being precise about, because the operational scope determines what conclusions can be drawn from it.</p>
+<p><strong>Issuer side.</strong> Export Development Canada, a Canadian Crown corporation with a well-established institutional bond issuance track record, served as the issuer. EDC's involvement is structurally meaningful because it signals that Canadian Crown issuance can be operationally compatible with tokenized issuance frameworks. Crown issuance is among the most institutionally credible asset categories in the Canadian market.</p>
+<p><strong>Bank side.</strong> RBC Capital Markets and TD Securities, two of the largest Canadian institutional bank capital markets desks, served as joint lead managers. Their participation indicates that Canadian Tier-1 bank capital markets operations can operationalize tokenized issuance under pilot conditions.</p>
+<p><strong>Cash side.</strong> Wholesale central-bank digital money, issued by the Bank of Canada inside the pilot perimeter, served as the cash leg for settlement. This is distinct from retail or private-sector stablecoin settlement; it is central-bank money. The pilot demonstrated that wholesale CBDC can operationally function as the institutional settlement asset for a tokenized bond.</p>
+<p><strong>Technology side.</strong> Distributed ledger technology served as the underlying record-keeping and transfer mechanism. The pilot did not require any single chain to be the production answer; it tested whether DLT in general can serve the institutional bond lifecycle.</p>
+<p><strong>Scope of lifecycle tested.</strong> The pilot tested issuance, settlement (asset leg and cash leg), lifecycle management (coupon and other lifecycle events), and secondary-market functionality. This is the full institutional bond lifecycle, not just an issuance proof of concept.</p>
+<p>The pilot's design was conservative and comprehensive. The conclusions that can be drawn from it are correspondingly strong.</p>
 <div class="brief-section-break"></div>
-<h2 id="2-the-current-canadian-cad-stablecoin-layer">2 The current Canadian CAD stablecoin layer</h2>
-<p>Three issuer-and-rail combinations are doing the bulk of the credible work today.</p>
-<p><strong>Stablecorp and QCAD (Toronto).</strong> Stablecorp has issued QCAD, a CAD-denominated stablecoin, since 2020. QCAD is backed by reserves held with regulated custodians, attested by independent auditors, and supported by strategic Canadian fintech partnerships. Stablecorp raised a pre-Series A in 2022 (C$1.9 million disclosed) and a follow-on round in 2025 (approximately C$2.5 million disclosed) per public disclosures. The company has reported cumulative 2025 funding in excess of C$6 million. QCAD is the most established Canadian CAD stablecoin instrument and is in active production use across multiple Canadian digital asset platforms and payments rails.</p>
-<p><strong>Loon and CADC (Calgary).</strong> Loon, a Calgary-based stablecoin issuer, raised a C$3 million pre-seed in 2025 and acquired the CADC stablecoin from Paytrie in the same year. The acquisition was the first material M&A consolidation event in the Canadian CAD stablecoin layer, and it positioned Loon as a regulated CAD stablecoin issuer with the operational asset (CADC) and the capital to build it into an institutional-grade instrument. Loon's regulatory posture is explicitly built around Canadian payments-services oversight and Canadian institutional onboarding.</p>
-<p><strong>Cybrid (Toronto).</strong> Cybrid is not a stablecoin issuer in the traditional sense. It is the enterprise-grade payments and stablecoin orchestration infrastructure that lets regulated Canadian institutions interact with stablecoins (Canadian, US, and otherwise) and tokenized assets within a Canadian compliance posture. Cybrid is registered as a payments service provider with the relevant Canadian regulators. For the institutional rail, Cybrid is the connector between traditional bank money and stablecoin settlement, and it serves a role no individual stablecoin issuer can serve on its own.</p>
-<p>Together, these three are the operational backbone of the current Canadian CAD digital cash layer. Each has a defined role: QCAD and CADC as the issued instruments, Cybrid as the orchestration and bank-connector rail.</p>
+<h2 id="2-what-samara-proved">2 What Samara proved</h2>
+<p>Five specific conclusions follow from the pilot's design and execution.</p>
+<p><strong>DLT can support institutional bond issuance workflows in Canada.</strong> This was not obvious in advance. Bond issuance has well-established operational expectations around legal documentation, registration, transfer agency, and lifecycle automation. The pilot demonstrated that these expectations can be operationalized on DLT under Canadian regulatory conditions.</p>
+<p><strong>Wholesale digital money can support institutional settlement experiments.</strong> The pairing of a tokenized bond asset with wholesale CBDC as the cash leg proved that atomic delivery-versus-payment is operationally feasible inside a Canadian pilot perimeter. This is the gating primitive for institutional tokenization at scale.</p>
+<p><strong>Major Canadian institutions will participate when the regulatory perimeter is clear.</strong> EDC, RBC, and TD participated. Their participation signals that other Canadian Tier-1 institutions will participate in successor initiatives under similar conditions. Anchor institutional adoption is a prerequisite for the next phase.</p>
+<p><strong>Secondary trading can be modeled inside a pilot perimeter.</strong> The pilot did not produce a live continuous secondary market, but it did demonstrate that secondary-market functionality can be tested on the same architecture as primary issuance. The technical foundation for a regulated secondary market is in place.</p>
+<p><strong>Lifecycle events can be digitized end to end.</strong> Coupon payments, registration changes, and other bond lifecycle events were demonstrated as operationally compatible with the DLT-based architecture. This is operationally significant because the alternative (manual workflows wrapped around a DLT record) would have undermined the case for tokenization in the first place.</p>
 <div class="brief-section-break"></div>
-<h2 id="3-the-regulatory-framework">3 The regulatory framework</h2>
-<p>The Canadian regulatory framework around stablecoins is composed of several overlapping perimeters. The picture is genuinely clearer in Canada than in most jurisdictions.</p>
-<p><strong>Canadian Securities Administrators (CSA) and provincial regulators.</strong> A stablecoin can be (and in most institutional structures will be) a security or a derivative under provincial securities law. Issuers operating in Canada generally engage the CSA framework directly, which has been publicly clarified across multiple staff notices and interpretive statements over 2022 to 2025.</p>
-<p><strong>Bank of Canada and the wholesale CBDC research line.</strong> The Bank of Canada has not committed to a retail CBDC, but its research and pilot work on wholesale digital cash (including Project Samara, the March 2026 tokenized bond trial) has consistently treated regulated, private CAD stablecoins as part of the institutional settlement landscape, not as a substitute for it.</p>
-<p><strong>FINTRAC and money services business (MSB) registration.</strong> Stablecoin issuance, custody, and exchange activities engage federal financial-crime regulation under FINTRAC, with MSB registration typically required.</p>
-<p><strong>Payments Canada and the modernization of Canadian payment rails.</strong> Real-time payments infrastructure (Lynx, RTR) interconnects with stablecoin orchestration through providers like Cybrid. The settlement-finality and interoperability characteristics of modernized Canadian payments rails increasingly affect what stablecoin issuers and rails need to support.</p>
-<p>The aggregate posture is more developed than the public narrative usually acknowledges. Canadian regulated stablecoin issuance has a clearer perimeter than US issuance has had at most points in the last five years.</p>
+<h2 id="3-what-samara-intentionally-did-not-build">3 What Samara intentionally did not build</h2>
+<p>The pilot's design boundaries are equally important. Five categories of work were explicitly outside scope.</p>
+<p><strong>Production-grade multi-bank settlement.</strong> The pilot involved two banks (RBC and TD). A production institutional venue needs to support the full Canadian Tier-1 bank set plus regional banks, credit unions, and Crown institutions as peer counterparties. That multi-institution operating capability is the architectural problem that has to be solved next.</p>
+<p><strong>Commercialized tokenized deposit infrastructure.</strong> Wholesale CBDC inside a pilot perimeter is structurally different from production tokenized deposit infrastructure operating at commercial scale across institutional counterparties. The latter requires bank-side product launches (BMO's announcement with CME and Google Cloud is the first material example), regulatory clearance for production deployment, and integration with the venue layer.</p>
+<p><strong>Live regulated liquidity venues.</strong> Secondary-market functionality modeled inside a pilot perimeter is not the same as a continuously operating, regulated, multi-issuer, multi-counterparty secondary market. The latter requires venue-level licensing, market-making capability, regulatory reporting, and the operational scale that only a dedicated institutional venue produces.</p>
+<p><strong>Scaled custody, audit, and interoperability.</strong> Pilot-stage custody arrangements are operationally simpler than production-stage custody at scale. The CIRO Digital Asset Custody Framework, formalized in February 2026, defines what production-stage custody looks like. Aligning Samara-style activity with the production framework is its own work stream.</p>
+<p><strong>Scalable legal and compliance standards.</strong> Pilot transactions can rely on bespoke legal documentation. A scalable institutional market requires standardized legal frameworks, templated disclosure, automated compliance workflows, and the operational discipline that supports issuance velocity across many issuers and counterparties.</p>
+<p>None of these omissions reflect weakness in the pilot. They reflect the correct scoping of a pilot's role. The pilot's job was to prove the architecture. The production build's job is to operationalize what comes next.</p>
 <div class="brief-section-break"></div>
-<h2 id="4-what-institutional-grade-settlement-requires">4 What institutional-grade settlement requires</h2>
-<p>The gap between today's Canadian CAD stablecoin layer and a fully institutional-grade settlement layer is real but tractable. Five requirements define the gap.</p>
-<p><strong>Atomic delivery-versus-payment (DvP) with tokenized assets.</strong> Institutional settlement requires that the asset leg and the cash leg either both succeed or both fail. Today's Canadian CAD stablecoins can technically support DvP on permissioned chains; production institutional volume at this pattern requires venue infrastructure that is still being built.</p>
-<p><strong>Programmatic compliance gating.</strong> Stablecoin transfers in institutional settlement must enforce KYC, AML, sanctions, and counterparty eligibility at the protocol layer. QCAD and Loon's instruments support some of this today; full institutional-grade gating requires continued investment.</p>
-<p><strong>Continuous attestation and proof-of-reserves.</strong> Institutional buyers will require continuous, third-party-attested, transparent reserve verification. Daily or weekly attestation is the institutional norm globally; Canadian issuers are moving in that direction at differing speeds.</p>
-<p><strong>Multi-venue, multi-custodian interoperability.</strong> A CAD stablecoin that only clears on one venue or only sits in one custodian is operationally limited. Institutional use requires the stablecoin to move across multiple regulated venues and qualified custodians without friction.</p>
-<p><strong>Bank-of-Canada-aligned redemption certainty.</strong> The deepest institutional credibility comes from credible, contractually firm convertibility back to central-bank reserves. The current pathway is through tier-one Canadian banks; the longer-term pathway may include direct or wholesale-CBDC-mediated redemption mechanisms. Either way, the institutional buyer needs certainty about the redemption leg under stress conditions.</p>
-<p>Each of these is addressable. None of them is a question of whether CAD stablecoins can serve institutional settlement; they are questions of when and on what timeline.</p>
+<h2 id="4-the-missing-layer-between-issuance-and-liquidity">4 The missing layer between issuance and liquidity</h2>
+<p>The structural gap that Samara surfaces is the absence of a regulated multi-institution venue and settlement architecture that connects issuers (Canadian banks, Crown corporations, asset managers, RWA issuers) to institutional buyers (pension funds, insurance companies, asset managers, accredited and qualified individual buyers) on terms that meet Canadian institutional mandates.</p>
+<p>The missing-layer functions:</p>
+<ul>
+<li>Standardized listing and disclosure framework that scales across issuers</li>
+<li>Continuous secondary-market liquidity with market-making support</li>
+<li>Multi-custodian interoperability across qualified Canadian custodians</li>
+<li>Atomic delivery-versus-payment across multiple CAD digital cash instruments (QCAD, regulated CADC, tokenized deposits, wholesale CBDC)</li>
+<li>Regulatory reporting and supervisory access from inception</li>
+<li>Cross-jurisdictional interoperability for international institutional buyers</li>
+<li>Multi-bank governance and neutral system administration</li>
+</ul>
+<p>No existing Canadian operator delivers all of these at production scale. The Bank of Canada explicitly does not operate production institutional venues; that is not a central bank's role. The major Canadian banks individually can build single-bank platforms (and BMO's CME and Google Cloud announcement is one such platform) but cannot, by definition, build a neutral multi-bank venue. The existing Canadian crypto exchanges (NDAX, Bitbuy, Wealthsimple Crypto, Newton, Shakepay) are retail-focused, not institutional-RWA-focused. The international RWA venues (Archax in the UK, ADDX in Singapore, Securitize in the US, SDX in Switzerland) are regulatorily constrained to their home jurisdictions and cannot serve Canadian regulated institutional counterparties on terms that meet Canadian mandates.</p>
+<p>The missing layer is structurally an institutional opportunity. Closing it requires a deliberate, multi-stakeholder build with the right governance posture and regulatory pathway from inception.</p>
 <div class="brief-section-break"></div>
-<h2 id="5-interoperability-with-4orm-finance-and-the-institutional-v">5 Interoperability with 4orm Finance and the institutional venue</h2>
-<p>A regulated multi-institution Canadian exchange and settlement layer (the layer 4orm Finance is being designed to operate) interacts with the CAD stablecoin layer in three structural ways.</p>
-<p><strong>As settlement leg.</strong> The venue accepts CAD-denominated regulated stablecoin instruments as the cash leg in DvP settlement against tokenized RWAs. This requires venue-level integration with the issuer infrastructure (QCAD, regulated CADC, eventual wholesale CBDC) and with the orchestration layer (Cybrid).</p>
-<p><strong>As balance instrument.</strong> Institutional counterparties holding cash positions on the venue between transactions need a stable, regulated, low-risk CAD instrument to hold those balances in. CAD stablecoins, properly attested, are the natural answer.</p>
-<p><strong>As cross-asset bridge.</strong> Tokenized cross-asset transactions (for example, a tokenized CAD-denominated mortgage credit instrument settling against a tokenized USD-denominated treasury exposure) require a bridge between CAD-denominated and foreign-currency-denominated digital cash. The Canadian CAD stablecoin layer is one side of that bridge.</p>
-<p>The architectural read is that the CAD stablecoin layer and the regulated multi-institution venue are mutually reinforcing. Each accelerates the institutional adoption of the other. Neither, on its own, produces institutional-scale tokenized RWA volume in Canada.</p>
+<h2 id="5-why-canada-needs-a-neutral-institutional-venue">5 Why Canada needs a neutral institutional venue</h2>
+<p>The neutrality requirement matters. A single-bank venue, regardless of which bank operates it, will not be used by other Tier-1 Canadian banks as a peer settlement layer on equal terms. The JPMorgan Onyx experience in the US is the canonical example. Onyx has cleared more than US$1.5 trillion in cumulative notional, but it has done so as JPMorgan's network. Other Tier-1 US banks have not used Onyx as a neutral settlement venue on equal terms with JPMorgan; the venue, the rules, the system administration, and the data are all JPMorgan's.</p>
+<p>For a Canadian national settlement layer, the single-bank governance model is the wrong choice from the start. The venue needs to be:</p>
+<ul>
+<li>Operated by an entity independent of any single bank</li>
+<li>Governed by a multi-institution board that includes representation from multiple Tier-1 banks, multiple custodians, multiple issuer categories, and independent expertise</li>
+<li>Subject to supervisory oversight by CIRO and the CSA in their respective domains</li>
+<li>Structured for cross-jurisdictional interoperability rather than for protection of any single domestic counterparty's market position</li>
+</ul>
+<p>This is achievable. It requires deliberate design from inception. It is not retrofittable after the fact.</p>
 <div class="brief-section-break"></div>
-<h2 id="6-the-longer-arc">6 The longer arc</h2>
-<p>Three forward-looking points are worth stating.</p>
-<p><strong>The number of credible Canadian CAD stablecoin issuers is likely to consolidate before it expands.</strong> The economics of stablecoin issuance reward scale, regulatory clarity, and counterparty reach. The Canadian market is unlikely to support five or six material issuers at production scale. The Loon-CADC acquisition is the first signal of the consolidation pattern; further consolidation is plausible over the next 24 to 36 months.</p>
-<p><strong>Wholesale CBDC, if it arrives in Canada, will not replace private CAD stablecoins.</strong> It will sit alongside them, with the central-bank instrument serving the inter-bank wholesale settlement layer and private stablecoins serving the broader institutional and corporate layer. This is consistent with the Bank of Canada's published posture and consistent with how the wholesale CBDC discussion is evolving in adjacent jurisdictions.</p>
-<p><strong>The institutional volume of CAD-denominated stablecoin settlement will increase by an order of magnitude or more over the next five years, if the venue side scales.</strong> The CAD stablecoin issuers, on their own, cannot drive institutional volume. The venue side has to scale in parallel. If both scale together, Canada has a credible CAD-denominated tokenized RWA settlement layer by the end of the decade. If only one scales, the other constrains the system.</p>
+<h2 id="6-what-banks-can-build-alone-vs-what-requires-shared-rails">6 What banks can build alone vs what requires shared rails</h2>
+<p>The line between what an individual Canadian bank can build inside its own perimeter and what requires shared multi-bank infrastructure is sharp and consequential.</p>
+<p><strong>What an individual bank can build alone.</strong></p>
+<ul>
+<li>Tokenized deposits for its own institutional clients</li>
+<li>A token-aware client treasury management product</li>
+<li>Integration of its existing capital markets and lending products with tokenized issuance</li>
+<li>Internal settlement and reconciliation automation using DLT</li>
+<li>Pilot transactions with selected counterparties, including other banks under bilateral arrangements</li>
+</ul>
+<p>These are all useful and several Canadian banks are already operating in this space. BMO's CME Group and Google Cloud tokenized cash platform is the most public example. Other Tier-1 banks are operating less-publicized variants.</p>
+<p><strong>What requires shared multi-bank rails.</strong></p>
+<ul>
+<li>Cross-bank tokenized deposit settlement (so a corporate client can hold tokenized deposits with one bank and transact against tokenized assets held with another bank's custodian)</li>
+<li>Multi-bank tokenized repo and intraday liquidity facilities</li>
+<li>Cross-bank tokenized securities settlement at production scale</li>
+<li>A regulated continuous secondary market that interoperates across multiple bank-issuer relationships</li>
+<li>Standardized regulatory reporting from a single venue rather than from each bank individually</li>
+<li>Cross-jurisdictional interoperability that serves multiple Canadian banks rather than only one bank's international counterparties</li>
+</ul>
+<p>None of these can be built by an individual bank, no matter how large or how well-resourced. They require a multi-bank, neutral, regulated venue. That is the architectural reason a single-bank model fails for the Canadian institutional layer.</p>
 <div class="brief-section-break"></div>
-<h2 id="7-the-constructive-read">7 The constructive read</h2>
-<p>Canada's CAD stablecoin infrastructure is more developed than the public narrative acknowledges and is structurally well-positioned for institutional settlement. The active issuers (QCAD via Stablecorp, regulated CADC via Loon) are credible. The orchestration layer (Cybrid) is operational. The regulatory framework (CSA, Bank of Canada, FINTRAC, Payments Canada) is among the most clearly defined globally.</p>
-<p>The gap between today's posture and institutional-grade settlement is real but tractable: atomic DvP, programmatic compliance gating, continuous attestation, multi-venue interoperability, and bank-of-Canada-aligned redemption certainty. None of these is a structural blocker. All of them are work items on a multi-year build.</p>
-<p>The institutional opportunity is in the interface between the CAD stablecoin layer and the regulated multi-institution venue. Both need to scale, in parallel, for CAD-denominated institutional tokenized RWA settlement to become a production-scale market. The CAD stablecoin issuers are building. The venue side is building. The question is whether they connect in time to keep Canadian RWA flow settling in CAD, in Canada, on Canadian infrastructure.</p>
+<h2 id="7-the-production-blueprint">7 The production blueprint</h2>
+<p>A working production blueprint for the post-Samara phase has six operational requirements.</p>
+<p><strong>One.</strong> A multi-bank governance model with anchor participation from at least three Tier-1 Canadian banks and one Crown institutional counterparty.</p>
+<p><strong>Two.</strong> A CIRO-compliant three-entity structure (HoldCo, OpCo, CustodyCo) with the CustodyCo interoperating with other Canadian qualified custodians, not competing with them.</p>
+<p><strong>Three.</strong> Native multi-instrument CAD digital cash settlement (QCAD, regulated CADC, bank tokenized deposits, eventually wholesale CBDC for inter-bank flows), with atomic delivery-versus-payment as the operational default.</p>
+<p><strong>Four.</strong> Supervisory access from inception for CIRO, the CSA, FINTRAC, and the Bank of Canada in their respective domains.</p>
+<p><strong>Five.</strong> Cross-jurisdictional interoperability with qualified international custodians and selected international venues, enabling cross-border institutional buyer access to Canadian-issued tokenized assets.</p>
+<p><strong>Six.</strong> Operational scaling capacity for a multi-issuer, multi-asset-class flow (real estate, mortgages, commodities, credit, fixed income, fund instruments) running on the same venue infrastructure.</p>
+<p>Each is a serious build. Together they constitute the institutional infrastructure that converts Samara-style proof into a live market.</p>
+<div class="brief-section-break"></div>
+<h2 id="8-the-constructive-read">8 The constructive read</h2>
+<p>Project Samara settled the feasibility question. Canadian institutional tokenization can be operationalized on DLT with wholesale digital money under regulated conditions, with credible Tier-1 bank and Crown participation, across the full bond lifecycle. The architecture works.</p>
+<p>The next phase is the production build. The structural gap is the absence of a regulated multi-institution venue and settlement architecture that converts pilot-stage feasibility into live, scalable, multi-bank, multi-issuer institutional market activity. The pieces around the gap are increasingly in place: CIRO custody, QCAD and the regulated CAD stablecoin layer, BMO's tokenized deposit platform, the CSA's active Project Tokenization workstream, and the Bank of Canada's continued wholesale CBDC research. The connective venue layer is what is missing.</p>
+<p>That layer is what 4orm Finance is being designed to operate. Samara proved the architecture. The production phase is the build that follows.</p>
 <h3>Background and Sources</h3>
 <ul>
-<li><a href="https://www.stablecorp.ca/" target="_blank" rel="noopener">Stablecorp Inc.</a> public disclosures and QCAD program materials, 2022 to 2025.</li>
-<li><a href="https://www.loon.com/" target="_blank" rel="noopener">Loon</a> public materials and CADC acquisition disclosures, 2025.</li>
-<li><a href="https://cybrid.xyz/" target="_blank" rel="noopener">Cybrid Inc.</a> public materials and payments-service-provider registration, 2024 and 2025.</li>
-<li><a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada, "Project Samara: tokenized bond trial summary,"</a> March 2026.</li>
-<li><a href="https://www.bankofcanada.ca/research/digital-currencies-and-fintech/" target="_blank" rel="noopener">Bank of Canada, central bank digital currency research line</a>, 2022 to 2025.</li>
-<li><a href="https://www.securities-administrators.ca/" target="_blank" rel="noopener">Canadian Securities Administrators</a>, staff notices on crypto-asset trading platforms and stablecoins, 2022 to 2025.</li>
-<li><a href="https://www.fintrac-canafe.canada.ca/" target="_blank" rel="noopener">FINTRAC</a>, anti-money laundering and money services business guidance, 2024 and 2025.</li>
-<li><a href="https://www.payments.ca/" target="_blank" rel="noopener">Payments Canada</a>, modernization program public materials, 2024 and 2025.</li>
+<li><a href="https://www.bankofcanada.ca/" target="_blank" rel="noopener">Bank of Canada, Project Samara announcement and pilot materials</a>, March 2026.</li>
+<li><a href="https://www.edc.ca/" target="_blank" rel="noopener">Export Development Canada, public statements on Project Samara participation</a>.</li>
+<li><a href="https://www.rbccm.com/" target="_blank" rel="noopener">RBC Capital Markets</a> and <a href="https://www.tdsecurities.com/" target="_blank" rel="noopener">TD Securities</a> public materials on Project Samara.</li>
+<li><a href="https://www.securities-administrators.ca/" target="_blank" rel="noopener">Canadian Securities Administrators, CSA Project Tokenization</a>.</li>
+<li><a href="https://www.ciro.ca/" target="_blank" rel="noopener">CIRO Digital Asset Custody Framework</a>, February 2026.</li>
+<li><a href="https://newsroom.bmo.com/" target="_blank" rel="noopener">BMO Tokenized Cash Platform announcement with CME Group and Google Cloud</a>, April 2026.</li>
 </ul>
 <p>This report is institutional research from KCS Capital. It is for informational purposes only and does not constitute an offer or solicitation to buy or sell securities. KCS Capital Inc. is an independent technology and research firm; 4orm Finance operates as a separate regulated entity.</p>
 </div>

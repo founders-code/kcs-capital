@@ -96,16 +96,21 @@
 }
 /* RESEARCH LEFT SIDEBAR (fixed, hides on < 1280px) */
 .research-sidebar{position:fixed;top:100px;left:1.5rem;width:240px;max-height:calc(100vh - 130px);overflow-y:auto;z-index:50;font-family:var(--ui);padding-right:.5rem}
-.research-sidebar-back{display:inline-flex;align-items:center;gap:.5rem;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-bottom:.8rem;margin-bottom:1rem;border-bottom:1px solid var(--border);transition:color .2s,gap .2s;width:100%}
+.research-sidebar-back{display:inline-flex;align-items:center;gap:.5rem;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-bottom:.8rem;margin-bottom:1.1rem;border-bottom:1px solid var(--border);transition:color .2s,gap .2s;width:100%}
 .research-sidebar-back:hover{color:var(--gold-l);gap:.7rem}
-/* Executive summary excerpt box */
-.research-sidebar-exec{background:var(--surface-2);border:1px solid var(--border);border-left:2px solid var(--gold);padding:.9rem 1rem;margin-bottom:1.5rem}
-.research-sidebar-exec-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem}
-.research-sidebar-exec-text{font-family:var(--body);font-size:.78rem;font-weight:300;line-height:1.55;color:rgba(242,237,232,.74);margin-bottom:.7rem}
-.research-sidebar-exec-link{display:inline-flex;align-items:center;gap:.35rem;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:color .2s,gap .2s}
-.research-sidebar-exec-link:hover{color:var(--gold-l);gap:.55rem}
+/* Chapter nav block (replaces exec summary excerpt) */
+.research-sidebar-chapters{margin-bottom:3rem}
+.research-sidebar-chap-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.research-sidebar-chap-list{list-style:none;counter-reset:chap;padding:0;margin:0}
+.research-sidebar-chap-list li{counter-increment:chap;margin:0}
+.research-sidebar-chap-list a{display:flex;gap:.6rem;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.4;color:rgba(242,237,232,.7);text-decoration:none;padding:.42rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
+.research-sidebar-chap-list a::before{content:counter(chap,decimal-leading-zero);font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em;flex-shrink:0;padding-top:.18em}
+.research-sidebar-chap-list a:hover{color:var(--gold-l);padding-left:.3rem}
+.research-sidebar-chap-list li:last-child a{border-bottom:none}
+/* Visual divider between chapters and other research */
+.research-sidebar-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,136,42,.3) 30%,rgba(201,136,42,.3) 70%,transparent);margin:1.5rem 0 2rem}
 /* Other research list */
-.research-sidebar-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.75rem}
+.research-sidebar-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.85rem}
 .research-sidebar-list{list-style:none;padding:0;margin:0}
 .research-sidebar-list li{margin:0}
 .research-sidebar-list a{display:block;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.35;color:rgba(242,237,232,.55);text-decoration:none;padding:.5rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
@@ -134,11 +139,20 @@
 </nav>
 <aside class="research-sidebar no-print">
  <a href="/research" class="research-sidebar-back">&larr; All Research</a>
- <div class="research-sidebar-exec">
-  <div class="research-sidebar-exec-label">Executive Summary</div>
-  <p class="research-sidebar-exec-text">A meaningful share of the world&#x27;s tokenized real-world asset activity will, over the next five years, settle in regulated, fiat-denominated digital cash rather than in volatile crypto. For Canadian issuers and Canadian institutional buyers, that means CAD-denominated regulated stablecoins, not USD.</p>
-  <a href="#executive-summary" class="research-sidebar-exec-link">Read full &rarr;</a>
+ <div class="research-sidebar-chapters">
+  <div class="research-sidebar-chap-label">In This Report</div>
+  <ol class="research-sidebar-chap-list">
+   <li><a href="#executive-summary">Executive summary</a></li>
+   <li><a href="#1-why-cad-denominated-settlement-matters">1 Why CAD-denominated settlement matters</a></li>
+   <li><a href="#2-the-current-canadian-cad-stablecoin-layer">2 The current Canadian CAD stablecoin layer</a></li>
+   <li><a href="#3-the-regulatory-framework">3 The regulatory framework</a></li>
+   <li><a href="#4-what-institutional-grade-settlement-requires">4 What institutional-grade settlement requir...</a></li>
+   <li><a href="#5-interoperability-with-4orm-finance-and-the-institutional-v">5 Interoperability with 4orm Finance and the...</a></li>
+   <li><a href="#6-the-longer-arc">6 The longer arc</a></li>
+   <li><a href="#7-the-constructive-read">7 The constructive read</a></li>
+  </ol>
  </div>
+ <div class="research-sidebar-divider"></div>
  <div class="research-sidebar-label">Other Research</div>
  <ul class="research-sidebar-list">
    <li><a href="/research-ciro-custody-framework">The CIRO Digital Asset Custody Framework, Explained</a></li>

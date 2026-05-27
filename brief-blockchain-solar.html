@@ -66,22 +66,98 @@
  .brief-hero-img{max-height:280px}
  .brief-hero-img-wrap{margin-bottom:1.6rem}
 }
-/* LEFT SIDEBAR NAV (fixed, hides on < 1280px so it never overlaps content) */
-.brief-sidebar{position:fixed;top:120px;left:1.5rem;width:210px;max-height:calc(100vh - 160px);overflow-y:auto;z-index:50;font-family:var(--ui);padding-right:.5rem}
-.brief-sidebar-back{display:inline-flex;align-items:center;gap:.5rem;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-bottom:1rem;margin-bottom:1.1rem;border-bottom:1px solid var(--border);transition:color .2s,gap .2s;width:100%}
+/* LEFT SIDEBAR NAV (fixed, dual independent scroll, hides on < 1280px) */
+.brief-sidebar{position:fixed;top:120px;left:1.5rem;width:220px;height:calc(100vh - 160px);display:flex;flex-direction:column;z-index:50;font-family:var(--ui);padding-right:.25rem;overflow:hidden}
+.brief-sidebar-back{display:inline-flex;align-items:center;gap:.5rem;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-bottom:1rem;margin-bottom:1.1rem;border-bottom:1px solid var(--border);transition:color .2s,gap .2s;flex:0 0 auto}
 .brief-sidebar-back:hover{color:var(--gold-l);gap:.7rem}
-.brief-sidebar-label{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.85rem}
-.brief-sidebar-list{list-style:none;padding:0;margin:0}
+/* Chapters region (top, scrolls). Weight 2. */
+.brief-sidebar-chapters{display:flex;flex-direction:column;flex:2 1 0;min-height:0}
+.brief-sidebar-chap-label{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;flex:0 0 auto}
+.brief-sidebar-chap-list{list-style:none;counter-reset:bchap;padding:0 .5rem 0 0;margin:0;overflow-y:scroll;min-height:0;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:rgba(201,136,42,.45) rgba(201,136,42,.07)}
+.brief-sidebar-chap-list li{counter-increment:bchap;margin:0}
+.brief-sidebar-chap-list a{display:flex;gap:.6rem;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.4;color:rgba(242,237,232,.7);text-decoration:none;padding:.42rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
+.brief-sidebar-chap-list a::before{content:counter(bchap,decimal-leading-zero);font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em;flex-shrink:0;padding-top:.18em}
+.brief-sidebar-chap-list a:hover{color:var(--gold-l);padding-left:.3rem}
+.brief-sidebar-chap-list li:last-child a{border-bottom:none}
+/* Divider */
+.brief-sidebar-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,136,42,.3) 30%,rgba(201,136,42,.3) 70%,transparent);margin:1.6rem 0;flex:0 0 auto}
+/* Other briefs region (bottom, scrolls). Weight 3. */
+.brief-sidebar-other{display:flex;flex-direction:column;flex:3 1 0;min-height:0}
+.brief-sidebar-label{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.85rem;flex:0 0 auto}
+.brief-sidebar-list{list-style:none;padding:0 .5rem 0 0;margin:0;overflow-y:scroll;min-height:0;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:rgba(201,136,42,.45) rgba(201,136,42,.07)}
 .brief-sidebar-list li{margin:0}
-.brief-sidebar-list a{display:block;font-family:var(--body);font-size:.82rem;font-weight:400;line-height:1.35;color:rgba(242,237,232,.55);text-decoration:none;padding:.55rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
+.brief-sidebar-list a{display:block;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.35;color:rgba(242,237,232,.55);text-decoration:none;padding:.5rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
 .brief-sidebar-list a:hover{color:var(--gold);padding-left:.4rem}
 .brief-sidebar-list li:last-child a{border-bottom:none}
-.brief-sidebar::-webkit-scrollbar{width:3px}
-.brief-sidebar::-webkit-scrollbar-track{background:transparent}
-.brief-sidebar::-webkit-scrollbar-thumb{background:rgba(201,136,42,.2);border-radius:2px}
-.brief-sidebar::-webkit-scrollbar-thumb:hover{background:rgba(201,136,42,.4)}
+.brief-sidebar-chap-list::-webkit-scrollbar,.brief-sidebar-list::-webkit-scrollbar{width:5px;-webkit-appearance:none}
+.brief-sidebar-chap-list::-webkit-scrollbar-track,.brief-sidebar-list::-webkit-scrollbar-track{background:rgba(201,136,42,.07);border-radius:2px}
+.brief-sidebar-chap-list::-webkit-scrollbar-thumb,.brief-sidebar-list::-webkit-scrollbar-thumb{background:rgba(201,136,42,.45);border-radius:2px}
+.brief-sidebar-chap-list::-webkit-scrollbar-thumb:hover,.brief-sidebar-list::-webkit-scrollbar-thumb:hover{background:rgba(201,136,42,.7)}
 @media(max-width:1280px){.brief-sidebar{display:none}}
 @media print{.brief-sidebar{display:none !important}}
+/* PROGRESS BAR */
+.brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
+.brief-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-l));transition:width .08s linear}
+/* HERO ACTIONS (Download PDF + All Briefs) */
+.brief-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.6rem}
+.brief-btn-pdf{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.78rem 1.2rem;border:none;cursor:pointer;text-decoration:none;transition:background .2s}
+.brief-btn-pdf:hover{background:var(--gold-l)}
+.brief-btn-pdf::before{content:'\2193';font-weight:800;font-size:13px}
+.brief-btn-ghost{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:transparent;padding:.78rem 1.2rem;border:1px solid var(--border-b);text-decoration:none;cursor:pointer;transition:color .2s,border-color .2s}
+.brief-btn-ghost:hover{color:var(--gold-l);border-color:var(--gold)}
+/* TABLE OF CONTENTS (body aside) */
+.brief-toc-aside{max-width:820px;margin:0 auto 3rem;padding:1.5rem 1.75rem;background:var(--surface-2);border:1px solid var(--border);border-left:2px solid var(--gold)}
+.brief-toc-aside-label{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.brief-toc-aside ol{list-style:none;counter-reset:btoc;padding:0;margin:0}
+.brief-toc-aside li{counter-increment:btoc;font-family:var(--body);font-size:.95rem;color:rgba(242,237,232,.74);padding:.4rem 0 .4rem 2rem;position:relative;line-height:1.4;border-bottom:1px solid var(--border)}
+.brief-toc-aside li:last-child{border-bottom:none}
+.brief-toc-aside li::before{content:counter(btoc,decimal-leading-zero);position:absolute;left:0;top:.4rem;font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.brief-toc-aside a{color:inherit;text-decoration:none;transition:color .2s}
+.brief-toc-aside a:hover{color:var(--gold-l)}
+.prose h2{scroll-margin-top:2rem}
+/* FLOATING BACK-TO-TOP + ALL BRIEFS */
+.brief-floating{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;gap:.5rem;z-index:90;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.brief-floating.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.brief-float-btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(8,9,12,.92);padding:.7rem 1rem;border:1px solid var(--border-b);text-decoration:none;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:color .2s,border-color .2s;cursor:pointer}
+.brief-float-btn:hover{color:var(--gold-l);border-color:var(--gold)}
+/* PRINT STYLESHEET (for Download PDF) */
+@media print{
+ @page{size:letter;margin:.7in .8in}
+ html,body{background:#fff !important;color:#0a0a0a !important;font-size:11pt}
+ .no-print,nav,footer,.brief-floating,.brief-progress,.brief-actions,.brief-foot-nav,.brief-sidebar{display:none !important}
+ .brief-hero{padding:0 0 1.5rem !important;background:#fff !important;border-bottom:2px solid #b8860b}
+ .brief-hero::before{display:none}
+ .brief-hero-img-wrap{max-width:100% !important;margin-bottom:1rem !important;border:1px solid #ccc !important}
+ .brief-hero-img-wrap::after{display:none !important}
+ .brief-hero-img{max-height:280px !important}
+ .brief-meta{color:#b8860b !important}
+ .brief-meta .muted{color:#666 !important}
+ .brief-h1{color:#0a0a0a !important;font-size:22pt !important;line-height:1.15 !important}
+ .brief-h1 em{color:#b8860b !important}
+ .brief-lead{color:#333 !important;font-size:11.5pt !important;line-height:1.5 !important}
+ .brief-feature{background:#b8860b !important;margin:1rem 0 !important;height:2px !important}
+ .brief-body{background:#fff !important;padding:1.2rem 0 0 !important;border-bottom:none !important}
+ .prose{color:#1a1a1a !important;font-size:11pt !important;line-height:1.55 !important;max-width:100% !important}
+ .prose p{margin-bottom:.65rem !important}
+ .prose h2{color:#0a0a0a !important;font-size:15pt !important;margin:1.2rem 0 .5rem !important;page-break-after:avoid;break-after:avoid}
+ .prose h3{color:#b8860b !important;font-size:9pt !important;margin:1rem 0 .35rem !important;page-break-after:avoid;break-after:avoid}
+ .prose strong{color:#000 !important}
+ .prose em{color:#7a5218 !important;font-style:italic}
+ .prose a{color:#7a5218 !important;border:none !important;text-decoration:underline}
+ .prose ul{margin:.5rem 0 1rem !important}
+ .prose ul li{margin-bottom:.3rem !important;line-height:1.45 !important;color:#1a1a1a !important}
+ .prose ul li::before{background:#b8860b !important}
+ .brief-callout{background:#f8f5f0 !important;border:1px solid #ccc !important;border-left:2px solid #7a5218 !important;padding:.6rem .9rem !important;margin:.8rem 0 !important;page-break-inside:avoid !important}
+ .brief-callout p{color:#0a0a0a !important;font-size:10pt !important}
+ .brief-pull{color:#0a0a0a !important;font-size:13pt !important;border-left:2px solid #7a5218 !important;margin:1rem 0 !important;padding-left:.8rem !important;page-break-inside:avoid !important}
+ .brief-sources{border-top:1px dashed #999 !important;margin-top:1.5rem !important;padding-top:1rem !important}
+ .brief-sources h4{color:#7a5218 !important;font-size:9pt !important}
+ .brief-sources li{color:#444 !important;font-size:9pt !important}
+ .brief-toc-aside{display:none !important}
+ .brief-disclaimer{color:#666 !important;font-size:8.5pt !important;margin-top:1rem !important}
+ article::after{content:"KCS Capital  .  kcs-capital.com  .  contact@kcs-capital.com";display:block;text-align:center;font-family:'DM Sans',sans-serif;font-size:8pt;color:#999;padding-top:.5rem;border-top:1px solid #ddd;margin-top:1.5rem}
+ a[href]::after{content:""}
+}
 </style>
 </head>
 <body>
@@ -112,23 +188,37 @@
 </nav>
 <aside class="brief-sidebar no-print">
  <a href="/briefs" class="brief-sidebar-back">&larr; All Briefs</a>
- <div class="brief-sidebar-label">Other Briefs</div>
- <ul class="brief-sidebar-list">
-   <li><a href="/brief-ai-debt-gdp">Can AI outgrow the debt trap? A hypothesis...</a></li>
-   <li><a href="/brief-alberta-tokenization">Unlocking Alberta&#x27;s wealth through tokenization</a></li>
-   <li><a href="/brief-canada-budget-stable-finance">Canada&#x27;s new budget signals a safer path. The...</a></li>
-   <li><a href="/brief-emergency-money-fort-mcmurray">Emergency money, without the wait. What programmable relief...</a></li>
-   <li><a href="/brief-equity-debt-bitcoin-reserves">Equity, debt, and digital-asset reserves. How Canadian companies...</a></li>
-   <li><a href="/brief-financing-strategies">Equity, debt, and bitcoin reserves. How Canadian companies...</a></li>
-   <li><a href="/brief-local-profits-amazon-shopify">When &quot;local&quot; means keeping profits at home. Amazon...</a></li>
-   <li><a href="/brief-public-finance-infrastructure">Governments don&#x27;t fail because of bad intent. They...</a></li>
-   <li><a href="/brief-real-assets-debt-reset">When IOUs break</a></li>
-   <li><a href="/brief-rwa-market-opportunity">The market opportunity</a></li>
-   <li><a href="/brief-the-shift-has-begun">The shift has begun. Why Canada needs creative...</a></li>
-   <li><a href="/brief-too-taxed-to-grow">Too taxed to grow. The SMB squeeze, and...</a></li>
-   <li><a href="/brief-two-tier-finance">Separating leverage from livelihood</a></li>
-   <li><a href="/brief-when-trust-fails">When &quot;trust us&quot; fails. A record penalty, a...</a></li>
- </ul>
+ <div class="brief-sidebar-chapters">
+  <div class="brief-sidebar-chap-label">In This Brief</div>
+  <ol class="brief-sidebar-chap-list">
+   <li><a href="#1-fractionalized-solar-cells-sun-exchange-nhimbe-fresh-">1 · Fractionalized solar cells, Sun Exchange...</a></li>
+   <li><a href="#2-pre-purchased-energy-wepower-conquista-solar-spain">2 · Pre-purchased energy, WePower &amp; Conquist...</a></li>
+   <li><a href="#3-one-panel-one-unit-suncontract-slovenia">3 · One panel, one unit, SunContract, Sloven...</a></li>
+   <li><a href="#4-community-financed-microgrids-impactppa-india-and-bey">4 · Community-financed microgrids, ImpactPPA...</a></li>
+   <li><a href="#what-the-four-projects-have-in-common">What the four projects have in common</a></li>
+   <li><a href="#why-canada-should-pay-attention-and-what-it-would-take-">Why Canada should pay attention, and what it...</a></li>
+  </ol>
+ </div>
+ <div class="brief-sidebar-divider"></div>
+ <div class="brief-sidebar-other">
+  <div class="brief-sidebar-label">Other Briefs</div>
+  <ul class="brief-sidebar-list">
+    <li><a href="/brief-ai-debt-gdp">Can AI outgrow the debt trap? A hypothesis...</a></li>
+    <li><a href="/brief-alberta-tokenization">Unlocking Alberta&#x27;s wealth through tokenization</a></li>
+    <li><a href="/brief-canada-budget-stable-finance">Canada&#x27;s new budget signals a safer path</a></li>
+    <li><a href="/brief-emergency-money-fort-mcmurray">Emergency money, without the wait</a></li>
+    <li><a href="/brief-equity-debt-bitcoin-reserves">Equity, debt, and digital-asset reserves</a></li>
+    <li><a href="/brief-financing-strategies">Equity, debt, and bitcoin reserves</a></li>
+    <li><a href="/brief-local-profits-amazon-shopify">When &quot;local&quot; means keeping profits at home</a></li>
+    <li><a href="/brief-public-finance-infrastructure">Governments don&#x27;t fail because of bad intent</a></li>
+    <li><a href="/brief-real-assets-debt-reset">When IOUs break</a></li>
+    <li><a href="/brief-rwa-market-opportunity">The market opportunity</a></li>
+    <li><a href="/brief-the-shift-has-begun">The shift has begun</a></li>
+    <li><a href="/brief-too-taxed-to-grow">Too taxed to grow</a></li>
+    <li><a href="/brief-two-tier-finance">Separating leverage from livelihood</a></li>
+    <li><a href="/brief-when-trust-fails">When &quot;trust us&quot; fails</a></li>
+  </ul>
+ </div>
 </aside>
 
 
@@ -141,6 +231,10 @@
  </div>
  <h1 class="brief-h1 reveal">Plug into the future. <em>How tokenized rails are already financing global solar, and what it would take in Canada.</em></h1>
  <p class="brief-lead reveal">Imagine owning a verifiable slice of a solar farm in Zimbabwe, Spain, or Slovenia without ever owning a rooftop. From fractionalized solar cells in Africa to tokenized energy output in Europe, real-world-asset infrastructure is already being used to finance utility-scale renewables. The projects are real. The missing layer, for Canada, is rails you can trust.</p>
+ <div class="brief-actions reveal no-print">
+ <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+ <a href="/briefs" class="brief-btn-ghost">All KCS Briefs &rarr;</a>
+</div>
  </div>
 </section>
 <div class="brief-feature"></div>
@@ -150,18 +244,18 @@
  <p>Renewable energy has a financing problem that has nothing to do with whether the technology works. Utility-scale solar is capital-intensive and long-dated: large sums up front, returns that arrive slowly over decades. Traditional project finance handles that for the biggest developers with the deepest relationships, and handles it poorly, or not at all, for everyone else. Community-scale projects, emerging-market installations, and mid-sized developers routinely stall not for lack of sun but for lack of accessible capital.</p>
  <p>Over the past several years, a handful of projects around the world have tested a different approach: use tokenized, real-world-asset infrastructure to break a physical energy asset into small, ownable, trackable units, and let a global base of participants finance it directly. The results are instructive, and so are the caveats. Here are four worth studying.</p>
 
- <h2>1 &middot; Fractionalized solar cells, Sun Exchange &amp; Nhimbe Fresh, Zimbabwe</h2>
+ <h2 id="1-fractionalized-solar-cells-sun-exchange-nhimbe-fresh-">1 &middot; Fractionalized solar cells, Sun Exchange &amp; Nhimbe Fresh, Zimbabwe</h2>
  <p>The model was almost startlingly simple: participants around the world could purchase <strong>individual solar cells</strong>, priced at roughly US$4 to $10 each, that collectively made up a real installation. According to the project, around <strong>1,700 participants from 98 countries</strong> financed a 1.9&nbsp;MW solar-plus-storage farm serving an agricultural operation, reportedly cutting that operation's energy costs substantially and avoiding a large volume of CO&#8322; emissions annually. Cell owners received a share of revenue, with performance tracked on a shared ledger.</p>
  <p>The lesson is not the specific returns, which depend entirely on the project. It is the <em>structure</em>: a physical asset made divisible and trackable can draw financing from people and places traditional project finance never reaches.</p>
 
- <h2>2 &middot; Pre-purchased energy, WePower &amp; Conquista Solar, Spain</h2>
+ <h2 id="2-pre-purchased-energy-wepower-conquista-solar-spain">2 &middot; Pre-purchased energy, WePower &amp; Conquista Solar, Spain</h2>
  <p>Here the unit was not a piece of hardware but a piece of <strong>future output</strong>. Conquista issued energy tokens, each representing roughly one kilowatt-hour of future solar generation, reportedly sold below wholesale rates. Buyers effectively pre-purchased electricity, which financed plant construction, and could later consume or trade what they held. Smart-contract automation handled revenue sharing.</p>
  <p>The insight: tokenization does not only fractionalize <em>ownership</em>, it can fractionalize <em>the product itself</em>, turning a future cash flow into something financeable today, the same principle behind much of the real-world-asset thesis.</p>
 
- <h2>3 &middot; One panel, one unit, SunContract, Slovenia</h2>
+ <h2 id="3-one-panel-one-unit-suncontract-slovenia">3 &middot; One panel, one unit, SunContract, Slovenia</h2>
  <p>SunContract's "personal power plant" approach divided a roughly 517&nbsp;kW solar farm so that each ownership unit corresponded to a specific physical panel. Participants became fractional owners of identifiable hardware, with proceeds flowing back through the platform's token. The notable feature is <strong>granular, asset-level transparency</strong>: ownership mapped to a real, locatable thing, not an abstract pool.</p>
 
- <h2>4 &middot; Community-financed microgrids, ImpactPPA, India and beyond</h2>
+ <h2 id="4-community-financed-microgrids-impactppa-india-and-bey">4 &middot; Community-financed microgrids, ImpactPPA, India and beyond</h2>
  <p>The fourth model pushed furthest on governance. Community members purchased utility tokens to pre-finance microgrids and solar installations, with token holders voting on projects and on-chain metering driving automatic, transparent revenue payouts. The aim was to compress the bureaucratic delay that so often strands rural electrification, while keeping investor and community incentives aligned.</p>
 
  <div class="brief-callout">
@@ -169,11 +263,11 @@
  <p>These are illustrative third-party projects, summarized from public descriptions, not endorsements, and not a representation that any of them performed as planned or would be permitted in their original form under Canadian regulation. Several early tokenized-energy ventures have also faced difficulties. The point of studying them is the <strong>structural lesson</strong>, not the specific returns or any particular operator.</p>
  </div>
 
- <h2>What the four projects have in common</h2>
+ <h2 id="what-the-four-projects-have-in-common">What the four projects have in common</h2>
  <p>Strip away the differences and a single pattern emerges. In each case, a real, physical energy asset was made <strong>divisible, ownable, and continuously trackable</strong>, and that combination unlocked a pool of financing the asset could not otherwise reach. That is precisely the real-world-asset thesis applied to infrastructure: the value was always there in the panels and the power-purchase agreements; what was missing was a way to <em>represent and move</em> that value efficiently.</p>
  <p class="brief-pull">The sun was never the constraint. The financial plumbing was.</p>
 
- <h2>Why Canada should pay attention, and what it would take to do this credibly</h2>
+ <h2 id="why-canada-should-pay-attention-and-what-it-would-take-">Why Canada should pay attention, and what it would take to do this credibly</h2>
  <p>Canada has abundant renewable potential, sophisticated capital markets, and a growing pipeline of community-scale and mid-market clean-energy projects that struggle to access financing on reasonable terms. The structural lesson from abroad is directly relevant. But importing the early models wholesale would be a mistake. The honest version of this opportunity has hard requirements:</p>
  <ul>
  <li><strong>Securities-law alignment.</strong> A token representing fractional ownership of an asset or a share of its revenue will, in most cases, be a security in Canada. The path runs <em>through</em> the regulators, exempt-market frameworks, registered dealers, proper disclosure, not around them.</li>
@@ -201,6 +295,11 @@
  </div>
 </section>
 </article>
+
+<div class="brief-floating no-print" id="brief-floating">
+ <a href="/briefs" class="brief-float-btn">&larr; All Briefs</a>
+ <button type="button" class="brief-float-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr; Top</button>
+</div>
 
 <footer>
  <div class="foot-main">
@@ -267,6 +366,8 @@
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');if(s==='investors'&&h==='/data-room')a.classList.add('nav-active');});}})();
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+
+(function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
 </body>
 </html>

@@ -94,6 +94,29 @@
  article::after{content:"KCS Capital  .  kcs-capital.com  .  contact@kcs-capital.com";display:block;text-align:center;font-family:'DM Sans',sans-serif;font-size:8pt;color:#999;padding-top:.5rem;border-top:1px solid #ddd;margin-top:1.5rem}
  a[href]::after{content:""}
 }
+/* RESEARCH LEFT SIDEBAR (fixed, hides on < 1280px) */
+.research-sidebar{position:fixed;top:100px;left:1.5rem;width:240px;max-height:calc(100vh - 130px);overflow-y:auto;z-index:50;font-family:var(--ui);padding-right:.5rem}
+.research-sidebar-back{display:inline-flex;align-items:center;gap:.5rem;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-bottom:.8rem;margin-bottom:1rem;border-bottom:1px solid var(--border);transition:color .2s,gap .2s;width:100%}
+.research-sidebar-back:hover{color:var(--gold-l);gap:.7rem}
+/* Executive summary excerpt box */
+.research-sidebar-exec{background:var(--surface-2);border:1px solid var(--border);border-left:2px solid var(--gold);padding:.9rem 1rem;margin-bottom:1.5rem}
+.research-sidebar-exec-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem}
+.research-sidebar-exec-text{font-family:var(--body);font-size:.78rem;font-weight:300;line-height:1.55;color:rgba(242,237,232,.74);margin-bottom:.7rem}
+.research-sidebar-exec-link{display:inline-flex;align-items:center;gap:.35rem;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:color .2s,gap .2s}
+.research-sidebar-exec-link:hover{color:var(--gold-l);gap:.55rem}
+/* Other research list */
+.research-sidebar-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.75rem}
+.research-sidebar-list{list-style:none;padding:0;margin:0}
+.research-sidebar-list li{margin:0}
+.research-sidebar-list a{display:block;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.35;color:rgba(242,237,232,.55);text-decoration:none;padding:.5rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
+.research-sidebar-list a:hover{color:var(--gold);padding-left:.4rem}
+.research-sidebar-list li:last-child a{border-bottom:none}
+.research-sidebar::-webkit-scrollbar{width:3px}
+.research-sidebar::-webkit-scrollbar-track{background:transparent}
+.research-sidebar::-webkit-scrollbar-thumb{background:rgba(201,136,42,.2);border-radius:2px}
+.research-sidebar::-webkit-scrollbar-thumb:hover{background:rgba(201,136,42,.4)}
+@media(max-width:1280px){.research-sidebar{display:none}}
+@media print{.research-sidebar{display:none !important}}
 </style></head><body>
 
 <div class="brief-progress no-print"><div class="brief-progress-bar" id="brief-progress-bar"></div></div>
@@ -109,6 +132,29 @@
  <ul class="nav-drop-menu"><li><a href="/partners">Partners</a></li><li><a href="/regulator">Regulator</a></li><li><a href="/contact">Contact</a></li></ul></li>
  <li><a href="/data-room" class="nav-cta">Access Data Room</a></li></ul>
 </nav>
+<aside class="research-sidebar no-print">
+ <a href="/research" class="research-sidebar-back">&larr; All Research</a>
+ <div class="research-sidebar-exec">
+  <div class="research-sidebar-exec-label">Executive Summary</div>
+  <p class="research-sidebar-exec-text">In late 2025 Pineapple Financial Inc., a Toronto-listed mortgage origination and technology platform, began publishing mortgage transaction records to a public blockchain across a portfolio measured in the tens of thousands of loans and over C$13.7 billion in notional.</p>
+  <a href="#executive-summary" class="research-sidebar-exec-link">Read full &rarr;</a>
+ </div>
+ <div class="research-sidebar-label">Other Research</div>
+ <ul class="research-sidebar-list">
+   <li><a href="/research-ciro-custody-framework">The CIRO Digital Asset Custody Framework, Explained</a></li>
+   <li><a href="/research-canada-rwa-infrastructure-tam">Canada&#x27;s $1.9B RWA Infrastructure TAM</a></li>
+   <li><a href="/research-alberta-tokenization-tam">Alberta Resource Tokenization</a></li>
+   <li><a href="/research-project-samara-pathway">Project Samara &amp; the Canadian Tokenization Pathway</a></li>
+   <li><a href="/research-jpmorgan-onyx-canada-learns">JPMorgan Onyx</a></li>
+   <li><a href="/research-canadian-rwa-ecosystem-map">The Canadian RWA Ecosystem</a></li>
+   <li><a href="/research-tokenized-mining-bullion-aucan">Tokenized Mining Bullion</a></li>
+   <li><a href="/research-canadian-stablecoin-infrastructure">Canadian Stablecoin Infrastructure</a></li>
+   <li><a href="/research-qualified-digital-custody-canada">Qualified Digital Custody in Canada</a></li>
+   <li><a href="/research-blackrock-buidl-institutional-stablecoin-trade">BlackRock BUIDL</a></li>
+   <li><a href="/research-capital-repatriation">Capital Repatriation</a></li>
+ </ul>
+</aside>
+
 
 <article>
 <section class="brief-hero"><div class="brief-in">

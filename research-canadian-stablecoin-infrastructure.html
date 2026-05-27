@@ -101,7 +101,7 @@
 /* Chapter region (top, scrolls independently). Weight 2 of total flex space. */
 .research-sidebar-chapters{display:flex;flex-direction:column;flex:2 1 0;min-height:0}
 .research-sidebar-chap-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;flex:0 0 auto}
-.research-sidebar-chap-list{list-style:none;counter-reset:chap;padding:0 .5rem 0 0;margin:0;overflow-y:auto;min-height:0;flex:1 1 auto}
+.research-sidebar-chap-list{list-style:none;counter-reset:chap;padding:0 .5rem 0 0;margin:0;overflow-y:scroll;min-height:0;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:rgba(201,136,42,.45) rgba(201,136,42,.07)}
 .research-sidebar-chap-list li{counter-increment:chap;margin:0}
 .research-sidebar-chap-list a{display:flex;gap:.6rem;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.4;color:rgba(242,237,232,.7);text-decoration:none;padding:.42rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
 .research-sidebar-chap-list a::before{content:counter(chap,decimal-leading-zero);font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em;flex-shrink:0;padding-top:.18em}
@@ -112,16 +112,16 @@
 /* Other research region (bottom, scrolls independently). Weight 3 of total flex space. */
 .research-sidebar-other{display:flex;flex-direction:column;flex:3 1 0;min-height:0}
 .research-sidebar-label{font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,136,42,.55);margin-bottom:.85rem;flex:0 0 auto}
-.research-sidebar-list{list-style:none;padding:0 .5rem 0 0;margin:0;overflow-y:auto;min-height:0;flex:1 1 auto}
+.research-sidebar-list{list-style:none;padding:0 .5rem 0 0;margin:0;overflow-y:scroll;min-height:0;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:rgba(201,136,42,.45) rgba(201,136,42,.07)}
 .research-sidebar-list li{margin:0}
 .research-sidebar-list a{display:block;font-family:var(--body);font-size:.78rem;font-weight:400;line-height:1.35;color:rgba(242,237,232,.55);text-decoration:none;padding:.5rem 0;border-bottom:1px dashed rgba(201,136,42,.09);transition:color .2s,padding-left .2s}
 .research-sidebar-list a:hover{color:var(--gold);padding-left:.4rem}
 .research-sidebar-list li:last-child a{border-bottom:none}
 /* Slim gold scrollbar for both scrollable regions */
-.research-sidebar-chap-list::-webkit-scrollbar,.research-sidebar-list::-webkit-scrollbar{width:3px}
-.research-sidebar-chap-list::-webkit-scrollbar-track,.research-sidebar-list::-webkit-scrollbar-track{background:transparent}
-.research-sidebar-chap-list::-webkit-scrollbar-thumb,.research-sidebar-list::-webkit-scrollbar-thumb{background:rgba(201,136,42,.2);border-radius:2px}
-.research-sidebar-chap-list::-webkit-scrollbar-thumb:hover,.research-sidebar-list::-webkit-scrollbar-thumb:hover{background:rgba(201,136,42,.4)}
+.research-sidebar-chap-list::-webkit-scrollbar,.research-sidebar-list::-webkit-scrollbar{width:5px;-webkit-appearance:none}
+.research-sidebar-chap-list::-webkit-scrollbar-track,.research-sidebar-list::-webkit-scrollbar-track{background:rgba(201,136,42,.07);border-radius:2px}
+.research-sidebar-chap-list::-webkit-scrollbar-thumb,.research-sidebar-list::-webkit-scrollbar-thumb{background:rgba(201,136,42,.45);border-radius:2px}
+.research-sidebar-chap-list::-webkit-scrollbar-thumb:hover,.research-sidebar-list::-webkit-scrollbar-thumb:hover{background:rgba(201,136,42,.7)}
 @media(max-width:1280px){.research-sidebar{display:none}}
 @media print{.research-sidebar{display:none !important}}
 </style></head><body>

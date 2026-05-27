@@ -7,6 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
+/* PROGRESS BAR */
+.brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
+.brief-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-l));transition:width .08s linear}
+/* HERO */
 .brief-hero{position:relative;padding:9.5rem 3rem 3.5rem;background:var(--black);overflow:hidden}
 .brief-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.08) 0%,transparent 70%);pointer-events:none}
 .brief-in{max-width:820px;margin:0 auto;position:relative}
@@ -15,16 +19,32 @@
 .brief-meta .muted{color:rgba(154,149,144,.7)}
 .brief-h1{font-family:var(--serif);font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:300;line-height:1.13;letter-spacing:-.02em;color:var(--white);margin-bottom:1.4rem}
 .brief-h1 em{font-style:italic;color:var(--gold)}
-.brief-lead{font-family:var(--body);font-size:1.2rem;font-weight:300;color:rgba(242,237,232,.74);line-height:1.65}
+.brief-lead{font-family:var(--body);font-size:1.2rem;font-weight:300;color:rgba(242,237,232,.74);line-height:1.65;margin-bottom:1.6rem}
+/* HERO ACTIONS (Download PDF button) */
+.brief-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.8rem}
+.brief-btn-pdf{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.78rem 1.2rem;border:none;cursor:pointer;text-decoration:none;transition:background .2s}
+.brief-btn-pdf:hover{background:var(--gold-l)}
+.brief-btn-pdf::before{content:'\2193';font-weight:800;font-size:13px}
+.brief-btn-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:transparent;padding:.78rem 1.2rem;border:1px solid var(--border-b);text-decoration:none;transition:color .2s,border-color .2s}
+.brief-btn-back:hover{color:var(--gold-l);border-color:var(--gold)}
 .brief-feature{height:5px;background:linear-gradient(90deg,var(--gold),var(--gold-d) 40%,transparent);max-width:820px;margin:0 auto}
 .brief-body{background:var(--surface);padding:4.5rem 3rem 3rem;border-bottom:1px solid var(--border)}
+/* TOC */
+.brief-toc{max-width:820px;margin:0 auto 3rem;padding:1.5rem 1.75rem;background:var(--surface-2);border:1px solid var(--border);border-left:2px solid var(--gold)}
+.brief-toc-label{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.brief-toc ol{list-style:none;counter-reset:toc;padding:0;margin:0}
+.brief-toc li{counter-increment:toc;font-family:var(--body);font-size:.95rem;color:rgba(242,237,232,.74);padding:.4rem 0 .4rem 2rem;position:relative;line-height:1.4;border-bottom:1px solid var(--border)}
+.brief-toc li:last-child{border-bottom:none}
+.brief-toc li::before{content:counter(toc,decimal-leading-zero);position:absolute;left:0;top:.4rem;font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.brief-toc a{color:inherit;text-decoration:none;transition:color .2s}
+.brief-toc a:hover{color:var(--gold-l)}
 .prose{max-width:820px;margin:0 auto;color:rgba(242,237,232,.82);font-family:var(--body);font-size:1.08rem;line-height:1.9}
 .prose p{margin-bottom:1.5rem}
 .prose strong{color:var(--white);font-weight:500}
 .prose em{color:var(--gold-l);font-style:italic}
 .prose a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-d);transition:border-color .2s}
 .prose a:hover{border-color:var(--gold)}
-.prose h2{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);margin:3rem 0 1.1rem;letter-spacing:-.01em;line-height:1.25}
+.prose h2{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);margin:3rem 0 1.1rem;letter-spacing:-.01em;line-height:1.25;scroll-margin-top:2rem}
 .prose h3{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:2.25rem 0 .9rem}
 .prose ul{list-style:none;margin:0 0 1.5rem}
 .prose ul li{padding-left:1.4rem;position:relative;margin-bottom:.7rem;line-height:1.75}
@@ -43,15 +63,61 @@
 .brief-foot-nav{max-width:820px;margin:0 auto;padding:2.5rem 0 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .brief-back{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--gold-d);padding-bottom:3px}
 .brief-back:hover{color:var(--gold-l)}
+/* FLOATING BACK-TO-TOP */
+.brief-floating{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;gap:.5rem;z-index:90;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.brief-floating.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.brief-float-btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(8,9,12,.92);padding:.7rem 1rem;border:1px solid var(--border-b);text-decoration:none;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:color .2s,border-color .2s}
+.brief-float-btn:hover{color:var(--gold-l);border-color:var(--gold)}
 @media(max-width:768px){
  .brief-hero{padding:8rem 1.5rem 3rem}
  .brief-body{padding:3rem 1.5rem 2.5rem}
  .prose{font-size:1.04rem}
  .prose table{font-size:.88rem}
  .prose th,.prose td{padding:.5rem .65rem}
+ .brief-toc{padding:1.2rem 1.4rem}
+ .brief-floating{bottom:1rem;right:1rem}
+ .brief-float-btn{font-size:9.5px;padding:.6rem .85rem}
+}
+/* PRINT STYLESHEET — for "Download PDF" via browser Print → Save as PDF */
+@media print{
+ @page{size:letter;margin:.7in .8in}
+ html,body{background:#fff !important;color:#0a0a0a !important;font-size:11pt}
+ .no-print,nav,footer,.brief-floating,.brief-progress,.brief-actions,.brief-foot-nav{display:none !important}
+ .brief-hero{padding:0 0 1.5rem !important;background:#fff !important;border-bottom:2px solid #b8860b}
+ .brief-hero::before{display:none}
+ .brief-meta{color:#b8860b !important}
+ .brief-meta .muted{color:#666 !important}
+ .brief-h1{color:#0a0a0a !important;font-size:24pt !important;line-height:1.15 !important}
+ .brief-h1 em{color:#b8860b !important}
+ .brief-lead{color:#333 !important;font-size:12pt !important;line-height:1.5 !important}
+ .brief-feature{background:#b8860b !important;margin:1rem 0 !important;height:2px !important}
+ .brief-body{background:#fff !important;padding:1.2rem 0 0 !important;border-bottom:none !important}
+ .prose{color:#1a1a1a !important;font-size:11pt !important;line-height:1.55 !important;max-width:100% !important}
+ .prose p{margin-bottom:.7rem !important}
+ .prose h2{color:#0a0a0a !important;font-size:16pt !important;margin:1.4rem 0 .6rem !important;page-break-after:avoid;break-after:avoid}
+ .prose h3{color:#b8860b !important;font-size:9pt !important;margin:1rem 0 .4rem !important;page-break-after:avoid;break-after:avoid}
+ .prose strong{color:#000 !important}
+ .prose em{color:#7a5218 !important;font-style:italic}
+ .prose a{color:#7a5218 !important;border:none !important;text-decoration:underline}
+ .prose ul{margin:.5rem 0 1rem !important}
+ .prose ul li{margin-bottom:.3rem !important;line-height:1.45 !important;color:#1a1a1a !important}
+ .prose ul li::before{background:#b8860b !important}
+ .prose table{background:#fff !important;border:1px solid #ccc !important;font-size:9.5pt !important;page-break-inside:avoid}
+ .prose th{background:#f4ecd9 !important;color:#7a5218 !important;border-bottom:1px solid #b8860b !important}
+ .prose td{color:#1a1a1a !important;border-bottom:1px solid #e2e2e2 !important}
+ .prose tbody tr:hover{background:#fff !important}
+ .brief-section-break{background:#ccc !important;max-width:120px !important;margin:1.4rem auto !important}
+ .brief-diagram{background:#fafafa !important;border:1px solid #ccc !important;padding:1rem !important;page-break-inside:avoid}
+ .brief-diagram-caption{color:#666 !important}
+ .brief-toc{display:none !important}
+ article::after{content:"KCS Capital  ·  kcs-capital.com  ·  contact@kcs-capital.com";display:block;text-align:center;font-family:'DM Sans',sans-serif;font-size:8pt;color:#999;padding-top:.5rem;border-top:1px solid #ddd;margin-top:1.5rem}
+ a[href]::after{content:""}
 }
 </style></head><body>
-<nav id="main-nav">
+
+<div class="brief-progress no-print"><div class="brief-progress-bar" id="brief-progress-bar"></div></div>
+
+<nav id="main-nav" class="no-print">
  <a href="/" class="nav-logo"><img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img"><span class="nav-sub">Research &middot; Technology &middot; Education</span></a>
  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
@@ -65,28 +131,44 @@
 
 <article>
 <section class="brief-hero"><div class="brief-in">
- <div class="brief-meta reveal"><span>KCS Research</span><span class="dot"></span><span>Market & TAM</span><span class="dot"></span><span class="muted">March 2026</span><span class="dot"></span><span class="muted">18 min read</span></div>
- <h1 class="brief-h1 reveal">Canada's $1.9B RWA Infrastructure TAM. <em>Sized and Defended.</em></h1>
- <p class="brief-lead reveal">A bottom-up read of Canada's RWA infrastructure revenue pools across settlement, issuance, custody, marketplace, and repatriation. Sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma. The headline number is not the point. The structural fact underneath it is.</p>
+ <div class="brief-meta"><span>KCS Research</span><span class="dot"></span><span>Market & TAM</span><span class="dot"></span><span class="muted">March 2026</span><span class="dot"></span><span class="muted">18 min read</span></div>
+ <h1 class="brief-h1">Canada's $1.9B RWA Infrastructure TAM. <em>Sized and Defended.</em></h1>
+ <p class="brief-lead">A bottom-up read of Canada's RWA infrastructure revenue pools across settlement, issuance, custody, marketplace, and repatriation. Sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, and the 4orm Master Pro Forma. The headline number is not the point. The structural fact underneath it is.</p>
+ <div class="brief-actions no-print">
+  <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <a class="brief-btn-back" href="/research">All Research &rarr;</a>
+ </div>
 </div></section>
 <div class="brief-feature"></div>
 
 <section class="brief-body">
+<aside class="brief-toc no-print">
+ <div class="brief-toc-label">In this report</div>
+ <ol>
+  <li><a href="#executive-summary">Executive summary</a></li>
+  <li><a href="#1-why-the-existing-market-sizings-do-not-work-for-institutio">1 · Why the existing market sizings do not work for institutional decisions</a></li>
+  <li><a href="#2-the-fivelayer-revenue-stack">2 · The five-layer revenue stack</a></li>
+  <li><a href="#3-defending-the-range-against-the-three-most-common-critique">3 · Defending the range against the three most common critiques</a></li>
+  <li><a href="#4-where-the-numbers-tie-to-the-published-canadian-record">4 · Where the numbers tie to the published Canadian record</a></li>
+  <li><a href="#5-the-infrastructure-decision-underneath-the-number">5 · The infrastructure decision underneath the number</a></li>
+  <li><a href="#6-what-this-report-changes-about-how-the-opportunity-is-size">6 · What this report changes about how the opportunity is sized</a></li>
+ </ol>
+</aside>
 <div class="prose">
-<h2>Executive summary</h2>
+<h2 id="executive-summary">Executive summary</h2>
 <p>Most tokenization market sizings circulating in 2026 are top-down. They start with a global tokenized-asset projection, McKinsey's US$2-trillion base case by 2030, BCG and Ripple's US$18.9-trillion long-tail scenario, JPMorgan Kinexys at over US$1.5 trillion in cumulative notional, and they back into a Canadian share by population or GDP weighting. That approach is fine for a headline. It is useless for an institution making an infrastructure decision.</p>
 <p>This report does the opposite. It sizes Canada's real-world-asset infrastructure revenue pools the way an operator would: from the bottom, fee line by fee line, across the five functional layers a regulated RWA platform actually charges for, settlement, issuance, custody, marketplace, and repatriation. It then defends the range against three of the most likely critiques: that the numbers double-count, that they front-load, and that they assume away the regulatory friction that has slowed every other Canadian financial-infrastructure transition.</p>
 <p>The answer the model returns: <strong>C$350 million to C$1.9 billion in annual infrastructure revenue pools by 2030</strong>, with a cumulative five-year fee base of <strong>C$1.33 billion to C$8.3 billion</strong> between 2026 and 2030. The low end is a base case in which Canada captures only the institutional flows already migrating to tokenized rails today. The high end is what happens if a credible domestic platform repatriates a meaningful share of the activity currently leaking to non-Canadian venues, and if the Bank of Canada's Project Samara architecture is generalized into production settlement.</p>
 <p>Neither end is a moonshot. Both are conditional on one thing: whether Canada operates this layer with a domestic, institution-grade, regulator-aligned platform, or whether the activity continues to clear through foreign rails and the fees follow it offshore. That is the structural question this report is built to answer, and it is the question 4orm Finance is being built to resolve.</p>
 <div class="brief-section-break"></div>
-<h2>1 · Why the existing market sizings do not work for institutional decisions</h2>
+<h2 id="1-why-the-existing-market-sizings-do-not-work-for-institutio">1 · Why the existing market sizings do not work for institutional decisions</h2>
 <p>The public conversation about tokenized real-world assets is dominated by three numbers, and each of them is misleading on its own.</p>
 <p><strong>McKinsey's US$2-trillion base case by 2030.</strong> This is the most-cited figure in the institutional tokenization literature and it is reasonable as a global asset-value forecast. It says nothing useful about Canadian infrastructure revenue. Asset value is not fee revenue. A tokenized money-market fund holding C$1 billion in NAV pays its rails a small fraction of one percent in annual platform fees. The aggregate dollar value of tokenized assets and the aggregate dollar value of infrastructure fees are two different stacks, related but not interchangeable. Quoting one as a proxy for the other has produced a generation of pitch decks that confuse balance sheet for income statement.</p>
 <p><strong>BCG and Ripple's US$18.9-trillion long-tail.</strong> This is a tokenized-RWA scenario for 2033 that assumes broad asset coverage including private credit, real estate, equities, and money markets at scale. The methodology is defensible but the number is not Canadian. Applying a population weight gives you something like a C$500-billion Canadian asset stack. Applying a GDP weight gives you C$700 billion. Applying an institutional-asset weight, Canadian managed assets relative to global, gives you closer to C$900 billion. Pick your weighting; you have just produced a number that tells you what Canada's tokenized asset base might look like, not what its infrastructure operator could charge for moving it.</p>
 <p><strong>JPMorgan Kinexys at US$1.5 trillion in cumulative notional.</strong> This one is closer to useful, because Kinexys is institutional infrastructure rather than an asset projection. But the comparison breaks at the boundary: Kinexys is a single-institution rail inside the largest US investment bank. Canada has no Tier-1 equivalent willing to take that posture alone, and that is precisely why a neutral multi-institution platform is the indicated structure. The Kinexys number tells you the <em>order of magnitude</em> an institutional rail can move once it exists. It does not tell you what Canada's institutional rail will look like, or how Canada's revenue pool stacks up.</p>
 <p>The model in this report bypasses all three by doing what each of them avoids: it sizes the fees, not the assets. It does so layer by layer, citing the McKinsey, BCG, PwC, and KPMG bands where they apply, and pulling Canadian-specific anchors from Bank of Canada Project Samara disclosures, the 4orm Master Pro Forma, and current published activity from Canadian issuers.</p>
 <div class="brief-section-break"></div>
-<h2>2 · The five-layer revenue stack</h2>
+<h2 id="2-the-fivelayer-revenue-stack">2 · The five-layer revenue stack</h2>
 <div class="brief-diagram"><img src="/diagram-01-tam-revenue-stack.svg" alt="The five-layer revenue stack. Settlement, issuance, custody, marketplace, and repatriation."><div class="brief-diagram-caption">The five-layer revenue stack. Settlement, issuance, custody, marketplace, and repatriation.</div></div>
 <p>Every regulated RWA platform monetizes some combination of five things. Each is a distinct fee line with a distinct economic driver, and conflating them is the error that produces the inflated headline numbers.</p>
 <h3>Layer 1 · Settlement</h3>
@@ -113,7 +195,7 @@
 </table>
 <p>The point of the table is not the precision of any one cell. It is the shape. Even the low end is a serious revenue pool, large enough to fund a national-scale platform with institutional capitalization and durable margins. The high end is what the layer becomes if Canada chooses to build, operate, and capture the activity rather than route it.</p>
 <div class="brief-section-break"></div>
-<h2>3 · Defending the range against the three most common critiques</h2>
+<h2 id="3-defending-the-range-against-the-three-most-common-critique">3 · Defending the range against the three most common critiques</h2>
 <h3>Critique 1, "You are double-counting across layers"</h3>
 <p>The critique is that an issuance fee on a C$100-million bond also flows into settlement fees, custody fees, and marketplace fees on the same asset. The answer is that this is what every modern financial-infrastructure operator already does and is the way every public comparable reports revenue. Custody fees are a stock measure (assets held over time); issuance is a flow measure (annual gross issuance); settlement is a flow measure (annual cleared value); marketplace is a flow measure (annual secondary turnover); repatriation is a categorical adjustment, not an additive layer. The five lines describe distinct economic activities that the same asset can support, the same way SWIFT charges a message fee while a custodian charges an AUM fee while an exchange charges a trade fee, all on the same security. They are not double-counted; they are the legitimate stack of fees the institutional financial system already pays, applied to a class of asset that did not previously sit on tokenized rails.</p>
 <h3>Critique 2, "The 2030 numbers front-load"</h3>
@@ -121,7 +203,7 @@
 <h3>Critique 3, "Canada will not capture this"</h3>
 <p>The critique is that the activity will happen but will not run on a Canadian platform, leaving the modeled fee pools to accrue to JPMorgan, BlackRock, or whichever offshore operator scales first. This is the most serious critique and it is exactly the structural question this report is written to surface. The answer is conditional: if Canada does not build a credible domestic institutional layer, the higher end of the range will accrue elsewhere, and Canada's role becomes that of a regulatory jurisdiction whose firms must operate as customers of foreign rails. If Canada does build the layer, with the regulator alignment Project Samara has already validated, the custody framework CIRO has already published, and the institutional pathways the major banks are already piloting, the range captured is closer to the high end. The number this model defends is what the Canadian fee pool <em>could be</em> if Canada operates it. It is not a forecast of what will happen by default. That distinction is the entire reason to publish the analysis.</p>
 <div class="brief-section-break"></div>
-<h2>4 · Where the numbers tie to the published Canadian record</h2>
+<h2 id="4-where-the-numbers-tie-to-the-published-canadian-record">4 · Where the numbers tie to the published Canadian record</h2>
 <p>Anchoring the model to public Canadian disclosures rather than global projections is the test of whether the range is credible. The anchors are visible and recent.</p>
 <p><strong>Settlement.</strong> Bank of Canada Project Samara closed March 6, 2026, with C$100 million in tokenized bonds issued and a full settlement lifecycle completed with RBC, TD, and Export Development Canada under OSC, AMF, and CIRO sign-off. Project Samara is the validated Canadian reference architecture. A neutral multi-institution platform built to that architecture is the indicated production path.</p>
 <p><strong>Issuance.</strong> Pineapple Financial brought C$13.7 billion in tokenized mortgages on-chain. AuCan Gold's tokenized bullion program totals C$2.5 billion. T-RIZE and Ocree Capital have brought structured real-estate to market. These are not pipeline numbers. They are live issuance and they are Canadian.</p>
@@ -129,13 +211,13 @@
 <p><strong>Marketplace.</strong> Polymesh is the regulated assets blockchain with Canadian regulatory standing. No Canadian secondary marketplace for institutional tokenized assets currently exists at scale. This is the largest structural gap in the stack and the layer where 4orm Finance's design has the least incumbency to displace.</p>
 <p><strong>Repatriation.</strong> The fee leakage estimate is built from the 4orm Master Pro Forma's bottom-up reconstruction of Canadian flows currently routing through Polygon, Ethereum mainnet, Hedera, Stellar, and US-domiciled tokenization platforms. The number is conservative, it excludes the on-chain volume in stablecoins held by Canadian institutions that already routes through non-Canadian issuers, and the unstated upper bound is meaningfully higher than the range used in the model.</p>
 <div class="brief-section-break"></div>
-<h2>5 · The infrastructure decision underneath the number</h2>
+<h2 id="5-the-infrastructure-decision-underneath-the-number">5 · The infrastructure decision underneath the number</h2>
 <p>The TAM range is not the conclusion. It is the framing.</p>
 <p>Every Canadian financial-infrastructure transition in the past four decades, the rollout of CDS, the migration to electronic clearing, the modernization of Lynx and Real-Time Rail, has produced a moment in which the architecture is validated, the regulators are aligned, and the institutional participants are ready, but the operating layer that connects them does not yet exist. Project Samara has produced exactly that moment for Canadian RWA infrastructure. The validation is published. The capital frameworks are written. The Tier-1 banks are running pilots. The asset issuers are live. The institutional bridge, the marketplace with bank counterparties, secondary liquidity, an investor pool, a settlement layer connecting issuers to buy-side institutions, does not yet exist.</p>
 <p>That bridge is what 4orm Finance is being built to be. KCS Capital is the firm developing the technology behind it. The TAM range in this report is the upper bound on the economic opportunity for whoever operates that layer. The lower bound is what accrues to a Canadian operator that captures only institutional flows already migrating to tokenized rails. The high end is what accrues to a Canadian operator that also reverses the offshore fee leakage. Both bounds are conditional on Canada having a credible domestic platform. The conditionality is the actual story.</p>
 <p>The TAM is what is at stake. The decision is whether Canada operates this layer or rents it.</p>
 <div class="brief-section-break"></div>
-<h2>6 · What this report changes about how the opportunity is sized</h2>
+<h2 id="6-what-this-report-changes-about-how-the-opportunity-is-size">6 · What this report changes about how the opportunity is sized</h2>
 <p>Three takeaways for institutional readers:</p>
 <p>The Canadian RWA opportunity is best sized <strong>bottom-up on fee revenue, not top-down on asset value.</strong> McKinsey, BCG, and PwC produce reasonable global asset forecasts and uneven Canadian fee forecasts; the 4orm Master Pro Forma's five-layer fee stack is the structure this report defends.</p>
 <p>The annual revenue pool by 2030 is <strong>C$350 million to C$1.9 billion</strong>, and the cumulative pool over 2026 to 2030 is <strong>C$1.33 billion to C$8.3 billion</strong>. The range is wide because the conditionality is real. The conditionality is the policy choice this report exists to surface.</p>
@@ -156,7 +238,7 @@
 </div>
 </section>
 
-<section class="brief-body" style="padding-top:0;border-bottom:none">
+<section class="brief-body no-print" style="padding-top:0;border-bottom:none">
 <div class="brief-foot-nav">
  <a href="/research" class="brief-back">&larr; Back to KCS Research</a>
  <a href="/contact?type=research-subscribe" class="brief-back">Subscribe to Research &rarr;</a>
@@ -164,7 +246,12 @@
 </section>
 </article>
 
-<footer>
+<div class="brief-floating no-print" id="brief-floating">
+ <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="brief-float-btn">&uarr; Top</a>
+ <a href="/research" class="brief-float-btn">All Research</a>
+</div>
+
+<footer class="no-print">
  <div class="foot-main">
  <div>
  <div class="foot-brand"><div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>KCS Capital</div>
@@ -193,5 +280,23 @@
 <script>
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var h=(a.getAttribute('href')||'');if(h==='/research')a.classList.add('nav-active');});})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+/* Reading progress bar */
+(function(){
+ var bar=document.getElementById('brief-progress-bar');
+ var floating=document.getElementById('brief-floating');
+ if(!bar)return;
+ function update(){
+  var h=document.documentElement;
+  var top=window.scrollY||h.scrollTop;
+  var total=(h.scrollHeight - h.clientHeight) || 1;
+  var pct=Math.max(0,Math.min(100,(top/total)*100));
+  bar.style.width=pct+'%';
+  if(floating){
+   if(top>500) floating.classList.add('visible'); else floating.classList.remove('visible');
+  }
+ }
+ window.addEventListener('scroll',update,{passive:true});
+ window.addEventListener('resize',update,{passive:true});
+ update();
+})();
 </script></body></html>

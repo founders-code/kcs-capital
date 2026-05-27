@@ -7,6 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
+/* PROGRESS BAR */
+.brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
+.brief-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-l));transition:width .08s linear}
+/* HERO */
 .brief-hero{position:relative;padding:9.5rem 3rem 3.5rem;background:var(--black);overflow:hidden}
 .brief-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.08) 0%,transparent 70%);pointer-events:none}
 .brief-in{max-width:820px;margin:0 auto;position:relative}
@@ -15,16 +19,32 @@
 .brief-meta .muted{color:rgba(154,149,144,.7)}
 .brief-h1{font-family:var(--serif);font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:300;line-height:1.13;letter-spacing:-.02em;color:var(--white);margin-bottom:1.4rem}
 .brief-h1 em{font-style:italic;color:var(--gold)}
-.brief-lead{font-family:var(--body);font-size:1.2rem;font-weight:300;color:rgba(242,237,232,.74);line-height:1.65}
+.brief-lead{font-family:var(--body);font-size:1.2rem;font-weight:300;color:rgba(242,237,232,.74);line-height:1.65;margin-bottom:1.6rem}
+/* HERO ACTIONS (Download PDF button) */
+.brief-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.8rem}
+.brief-btn-pdf{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.78rem 1.2rem;border:none;cursor:pointer;text-decoration:none;transition:background .2s}
+.brief-btn-pdf:hover{background:var(--gold-l)}
+.brief-btn-pdf::before{content:'\2193';font-weight:800;font-size:13px}
+.brief-btn-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:transparent;padding:.78rem 1.2rem;border:1px solid var(--border-b);text-decoration:none;transition:color .2s,border-color .2s}
+.brief-btn-back:hover{color:var(--gold-l);border-color:var(--gold)}
 .brief-feature{height:5px;background:linear-gradient(90deg,var(--gold),var(--gold-d) 40%,transparent);max-width:820px;margin:0 auto}
 .brief-body{background:var(--surface);padding:4.5rem 3rem 3rem;border-bottom:1px solid var(--border)}
+/* TOC */
+.brief-toc{max-width:820px;margin:0 auto 3rem;padding:1.5rem 1.75rem;background:var(--surface-2);border:1px solid var(--border);border-left:2px solid var(--gold)}
+.brief-toc-label{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.brief-toc ol{list-style:none;counter-reset:toc;padding:0;margin:0}
+.brief-toc li{counter-increment:toc;font-family:var(--body);font-size:.95rem;color:rgba(242,237,232,.74);padding:.4rem 0 .4rem 2rem;position:relative;line-height:1.4;border-bottom:1px solid var(--border)}
+.brief-toc li:last-child{border-bottom:none}
+.brief-toc li::before{content:counter(toc,decimal-leading-zero);position:absolute;left:0;top:.4rem;font-family:var(--ui);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.brief-toc a{color:inherit;text-decoration:none;transition:color .2s}
+.brief-toc a:hover{color:var(--gold-l)}
 .prose{max-width:820px;margin:0 auto;color:rgba(242,237,232,.82);font-family:var(--body);font-size:1.08rem;line-height:1.9}
 .prose p{margin-bottom:1.5rem}
 .prose strong{color:var(--white);font-weight:500}
 .prose em{color:var(--gold-l);font-style:italic}
 .prose a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-d);transition:border-color .2s}
 .prose a:hover{border-color:var(--gold)}
-.prose h2{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);margin:3rem 0 1.1rem;letter-spacing:-.01em;line-height:1.25}
+.prose h2{font-family:var(--serif);font-size:1.95rem;font-weight:400;color:var(--white);margin:3rem 0 1.1rem;letter-spacing:-.01em;line-height:1.25;scroll-margin-top:2rem}
 .prose h3{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:2.25rem 0 .9rem}
 .prose ul{list-style:none;margin:0 0 1.5rem}
 .prose ul li{padding-left:1.4rem;position:relative;margin-bottom:.7rem;line-height:1.75}
@@ -43,15 +63,61 @@
 .brief-foot-nav{max-width:820px;margin:0 auto;padding:2.5rem 0 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .brief-back{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--gold-d);padding-bottom:3px}
 .brief-back:hover{color:var(--gold-l)}
+/* FLOATING BACK-TO-TOP */
+.brief-floating{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;gap:.5rem;z-index:90;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.brief-floating.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.brief-float-btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(8,9,12,.92);padding:.7rem 1rem;border:1px solid var(--border-b);text-decoration:none;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:color .2s,border-color .2s}
+.brief-float-btn:hover{color:var(--gold-l);border-color:var(--gold)}
 @media(max-width:768px){
  .brief-hero{padding:8rem 1.5rem 3rem}
  .brief-body{padding:3rem 1.5rem 2.5rem}
  .prose{font-size:1.04rem}
  .prose table{font-size:.88rem}
  .prose th,.prose td{padding:.5rem .65rem}
+ .brief-toc{padding:1.2rem 1.4rem}
+ .brief-floating{bottom:1rem;right:1rem}
+ .brief-float-btn{font-size:9.5px;padding:.6rem .85rem}
+}
+/* PRINT STYLESHEET — for "Download PDF" via browser Print → Save as PDF */
+@media print{
+ @page{size:letter;margin:.7in .8in}
+ html,body{background:#fff !important;color:#0a0a0a !important;font-size:11pt}
+ .no-print,nav,footer,.brief-floating,.brief-progress,.brief-actions,.brief-foot-nav{display:none !important}
+ .brief-hero{padding:0 0 1.5rem !important;background:#fff !important;border-bottom:2px solid #b8860b}
+ .brief-hero::before{display:none}
+ .brief-meta{color:#b8860b !important}
+ .brief-meta .muted{color:#666 !important}
+ .brief-h1{color:#0a0a0a !important;font-size:24pt !important;line-height:1.15 !important}
+ .brief-h1 em{color:#b8860b !important}
+ .brief-lead{color:#333 !important;font-size:12pt !important;line-height:1.5 !important}
+ .brief-feature{background:#b8860b !important;margin:1rem 0 !important;height:2px !important}
+ .brief-body{background:#fff !important;padding:1.2rem 0 0 !important;border-bottom:none !important}
+ .prose{color:#1a1a1a !important;font-size:11pt !important;line-height:1.55 !important;max-width:100% !important}
+ .prose p{margin-bottom:.7rem !important}
+ .prose h2{color:#0a0a0a !important;font-size:16pt !important;margin:1.4rem 0 .6rem !important;page-break-after:avoid;break-after:avoid}
+ .prose h3{color:#b8860b !important;font-size:9pt !important;margin:1rem 0 .4rem !important;page-break-after:avoid;break-after:avoid}
+ .prose strong{color:#000 !important}
+ .prose em{color:#7a5218 !important;font-style:italic}
+ .prose a{color:#7a5218 !important;border:none !important;text-decoration:underline}
+ .prose ul{margin:.5rem 0 1rem !important}
+ .prose ul li{margin-bottom:.3rem !important;line-height:1.45 !important;color:#1a1a1a !important}
+ .prose ul li::before{background:#b8860b !important}
+ .prose table{background:#fff !important;border:1px solid #ccc !important;font-size:9.5pt !important;page-break-inside:avoid}
+ .prose th{background:#f4ecd9 !important;color:#7a5218 !important;border-bottom:1px solid #b8860b !important}
+ .prose td{color:#1a1a1a !important;border-bottom:1px solid #e2e2e2 !important}
+ .prose tbody tr:hover{background:#fff !important}
+ .brief-section-break{background:#ccc !important;max-width:120px !important;margin:1.4rem auto !important}
+ .brief-diagram{background:#fafafa !important;border:1px solid #ccc !important;padding:1rem !important;page-break-inside:avoid}
+ .brief-diagram-caption{color:#666 !important}
+ .brief-toc{display:none !important}
+ article::after{content:"KCS Capital  ·  kcs-capital.com  ·  contact@kcs-capital.com";display:block;text-align:center;font-family:'DM Sans',sans-serif;font-size:8pt;color:#999;padding-top:.5rem;border-top:1px solid #ddd;margin-top:1.5rem}
+ a[href]::after{content:""}
 }
 </style></head><body>
-<nav id="main-nav">
+
+<div class="brief-progress no-print"><div class="brief-progress-bar" id="brief-progress-bar"></div></div>
+
+<nav id="main-nav" class="no-print">
  <a href="/" class="nav-logo"><img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img"><span class="nav-sub">Research &middot; Technology &middot; Education</span></a>
  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
@@ -65,21 +131,37 @@
 
 <article>
 <section class="brief-hero"><div class="brief-in">
- <div class="brief-meta reveal"><span>KCS Research</span><span class="dot"></span><span>Regulatory</span><span class="dot"></span><span class="muted">April 2026</span><span class="dot"></span><span class="muted">17 min read</span></div>
- <h1 class="brief-h1 reveal">The CIRO Digital Asset Custody Framework, Explained. <em>Three entities, tiered capital, weekly proof.</em></h1>
- <p class="brief-lead reveal">February 2026 brought the formal CIRO framework. Three-entity separation, tiered capital, weekly custody monitoring, segregated client assets, and a structural model the entire Canadian institutional tokenization stack is now organizing around. This is the institutional implication map for any firm operating tokenized assets in Canada, and the reason "trust us" is no longer an acceptable answer.</p>
+ <div class="brief-meta"><span>KCS Research</span><span class="dot"></span><span>Regulatory</span><span class="dot"></span><span class="muted">April 2026</span><span class="dot"></span><span class="muted">17 min read</span></div>
+ <h1 class="brief-h1">The CIRO Digital Asset Custody Framework, Explained. <em>Three entities, tiered capital, weekly proof.</em></h1>
+ <p class="brief-lead">February 2026 brought the formal CIRO framework. Three-entity separation, tiered capital, weekly custody monitoring, segregated client assets, and a structural model the entire Canadian institutional tokenization stack is now organizing around. This is the institutional implication map for any firm operating tokenized assets in Canada, and the reason "trust us" is no longer an acceptable answer.</p>
+ <div class="brief-actions no-print">
+  <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <a class="brief-btn-back" href="/research">All Research &rarr;</a>
+ </div>
 </div></section>
 <div class="brief-feature"></div>
 
 <section class="brief-body">
+<aside class="brief-toc no-print">
+ <div class="brief-toc-label">In this report</div>
+ <ol>
+  <li><a href="#executive-summary">Executive summary</a></li>
+  <li><a href="#1-the-five-elements-of-the-framework">1 · The five elements of the framework</a></li>
+  <li><a href="#2-why-the-framework-is-structured-this-way">2 · Why the framework is structured this way</a></li>
+  <li><a href="#3-the-implications-for-institutional-firms">3 · The implications for institutional firms</a></li>
+  <li><a href="#4-the-relationship-to-project-samara-the-csa-and-osfi">4 · The relationship to Project Samara, the CSA, and OSFI</a></li>
+  <li><a href="#5-the-structural-test-of-the-framework-and-what-4orm-finance">5 · The structural test of the framework, and what 4orm Finance does about it</a></li>
+  <li><a href="#6-the-constructive-read">6 · The constructive read</a></li>
+ </ol>
+</aside>
 <div class="prose">
-<h2>Executive summary</h2>
+<h2 id="executive-summary">Executive summary</h2>
 <p>The Canadian Investment Regulatory Organization published its Digital Asset Custody Framework in February 2026. The framework specifies the structural conditions under which a Canadian firm may operate qualified digital custody for tokenized assets at institutional scale. Five elements define it: three-entity separation between holding, operating, and custody activities; tiered minimum capital requirements scaled to assets under custody; weekly reserves-to-liabilities monitoring with public attestation; segregated client assets enforced at the transaction layer rather than the policy layer; and a defined permission pathway operated under CIRO marketplace and dealer oversight.</p>
 <p>The framework is not, in form or intent, a sandbox. It is a production rulebook. It tells any firm that wants to operate institutional tokenized custody in Canada exactly what the structural prerequisites are, exactly what the capital posture must look like, exactly what proof has to be public on what cadence, and exactly which CIRO permissions must be in place to operate. It is, in effect, the regulatory specification that converts the architectural validation Project Samara delivered into a permissioned production environment.</p>
 <p>The reason this matters beyond compliance is that the framework decides what kind of firm can credibly operate the institutional tokenization layer in Canada. A firm that started as a retail crypto exchange and tried to retrofit institutional custody into the same legal entity cannot meet the structural separation. A firm that did not architect entity separation from inception faces a serious corporate reorganization to qualify. A firm that did design to the framework from day one is now operating with a regulatory tailwind. This is precisely the design choice KCS Capital made in structuring 4orm Finance as HoldCo / OpCo / CustodyCo, and this report is the institutional implication map for what the framework requires and why.</p>
 <p>The companion brief <em>When "Trust Us" Fails</em> (November 2025) is the policy argument for why opacity is no longer an acceptable design choice. This report is the technical and operational map of what the CIRO framework now requires Canadian institutional firms to build instead.</p>
 <div class="brief-section-break"></div>
-<h2>1 · The five elements of the framework</h2>
+<h2 id="1-the-five-elements-of-the-framework">1 · The five elements of the framework</h2>
 <p>The framework consists of five operative elements. None is novel in isolation, each maps to long-standing precedents in traditional financial regulation. The novelty is the package: applied to a digital-asset operator, in Canada, at the layer below institutional adoption, by the dealer-and-marketplace regulator.</p>
 <p><strong>Element one, three-entity separation.</strong> A firm operating institutional tokenized custody in Canada must structure across three distinct legal entities: a HoldCo (the parent holding entity that owns the platform and capitalizes the operating businesses), an OpCo (the operating entity that runs the technology platform and the marketplace functions), and a CustodyCo (the custody entity that holds client assets and is permissioned as a qualified Canadian digital custodian). The three must be separately capitalized, separately governed, and separately operated. Cross-entity loans, asset commingling, and shared operational accounts are prohibited. The structural intent is that the failure of any one entity, operational, financial, or governance, cannot cascade to the others, and specifically that operating-entity stress cannot reach client custody assets.</p>
 <p>The precedent is the bank holding company structure that has been the foundation of Canadian banking regulation since the 1980s, and the broker-dealer custody-segregation rules that have governed Canadian securities firms since the early days of CDS. CIRO's framework applies the same logic to digital assets, with two adjustments: the custody entity must be specifically permissioned as a qualified Canadian digital custodian, and the technology-platform entity is separately scoped from the custody entity in a way that has no direct analogue in traditional finance.</p>
@@ -92,7 +174,7 @@
 <p><strong>Element five, CIRO marketplace and dealer permissioning.</strong> The operating entity that runs marketplace functions (matching, execution, listing) must be permissioned under CIRO marketplace rules. The firms that interact as dealers must be permissioned as CIRO members. The framework folds tokenized institutional marketplaces into the same dealer-and-marketplace regulatory perimeter that governs traditional Canadian securities marketplaces, with adjustments for the specific operational characteristics of digital assets.</p>
 <p>The permissioning is not a one-time approval. It is a continuing supervisory relationship. The operating entity is subject to CIRO marketplace oversight, capital requirements, and operational reporting on the same continuing basis as a traditional Canadian alternative trading system or recognized marketplace. The framework, in this dimension, treats tokenization as a marketplace structure rather than as an asset class.</p>
 <div class="brief-section-break"></div>
-<h2>2 · Why the framework is structured this way</h2>
+<h2 id="2-why-the-framework-is-structured-this-way">2 · Why the framework is structured this way</h2>
 <div class="brief-diagram"><img src="/diagram-03-ciro-entity-separation.svg" alt="The CIRO three-entity separation. HoldCo, OpCo, CustodyCo."><div class="brief-diagram-caption">The CIRO three-entity separation. HoldCo, OpCo, CustodyCo.</div></div>
 <p>The framework's design is best understood by looking at the failure modes it is built to prevent.</p>
 <p><strong>Failure mode 1: operating-entity stress reaches client custody.</strong> The historical pattern in failed crypto-asset custodians is operating-entity losses that the operator covered by drawing on client assets, undisclosed. The three-entity separation breaks the operational pathway: the operating entity simply does not have access to custody-entity client assets. The legal and operational separation is the structural prevention.</p>
@@ -102,7 +184,7 @@
 <p><strong>Failure mode 5: operations outside the existing regulatory perimeter.</strong> A tokenized marketplace that does not interact with CIRO supervision is, in the framework's logic, an open question on whether the marketplace is properly regulated at all. The marketplace and dealer permissioning closes that question: tokenized institutional marketplaces are CIRO-regulated marketplaces, the participants are CIRO-permissioned, and the supervisory relationship is continuous.</p>
 <p>The framework is not the only possible response to the failure modes. It is, however, a coherent one, and it has the meaningful feature that it composes with the rest of the Canadian financial regulatory perimeter (OSFI capital treatment, FINTRAC AML supervision, RPAA payments supervision, OSC and AMF securities oversight) rather than asking the regulator to invent new authority. That is the design choice that distinguishes the CIRO approach from the more sandbox-oriented frameworks emerging in other jurisdictions.</p>
 <div class="brief-section-break"></div>
-<h2>3 · The implications for institutional firms</h2>
+<h2 id="3-the-implications-for-institutional-firms">3 · The implications for institutional firms</h2>
 <p>Every Canadian firm operating, or planning to operate, in the tokenized institutional layer faces a sequence of decisions the framework now structures. Six categories of implication matter.</p>
 <p><strong>Implication 1, for incumbent Canadian custodians.</strong> Tetra Trust, Balance Trust, and Brane Trust were named as qualified Canadian digital custodians in the framework. Each was already operating to broadly the structural requirements the framework codified, which is part of how the framework was able to be published in the form it took. The custodians' role in the production stack is well-defined and the operational implications of the framework on them are limited to ongoing compliance.</p>
 <p><strong>Implication 2, for firms operating outside the framework.</strong> Firms operating institutional tokenized custody in Canada without entity separation, without the capital tiers, without the weekly proof, or without the CIRO permissioning are now operating outside the framework. The framework does not retroactively prohibit prior operations, but it sets the structural test for forward operation. Firms in this position face a choice: restructure to the framework, narrow operations to a non-custodial layer, or operate outside Canada. The framework does not force a choice. It makes the choice explicit.</p>
@@ -111,7 +193,7 @@
 <p><strong>Implication 5, for asset issuers.</strong> Pineapple Financial, AuCan Gold, T-RIZE, Ocree Capital, and the broader set of Canadian asset issuers operate in a structural environment where the institutional layer their assets must clear through is now defined. The relevant decision for issuers is not whether to interact with the framework, the framework is the operating environment, but which operating-rail custodian and marketplace they integrate with. The decision becomes a vendor-selection question.</p>
 <p><strong>Implication 6, for foreign operators.</strong> Foreign tokenization platforms operating in Canada, and the activity routing offshore as discussed in <em>Capital Repatriation: $20B to $40B Leaking Offshore</em>, face a framework that does not directly prohibit cross-border activity but does specify the conditions for institutional Canadian custody. Foreign operators wanting to serve Canadian institutional clients at scale must either operate a framework-compliant Canadian entity, partner with a framework-compliant Canadian operator, or remain in the cross-border / retail layer outside the institutional perimeter. The framework, in its export effect, structurally favours domestic infrastructure.</p>
 <div class="brief-section-break"></div>
-<h2>4 · The relationship to Project Samara, the CSA, and OSFI</h2>
+<h2 id="4-the-relationship-to-project-samara-the-csa-and-osfi">4 · The relationship to Project Samara, the CSA, and OSFI</h2>
 <p>The CIRO framework does not exist alone. It is the custody-layer element of a stack of Canadian regulatory developments that together define the institutional tokenization environment.</p>
 <p><strong>Project Samara (Bank of Canada, March 2026)</strong> validated the settlement and lifecycle architecture. The CIRO framework is the custody architecture that production-grade Samara successors must operate within.</p>
 <p><strong>CSA Project Tokenization (Q2 2026)</strong> elevated tokenization to a national regulatory initiative. The CIRO framework is one of the deliverables that fits within the CSA's coordinating mandate.</p>
@@ -120,14 +202,14 @@
 <p><strong>Alberta Financial Innovation Act (2026)</strong> created the provincial regulatory sandbox. The CIRO framework operates federally and applies to firms operating across Canada. Alberta's sandbox provides a regulatory experimentation environment that is compatible with, but separate from, the CIRO production framework.</p>
 <p>The composition is what matters. The Canadian regulatory environment, as of mid-2026, is not a patchwork of partial permissions. It is an aligned stack: payments supervision, capital treatment, sandbox testing, custody framework, settlement validation, and national coordinating initiative. Each layer was finalized within an eighteen-month window. The cumulative effect is that the operating environment for a Canadian institutional tokenization platform is now structurally complete.</p>
 <div class="brief-section-break"></div>
-<h2>5 · The structural test of the framework, and what 4orm Finance does about it</h2>
+<h2 id="5-the-structural-test-of-the-framework-and-what-4orm-finance">5 · The structural test of the framework, and what 4orm Finance does about it</h2>
 <p>The framework is, in the deepest sense, a structural test. It asks every firm wanting to operate in the institutional layer: <em>can you separate the entities, capitalize the custody business, prove the reserves on a weekly public cadence, enforce segregation at the transaction layer, and operate under continuous CIRO supervision?</em></p>
 <p>If yes, the firm has a regulator-aligned pathway to operate at production scale.</p>
 <p>If no, for any of the five elements, the firm faces either a serious corporate restructuring or a structural constraint on its addressable market. The framework does not block the no-answer firms from operating. It blocks them from operating <em>in this layer</em>. The retail-grade firms, the off-Canada-domiciled firms, the firms that emerged from non-institutional origins all retain their operating optionality outside the institutional perimeter. The framework's effect is to define what the institutional perimeter is, not to expand or contract the perimeter outside it.</p>
 <p>4orm Finance is being built as a yes-answer firm. The HoldCo / OpCo / CustodyCo structure is the structural separation. The capital posture is being aligned to the published tier requirements from the firm's pre-seed phase, with the explicit goal of operating in the tier-2 (intermediate) range at production launch and scaling to tier-3 (advanced) as assets under custody grow. The weekly proof-of-reserves attestation is built into the platform from day one rather than retrofitted onto it. Segregation is enforced at the smart-contract layer through asset-binding logic that makes commingling impossible without an explicit, audited governance action. CIRO marketplace and dealer permissioning is the pathway under preparation.</p>
 <p>The structural design is not the source of the firm's competitive advantage on its own. It is the table-stakes that allow the firm to operate where the framework draws the institutional perimeter. The competitive advantage is the architecture above the framework, the multi-institution rail, the tokenized CAD deposit settlement asset, the marketplace design, the integration with the Canadian banking sector, the asset-class breadth from precious metals to mortgages to private credit. The framework does not produce the advantage. The framework allows the advantage to operate.</p>
 <div class="brief-section-break"></div>
-<h2>6 · The constructive read</h2>
+<h2 id="6-the-constructive-read">6 · The constructive read</h2>
 <p>The framework is a closing question, not an opening one. For most of the 2023 to 2025 period, the question Canadian institutional firms asked of tokenization was: <em>under what regulatory framework can this operate at scale.</em> The CIRO Custody Framework, the OSFI capital guidance, the RPAA supervision, Project Samara, and CSA Project Tokenization together close that question. The remaining questions are operational: which platform, which counterparties, which asset classes, which timeline.</p>
 <p>The closing of the regulatory question is the moment institutional tokenization in Canada transitions from a thesis to a build. The build is led by firms that designed to the framework. The framework was published in February 2026. The build year is 2026 to 2027.</p>
 <p>The companion KCS Brief <em>When "Trust Us" Fails: Canada's Record Crypto Penalty</em> (November 2025) is the policy argument for why opacity is no longer an acceptable design choice and why the framework is the constructive response. The companion research reports <em>Project Samara & the Canadian Tokenization Pathway</em> (March 2026) and <em>Canada's $1.9B RWA Infrastructure TAM</em> (March 2026) develop the settlement-architecture and economic-opportunity sides of what the framework now permits to be built.</p>
@@ -150,7 +232,7 @@
 </div>
 </section>
 
-<section class="brief-body" style="padding-top:0;border-bottom:none">
+<section class="brief-body no-print" style="padding-top:0;border-bottom:none">
 <div class="brief-foot-nav">
  <a href="/research" class="brief-back">&larr; Back to KCS Research</a>
  <a href="/contact?type=research-subscribe" class="brief-back">Subscribe to Research &rarr;</a>
@@ -158,7 +240,12 @@
 </section>
 </article>
 
-<footer>
+<div class="brief-floating no-print" id="brief-floating">
+ <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="brief-float-btn">&uarr; Top</a>
+ <a href="/research" class="brief-float-btn">All Research</a>
+</div>
+
+<footer class="no-print">
  <div class="foot-main">
  <div>
  <div class="foot-brand"><div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>KCS Capital</div>
@@ -187,5 +274,23 @@
 <script>
 (function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
 (function(){var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var h=(a.getAttribute('href')||'');if(h==='/research')a.classList.add('nav-active');});})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
+/* Reading progress bar */
+(function(){
+ var bar=document.getElementById('brief-progress-bar');
+ var floating=document.getElementById('brief-floating');
+ if(!bar)return;
+ function update(){
+  var h=document.documentElement;
+  var top=window.scrollY||h.scrollTop;
+  var total=(h.scrollHeight - h.clientHeight) || 1;
+  var pct=Math.max(0,Math.min(100,(top/total)*100));
+  bar.style.width=pct+'%';
+  if(floating){
+   if(top>500) floating.classList.add('visible'); else floating.classList.remove('visible');
+  }
+ }
+ window.addEventListener('scroll',update,{passive:true});
+ window.addEventListener('resize',update,{passive:true});
+ update();
+})();
 </script></body></html>

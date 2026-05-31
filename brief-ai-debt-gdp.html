@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260605">
+<link rel="stylesheet" href="/styles.css?v=20260606">
 <style>
 .brief-hero{position:relative;padding:6.5rem 3rem 2.8rem;background:var(--black);overflow:hidden}
 .brief-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.08) 0%,transparent 70%);pointer-events:none}
@@ -234,6 +234,7 @@
  <p class="brief-lead reveal">Debt compounds exponentially. Productivity grows linearly. That gap is the structural problem under almost every developed economy. This brief explores a fourth pathway, not a prediction, a hypothesis about what becomes possible if certain technologies and financial systems mature.</p>
  <div class="brief-actions reveal no-print">
  <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" onclick="kcsToggleListen()" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
  <a href="/briefs" class="brief-btn-ghost">All KCS Briefs &rarr;</a>
 </div>
  </div>
@@ -389,5 +390,6 @@
 
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
+<script src="/listen.js?v=20260606" defer></script>
 </body>
 </html>

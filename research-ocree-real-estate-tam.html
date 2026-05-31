@@ -5,7 +5,7 @@
 <meta property="og:title" content="Ocree Capital and the Canadian Real Estate Tokenization TAM | KCS Research"><meta property="og:description" content="Inside Ocree Capital&#x27;s Polymesh-based commercial real estate tokenization platform: the $51.9M 15 Berwick Court inaugural listing, the regulatory architecture, and a bottom-up TAM for Canadian commercial real estate tokenization through 2030."><meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260605">
+<link rel="stylesheet" href="/styles.css?v=20260606">
 <style>
 /* PROGRESS BAR */
 .brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
@@ -194,6 +194,7 @@
  <p class="brief-lead">Ocree Capital, the Toronto-based exempt-market dealer that launched the first regulated commercial real estate tokenization platform in Canada on the Polymesh blockchain in 2025, is the canonical institutional reference for what credible Canadian real estate tokenization looks like. Its inaugural listing, the C$51.9 million 15 Berwick Court multi-residential property in Winnipeg, is a small offering in absolute terms. The structural significance is what it establishes: a fully regulated EMD operating tokenized commercial real estate on Canadian rails, with nationwide securities licensing, on a compliance-first chain. This report is a deep dive on Ocree&#x27;s architecture, a bottom-up Canadian commercial real estate tokenization TAM, and the institutional projection for where the market goes through 2030.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" onclick="kcsToggleListen()" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
  </div>
 </div></section>
@@ -402,4 +403,5 @@
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
+<script src="/listen.js?v=20260606" defer></script>
 </body></html>

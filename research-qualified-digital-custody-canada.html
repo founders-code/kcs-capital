@@ -5,7 +5,7 @@
 <meta property="og:title" content="Qualified Digital Custody in Canada | KCS Research"><meta property="og:description" content="Mapping Canada&#x27;s qualified digital custody landscape: Tetra Trust, Balance Trust, Brane Trust. Capital tiers, regulatory standing, supported asset types, and how 4orm Finance&#x27;s CustodyCo entity sits alongside them."><meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260606">
+<link rel="stylesheet" href="/styles.css?v=20260607">
 <style>
 /* PROGRESS BAR */
 .brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
@@ -183,7 +183,6 @@
  </div>
 </aside>
 
-
 <article>
 <section class="brief-hero"><div class="brief-in">
  <div class="brief-meta"><span>KCS Research</span><span class="dot"></span><span>Ecosystem</span><span class="dot"></span><span class="muted">February 2026</span><span class="dot"></span><span class="muted">13 min read</span></div>
@@ -191,7 +190,7 @@
  <p class="brief-lead">Custody is the layer where Canadian regulatory clarity is strongest and where the institutional adoption gate sits hardest. Without a qualified Canadian digital asset custodian, no Canadian regulated counterparty can hold a tokenized real-world asset in a manner that clears institutional mandates. The CIRO Digital Asset Custody Framework, formalized in 2025, defined the operational requirements; a small set of Canadian custodians now meets them. This report maps the active providers, the capital tiers, the regulatory standing, the supported asset types, and where 4orm Finance&#x27;s CustodyCo entity fits inside the layered HoldCo / OpCo / CustodyCo model the framework requires.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
-  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" onclick="kcsToggleListen()" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
+  
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
  </div>
 </div></section>
@@ -344,5 +343,4 @@
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
-<script src="/listen.js?v=20260606" defer></script>
 </body></html>

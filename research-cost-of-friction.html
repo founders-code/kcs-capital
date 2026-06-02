@@ -189,8 +189,7 @@
  <p class="brief-lead">A bottom-up read of where money is lost, and where money is trapped, inside the Canadian banking system. Settlement float. Manual reconciliation. Failed payments. FX leakage on cross-border. Compliance friction. Batch-window latency. The Real-Time Rail that has been two years away for the past seven. The cumulative cost is, conservatively, C$8 billion to C$22 billion per year in direct operational expense and trapped capital across the Big Six and the broader Canadian financial system. The structural cause is not bank incompetence. It is the absence of a connectivity and workflow layer between institutions that have, until now, had no economically rational way to build it together.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
-  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
-  
+  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><input type="range" id="kcs-listen-scrub" class="kcs-listen-scrub" min="0" max="1000" value="0" step="1" aria-label="Audio progress"><span class="kcs-listen-time" id="kcs-listen-time">0:00 / 0:00</span><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
  </div>
 </div></section>
@@ -370,5 +369,5 @@
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
-<script src="/listen.js?v=20260609" defer></script>
+<script src="/listen.js?v=20260610" defer></script>
 </body></html>

@@ -5,7 +5,7 @@
 <meta property="og:title" content="The RWA Liquidity Gap: Why Issuance Alone Does Not Create a Market | KCS Research"><meta property="og:description" content="Pineapple Financial&#x27;s $500M+ tokenized mortgages against its $13.7B portfolio. T-RIZE&#x27;s institutional tokenization infrastructure across real estate, private credit, and carbon. QCAD as the regulated CAD settlement asset. The supply side is scaling. The liquidity layer is not. Global forecasts put the tokenized market at $2T to $16T by 2030; Canada&#x27;s share depends on whether the venue layer gets built."><meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260609">
+<link rel="stylesheet" href="/styles.css?v=20260610">
 <style>
 /* PROGRESS BAR */
 .brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
@@ -191,8 +191,7 @@
  <p class="brief-lead">The supply side of Canadian tokenization is scaling. Pineapple Financial has tokenized over C$500 million in mortgages against a C$13.7 billion portfolio and a stated longer-term goal of migrating more than 29,000 funded loans. T-RIZE Group is positioned as institutional tokenization infrastructure across real estate, private credit, and carbon credit structures. QCAD gives Canada a regulated CAD-denominated digital settlement asset backed one-to-one. AuCan Gold operates a C$2.5 billion tokenized bullion program. The cumulative announced tokenized asset issuance pipeline is materially scaling. What does not yet exist at production scale in Canada is the institutional liquidity layer: compliant secondary trading, custody integration, bank-grade settlement, regulated investor onboarding, and marketplace oversight. Issuance is not the bottleneck. Liquidity is. This report explains why.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
-  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
-  
+  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><input type="range" id="kcs-listen-scrub" class="kcs-listen-scrub" min="0" max="1000" value="0" step="1" aria-label="Audio progress"><span class="kcs-listen-time" id="kcs-listen-time">0:00 / 0:00</span><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
  </div>
 </div></section>
@@ -372,5 +371,5 @@
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
-<script src="/listen.js?v=20260609" defer></script>
+<script src="/listen.js?v=20260610" defer></script>
 </body></html>

@@ -5,7 +5,7 @@
 <meta property="og:title" content="Canadian Stablecoin Infrastructure: QCAD, CADC, and the CAD Settlement Layer | KCS Research"><meta property="og:description" content="Stablecorp&#x27;s QCAD. Loon&#x27;s regulated CAD stablecoin. Cybrid&#x27;s payments rail. What Canada&#x27;s emerging CAD settlement infrastructure looks like and how 4orm Finance interoperates."><meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260608">
+<link rel="stylesheet" href="/styles.css?v=20260609">
 <style>
 /* PROGRESS BAR */
 .brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
@@ -189,6 +189,7 @@
  <p class="brief-lead">A meaningful share of the world&#x27;s tokenized real-world asset activity will settle in regulated, fiat-denominated digital cash, not in volatile crypto. For Canadian issuers and Canadian institutional buyers, that means CAD-denominated settlement instruments, not USD-denominated ones. Canada&#x27;s CAD stablecoin layer is small in absolute terms today, but the regulatory perimeter around it is the most defined in the world. This report maps the active issuers, the regulatory posture, the payments rail interconnects, and what the layer needs to clear in order to serve as institutional settlement.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
   
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
  </div>
@@ -336,4 +337,5 @@
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
+<script src="/listen.js?v=20260609" defer></script>
 </body></html>

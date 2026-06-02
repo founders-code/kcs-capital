@@ -5,7 +5,7 @@
 <meta property="og:title" content="Global RWA Exchange Landscape: 18 Live Venues, the Funding Pattern, and What Canada&#x27;s Equivalent Needs | KCS Research"><meta property="og:description" content="Archax, DigiFT, ADDX, Securitize, tZERO, INX, MERJ, Assetera, SDX, OpenFinance, Tokeny, Polymath/Polymesh, RealT, Propy, Centrifuge, Maple Finance, Figure, Dinari, Spiko, Haven. The funding pattern, the regulatory model spread, and the geographic constraint that keeps the Canadian venue unbuilt."><meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260608">
+<link rel="stylesheet" href="/styles.css?v=20260609">
 <style>
 /* PROGRESS BAR */
 .brief-progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:300;pointer-events:none}
@@ -190,6 +190,7 @@
  <p class="brief-lead">Eighteen regulated or near-regulated RWA exchanges are operating internationally as of early 2026, with cumulative disclosed funding above US$650 million and at least three of them clearing institutional volumes in the hundreds of millions of dollars per month. None of them is Canadian. None of them clears in CAD as native settlement. None operates inside the CIRO and CSA regulatory perimeter. This report profiles the active venues, identifies the structural funding pattern that explains why the category attracts larger rounds than conventional fintech, and lays out what the Canadian equivalent must be designed to do in order to operate inside the domestic regulatory framework at institutional scale.</p>
  <div class="brief-actions no-print">
   <button type="button" class="brief-btn-pdf" onclick="window.print()">Download PDF</button>
+  <button type="button" class="brief-btn-listen no-print" id="kcs-listen-btn" aria-label="Listen to article"><span class="kcs-listen-icon">▶</span><span class="kcs-listen-label">Listen</span></button><span class="kcs-listen-controls no-print"><button type="button" class="kcs-listen-speed" id="kcs-listen-speed" aria-label="Playback speed">1x</button><button type="button" class="kcs-listen-stop" id="kcs-listen-stop" aria-label="Stop">✕</button></span>
   
   <a class="brief-btn-back" href="/research">All Research &rarr;</a>
  </div>
@@ -363,4 +364,5 @@
 (function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s)a.classList.add('nav-active');if(s.indexOf('research')===0&&hs==='research')a.classList.add('nav-active');});})();
 (function(){var bar=document.getElementById('brief-progress-bar');var floating=document.getElementById('brief-floating');if(!bar)return;function update(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;var pct=sh>0?(st/sh)*100:0;bar.style.width=pct+'%';if(floating){if(st>500)floating.classList.add('visible');else floating.classList.remove('visible');}}window.addEventListener('scroll',update,{passive:true});update();})();
 </script>
+<script src="/listen.js?v=20260609" defer></script>
 </body></html>

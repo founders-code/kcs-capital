@@ -167,7 +167,7 @@
     <li><a href="/research-rwa-liquidity-gap">The RWA Liquidity Gap</a></li>
     <li><a href="/research-alberta-tokenization-tam">Alberta Resource Tokenization</a></li>
     <li><a href="/research-canada-rwa-infrastructure-tam">Canada&#x27;s $1.9B RWA Infrastructure TAM</a></li>
-    <li><a href="/research-jpmorgan-onyx-canada-learns">JPMorgan Onyx</a></li>
+    <li><a href="/research-jpmorgan-onyx-canada-learns">JPMorgan Kinexys</a></li>
     <li><a href="/research-project-samara-pathway">Project Samara &amp; the Canadian Tokenization Pathway</a></li>
     <li><a href="/research-canadian-rwa-ecosystem-map">The Canadian RWA Ecosystem</a></li>
     <li><a href="/research-ocree-real-estate-tam">Ocree Capital</a></li>
@@ -268,14 +268,14 @@
 <ul>
 <li>An issuer who tokenizes a real estate offering on Polymesh, with Ocree Capital as the EMD, with Tetra Trust as custodian, with QCAD as the settlement leg, cannot route the offering through a single regulated multi-institution venue. There is no such venue at production scale.</li>
 <li>An institutional buyer who wants exposure to a tokenized Canadian commercial mortgage cannot, today, transact that exposure on regulated CAD-denominated settlement rails through a venue that interoperates with their existing custody arrangement. The pieces exist; the venue layer does not.</li>
-<li>A Tier-1 Canadian bank operating tokenized deposits (BMO and the next several to come) needs a multi-bank, neutral venue and settlement architecture to make the tokenized deposit useful across counterparties beyond its own client base. Without it, every bank's tokenized deposit is, by construction, a single-bank network (the JPMorgan Onyx pattern), which is wrong for a national settlement layer.</li>
+<li>A Tier-1 Canadian bank operating tokenized deposits (BMO and the next several to come) needs a multi-bank, neutral venue and settlement architecture to make the tokenized deposit useful across counterparties beyond its own client base. Without it, every bank's tokenized deposit is, by construction, a single-bank network (the JPMorgan Kinexys pattern), which is wrong for a national settlement layer.</li>
 <li>The CSA's Project Tokenization work, the CIRO custody framework, the Bank of Canada's wholesale CBDC research, and the FINTRAC stablecoin policy work all proceed in parallel without a single operational venue against which the regulatory framework can be exercised at production scale.</li>
 </ul>
 <p>The coordination gap is the structural opportunity. Closing it requires a regulated multi-institution venue and settlement layer, built under multi-bank governance, operating inside the Canadian regulatory perimeter, with native CAD-denominated settlement across stablecoin, tokenized deposit, and (eventually) wholesale CBDC instruments. That layer is what 4orm Finance is being designed to operate.</p>
 <div class="brief-section-break"></div>
 <h2 id="8-what-it-would-take-to-close-the-gap">8 What it would take to close the gap</h2>
 <p>Closing the coordination gap is a structural build, not a marketing campaign. The operational requirements are concrete.</p>
-<p><strong>Multi-institution governance.</strong> The venue cannot be a single-bank initiative. The JPMorgan Onyx experience, where Onyx operates as JPMorgan's network with non-JPMorgan counterparties unable to participate as peers, demonstrates the failure mode of single-bank infrastructure for a national settlement layer. The Canadian venue must be multi-bank, multi-custodian, multi-issuer from inception.</p>
+<p><strong>Multi-institution governance.</strong> The venue cannot be a single-bank initiative. The JPMorgan Kinexys experience, where Kinexys operates as JPMorgan's network with non-JPMorgan counterparties unable to participate as peers, demonstrates the failure mode of single-bank infrastructure for a national settlement layer. The Canadian venue must be multi-bank, multi-custodian, multi-issuer from inception.</p>
 <p><strong>CIRO-compliant three-entity separation.</strong> HoldCo, OpCo, CustodyCo, structurally and operationally separate. This is the framework requirement and also the architectural choice that makes the venue compatible with institutional procurement standards.</p>
 <p><strong>Native CAD-denominated settlement.</strong> The venue must interoperate with QCAD, the regulated CADC, BMO's tokenized deposit platform, and other regulated CAD-denominated instruments as they emerge. Asset and cash legs must settle atomically.</p>
 <p><strong>Supervisory access from inception.</strong> CIRO, the CSA, FINTRAC, and the Bank of Canada need operational supervisory access that is fast and efficient for both sides. Building this in from the start is cheaper than retrofitting.</p>

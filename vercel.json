@@ -7,6 +7,7 @@
     { "source": "/ourteam", "destination": "/team", "permanent": true },
     { "source": "/missionstatement", "destination": "/about", "permanent": true },
     { "source": "/blog", "destination": "/briefs", "permanent": true },
-    { "source": "/investors", "destination": "/data-room", "permanent": true }
+    { "source": "/investors", "destination": "https://data.4ormfinance.com", "permanent": true },
+    { "source": "/request-access", "destination": "https://data.4ormfinance.com", "permanent": true }
   ]
 }

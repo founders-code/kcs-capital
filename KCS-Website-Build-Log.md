@@ -58,8 +58,8 @@ All **14 blog posts** from the old Wix site were migrated into "KCS Briefs."
 
 ## 4. Team page
 
-- Nine team members as cards: Chad R. Johnston, Sam Mraiheen, Kevin Wong, Don H, Bruce Fair, Michael Stephens, Zahiruddin Sandeela (Zed), Angelo Aquino, Dean Hesse.
-- Circular headshots with a gold border treatment; per-photo framing adjustments so heads read at a consistent size (with custom enlargements for Chad, Sam, and Kevin).
+- Ten team members as cards: Chad R. Johnston, Kevin Wong, Michael Stephens, James Atherton, Zahiruddin Sandeela (Zed), Miika Makela, Don H, Bruce Fair, Angelo Aquino, Dean Hesse.
+- Circular headshots with a gold border treatment; per-photo framing adjustments so heads read at a consistent size (with custom enlargements for Chad and Kevin).
 - "Read Full Bio" opens a full-screen modal with the extended biography; closes on outside click.
 - LinkedIn profile links added for everyone except Dean.
 - Card actions ("Read Full Bio" + LinkedIn) pinned to the bottom of each card so they align across a row.
@@ -80,7 +80,7 @@ All **14 blog posts** from the old Wix site were migrated into "KCS Briefs."
 
 ## 6. Other pages
 
-- **About** - hero copy corrected to current positioning (4orm Finance as Canada's institution-grade Real World Asset Exchange and digital settlement network); governance and "human-centered finance" lines kept; founder quote band.
+- **About** - hero and body copy aligned to current 4orm positioning (settlement layer KCS is building for 4orm Finance); member-governance language removed; founder quote band.
 - **Partners** - added a compliant "Capital Partners" section ($10M Seed round opening Oct 1; written to be securities-compliant). Partners page also has a video hero (city/bridge footage, slowed 20%).
 - **Regulator page** - built from scratch: a regulatory-news section (CIRO, Stablecoin Act, CSA) and a resources/frameworks library (CIRO custody framework, CSA notices, NI 21-101/23-101, NI 31-103, PCMLTFA, RPAA, etc.). Placed after Partners in the navigation.
 - **Contact** - four routed email addresses: compliance@ (regulatory), legal@, founders@ (partnerships), admin@ (general).

@@ -440,8 +440,6 @@ nav.scrolled{
 .team-photo[src="/team-chad.png"]{transform:scale(1.13);object-position:center 26%}
 .team-card:hover .team-photo[src="/team-chad.png"]{transform:scale(1.19)}
 
-.team-photo[src="/team-sam.png"]{transform:scale(1.1);object-position:center 30%}
-.team-card:hover .team-photo[src="/team-sam.png"]{transform:scale(1.16)}
 
 .team-photo[src="/team-kevin.png"]{transform:scale(1.13);object-position:center 26%}
 .team-card:hover .team-photo[src="/team-kevin.png"]{transform:scale(1.19)}

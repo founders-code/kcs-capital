@@ -38,7 +38,6 @@ OLD_FOOT_REG_REGULATOR = (
 
 DISCLAIMER_PAGES = {
     "index.html": LEGAL_BLOCK,
-    "data-room.html": LEGAL_BLOCK,
     "solutions.html": LEGAL_BLOCK,
     "research.html": LEGAL_BLOCK,
     "briefs.html": LEGAL_BLOCK,

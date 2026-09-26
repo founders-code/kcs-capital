@@ -4,173 +4,139 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | KCS Capital</title>
-<meta name="description" content="Get in touch with KCS Capital.">
+<meta name="description" content="Send a note to KCS Capital. Research questions, source queries, media enquiries and research collaboration.">
 <meta property="og:title" content="Contact | KCS Capital">
-<meta property="og:description" content="Get in touch with KCS Capital.">
+<meta property="og:description" content="Send a note to KCS Capital. Research questions, source queries, media enquiries and research collaboration.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v=20260611">
 <style>
-.page-hero{position:relative;padding:11rem 3rem 6rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
+.page-hero{position:relative;min-height:82vh;display:flex;align-items:center;padding:8rem 3rem 5rem;background:var(--black);border-bottom:1px solid var(--border);overflow:hidden}
 .page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,136,42,.07) 0%,transparent 70%);pointer-events:none}
 .page-hero-in{max-width:1200px;margin:0 auto;position:relative;width:100%}
 .page-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
 .page-eyebrow-tick{width:36px;height:1px;background:var(--gold)}
 .page-eyebrow-text{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
-.page-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:300;line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:980px}
+.page-h1{font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.8rem);font-weight:300;line-height:1.06;letter-spacing:-.02em;color:var(--white);margin-bottom:1.5rem;max-width:960px}
 .page-h1 em{font-style:italic;color:var(--gold)}
-.page-lead{font-family:var(--body);font-size:1.18rem;color:rgba(242,237,232,.7);line-height:1.7;max-width:760px;font-weight:300}
-.page-section{padding:7rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.page-lead{font-family:var(--body);font-size:1.15rem;color:rgba(242,237,232,.72);line-height:1.72;max-width:740px;font-weight:300}
+.page-section{padding:6.5rem 3rem;background:var(--surface);border-bottom:1px solid var(--border)}
 .page-section.dark{background:var(--black)}
 .page-section-in{max-width:1200px;margin:0 auto}
-.page-section-hdr{margin-bottom:3rem;max-width:780px}
+.page-section-hdr{margin-bottom:3rem;max-width:820px}
 .page-section-eye{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
 .page-section-eye-dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
 .page-section-eye-txt{font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
-.page-section-h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.15;letter-spacing:-.02em;color:var(--white);margin-bottom:1.25rem}
+.page-section-h2{font-family:var(--serif);font-size:clamp(2rem,3.6vw,3.1rem);font-weight:300;line-height:1.16;letter-spacing:-.02em;color:var(--white);margin-bottom:1.25rem}
 .page-section-h2 em{font-style:italic;color:var(--gold)}
-.page-section-body{font-family:var(--body);font-size:1.05rem;color:rgba(242,237,232,.62);line-height:1.8}
-.prose{max-width:760px;color:rgba(242,237,232,.72);font-family:var(--body);font-size:1.05rem;line-height:1.85}
-.prose p{margin-bottom:1.25rem}
-.prose strong{color:var(--white);font-weight:500}
-.prose em{color:var(--gold);font-style:italic}
-.prose h3{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:2.25rem 0 .9rem;line-height:1.3}
-.prose h2{font-family:var(--serif);font-size:1.9rem;font-weight:300;color:var(--white);margin:2.5rem 0 1rem;letter-spacing:-.01em;line-height:1.2}
-.prose ul{list-style:none;margin-bottom:1.5rem}
-.prose ul li{padding-left:1.25rem;position:relative;margin-bottom:.9rem;line-height:1.7}
-.prose ul li::before{content:'';position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--gold)}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
-.cs-card{background:var(--surface-2);padding:2rem 1.75rem;display:flex;flex-direction:column;border-bottom:2px solid transparent;transition:border-color .35s,background .3s;cursor:pointer;text-decoration:none}
-.cs-card:hover{border-bottom-color:var(--gold);background:var(--surface-3)}
-.cs-tag{font-family:var(--ui);font-size:8.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
-.cs-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:.75rem;letter-spacing:-.01em}
-.cs-summary{font-size:.88rem;color:rgba(242,237,232,.6);line-height:1.65;flex:1;margin-bottom:1.25rem}
-.cs-meta{display:flex;align-items:center;justify-content:space-between;font-family:var(--ui);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase}
-.cs-date{color:rgba(168,164,160,.5)}
-.cs-read{color:var(--gold);font-weight:600}
-.cs-filter{display:flex;gap:1.5px;background:var(--border);margin-bottom:1px;flex-wrap:wrap}
-.cs-filter-btn{background:var(--surface-2);padding:.7rem 1.4rem;font-family:var(--ui);font-size:9.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white-dim);cursor:pointer;border:none;transition:color .2s,background .2s}
-.cs-filter-btn.active,.cs-filter-btn:hover{color:var(--gold);background:var(--surface-3)}
-@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:2rem} .page-hero{padding:7rem 1.5rem 4rem} .page-section{padding:4rem 1.5rem} .cs-grid{grid-template-columns:1fr}}
-@media(min-width:901px) and (max-width:1200px){.cs-grid{grid-template-columns:repeat(2,1fr)}}
+.page-section-body{font-family:var(--body);font-size:1.05rem;color:rgba(242,237,232,.64);line-height:1.78}
+.btn-primary{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:1rem 1.6rem;text-decoration:none;transition:background .2s}
+.btn-primary:hover{background:var(--gold-l)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:transparent;padding:1rem 1.6rem;border:1px solid var(--gold-d);text-decoration:none;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-l)}
+.hero-cta-row{display:flex;gap:1rem;margin-top:2.4rem;flex-wrap:wrap}
+@media(max-width:900px){.page-hero{padding:7rem 1.5rem 4rem}.page-section{padding:4rem 1.5rem}}
 </style>
 </head>
 <body>
+
 <nav id="main-nav">
  <a href="/" class="nav-logo">
  <img src="/kcs-capital-logo.png" alt="KCS Capital" class="nav-logo-img">
- <span class="nav-sub">Research &middot; Technology &middot; Education</span>
+ <span class="nav-sub">Independent research</span>
  </a>
  <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
  <label for="nav-toggle" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
  <ul class="nav-links">
  <li><a href="/">Home</a></li>
  <li><a href="/about">About</a></li>
- <li><a href="/solutions">Solutions</a></li>
  <li><a href="/team">Team</a></li>
  <li><a href="/research">Research</a></li>
- <li><a href="/briefs">KCS Briefs</a></li>
  <li class="nav-drop">
- <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Engagement</a>
+ <a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">4orm</a>
  <ul class="nav-drop-menu">
- <li><a href="/partners">Partners</a></li>
- <li><a href="/regulator">Regulator</a></li>
- <li><a href="/contact">Contact</a></li>
+ <li><a href="https://www.4ormfinance.com" target="_blank" rel="noopener">4orm Finance <span class="nav-drop-sub">Corporate</span></a></li>
+ <li><a href="https://www.4ormiq.com" target="_blank" rel="noopener">4ormIQ <span class="nav-drop-sub">For consumers</span></a></li>
+ <li><a href="https://www.4ormex.com" target="_blank" rel="noopener">4ormEx <span class="nav-drop-sub">For firms</span></a></li>
  </ul>
  </li>
- <li class="nav-drop"><a href="#" class="nav-drop-trigger" aria-haspopup="true" aria-expanded="false" tabindex="0">Development</a><ul class="nav-drop-menu"><li><a href="https://www.4ormfinance.com" target="_blank" rel="noopener">4orm Finance</a></li><li><a href="https://www.4ormex.com" target="_blank" rel="noopener">4ormEx <span class="nav-drop-sub">(Exchange)</span></a></li></ul></li>
+ <li><a href="/contact" class="nav-cta">Contact</a></li>
  </ul>
 </nav>
 
 <section class="page-hero">
  <div class="page-hero-in">
- <!-- Default hero (hidden when ?sent=1 in URL) -->
- <div id="contact-hero-default">
- <div class="page-eyebrow reveal"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Get In Touch</span></div>
- <h1 class="page-h1 reveal">Send us a note.<br><em>We will respond within two business days.</em></h1>
- <p class="page-lead reveal">Investors, institutional partners, journalists, prospective hires, and curious operators. Use the form below or pick up the phone.</p>
- </div>
- <!-- Success state (shown after Formspree redirect) -->
- <div id="contact-hero-success" style="display:none">
- <div class="page-eyebrow"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text" style="color:var(--gold)">Thank You</span></div>
- <h1 class="page-h1">Thank you for reaching out.<br><em>This is the start of the conversation.</em></h1>
- <p class="page-lead">We truly appreciate you taking the time to write to us. A member of the KCS Capital team will be in touch personally within the next 48 hours, and we're looking forward to learning more about you and finding where we can be useful. For anything time-sensitive, please call <a href="tel:17783632423" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-d)">+1 (778) 363-2423</a>.</p>
- </div>
+ <div class="page-eyebrow"><div class="page-eyebrow-tick"></div><span class="page-eyebrow-text">Contact KCS Capital</span></div>
+ <h1 class="page-h1">Send a note.<br><em>We read every one.</em></h1>
+ <p class="page-lead">KCS Capital is a research firm. If you have a question about our published work, a correction on a figure, a research collaboration to propose or a media enquiry, this is the right place. For a paid operating pilot with 4orm, use the design-partner contact on <a href="https://www.4ormfinance.com" target="_blank" rel="noopener" style="color:var(--gold)">4ormfinance.com</a>.</p>
  </div>
 </section>
-<script>
- (function(){
- try {
- if (new URLSearchParams(window.location.search).get('sent') === '1') {
- var d = document.getElementById('contact-hero-default');
- var s = document.getElementById('contact-hero-success');
- if (d) d.style.display = 'none';
- if (s) s.style.display = 'block';
- window.scrollTo(0, 0);
- }
- } catch(e) { /* no-op */ }
- })();
-</script>
-<section class="page-section" id="contact-form-section">
- <div class="page-section-in two-col">
- <div class="reveal">
- <div class="page-section-eye"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Contact Form</span></div>
- <form id="contact-form" action="https://formspree.io/f/mredpebq" method="POST" style="margin-top:2rem">
- <input type="hidden" name="_subject" value="New KCS Capital Contact Form Submission">
- <input type="hidden" name="_next" value="https://www.kcs-capital.com/contact?sent=1">
- <!-- Honeypot field, bots fill this, humans don't see it -->
+
+<section class="page-section">
+ <div class="page-section-in" style="max-width:820px">
+ <form action="https://formspree.io/f/mredpebq" method="POST" style="display:grid;gap:1.5rem">
+ <input type="hidden" name="_subject" value="KCS Capital enquiry">
  <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
- <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem">
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+ <label style="display:flex;flex-direction:column;gap:.6rem">
+ <span style="font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">Name</span>
+ <input type="text" name="name" required style="background:var(--surface-2);border:1px solid var(--border-b);color:var(--white);padding:1rem;font-family:var(--body);font-size:1rem">
+ </label>
+ <label style="display:flex;flex-direction:column;gap:.6rem">
+ <span style="font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">Email</span>
+ <input type="email" name="email" required style="background:var(--surface-2);border:1px solid var(--border-b);color:var(--white);padding:1rem;font-family:var(--body);font-size:1rem">
+ </label>
+ </div>
+ <label style="display:flex;flex-direction:column;gap:.6rem">
+ <span style="font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">Organisation (optional)</span>
+ <input type="text" name="organisation" style="background:var(--surface-2);border:1px solid var(--border-b);color:var(--white);padding:1rem;font-family:var(--body);font-size:1rem">
+ </label>
+ <label style="display:flex;flex-direction:column;gap:.6rem">
+ <span style="font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">Reason for the note</span>
+ <select name="reason" required style="background:var(--surface-2);border:1px solid var(--border-b);color:var(--white);padding:1rem;font-family:var(--body);font-size:1rem">
+ <option value="">Choose one</option>
+ <option>Question about a KCS report</option>
+ <option>Correction or source query</option>
+ <option>Research collaboration</option>
+ <option>Media enquiry</option>
+ <option>Something else</option>
+ </select>
+ </label>
+ <label style="display:flex;flex-direction:column;gap:.6rem">
+ <span style="font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">Message</span>
+ <textarea name="message" required rows="7" style="background:var(--surface-2);border:1px solid var(--border-b);color:var(--white);padding:1rem;font-family:var(--body);font-size:1rem;resize:vertical"></textarea>
+ </label>
  <div>
- <label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">First name</label>
- <input type="text" name="first_name" required style="width:100%;background:rgba(242,237,232,.05);border:1px solid var(--border);padding:.85rem 1rem;font-family:var(--body);font-size:13.5px;color:var(--white);outline:none">
+ <button type="submit" class="btn-primary" style="border:none;cursor:pointer">Send the note &rarr;</button>
  </div>
- <div>
- <label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">Last name</label>
- <input type="text" name="last_name" required style="width:100%;background:rgba(242,237,232,.05);border:1px solid var(--border);padding:.85rem 1rem;font-family:var(--body);font-size:13.5px;color:var(--white);outline:none">
- </div>
- </div>
- <div style="margin-bottom:1.25rem"><label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">Email</label><input type="email" name="email" required style="width:100%;background:rgba(242,237,232,.05);border:1px solid var(--border);padding:.85rem 1rem;font-family:var(--body);font-size:13.5px;color:var(--white);outline:none"></div>
- <div style="margin-bottom:1.25rem"><label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">Firm (Optional)</label><input type="text" name="firm" style="width:100%;background:rgba(242,237,232,.05);border:1px solid var(--border);padding:.85rem 1rem;font-family:var(--body);font-size:13.5px;color:var(--white);outline:none"></div>
- <div style="margin-bottom:1.25rem"><label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">Inquiry Type</label><select name="inquiry_type" style="width:100%;background:rgba(242,237,232,.05);border:1px solid var(--border);padding:.85rem 1rem;font-family:var(--body);font-size:13.5px;color:var(--white);outline:none"><option>Investor Inquiry</option><option>Institutional Discovery (Bank or Crown FI)</option><option>Issuer or Custodian Partnership</option><option>Research / Report Request</option><option>Press or Media</option><option>Career Inquiry</option><option>Other</option></select></div>
- <div style="margin-bottom:1.5rem"><label style="display:block;font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:.5rem">Message</label><textarea name="message" rows="6" required style="width:100%;background:rgba(242,237,232,.05);border:1px solid var(--border);padding:.85rem 1rem;font-family:var(--body);font-size:13.5px;color:var(--white);outline:none;resize:vertical"></textarea></div>
- <button type="submit" class="btn-p" id="contact-submit-btn" style="border:none;cursor:pointer">Send Message &rarr;</button>
- <div id="contact-form-error" style="display:none;margin-top:1rem;padding:.85rem 1rem;border:1px solid #c9534b;background:rgba(201,83,75,.08);color:#e8a8a3;font-family:var(--body);font-size:13px;line-height:1.5"></div>
  </form>
  </div>
- <div class="reveal d2">
- <div class="page-section-eye"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Direct Contact</span></div>
- <h2 class="page-section-h2" style="margin-top:1.25rem;font-size:1.7rem">Offices &amp; <em>Direct Lines</em></h2>
- <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem">
- <div style="border:1px solid var(--border);padding:1.5rem;background:var(--surface-2)"><div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Calgary &middot; HQ</div><div style="color:var(--white);font-size:14px;line-height:1.7">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3</div><a href="tel:17783632423" style="display:inline-block;margin-top:.6rem;color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.08em;text-decoration:none">1-778-363-2423</a></div>
- <div style="border:1px solid var(--border);padding:1.5rem;background:var(--surface-2)"><div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Vancouver</div><a href="tel:17786515255" style="color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.08em;text-decoration:none">1-778-651-5255</a></div>
- <div style="border:1px solid var(--border);padding:1.5rem;background:var(--surface-2)"><div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem">Edmonton</div><a href="tel:17802663050" style="color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.08em;text-decoration:none">1-780-266-3050</a></div>
- <div style="border:1px solid var(--border-b);padding:1.5rem;background:var(--surface-2)">
- <div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem">Email &middot; Routed by Inquiry</div>
- <div style="display:flex;flex-direction:column;gap:1rem">
- <div>
- <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,136,42,.6);margin-bottom:.25rem">Regulatory &amp; Compliance</div>
- <a href="mailto:compliance@kcs-capital.com" style="color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.04em;text-decoration:none">compliance@kcs-capital.com</a>
+</section>
+
+<section class="page-section dark">
+ <div class="page-section-in">
+ <div class="page-section-hdr">
+ <div class="page-section-eye"><div class="page-section-eye-dot"></div><span class="page-section-eye-txt">Direct lines</span></div>
+ <h2 class="page-section-h2">Or reach the offices directly.</h2>
  </div>
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem" class="page-section-body">
  <div>
- <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,136,42,.6);margin-bottom:.25rem">Legal</div>
- <a href="mailto:legal@kcs-capital.com" style="color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.04em;text-decoration:none">legal@kcs-capital.com</a>
+ <div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem">Calgary HQ</div>
+ <p style="line-height:1.6">Unit 400, 718 8 Ave SW<br>Calgary, AB T2P 1H3<br><a href="tel:17783632423" style="color:var(--white);text-decoration:none;border-bottom:1px solid var(--gold-d)">1-778-363-2423</a></p>
  </div>
  <div>
- <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,136,42,.6);margin-bottom:.25rem">Partnerships</div>
- <a href="mailto:founders@kcs-capital.com?cc=chad@kcs-capital.com,sam@kcs-capital.com,kevin@kcs-capital.com" style="color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.04em;text-decoration:none">founders@kcs-capital.com</a>
+ <div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem">Vancouver</div>
+ <p style="line-height:1.6"><a href="tel:17786515255" style="color:var(--white);text-decoration:none;border-bottom:1px solid var(--gold-d)">1-778-651-5255</a></p>
  </div>
  <div>
- <div style="font-family:var(--ui);font-size:8.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,136,42,.6);margin-bottom:.25rem">All Other Business</div>
- <a href="mailto:admin@kcs-capital.com" style="color:var(--gold-l);font-family:var(--ui);font-size:13px;letter-spacing:.04em;text-decoration:none">admin@kcs-capital.com</a>
+ <div style="font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem">Edmonton</div>
+ <p style="line-height:1.6"><a href="tel:17802663050" style="color:var(--white);text-decoration:none;border-bottom:1px solid var(--gold-d)">1-780-266-3050</a></p>
  </div>
  </div>
- </div>
- </div>
- </div>
+ <p style="margin-top:2.5rem;font-family:var(--body);color:rgba(242,237,232,.55);font-size:.95rem">General enquiries: <a href="mailto:admin@kcs-capital.com" style="color:var(--gold)">admin@kcs-capital.com</a></p>
  </div>
 </section>
 
@@ -181,7 +147,7 @@
  <div style="width:18px;height:18px;border:1px solid var(--gold-d);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--ui);font-size:7px;font-weight:800;color:var(--gold)">K</span></div>
  KCS Capital
  </div>
- <p class="foot-tag">Independent technology and research firm. KCS Capital develops the infrastructure operated by 4orm Finance. Both are separately governed Canadian entities. Calgary, Vancouver, Edmonton.</p>
+ <p class="foot-tag">Independent research firm. KCS Capital ran the two-year Canadian financial-services discovery that produced 4orm Finance. Calgary, Vancouver, Edmonton.</p>
  <div class="foot-soc">
  <a href="#" class="foot-sb" aria-label="LinkedIn">in</a>
  <a href="#" class="foot-sb" aria-label="Twitter">X</a>
@@ -190,24 +156,19 @@
  <div>
  <div class="foot-col-t">KCS Capital</div>
  <ul class="foot-links">
- <li><a href="/about">About the Firm</a></li>
- <li><a href="/team">Team &amp; Advisors</a></li>
- <li><a href="/research">Research</a></li>
- <li><a href="/briefs">KCS Briefs</a></li>
- <li><a href="/regulator">Regulator</a></li>
- <li><a href="/careers">Careers</a></li>
+ <li><a href="/about">About the firm</a></li>
+ <li><a href="/research">Research library</a></li>
+ <li><a href="/team">Team</a></li>
  <li><a href="/contact">Contact</a></li>
  </ul>
  </div>
  <div>
- <div class="foot-col-t">4orm Finance</div>
+ <div class="foot-col-t">4orm</div>
  <ul class="foot-links">
- <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Platform Overview &#8599;</a></li>
- <li><a href="/solutions">For Banks &amp; Crown FIs</a></li>
- <li><a href="/partners">For Issuers</a></li>
- <li><a href="/partners">For Custodians</a></li>
- <li><a href="https://4ormfinance.com" target="_blank" rel="noopener">Exchange (Coming Soon) &#8599;</a></li>
- <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operated independently<br>under CIRO custody framework</li>
+ <li><a href="https://www.4ormfinance.com" target="_blank" rel="noopener">4orm Finance &#8599;</a></li>
+ <li><a href="https://www.4ormiq.com" target="_blank" rel="noopener">4ormIQ (for consumers) &#8599;</a></li>
+ <li><a href="https://www.4ormex.com" target="_blank" rel="noopener">4ormEx (for firms) &#8599;</a></li>
+ <li style="margin-top:.6rem;font-size:10.5px;color:rgba(201,136,42,.55)">Operating company built<br>from KCS research</li>
  </ul>
  </div>
  <div>
@@ -231,71 +192,10 @@
  </div>
  <div class="foot-bot">
  <div class="foot-legal">&copy; 2026 KCS Capital Inc. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></div>
- <div class="foot-reg foot-legal-block">
-<p><strong>KCS Capital.</strong> KCS Capital is an independent technology and research firm, not a registered dealer or adviser. Any securities offering referenced is made by 4orm Finance under prospectus exemptions to accredited investors only (NI 45-106). Nothing on this site is an offer or solicitation. 4orm Finance operates as a separate regulated entity with independent governance, structured as HoldCo / OpCo / CustodyCo per the CIRO Digital Asset Custody Framework.</p>
-<p><em>Accredited investors only.</em> The securities referenced on this website are being offered only to &ldquo;accredited investors&rdquo; as defined in National Instrument 45-106. This is not an offer to sell or a solicitation of an offer to buy securities in any jurisdiction where such offer is not permitted. No securities regulatory authority has assessed the merits of any securities described on this website.</p>
-<p><em>Forward-looking statements.</em> This website contains forward-looking statements within the meaning of applicable Canadian securities laws, including statements about 4orm Finance&rsquo;s planned operations, regulatory pathway, market opportunity, partnership pipeline, and capital raise. Forward-looking statements are based on assumptions current as of the date stated and are subject to material risks and uncertainties, including the receipt of required regulatory approvals. Actual results may differ materially. KCS Capital and 4orm Finance disclaim any obligation to update forward-looking statements except as required by law.</p>
-<p><em>No affiliation or endorsement.</em> References to third-party companies, products, and services are for market-context and educational purposes only and do not imply any partnership, endorsement, sponsorship, or affiliation. All third-party names, trademarks, and logos are the property of their respective owners. KCS Capital and 4orm Finance are not affiliated with the Bank of Canada, OSFI, the CSA (or its member regulators including OSC, AMF, BCSC, ASC), CIRO, FINTRAC, or any other regulator. No regulator has reviewed, endorsed, or approved KCS Capital, 4orm Finance, its planned platform, or any securities described on this website. KCS Capital and 4orm Finance are informed by, but not participants in, the Bank of Canada&rsquo;s Project Samara experiment (Staff Analytical Paper 2026-8) and the CSA Project Tokenization initiative.</p>
-<p>Market statistics are sourced from McKinsey, BCG, PwC, KPMG, Bank of Canada, rwa.xyz, DefiLlama, and the 4orm Master Pro Forma where noted. Dollar ranges labeled as 4orm estimates are internal projections, not market facts.</p>
-</div>
+ <div class="foot-reg">KCS Capital Inc. is an independent research firm. 4orm Finance operates as a separate regulated entity with independent governance. This website is research and information only. Nothing here is an offer or solicitation to buy or sell securities, and nothing here is investment, legal, or financial advice.</div>
  </div>
 </footer>
-<script>
-(function(){var n=document.getElementById('main-nav');if(!n)return;window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60);},{passive:true});})();
-(function(){var s=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';var L=document.querySelectorAll('#main-nav .nav-links a');var m=false;L.forEach(function(a){if(a.classList.contains('nav-cta'))return;var hs=(a.getAttribute('href')||'').split('/').pop().replace(/\.html$/,'')||'index';if(hs===s){a.classList.add('nav-active');m=true;}});if(!m){L.forEach(function(a){var h=a.getAttribute('href')||'';if(s.indexOf('brief')===0&&h==='/briefs')a.classList.add('nav-active');});}})();
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-l').forEach(function(el){o.observe(el);});})();
 
-/* ============================================================
- CONTACT FORM, AJAX submit to Formspree (keeps user on /contact)
- ============================================================ */
-(function(){
- var form = document.getElementById('contact-form');
- if (!form) return;
- var btn = document.getElementById('contact-submit-btn');
- var errBox = document.getElementById('contact-form-error');
- var heroDefault = document.getElementById('contact-hero-default');
- var heroSuccess = document.getElementById('contact-hero-success');
- var formSection = document.getElementById('contact-form-section');
-
- form.addEventListener('submit', async function(e){
- e.preventDefault();
- if (errBox) { errBox.style.display = 'none'; errBox.textContent = ''; }
- if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; btn.style.opacity = '0.7'; btn.style.cursor = 'wait'; }
- try {
- var data = new FormData(form);
- var response = await fetch(form.action, {
- method: 'POST',
- body: data,
- headers: { 'Accept': 'application/json' }
- });
- if (response.ok) {
- // Show the success state and hide the form
- if (heroDefault) heroDefault.style.display = 'none';
- if (heroSuccess) heroSuccess.style.display = 'block';
- if (formSection) formSection.style.display = 'none';
- form.reset();
- // Update the URL bar so a refresh keeps them on the thank-you state (and supports the JS-disabled fallback)
- if (window.history && window.history.replaceState) {
- window.history.replaceState({}, '', '/contact?sent=1');
- }
- window.scrollTo({ top: 0, behavior: 'smooth' });
- } else {
- var msg = 'Sorry, something went wrong sending your message. Please try again, or email admin@kcs-capital.com directly.';
- try {
- var d = await response.json();
- if (d && d.errors && d.errors.length) {
- msg = d.errors.map(function(x){ return x.message; }).join(' ');
- }
- } catch(_) {}
- if (errBox) { errBox.textContent = msg; errBox.style.display = 'block'; }
- }
- } catch (err) {
- if (errBox) { errBox.textContent = 'Network problem. Please check your connection and try again, or email admin@kcs-capital.com directly.'; errBox.style.display = 'block'; }
- } finally {
- if (btn) { btn.disabled = false; btn.textContent = 'Send Message →'; btn.style.opacity = ''; btn.style.cursor = 'pointer'; }
- }
- });
-})();
-</script>
+<script src="/main.js?v=20260611" defer></script>
 </body>
 </html>
